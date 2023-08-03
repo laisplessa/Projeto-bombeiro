@@ -1,0 +1,55 @@
+body{
+    
+    margin: 0;
+    background-color: #FFF3B5;
+}
+
+.titulo{
+    font-size: 25px;
+    font-family: 'Open Sans Extra Bold';
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+}
+
+.botaofeminino{
+background: #9D0000;
+border: 0;
+color: #fff;
+cursor: pointer;
+padding: 15px 20px;
+text-decoration: none;
+transition: 0.2s;
+border-radius: 8px;
+margin-top: 25vh;
+display: block;
+width: 40vh;
+height: 4vh;
+text-align: center;
+margin-left: 82vh;
+font-size: 3vh;
+font-family: 'Open Sans Extra Bold';
+}
+
+a{
+    color: #fff;
+}
+
+.botaomasculino{
+    background: #9D0000;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    margin-top: 10vh;
+    display: block;
+    width: 40vh;
+    height: 4vh;
+    text-align: center;
+    margin-left: 82vh;
+    font-size: 3vh;
+    font-family: 'Open Sans Extra Bold';
+}

@@ -1,11 +1,8 @@
 body{
-    margin: 0;
-}
-
-.principal {
-    width: 100%;
-    height: 100vh;
-    background-color: #e4fffd;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #e4fffd;
 }
 
 .titulo{
@@ -13,7 +10,7 @@ body{
     font-family: 'Roboto Condensed';
     color: black;
     text-align: center;
-    margin-top: 6vh; 
+    margin-top: 2vh; 
 }
 
 .subtitulo{
@@ -30,38 +27,41 @@ body{
 
   .mainmenubtn {
     background-color: transparent;
-    color: rgba(12, 14, 175, 0.87);
+    color: black;
     border: none;
-    font-size: 30px;
+    font-size: 190%;
     cursor: pointer;
-    padding:20px;
-    margin-top:2px;
-    margin-right: 30px;
-    overflow: hidden;
+    margin-right: 65%;
+    overflow: hidden; 
+    position: absolute;
   }
   
   .mainmenubtn:hover {
     background-color: transparent;
-    left: 100px;
+    left: 100%;
   }
   
   .dropdown {
     position: absolute;
     display: inline-block;
-    width: 150px;
-    height: 100px;
+    /* width: 5%; */
     align-items: right;
+    font-size: 90%;
+
   }
   
   .dropdown-child {
     display: none;
     background-color: #9D0000;
-    min-width: 20px;
+    min-width: 20%;
+    position: relative;
+    height: 100%;
+    /* width: 20%; */
   }
   
   .dropdown-child a {
     color:white;
-    padding: 20px;
+    padding: 15%;
     text-decoration: none;
     display: block;
   }
@@ -70,7 +70,7 @@ body{
     display: block;
   }
   
-  .menu{
+  .menu2{
     width: 0px;
     text-align: right;
   }
@@ -82,6 +82,7 @@ body{
     color: black;
     cursor: pointer;
     margin-left: 40%;
+   text-align: center;
   }
   
   .material-checkbox input[type="checkbox"] {

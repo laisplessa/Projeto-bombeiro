@@ -63,6 +63,7 @@
         background: #E4F1FF;
     }
 
+/* texto */
     .text {
         padding: 45px 45px;
         line-height: 30px;
@@ -97,22 +98,26 @@
         padding: 30px;
     }
 
+/* Nome do checkbox */
     .form label,
     .form p {
         line-height: 2rem;
         /* font-weight: bold; */
     }
 
+    /* Campo de informações */
     .form-group input,
     .form select {
         border-radius: 5px;
         padding: 8px;
         border-color: rgba(218, 75, 44, 1);
-        border: 1px solid #ced4da;
+        border: 1px solid #353286;
+        background-color: #E4F1FF;
         margin-top: 13px;
         margin-bottom: 13px;
     }
 
+/* Lado ferimento */
     .form select {
         cursor: pointer;
     }
@@ -181,12 +186,6 @@
         text-decoration: none;
     }
 
-    .imgg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .dsn {
         column-gap: 20px;
         column-count: 3;
@@ -213,6 +212,7 @@
         padding: 5px;
     }
 
+/* Tabelas */
     table,
     th,
     td {
@@ -250,6 +250,7 @@
         margin-bottom: 13px;
     }
 
+/* tamanho local ferimento */
     input.form-control {
         width: 90%;
     }
@@ -304,12 +305,14 @@
         margin-left: 10px;
     }
 
+/* Espaço avaliação da cinemática */
     .eit {
         display: inline-block;
         column-count: 2;
         width: 80%;
     }
 
+/* Colunas dados ambulância */
     .c2 {
         column-count: 2;
     }
@@ -331,10 +334,12 @@
         border-image: initial;
     }
 
+/* titulo dos campos */
     legend {
         font-size: 18px;
     }
 
+/* Espaço para escrever observações */
     .centerr {
         margin-left: 15px;
         margin-right: 15px;
@@ -345,6 +350,7 @@
         background-color: #BDD8F4;
     }
 
+/*Cor de fundo formulário*/
     .destaque2 {
         background-color: #BDD8F4;
         border-radius: 5px;
@@ -359,9 +365,7 @@
 
 <body>
     <div class="header">
-        <div class="imgg">
-            <img src="logos.png" width="35%">
-        </div>
+
 
     </div>
     <br>
@@ -405,7 +409,6 @@
                                         placeholder="Digite o que aconteceu" required />
                                 </div>
                             </div>
-
                             <div class="destaque2">
                                 <div class="duo">
                                     <div>Aconteceu outras vezes</div>
@@ -510,6 +513,7 @@
 
                     <br>
 
+                <!--Formulário dados iniciais do paciente-->
                     <fieldset>
                         <legend id="Dadosiniciais">Dados Iniciais</legend>
                         <div>
@@ -523,8 +527,8 @@
                                 <div class="duo">
                                     <div class="radio">
                                         <label for="sexo">Sexo:</label>
-                                        <input name="radios" class="b1" type="radio" id="s-f">F
-                                        <input name="radios" type="radio" id="s-m">M
+                                        <input name="radios" class="b1" type="radio" id="s-f">Feminino
+                                        <input name="radios" type="radio" id="s-m">Masculino
                                     </div>
                                 </div>
                             </div>
@@ -576,6 +580,8 @@
                             </div>
                         </div>
                     </fieldset>
+                
+                    <!--Formulário Anamnese Gestacional-->
 
                     <br>
 
@@ -723,7 +729,7 @@
                         </div>
                     </fieldset>
 
-
+                    <!--Formulário tipo de ocorrência-->
                     <br>
 
                     <fieldset>
@@ -840,6 +846,8 @@
                             </div>
                         </div>
                     </fieldset>
+
+                <!--Formulário Avaliação do Paciente-->
 
                     <br>
 
@@ -1009,6 +1017,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário Sinais Vitais-->
                     <br>
 
                     <fieldset>
@@ -1084,6 +1093,7 @@
 
                     <br>
 
+                    <!--Formulário Problemas Enontrados Suspeitos-->
                     <fieldset>
                         <legend>Problemas Encontrados Suspeitos</legend>
                         <div>
@@ -1155,6 +1165,7 @@
 
                     <br>
 
+                    <!-- Localização dos Traumas-->
                     <fieldset>
                         <legend>Localização dos Traumas</legend>
                         <div>
@@ -1162,6 +1173,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário sobre o ferimento-->
                     <br>
 
                     <fieldset>
@@ -1488,6 +1500,7 @@
                         </div>
                     </fieldset>
 
+                <!--Formulário sobre a queimadura-->
                     <br>
 
                     <fieldset>
@@ -1587,6 +1600,7 @@
 
                     <br>
 
+                    <!-- Caixa de texto para objetos recolhidos-->
                     <fieldset>
                         <legend>Objetos Recolhidos</legend>
                         <div class="centerr">
@@ -1597,6 +1611,7 @@
 
                     <br>
 
+                    <!--Formulário Sinais e Sintomas-->
                     <fieldset>
                         <legend>Sinais e Sintomas</legend>
                         <div>
@@ -1867,6 +1882,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário sobre oque a Vítima Era-->
                     <br>
 
                     <fieldset>
@@ -1926,6 +1942,7 @@
                         </div>
                     </fieldset>
 
+                        <!--Formulário forma de condução-->
                     <br>
 
                     <fieldset>
@@ -1953,6 +1970,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário decisão de transporte do paciente-->
                     <br>
 
                     <fieldset>
@@ -1994,6 +2012,7 @@
                             </div>
                     </fieldset>
 
+                    <!--Formulário procedimentos efetuados-->
                     <br>
 
                     <fieldset>
@@ -2264,6 +2283,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário sobre materiais descartáveis utilizados-->
                     <br>
 
                     <fieldset>
@@ -2413,6 +2433,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário sobre materiais uilizados deixados no hospital-->
                     <br>
 
                     <fieldset>
@@ -2572,6 +2593,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Caixa de texto para observações-->
                     <br>
 
                     <fieldset>
@@ -2582,10 +2604,11 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário avaliação da cinemática-->
                     <br>
 
                     <fieldset>
-                        <legend>Avaliaçãoda Cinemática</legend>
+                        <legend>Avaliação da Cinemática</legend>
                         <div>
                             <div class="destaque2">
                                 <div class="eit">
@@ -2653,6 +2676,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário dados da ambulância-->
                     <br>
 
                     <fieldset>
@@ -2696,6 +2720,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Termo de Recusa de atendimento-->
                     <br>
 
                     <fieldset>
@@ -2743,6 +2768,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Formulário sobre a equipe de atendimento-->
                     <fieldset>
                         <legend>Equipe de Atendimento</legend>
                         <div>
@@ -2773,6 +2799,7 @@
                         </div>
                     </fieldset>
 
+                    <!--Botão para salvar-->
                     <br>
 
                     <div class="button-group">

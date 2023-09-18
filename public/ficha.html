@@ -13,7 +13,7 @@
         padding: 0;
         font-size: 16px;
         font-family: Arial, sans-serif;
-        background-color: rgba(160, 161, 161, 0.055);
+        background-color: #E4F1FF;
         align-items: center;
     }
 
@@ -57,9 +57,10 @@
         margin-bottom: 20px;
     }
 
-    .ddp {
+/* fundobombeiros */
+    .fundo2 {
         padding: 35px 35px;
-        background: rgba(160, 161, 161, 0.055);
+        background: #E4F1FF;
     }
 
     .text {
@@ -292,9 +293,10 @@
         width: 90%;
     }
 
-    .qa {
+/* fundo */
+    .fundo {
         line-height: 30px;
-        background: #FDFDFD;
+        /* background: #FDFDFD; */
     }
 
     .qh {
@@ -312,6 +314,7 @@
         column-count: 2;
     }
 
+/* Borda */
     fieldset {
         display: block;
         margin-inline-start: 20px;
@@ -324,7 +327,7 @@
         border-width: 2px;
         border-style: solid;
         border-radius: 5px;
-        border-color: rgba(218, 75, 44, 1);
+        border-color: #353286;
         border-image: initial;
     }
 
@@ -337,12 +340,13 @@
         margin-right: 15px;
     }
 
+/*Cor de fundo formulário*/
     .destaque {
-        background-color: #ced4da86;
+        background-color: #BDD8F4;
     }
 
     .destaque2 {
-        background-color: #ced4da86;
+        background-color: #BDD8F4;
         border-radius: 5px;
         margin-bottom: 5px;
         padding-left: 4px;
@@ -376,17 +380,22 @@
         <button class="button"><a href="ficha.html">Ficha</a></button>
         <button class="button"><a href="hist.html">Histórico</a></button> -->
     </div>
-
-    <div class="qa">
-        <div class="ddp">
+    
+<!--Título e subtítulo-->
+    <div class="fundo">
+        <div class="fundo2">
             <h1>Bombeiros Voluntários</h1>
             <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
         </div>
 
+
+<!-- Começo formulário-->
         <div class="container">
             <form class="form">
                 <div class="form-group">
 
+
+                    <!--Formulário Anamnese de Emergência-->
                     <fieldset>
                         <legend id="Anamnese">Anamnese da Emergência Médica</legend>
                         <div>
@@ -2566,53 +2575,6 @@
                     <br>
 
                     <fieldset>
-                        <legend>Termo de Recusa de Atendimento e/ou Transporte</legend>
-                        <div class="centerr">
-                            <div class="destaque2">
-                                Eu <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
-                                    placeholder="Digite" required />
-                                portador da carteira de indentidade RG N° <input type="text"
-                                    class="form-control cpf-mask" placeholder="000.000.000-00">
-                                inscrito no CPF sob N° <input type="text" class="form-control cpf-mask"
-                                    placeholder="000.000.000-00">
-                                na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
-                                me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
-                                voluntários de Guaramirim/SC, e assumo, individualmente a responsabilidade
-                                pelas consequencias que possam ocorrer por razão da minha recusa. Declaro
-                                que fui devidamente informado sobre o procedimento pelo qual eu deveria
-                                me submeter e alertado sobre riscos à saúde da sua não realização.
-                            </div>
-                            <div class="destaque2">
-                                <label for="nome-hospital">Ass:</label> <br>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
-                                    placeholder="Digite o nome do Hospital" required />
-                            </div>
-                            <div class="destaque2">
-                                <label for="nome-hospital">Testemunha:</label>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
-                                    placeholder="Digite o nome do Hospital" required />
-                            </div>
-                            <div class="destaque2">
-                                <label for="nome-hospital">Doc:</label> <br>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
-                                    placeholder="Digite o nome do Hospital" required />
-                            </div>
-                            <div class="destaque2">
-                                <label for="nome-hospital">Testemunha:</label>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
-                                    placeholder="Digite o nome do Hospital" required />
-                            </div>
-                            <div class="destaque2">
-                                <label for="nome-hospital">Doc:</label> <br>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
-                                    placeholder="Digite o nome do Hospital" required />
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <br>
-
-                    <fieldset>
                         <legend>Observações Importantes</legend>
                         <div class="centerr">
                             <input type="text" class="oi" id="objetos-recolhidos" name="objetos-recolhidos"
@@ -2735,6 +2697,51 @@
                     </fieldset>
 
                     <br>
+
+                    <fieldset>
+                        <legend>Termo de Recusa de Atendimento e/ou Transporte</legend>
+                        <div class="centerr">
+                            <div class="destaque2">
+                                Eu <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    placeholder="Digite" required />
+                                portador da carteira de indentidade RG N° <input type="text"
+                                    class="form-control cpf-mask" placeholder="000.000.000-00">
+                                inscrito no CPF sob N° <input type="text" class="form-control cpf-mask"
+                                    placeholder="000.000.000-00">
+                                na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
+                                me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
+                                voluntários de Guaramirim/SC, e assumo, individualmente a responsabilidade
+                                pelas consequencias que possam ocorrer por razão da minha recusa. Declaro
+                                que fui devidamente informado sobre o procedimento pelo qual eu deveria
+                                me submeter e alertado sobre riscos à saúde da sua não realização.
+                            </div>
+                            <div class="destaque2">
+                                <label for="nome-hospital">Ass:</label> <br>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+                            <div class="destaque2">
+                                <label for="nome-hospital">Testemunha:</label>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+                            <div class="destaque2">
+                                <label for="nome-hospital">Doc:</label> <br>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+                            <div class="destaque2">
+                                <label for="nome-hospital">Testemunha:</label>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+                            <div class="destaque2">
+                                <label for="nome-hospital">Doc:</label> <br>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+                        </div>
+                    </fieldset>
 
                     <fieldset>
                         <legend>Equipe de Atendimento</legend>

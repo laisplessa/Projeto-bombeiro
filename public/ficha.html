@@ -18,12 +18,6 @@
     }
 
 /* Botões do menu suspenso e de enviar */
-    .header {
-        background: linear-gradient(28deg, rgba(255, 239, 51, 0.8463760504201681) 0%, rgba(218, 75, 44, 1) 47%, rgba(94, 0, 0, 1) 100%);
-        color: rgba(160, 161, 161, 0.055);
-        text-align: center;
-    }
-
     .button-group {
         display: flex;
         gap: 20px;
@@ -60,8 +54,16 @@
 
 /* fundobombeiros */
     .fundo2 {
-        padding: 35px 35px;
+        padding: 5px 35px;
         background: #E4F1FF;
+    }
+
+    .fundo3{
+        padding: 5px 5px;
+        background: #E4F1FF;
+        position: fixed;
+        margin-top: -20px;
+        margin-left: 12px;
     }
 
 /* texto */
@@ -380,41 +382,97 @@
         padding-left: 4px;
     }
 
+#menu-container {
+position: fixed;
+top: 0;
+left: -300px; /* Inicialmente escondido à esquerda */
+width: 300px;
+height: 100%;
+background-color: #BDD8F4;
+transition: left 0.3s ease; /* Efeito de deslizamento suave */
+z-index: 1;
+}
+
+#menu-button {
+position: absolute;
+top: 20px;
+left: 20px;
+cursor: pointer;
+color: #000000;
+}
+
+#menu {
+list-style: none;
+padding: 0;
+margin: 50px 0 0 0;
+}
+
+#menu li {
+padding: 10px;
+text-align: left; /* Alinha o texto à esquerda */
+}
+
+#menu li a {
+color: black;
+text-decoration: none;
+}
+
     @import url(tiny.css) (min-width:300px);
     @import url(small.css) (min-width:600px);
     @import url(big.css) (min-width:700px);
 </style>
 
 <body>
-    <div class="header">
 
 
-    </div>
-    <br>
-    <br>
-    <div class="button-group">
-        <button class="button"><a href="#Anamnese">Anamnese</a></button>
-        <button class="button"><a href="#Dadosiniciais">Dados Iniciais</a></button>
-        <!-- <button class="button"><a href="#Dadosamb">Dados Ambulância</a></button> -->
-        <button class="button"><a href="#Tipoocor">Tipo de Ocorrência</a></button>
-        <!-- <button class="button"><a href="#Glasgow">Glasgow</a></button> -->
-    </div>
-    <div>
-        <!-- <button class="button"><a href="#Sinaisvitais">Sinais Vitais</a></button> -->
-        <!-- <button class="button"><a href="ficha.html">Ficha</a></button>
-        <button class="button"><a href="hist.html">Histórico</a></button>
-        <button class="button"><a href="ficha.html">Ficha</a></button>
-        <button class="button"><a href="hist.html">Histórico</a></button> -->
-    </div>
     
 <!--Título e subtítulo-->
-    <div class="fundo">
-        <div class="fundo2">
-            <h1>Bombeiros Voluntários</h1>
-            <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
-        </div>
+<div class="fundo">
+    <div class="fundo2">
+        <h1>Bombeiros Voluntários</h1>
+        <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
+    </div>
 
+<!-- Botão do Menu -->
+<div class="fundo3">
+<div id="menu-button">&#9776; </div>
 
+<!-- Container do Menu -->
+<div id="menu-container">
+<ul id="menu">
+<li><a href="#">Sexo do Paciente</a></li>
+<li><a href="#">Anamnese Gestacional</a></li>
+<li><a href="#">Dados da Ocorrência</a></li>
+<li><a href="#">Dados do Paciente</a></li>
+<li><a href="#">Tipo de Ocorrência</a></li>
+<li><a href="#">Problemas Encontrados Suspeitos</a></li>
+</ul>
+</div>
+</div>
+
+<script>
+// JavaScript para controlar a abertura e fechamento do menu
+const menuButton = document.getElementById("menu-button");
+const menuContainer = document.getElementById("menu-container");
+menuButton.addEventListener("click", () => {
+if (menuContainer.style.left === "-300px" || menuContainer.style.left === "") {
+menuContainer.style.left = "0";
+} else {
+menuContainer.style.left = "-300px";
+}
+});
+
+window.addEventListener("click", (event) => {
+if (
+event.target !== menuButton &&
+event.target !== menuContainer &&
+event.target.closest("#menu-container") === null
+) {
+menuContainer.style.left = "-300px";
+}
+});
+</script>
+        
 <!-- Começo formulário-->
         <div class="container">
             <form class="form">

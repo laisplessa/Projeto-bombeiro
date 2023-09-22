@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #E4F1FF;
+    /* align-items: center; */
+}
+
+/* Botões do menu suspenso e de enviar */
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    background-color: #353286;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tonn {
+    background-color: #353286;
+    margin-top: 30px;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c0392b;
+}
+
+.logged-in-user {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* fundobombeiros */
+.fundo2 {
+    padding: 5px 35px;
+    background: #E4F1FF;
+}
+
+.fundo3{
+    padding: 5px 5px;
+    background: #E4F1FF;
+    position: fixed;
+    margin-top: -20px;
+    margin-left: 12px;
+}
+
+/* texto */
+.text {
+    padding: 45px 45px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.cabecalho {
+    display: inline;
+}
+
+/* Tipo de ocorrência */
+.causas {
+    font-weight: 400;
+    line-height: 25px;
+    column-count: 3;
+}
+
+.amb {
+    font-weight: 400;
+    line-height: 25px;
+    column-count: 2;
+}
+
+/* Tamanho da div onde ta o formuário */
+.container {
+    max-width: 800px;
+    max-height: 90%;
+    background: rgba(160, 161, 161, 0.055);
+    margin: 0px auto 40px auto;
+    border-radius: 5px;
+}
+
+/* Formulário completo */
+.form {
+    padding: 30px;
+}
+
+/* Nome do checkbox */
+.form label,
+.form p {
+    line-height: 2rem;
+    /* font-weight: bold; */
+}
+
+/* Campo de informações */
+.form-group input,
+.form select {
+    border-radius: 5px;
+    padding: 8px;
+    border-color: rgba(218, 75, 44, 1);
+    border: 1px solid #353286;
+    background-color: #E4F1FF;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+/* Lado ferimento */
+.form select {
+    cursor: pointer;
+}
+
+/* Checkbox */
+.form-radio-checkbox {
+    margin-bottom: 15px;
+}
+
+form .form-radio-checkbox {
+    display: grid;
+}
+
+.form-radio-checkbox input {
+    margin-right: 10px;
+}
+
+.form-radio-checkbox label {
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-radio-checkbox label:first-child {
+    margin-bottom: 10px;
+}
+
+
+.input-radio {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.input-checkbox {
+    display: inline-block;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    cursor: pointer;
+}
+
+.form-textarea {
+    display: grid;
+}
+
+.form-textarea textarea {
+    padding: 10px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio {
+    column-gap: 20px;
+    column-count: 3;
+    justify-content: center;
+}
+
+/* Fonte botão */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Colunas de 3 espaços */
+.dsn {
+    column-gap: 20px;
+    column-count: 3;
+}
+
+/* Colunas da aba vitima era */
+.duplo {
+    column-gap: 40px;
+    column-count: 2;
+}
+
+.c3 {
+    column-count: 3;
+}
+
+/* Tabela */
+.table {
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Tabela */
+.cell {
+    flex: 1;
+    padding: 5px;
+}
+
+/* Tabelas */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Colunas sinais e sintomas */
+.ss {
+    font-weight: 400;
+    line-height: 25px;
+    column-count: 2;
+}
+
+/* Colunas decisão de transporte */
+.four {
+    column-count: 4;
+}
+
+/* Seleção de problemas encontrados */
+.le {
+    margin-left: 100px;
+    border-radius: 5px;
+    padding: 2px;
+    border-color: rgba(218, 75, 44, 1);
+    border: 1px solid #ced4da;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    width: 230px;
+}
+
+.lf {
+    border-radius: 5px;
+    padding: 2px;
+    border-color: rgba(218, 75, 44, 1);
+    border: 1px solid #ced4da;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+/* tamanho local ferimento */
+input.form-control {
+    width: 90%;
+}
+
+/* tamanho caixa de texto */
+input.sv {
+    width: 18%;
+}
+
+.mi {
+    width: 35px;
+}
+
+/* Tamanho coluna materiais */
+.i {
+    width: 15px;
+    height: 10px;
+}
+
+/* Tamanho caixas de textos */
+.qt {
+    width: 75%;
+    align-items: center;
+}
+
+/* Complemento na parte inferior de im sinal ou sintoma */
+.cmpp {
+    column-count: 2;
+    column-gap: 60px;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+/* Espaço tamanho ataduras */
+.pr {
+    font-size: 15px;
+}
+
+/* Tamanho caixas de textos */
+.oi {
+    width: 97%;
+    height: 100px;
+    background-color: #ced4da86;
+}
+
+/* Tamanho caixas de textos */
+.oa {
+    width: 90%;
+}
+
+/* fundo */
+.fundo {
+    line-height: 30px;
+    /* background: #FDFDFD; */
+}
+
+/* Horários */
+.insere {
+    width: 35px;
+    margin-left: 10px;
+}
+
+/* Espaço avaliação da cinemática */
+.eit {
+    display: inline-block;
+    column-count: 2;
+    width: 80%;
+}
+
+/* Colunas dados ambulância */
+.c2 {
+    column-count: 2;
+}
+
+/* Borda */
+banner {
+    display: block;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #353286;
+    border-image: initial;
+}
+
+/* titulo dos campos */
+titulos {
+    font-size: 18px;
+}
+
+/* Espaço para escrever observações */
+.centerr {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*Cor de fundo formulário*/
+.destaque {
+    background-color: #BDD8F4;
+}
+
+/*Cor de fundo formulário*/
+.dest2 {
+    background-color: #BDD8F4;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+}
+
+#menu-container {
+position: fixed;
+top: 0;
+left: -300px; /* Inicialmente escondido à esquerda */
+width: 300px;
+height: 100%;
+background-color: #BDD8F4;
+transition: left 0.3s ease; /* Efeito de deslizamento suave */
+z-index: 1;
+}
+
+#menu-button {
+position: absolute;
+top: 20px;
+left: 20px;
+cursor: pointer;
+color: #000000;
+}
+
+#menu {
+list-style: none;
+padding: 0;
+margin: 50px 0 0 0;
+}
+
+#menu li {
+padding: 10px;
+text-align: left; /* Alinha o texto à esquerda */
+}
+
+#menu li a {
+color: black;
+text-decoration: none;
+}
+
+@import url(tiny.css) (min-width:300px);
+@import url(small.css) (min-width:600px);
+@import url(big.css) (min-width:700px);

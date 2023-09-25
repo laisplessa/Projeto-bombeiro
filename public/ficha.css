@@ -173,9 +173,10 @@ form .form-radio-checkbox {
     margin-right: 5px;
 }
 
+/* Seleção sexo do paciente */
 .radio {
     column-gap: 20px;
-    column-count: 3;
+    column-count: 2;
     justify-content: center;
 }
 
@@ -282,7 +283,7 @@ input.sv {
     align-items: center;
 }
 
-/* Complemento na parte inferior de im sinal ou sintoma */
+/* Complemento de seleção auxiliar(aparece do lado ou abaixo) */
 .cmpp {
     column-count: 2;
     column-gap: 60px;
@@ -383,6 +384,7 @@ transition: left 0.3s ease; /* Efeito de deslizamento suave */
 z-index: 1;
 }
 
+/*Botão Menu Suspenso*/
 #menu-button {
 position: absolute;
 top: 20px;
@@ -391,17 +393,20 @@ cursor: pointer;
 color: #000000;
 }
 
+
 #menu {
 list-style: none;
 padding: 0;
-margin: 50px 0 0 0;
+margin: 10px 0 0 0;
 }
 
+/*Lista do Menu Suspenso*/
 #menu li {
-padding: 10px;
+padding: 7px;
 text-align: left; /* Alinha o texto à esquerda */
 }
 
+/*Botões do Menu Suspenso*/
 #menu li a {
 color: black;
 text-decoration: none;

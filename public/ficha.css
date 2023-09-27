@@ -397,13 +397,14 @@ color: #000000;
 #menu {
 list-style: none;
 padding: 0;
-margin: 10px 0 0 0;
+margin: 9px 0 0 0;
 }
 
 /*Lista do Menu Suspenso*/
 #menu li {
-padding: 7px;
+padding: 6px;
 text-align: left; /* Alinha o texto à esquerda */
+font-family: 'Calibri';
 }
 
 /*Botões do Menu Suspenso*/

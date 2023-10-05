@@ -136,8 +136,8 @@ menuContainer.style.left = "-300px";
 
                             <div class="dest2">
                                 <div class="duplo">
-                                    <div>Horário da útima medicação:</div>
-                                    <input type="text" class="insere" id="h-medicacao" placeholder="00:00">
+                                    <div>Horário da última medicação:</div>
+                                    <input type="text" class="insere" id="h-medicacao" placeholder="00:00" >
                                 </div>
                             </div>
 
@@ -192,7 +192,7 @@ menuContainer.style.left = "-300px";
                         <div>
                             <div class="dest2">
                                 <label for="data">Data:</label><br>
-                                <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-mask="00/00/0000"
+                                <input type="date" class="form-control" placeholder="dd/mm/aaaa" data-mask="00/00/0000"
                                     maxlength="10" autocomplete="off">
                             </div>
 
@@ -220,18 +220,19 @@ menuContainer.style.left = "-300px";
 
                             <div class="dest2">
                                 <label for="idade">Idade;</label><br>
-                                <input type="text" class="form-control" id="idade" name="idade"
+                                <input type="number" class="form-control" id="idade" name="idade"
                                     placeholder="Digite a idade do paciente" required />
                             </div>
 
                             <div class="dest2">
                                 <label for="fone">Fone:</label><br>
-                                <input type="text" class="form-control phone-mask" placeholder="0000-0000">
+                                <input type="tel" class="form-control phone-mask" placeholder="(00) 0000-0000">
                             </div>
 
                             <div class="dest2">
                                 <label for="cpf">RG/CPF Paciente:</label><br>
-                                <input type="text" class="form-control cpf-mask" placeholder="000.000.000-00">
+                                <input type="number" class="form-control cpf-mask" placeholder="000.000.000-00">
+                                
                             </div>
 
                             <div class="dest2">
@@ -242,7 +243,7 @@ menuContainer.style.left = "-300px";
 
                             <div class="dest2">
                                 <label for="idade-acompanhante">Idade:</label><br>
-                                <input type="text" class="form-control" id="idade-acompanhante"
+                                <input type="number" class="form-control" id="idade-acompanhante"
                                     name="idade-acompanhante" placeholder="Digite a idade do acompanhante" required />
                             </div>
 
@@ -290,27 +291,28 @@ menuContainer.style.left = "-300px";
 
                         <div class="dest2">
                             <div class="duplo">
-                                <div>Existe possibilidade da complicações?</div>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Sim</label>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Não</label>
+                                <div>Existe possibilidade de complicações?</div>
+                                <input type="radio" id="s-existe" name="s-existe" value="s-existe">
+                                <label for="s-existe">Sim</label>
+                                <input type="radio" id="s-existe" name="s-existe" value="s-existe">
+                                <label for="n-existe">Não</label>
                             </div>
                         </div>
 
                         <div class="dest2">
                             <div class="duplo">
                                 <div>É o primeiro filho?</div>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Sim</label>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Não</label>
+
+                                <input type="radio" id="s-primeiro" name="s-primeiro" value="s-primeiro">
+                                <label for="s-primeiro">Sim</label>
+                                <input type="radio" id="s-primeiro" name="s-primeiro" value="s-primeiro">
+                                <label for="n-primeiro">Não</label>
                             </div>
                         </div>
 
                         <div class="dest2">
                             <div>Quantos?</div>
-                            <div><input class="oa" type="text" id="nome-hospital" name="nome-hospital"
+                            <div><input class="oa" type="number" id="nome-hospital" name="nome-hospital"
                                     placeholder="Digite a quantidade de filhos" required />
                             </div>
                         </div>
@@ -339,30 +341,30 @@ menuContainer.style.left = "-300px";
                         <div class="dest2">
                             <div class="duplo">
                                 <div>Sente pressão na região do quadril ou vontade de evacuar?</div>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Sim</label>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Não</label>
+                                <input type="radio" id="s-sente" name="s-sente" value="s-sente">
+                                <label for="s-sente">Sim</label>
+                                <input type="radio" id="s-sente" name="s-sente" value="s-sente">
+                                <label for="n-sente">Não</label>
                             </div>
                         </div>
 
                         <div class="dest2">
                             <div class="duplo">
                                 <div>Já houve ruptura da bolsa?</div>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Sim</label>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Não</label>
+                                <input type="radio" id="s-houve" name="s-houve" value="s-houve">
+                                <label for="s-houve">Sim</label>
+                                <input type="radio" id="s-houve" name="s-houve" value="s-houve">
+                                <label for="n-houve">Não</label>
                             </div>
                         </div>
 
                         <div class="dest2">
                             <div class="duplo">
                                 <div>Foi feito inspeção visual?</div>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Sim</label>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="nome-hospital">Não</label>
+                                <input type="radio" id="s-foi" name="s-houve" value="s-foi">
+                                <label for="s-foi">Sim</label>
+                                <input type="radio" id="s-foi" name="s-foi" value="s-foi">
+                                <label for="n-foi">Não</label>
                             </div>
                         </div>
 
@@ -370,10 +372,10 @@ menuContainer.style.left = "-300px";
                             <div class="duplo">
                                 <div class="duplo">
                                     <div>Parto realizado?</div>
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="nome-hospital">Sim</label>
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="nome-hospital">Não</label>
+                                    <input type="radio" id="s-parto" name="s-parto" value="s-parto">
+                                    <label for="s-foi">Sim</label>
+                                    <input type="radio" id="s-parto" name="s-parto" value="s-parto">
+                                    <label for="n-foi">Não</label>
                                 </div>
                                 <div class="duplo">
                                     <div>Hora do nascimento:</div>
@@ -710,21 +712,21 @@ menuContainer.style.left = "-300px";
 
                             <div class="dest2">
                                 <label for="pulso">Pulso:</label>
-                                <input type="text" class="sv" id="pulso" name="pulso" placeholder="Digite" required />
+                                <input type="number" class="sv" id="pulso" name="pulso" placeholder="Digite" required />
                                 <label for="pulso">
                                     B.C.P.M.</label>
                             </div>
 
                             <div class="dest2">
                                 <label for="respiração">Respiração: </label>
-                                <input type="text" class="sv" id="respiração" name="respiração" placeholder="Digite"
+                                <input type="number" class="sv" id="respiração" name="respiração" placeholder="Digite"
                                     required /> <label for="respiração"> M.R.M.
                                 </label>
                             </div>
 
                             <div class="dest2">
                                 <label for="pulsacao">Pulsação:</label>
-                                <input type="text" class="sv" id="pulsacao" name="pulsacao" placeholder="Digite"
+                                <input type="number" class="sv" id="pulsacao" name="pulsacao" placeholder="Digite"
                                     required /><label for="pulsacao"> % /
                                     HGT:</label>
                                 <input type="text" class="sv" id="pulsacao" name="pulsacao" placeholder="Digite"
@@ -734,7 +736,7 @@ menuContainer.style.left = "-300px";
                             <div class="dest2">
                                 <div class="duplo">
                                     <label for="temperatura">Temperatura:</label>
-                                    <input type="text" class="sv" id="temperatura" name="temperatura"
+                                    <input type="number" class="sv" id="temperatura" name="temperatura"
                                         placeholder="Digite" required />
                                     <label for="temperatura"> °C </label>
                                 </div>
@@ -745,21 +747,21 @@ menuContainer.style.left = "-300px";
                                     <label for="perfusão">Perfusão:</label>
                                     <div>
                                         <label for="perfusão">> 2 seg.</label>
-                                        <input type="checkbox" class="glas" id="perfusão" name="perfusão"
+                                        <input type="radio" class="glas" id="perfusão" name="perfusão"
                                             value="perfusão">
                                     </div>
                                     <div>
                                         <label for="perfusão"> < 2 seg.</label>
-                                        <input type="checkbox" class="glas" id="perfusão" name="perfusão"
+                                        <input type="radio" class="glas" id="perfusão" name="perfusão"
                                             value="perfusão">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="dest2">
-                                <input type="checkbox" class="glas" id="anormal" name="anormal" value="anormal">
+                                <input type="radio" class="glas" id="anormal" name="anormal" value="anormal">
                                 <label for="anormal">Anormal</label>
-                                <input type="checkbox" class="glas" id="normal" name="normal" value="normal">
+                                <input type="radio" class="glas" id="anormal" name="anormal" value="anormal">
                                 <label for="normal">Normal</label>
                             </div>
                         </div>
@@ -1191,82 +1193,82 @@ menuContainer.style.left = "-300px";
 
                                 <tr class="destaque">
                                     <td>Cabeça</td>
-                                    <td><input type="checkbox" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
-                                    <td><input type="checkbox" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
-                                    <td><input type="checkbox" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
-                                    <td><input type="checkbox" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
+                                    <td><input type="radio" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
+                                    <td><input type="radio" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
+                                    <td><input type="radio" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
+                                    <td><input type="radio" id="f-cabeca" name="f-cabeca" value="f-cabeca"></td>
                                 </tr>
 
                                 <tr>
                                     <td>Pescoço</td>
-                                    <td><input type="checkbox" id="f-pescoco" name="f-pescoco" value="f-pescoco">
+                                    <td><input type="radio" id="f-pescoco" name="f-pescoco" value="f-pescoco">
                                     </td>
-                                    <td><input type="checkbox" id="f-pescoco" name="f-pescoco" value="f-pescoco">
+                                    <td><input type="radio" id="f-pescoco" name="f-pescoco" value="f-pescoco">
                                     </td>
-                                    <td><input type="checkbox" id="f-pescoco" name="f-pescoco" value="f-pescoco">
+                                    <td><input type="radio" id="f-pescoco" name="f-pescoco" value="f-pescoco">
                                     </td>
-                                    <td><input type="checkbox" id="f-pescoco" name="f-pescoco" value="f-pescoco">
+                                    <td><input type="radio" id="f-pescoco" name="f-pescoco" value="f-pescoco">
                                     </td>
                                 </tr>
 
                                 <tr class="destaque">
                                     <td>T. ant</td>
-                                    <td><input type="checkbox" id="f-tant" name="f-tant" value="f-tant"></td>
-                                    <td><input type="checkbox" id="f-tant" name="f-tant" value="f-tant"></td>
-                                    <td><input type="checkbox" id="f-tant" name="f-tant" value="f-tant"></td>
-                                    <td><input type="checkbox" id="f-tant" name="f-tant" value="f-tant"></td>
+                                    <td><input type="radio" id="f-tant" name="f-tant" value="f-tant"></td>
+                                    <td><input type="radio" id="f-tant" name="f-tant" value="f-tant"></td>
+                                    <td><input type="radio" id="f-tant" name="f-tant" value="f-tant"></td>
+                                    <td><input type="radio" id="f-tant" name="f-tant" value="f-tant"></td>
                                 </tr>
 
                                 <tr>
                                     <td>T. pos</td>
-                                    <td><input type="checkbox" id="t-tpos" name="t-tpos" value="t-tpos"></td>
-                                    <td><input type="checkbox" id="t-tpos" name="t-tpos" value="t-tpos"></td>
-                                    <td><input type="checkbox" id="t-tpos" name="t-tpos" value="t-tpos"></td>
-                                    <td><input type="checkbox" id="t-tpos" name="t-tpos" value="t-tpos"></td>
+                                    <td><input type="radio" id="t-tpos" name="t-tpos" value="t-tpos"></td>
+                                    <td><input type="radio" id="t-tpos" name="t-tpos" value="t-tpos"></td>
+                                    <td><input type="radio" id="t-tpos" name="t-tpos" value="t-tpos"></td>
+                                    <td><input type="radio" id="t-tpos" name="t-tpos" value="t-tpos"></td>
                                 </tr>
 
                                 <tr class="destaque">
                                     <td>Genital</td>
-                                    <td><input type="checkbox" id="f-genital" name="f-genital" value="f-genital">
+                                    <td><input type="radio" id="f-genital" name="f-genital" value="f-genital">
                                     </td>
-                                    <td><input type="checkbox" id="f-genital" name="f-genital" value="f-genital">
+                                    <td><input type="radio" id="f-genital" name="f-genital" value="f-genital">
                                     </td>
-                                    <td><input type="checkbox" id="f-genital" name="f-genital" value="f-genital">
+                                    <td><input type="radio" id="f-genital" name="f-genital" value="f-genital">
                                     </td>
-                                    <td><input type="checkbox" id="f-genital" name="f-genital" value="f-genital">
+                                    <td><input type="radio" id="f-genital" name="f-genital" value="f-genital">
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>Membro inferior direito</td>
-                                    <td><input type="checkbox" id="f-mid" name="f-mid" value="f-mid"></td>
-                                    <td><input type="checkbox" id="f-mid" name="f-mid" value="f-mid"></td>
-                                    <td><input type="checkbox" id="f-mid" name="f-mid" value="f-mid"></td>
-                                    <td><input type="checkbox" id="f-mid" name="f-mid" value="f-mid"></td>
+                                    <td><input type="radio" id="f-mid" name="f-mid" value="f-mid"></td>
+                                    <td><input type="radio" id="f-mid" name="f-mid" value="f-mid"></td>
+                                    <td><input type="radio" id="f-mid" name="f-mid" value="f-mid"></td>
+                                    <td><input type="radio" id="f-mid" name="f-mid" value="f-mid"></td>
                                 </tr>
 
                                 <tr class="destaque">
                                     <td>Membro inferior esquerdo</td>
-                                    <td><input type="checkbox" id="f-mie" name="f-mie" value="f-mie"></td>
-                                    <td><input type="checkbox" id="f-mie" name="f-mie" value="f-mie"></td>
-                                    <td><input type="checkbox" id="f-mie" name="f-mie" value="f-mie"></td>
-                                    <td><input type="checkbox" id="f-mie" name="f-mie" value="f-mie"></td>
+                                    <td><input type="radio" id="f-mie" name="f-mie" value="f-mie"></td>
+                                    <td><input type="radio" id="f-mie" name="f-mie" value="f-mie"></td>
+                                    <td><input type="radio" id="f-mie" name="f-mie" value="f-mie"></td>
+                                    <td><input type="radio" id="f-mie" name="f-mie" value="f-mie"></td>
                                 </tr>
 
                                 <tr>
                                     <td>Membro superior direito</td>
-                                    <td><input type="checkbox" id="f-msd" name="f-msd" value="f-msd"></td>
-                                    <td><input type="checkbox" id="f-msd" name="f-msd" value="f-msd"></td>
-                                    <td><input type="checkbox" id="f-msd" name="f-msd" value="f-msd"></td>
-                                    <td><input type="checkbox" id="f-msd" name="f-msd" value="f-msd"></td>
+                                    <td><input type="radio" id="f-msd" name="f-msd" value="f-msd"></td>
+                                    <td><input type="radio" id="f-msd" name="f-msd" value="f-msd"></td>
+                                    <td><input type="radio" id="f-msd" name="f-msd" value="f-msd"></td>
+                                    <td><input type="radio" id="f-msd" name="f-msd" value="f-msd"></td>
                                 </tr>
 
                                 <tr class="destaque">
                                     <td>Membro superior esquerdo</td>
-                                    <td><input type="checkbox" id="f-mse" name="f-mse" value="f-mse"></td>
-                                    <td><input type="checkbox" id="f-mse" name="f-mse" value="f-mse"></td>
-                                    <td><input type="checkbox" id="f-mse" name="f-mse" value="f-mse"></td>
-                                    <td><input type="checkbox" id="f-mse" name="f-mse" value="f-mse"></td>
+                                    <td><input type="radio" id="f-mse" name="f-mse" value="f-mse"></td>
+                                    <td><input type="radio" id="f-mse" name="f-mse" value="f-mse"></td>
+                                    <td><input type="radio" id="f-mse" name="f-mse" value="f-mse"></td>
+                                    <td><input type="radio" id="f-mse" name="f-mse" value="f-mse"></td>
                                 </tr>
                             </table>
                         </div>
@@ -1624,19 +1626,19 @@ menuContainer.style.left = "-300px";
                         <div>
                             <div class="dsn">
                                 <div class="dest2">
-                                    <input type="checkbox" class="espass" id="forma-conducao" name="forma-conducao"
+                                    <input type="radio" class="espass" id="forma-conducao" name="forma-conducao"
                                         value="forma-conducao">
                                     <label for="forma-conducao">Deitada</label>
                                 </div>
 
                                 <div class="dest2">
-                                    <input type="checkbox" class="espass" id="forma-conducao" name="forma-conducao"
+                                    <input type="radio" class="espass" id="forma-conducao" name="forma-conducao"
                                         value="forma-conducao">
                                     <label for="forma-conducao">Semi-deitada</label>
                                 </div>
 
                                 <div class="dest2">
-                                    <input type="checkbox" class="espass" id="forma-conducao" name="forma-conducao"
+                                    <input type="radio" class="espass" id="forma-conducao" name="forma-conducao"
                                         value="forma-conducao">
                                     <label for="forma-conducao">Sentada</label>
                                 </div>
@@ -1654,15 +1656,15 @@ menuContainer.style.left = "-300px";
 
                                 <div class="dest2">
                                     <div class="emoji">&#128577;<br>
-                                        <input type="checkbox" class="espass" id="d-transporte" name="d-transporte"
+                                        <input type="radio" class="espass" id="d-transporte" name="d-transporte"
                                             value="d-transporte">
                                         <label for="d-transporte">Crítico</label>
                                     </div>
                                 </div>
 
                                 <div class="dest2">
-                                    <div class="emoji">&#128534;<br>
-                                        <input type="checkbox" class="espass" id="d-transporte" name="d-transporte"
+                                    <div class="emoji">&#1285s34;<br>
+                                        <input type="radio" class="espass" id="d-transporte" name="d-transporte"
                                             value="d-transporte">
                                         <label for="d-transporte">Instável</label>
                                     </div>
@@ -1670,7 +1672,7 @@ menuContainer.style.left = "-300px";
 
                                 <div class="dest2">
                                     <div class="emoji">&#128528;<br>
-                                        <input type="checkbox" class="espass" id="d-transporte" name="d-transporte"
+                                        <input type="radio" class="espass" id="d-transporte" name="d-transporte"
                                             value="d-transporte">
                                         <label for="d-transporte">Potencialmente instável</label>
                                     </div>
@@ -1678,7 +1680,7 @@ menuContainer.style.left = "-300px";
 
                                 <div class="dest2">
                                     <div class="emoji">&#128578;<br>
-                                        <input type="checkbox" class="espass" id="d-transporte" name="d-transporte"
+                                        <input type="radio" class="espass" id="d-transporte" name="d-transporte"
                                             value="d-transporte">
                                         <label for="d-transporte">Deitada</label>
                                     </div>
@@ -1989,14 +1991,14 @@ menuContainer.style.left = "-300px";
                                             <label for="ataduras">20</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="mud" name="mud" placeholder="Digite a quantidade"
+                                    <td><input class="qt" type="number" id="mud" name="mud" placeholder="Digite a quantidade"
                                             required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="mud" name="mud" value="mud">
                                         <label for="mud">Manta aluminizada</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="mud" name="mud" placeholder="Digite a quantidade"
+                                    <td><input class="qt" type="number" id="mud" name="mud" placeholder="Digite a quantidade"
                                             required />
                                     </td>
                                 </tr>
@@ -2006,14 +2008,14 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Cateter TP. Ocúlos</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Pás do DEA</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2023,14 +2025,14 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Compressa comum</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Sonda de aspiração</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2051,14 +2053,14 @@ menuContainer.style.left = "-300px";
                                             <label for="vehicle1">Q</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Soro fisiológico</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2068,7 +2070,7 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Luvas Desc. (Pares)</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
@@ -2083,7 +2085,7 @@ menuContainer.style.left = "-300px";
                                             <label for="vehicle1">G</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2093,7 +2095,7 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Máscara Desc.</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
@@ -2101,7 +2103,7 @@ menuContainer.style.left = "-300px";
                                         <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Outro material" required />
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2128,7 +2130,7 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Base do Estabiliza</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
@@ -2143,7 +2145,7 @@ menuContainer.style.left = "-300px";
                                             <label for="vehicle1">Infa.</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2164,14 +2166,14 @@ menuContainer.style.left = "-300px";
                                             <label for="vehicle1">P</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Tirante Aranha</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2193,14 +2195,14 @@ menuContainer.style.left = "-300px";
                                                 placeholder="." required />
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Tirante de Cabeça</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2210,14 +2212,14 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Coxins Estabiliza.</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Cânula</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2235,7 +2237,7 @@ menuContainer.style.left = "-300px";
                                             <label for="vehicle1">Infa.</label>
                                         </div>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
@@ -2243,7 +2245,7 @@ menuContainer.style.left = "-300px";
                                         <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Outro material" required />
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2253,7 +2255,7 @@ menuContainer.style.left = "-300px";
                                         <input type="checkbox" class="glas" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1">Maca Rígida</label>
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                     <td>
@@ -2261,7 +2263,7 @@ menuContainer.style.left = "-300px";
                                         <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Outro material" required />
                                     </td>
-                                    <td><input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
+                                    <td><input class="qt" type="number" id="nome-acompanhante" name="nome-acompanhante"
                                             placeholder="Digite a quantidade" required />
                                     </td>
                                 </tr>
@@ -2361,11 +2363,11 @@ menuContainer.style.left = "-300px";
                             <div class="c2">
                                 <div class="dest2">
                                     <label for="vehicle">N° Usd.</label><br>
-                                    <input type="text1" id="n-usd" name="n-usd" placeholder="Digite o N° Usd" required />
+                                    <input type="number" id="n-usd" name="n-usd" placeholder="Digite o N° Usd" required />
                                 </div>
                                 <div class="dest2">
                                     <label for="vehicle">N° Ocorr.</label><br>
-                                    <input type="text1" id="n-ocorr" name="n-ocorr" placeholder="Digite o N° Ocorr." required />
+                                    <input type="number" id="n-ocorr" name="n-ocorr" placeholder="Digite o N° Ocorr." required />
                                 </div>
                                 <div class="dest2">
                                     <label for="vehicle">Desp</label><br>
@@ -2373,7 +2375,7 @@ menuContainer.style.left = "-300px";
                                 </div>
                                 <div class="dest2">
                                     <label for="vehicle">Km Final</label><br>
-                                    <input type="text1" id="km-final" name="km-final" placeholder="Digite o KM final" required />
+                                    <input type="number" id="km-final" name="km-final" placeholder="Digite o KM final" required />
                                 </div>
                                 <div class="dest2">
                                     <label for="vehicle1">Cód. Ir</label><br>
@@ -2405,9 +2407,9 @@ menuContainer.style.left = "-300px";
                             <div class="dest2">
                                 Eu <input class="qt" type="text" id="nome-acompanhante" name="nome-acompanhante"
                                     placeholder="Digite" required />
-                                portador da carteira de indentidade RG N° <input type="text"
+                                portador da carteira de indentidade RG N° <input type="number"
                                     class="form-control cpf-mask" placeholder="000.000.000-00">
-                                inscrito no CPF sob N° <input type="text" class="form-control cpf-mask"
+                                inscrito no CPF sob N° <input type="number" class="form-control cpf-mask"
                                     placeholder="000.000.000-00">
                                 na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
                                 me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
@@ -2428,7 +2430,7 @@ menuContainer.style.left = "-300px";
                             </div>
                             <div class="dest2">
                                 <label for="nome-hospital">Doc:</label> <br>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                <input type="number" class="form-control" id="nome-hospital" name="nome-hospital"
                                     placeholder="Digite o CPF/RG da testemunha" required />
                             </div>
                             <div class="dest2">
@@ -2438,7 +2440,7 @@ menuContainer.style.left = "-300px";
                             </div>
                             <div class="dest2">
                                 <label for="nome-hospital">Doc:</label> <br>
-                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                <input type="number" class="form-control" id="nome-hospital" name="nome-hospital"
                                     placeholder="Digite o CPF/RG da testemunha" required />
                             </div>
                         </div>

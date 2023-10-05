@@ -47,6 +47,12 @@ body {
     padding: 5px 35px;
     background: #E4F1FF;
 }
+.divlogo{
+    height: 20%;
+    position: absolute;
+    left: 85%;
+}
+
 
 .fundo3{
     padding: 5px 5px;
@@ -154,6 +160,11 @@ form .form-radio-checkbox {
     min-width: 1.25rem;
     min-height: 1.25rem;
     cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .form-textarea {
@@ -316,8 +327,8 @@ input.sv {
 
 /* Horários */
 .insere {
-    width: 35px;
-    margin-left: 10px;
+    width: 37px;
+    margin-left: 2px;
 }
 
 /* Espaço avaliação da cinemática */

@@ -55,6 +55,9 @@ body {
 
 
 .fundo3{
+    position: absolute;
+    top: 25px;
+    left: -20px;
     padding: 5px 5px;
     background: #E4F1FF;
     position: fixed;

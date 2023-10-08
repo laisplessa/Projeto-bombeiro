@@ -1,26 +1,48 @@
 <?php
 
-$CPF = $_POST["CPF"];
-$Senha = $_POST["Senha"];
+include "db.php";
 
-$con = mysqli_connect('localhost','root','root');
-mysqli_select_db('sa-bombeiros', $con);
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-	
-$query = "SELECT cpf, senha FROM user WHERE cpf = $CPF and senha = $Senha";
+session_start();
 
-$result = mysqli_query($query);
+$cpf = $_POST["cpf"];
+$senha = $_POST["senha"];
 
-if($result){
-        $string = "login bem sucedido";
-        $data = array("minha_string" => $string);
-        $json_texto = json_encode($data);
-        echo($json_texto);
+if ($cpf == null || $senha == null) {
+
+  $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações");
+  header("Content-Type: application/json");
+  echo json_encode($data);
+  exit();
+
+} else {
+
+  $sql = "SELECT * FROM usuario WHERE cpf = '$cpf' AND senha = '$senha' LIMIT 1";
+
+  $run_query = mysqli_query($con, $sql);
+  $count = mysqli_num_rows($run_query);
+
+  if ($count >= 1) {
     
-}else{
-    $string = "CPF ou Senha informados inválidos";
-    $data = array("minha_string" => $string);
-    $json_texto = json_encode($data);
-    echo($json_texto);
+    $_SESSION['cpf'] = $cpf;
+
+    $data = array("erro" => false, "mensagem" => "Login executado com sucesso");
+    header("Content-Type: application/json");
+    echo json_encode($data);
+    exit();
+
+  } else {
+
+    $data = array("erro" => true, "mensagem" => "Usuário não encontrado no sistema");
+    header("Content-Type: application/json");
+    echo json_encode($data);
+    exit();
+
+  }
+
 }
+
 ?>

@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    background-color: #E4F1FF;
+    background-color: #defdec;
     /* align-items: center; */
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 .button {
-    background-color: #353286;
+    background-color: #20643f;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -23,7 +23,7 @@ body {
 }
 
 .tonn {
-    background-color: #353286;
+    background-color: #20643f;
     margin-top: 30px;
     color: #fff;
     padding: 10px 10px;
@@ -45,7 +45,7 @@ body {
 /* fundobombeiros */
 .fundo2 {
     padding: 5px 35px;
-    background: #E4F1FF;
+    background: #defdec;
 }
 .divlogo{
     height: 20%;
@@ -115,9 +115,8 @@ body {
 .form select {
     border-radius: 5px;
     padding: 8px;
-    border-color: rgba(218, 75, 44, 1);
-    border: 1px solid #353286;
-    background-color: #E4F1FF;
+    border: 1.5px solid #20643f;
+    background-color:#defdec;
     margin-top: 13px;
     margin-bottom: 13px;
 }
@@ -359,7 +358,7 @@ banner {
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    border-color: #353286;
+    border-color: #20643f;
     border-image: initial;
 }
 
@@ -376,12 +375,12 @@ titulos {
 
 /*Cor de fundo formulário*/
 .destaque {
-    background-color: #BDD8F4;
+    background-color: #8de2b3;
 }
 
 /*Cor de fundo formulário*/
 .dest2 {
-    background-color: #BDD8F4;
+    background-color: #b4f5d1;
     border-radius: 5px;
     margin-bottom: 5px;
     padding-left: 4px;
@@ -393,7 +392,7 @@ top: 0;
 left: -300px; /* Inicialmente escondido à esquerda */
 width: 300px;
 height: 100%;
-background-color: #BDD8F4;
+background-color: #b4f5d1;
 transition: left 0.3s ease; /* Efeito de deslizamento suave */
 z-index: 1;
 }

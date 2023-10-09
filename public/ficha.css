@@ -387,6 +387,12 @@ titulos {
     padding-left: 4px;
 }
 
+.logo{
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+  }
+  
 #menu-container {
 position: fixed;
 top: 0;

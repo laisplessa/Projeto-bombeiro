@@ -60,3 +60,9 @@ body{
   .cadastro-button:hover {
     background: #32945e;
   }
+
+  .logo{
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+  }

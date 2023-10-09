@@ -4,8 +4,9 @@ body{
     margin: 0;
     background-color: #E4F1FF;
 }
+
 .botaoatendimento{
-background: #353286;
+background:  #20643f;
 border: 0;
 color: #fff;
 cursor: pointer;
@@ -26,7 +27,7 @@ a{
     color: #fff;
 }
 .botaorecusa{
-    background: #353286;
+    background:  #20643f;
     border: 0;
     color: #fff;
     cursor: pointer;
@@ -43,6 +44,26 @@ a{
     font-size: 130%;
     font-family: 'Roboto Condensed';
     }
+
+    .botaopesquisa{
+    background:  #20643f;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    margin-top: 10vh;
+    display: block;
+    width: 32%;
+    height: 3%;
+    text-align: center;
+    margin-left: 33%;
+    font-size: 130%;
+    font-family: 'Roboto Condensed';
+}
+
 .logoimagem{
 width: 100%;
 height: 5%;

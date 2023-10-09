@@ -30,9 +30,16 @@ if ((!isset($_SESSION['cpf']) == true)) {
     <div class="botaoatendimento">
       <b><a href="ficha.html"> Atendimento </a></b>
     </div>
+
     <!--Botão para acessar formulário de recusa de atendimento-->
     <div class="botaorecusa">
       <b><a href="ficha.html #termorec"> Recusa de Atendimento</a></b>
+    </div>
+  </div>
+
+      <!--Botão para acessar formulário de recusa de atendimento-->
+      <div class="botaopesquisa">
+      <b><a href="#"> Pesquisar ocorrência </a></b>
     </div>
   </div>
 

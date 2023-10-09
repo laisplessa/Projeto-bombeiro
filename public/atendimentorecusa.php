@@ -14,7 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
 <body>
-
+<div class="logo">
+            <img src="logobombeiros.png" height="140" width="140" align="right">
+        </div> 
     <!--Botão para acessar formulário de atendimento-->
     <div class="botaoatendimento">
       <b><a href="ficha.html"> Atendimento </a></b>

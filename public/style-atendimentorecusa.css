@@ -2,7 +2,7 @@ body{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #E4F1FF;
+    background-color: #defdec;
 }
 
 .botaoatendimento{
@@ -14,7 +14,7 @@ padding: 15px 20px;
 text-decoration: none;
 transition: 0.2s;
 border-radius: 8px;
-margin-top: 35vh;
+margin-top: 29vh;
 display: block;
 width: 32%;
 height: 3%;
@@ -23,9 +23,11 @@ margin-left: 33%;
 font-size:  130%;
 font-family: 'Roboto Condensed';
 }
+
 a{
     color: #fff;
 }
+
 .botaorecusa{
     background:  #20643f;
     border: 0;

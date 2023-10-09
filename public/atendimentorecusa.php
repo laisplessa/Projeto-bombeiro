@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-
-session_start();
-
-if ((!isset($_SESSION['cpf']) == true)) {
-  header('location:login.html');
-}
-
-?>
 
 <head>
   <meta charset="UTF-8">
@@ -23,8 +14,6 @@ if ((!isset($_SESSION['cpf']) == true)) {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
 <body>
-  <!-- <img src="logobombeiros.png" alt="descrehfasbhioanvidn" width="10%" height="5%"> -->
-  <div class="principal">
 
     <!--Botão para acessar formulário de atendimento-->
     <div class="botaoatendimento">

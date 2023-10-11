@@ -7,6 +7,105 @@ body {
     /* align-items: center; */
 }
 
+/* fundo total */
+.fundo {
+    padding: 5px 35px;
+    background: #defdec;
+    line-height: 30px;
+}
+
+/* logo bombeiros */
+.logo {
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+}
+
+/* div que esta o menu */
+.divmenu {
+    position: absolute;
+    top: 25px;
+    left: -20px;
+    padding: 5px 5px;
+    background: #E4F1FF;
+    position: fixed;
+    margin-top: -20px;
+    margin-left: 12px;
+}
+
+/* Tamanho da div onde ta o formuário */
+.fundo2 {
+    max-width: 800px;
+    max-height: 90%;
+    background: rgba(160, 161, 161, 0.055);
+    margin: 0px auto 40px auto;
+    border-radius: 5px;
+}
+
+/* Formulário completo */
+.form {
+    padding: 30px;
+}
+
+/* Campo dentro da borda verde */
+.form2 input,
+.form select {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1.5px solid #20643f;
+    background-color: #defdec;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+/* titulo dos campos */
+titulos {
+    font-size: 18px;
+}
+
+/*Cor de fundo formulário ANTIGO DEST2*/
+.destaqueclaro {
+    background-color: #b4f5d1;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+}
+
+/* Tamanho de algumas caixas de textos ANTIGO OA*/
+.tam90 {
+    width: 90%;
+}
+
+/* 2 colunas */
+.duasc {
+    column-gap: 40px;
+    column-count: 2;
+}
+
+/* Horários */
+.hora {
+    width: 37px;
+    margin-left: 2px;
+}
+
+/* Colunas de 3 espaços */
+.coluna3 {
+    column-gap: 20px;
+    column-count: 3;
+}
+
+/* Tamanho caixas de textos */
+.tam75 {
+    width: 75%;
+    align-items: center;
+}
+
+/* Tipo de ocorrência */
+.tipo {
+    font-weight: 400;
+    line-height: 25px;
+    column-count: 3;
+}
 /* Botões do menu suspenso e de enviar */
 .button-group {
     display: flex;
@@ -42,30 +141,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* fundobombeiros */
-.fundo2 {
-    padding: 5px 35px;
-    background: #defdec;
-}
-
-.divlogo{
-    height: 20%;
-    position: absolute;
-    left: 85%;
-}
-
-
-.fundo3{
-    position: absolute;
-    top: 25px;
-    left: -20px;
-    padding: 5px 5px;
-    background: #E4F1FF;
-    position: fixed;
-    margin-top: -20px;
-    margin-left: 12px;
-}
-
 /* texto */
 .text {
     padding: 45px 45px;
@@ -77,12 +152,6 @@ body {
     display: inline;
 }
 
-/* Tipo de ocorrência */
-.causas {
-    font-weight: 400;
-    line-height: 25px;
-    column-count: 3;
-}
 
 .amb {
     font-weight: 400;
@@ -90,19 +159,6 @@ body {
     column-count: 2;
 }
 
-/* Tamanho da div onde ta o formuário */
-.container {
-    max-width: 800px;
-    max-height: 90%;
-    background: rgba(160, 161, 161, 0.055);
-    margin: 0px auto 40px auto;
-    border-radius: 5px;
-}
-
-/* Formulário completo */
-.form {
-    padding: 30px;
-}
 
 /* Nome do checkbox */
 .form label,
@@ -111,16 +167,6 @@ body {
     /* font-weight: bold; */
 }
 
-/* Campo de informações */
-.form-group input,
-.form select {
-    border-radius: 5px;
-    padding: 8px;
-    border: 1.5px solid #20643f;
-    background-color:#defdec;
-    margin-top: 13px;
-    margin-bottom: 13px;
-}
 
 /* Lado ferimento */
 .form select {
@@ -164,10 +210,11 @@ form .form-radio-checkbox {
     min-height: 1.25rem;
     cursor: pointer;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .form-textarea {
@@ -198,18 +245,6 @@ input::-webkit-inner-spin-button {
 a {
     color: white;
     text-decoration: none;
-}
-
-/* Colunas de 3 espaços */
-.dsn {
-    column-gap: 20px;
-    column-count: 3;
-}
-
-/* Colunas da aba vitima era */
-.duplo {
-    column-gap: 40px;
-    column-count: 2;
 }
 
 .c3 {
@@ -271,11 +306,6 @@ td {
     margin-bottom: 13px;
 }
 
-/* tamanho local ferimento */
-input.form-control {
-    width: 90%;
-}
-
 /* tamanho caixa de texto */
 input.sv {
     width: 18%;
@@ -291,11 +321,7 @@ input.sv {
     height: 10px;
 }
 
-/* Tamanho caixas de textos */
-.qt {
-    width: 75%;
-    align-items: center;
-}
+
 
 /* Complemento de seleção auxiliar(aparece do lado ou abaixo) */
 .cmpp {
@@ -317,22 +343,6 @@ input.sv {
     background-color: #ced4da86;
 }
 
-/* Tamanho caixas de textos */
-.oa {
-    width: 90%;
-}
-
-/* fundo */
-.fundo {
-    line-height: 30px;
-    /* background: #FDFDFD; */
-}
-
-/* Horários */
-.insere {
-    width: 37px;
-    margin-left: 2px;
-}
 
 /* Espaço avaliação da cinemática */
 .eit {
@@ -363,11 +373,6 @@ banner {
     border-image: initial;
 }
 
-/* titulo dos campos */
-titulos {
-    font-size: 18px;
-}
-
 /* Espaço para escrever observações */
 .centerr {
     margin-left: 15px;
@@ -375,62 +380,52 @@ titulos {
 }
 
 /*Cor de fundo formulário*/
-.destaque {
+.destaqueescuro {
     background-color: #8de2b3;
 }
 
-/*Cor de fundo formulário*/
-.dest2 {
-    background-color: #b4f5d1;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding-left: 4px;
-}
 
-.logo{
-    block-size: 100px;
-    margin-top: 15px;
-    height: 140px;
-  }
-  
 #menu-container {
-position: fixed;
-top: 0;
-left: -300px; /* Inicialmente escondido à esquerda */
-width: 300px;
-height: 100%;
-background-color: #b4f5d1;
-transition: left 0.3s ease; /* Efeito de deslizamento suave */
-z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* Inicialmente escondido à esquerda */
+    width: 300px;
+    height: 100%;
+    background-color: #b4f5d1;
+    transition: left 0.3s ease;
+    /* Efeito de deslizamento suave */
+    z-index: 1;
 }
 
 /*Botão Menu Suspenso*/
 #menu-button {
-position: absolute;
-top: 20px;
-left: 20px;
-cursor: pointer;
-color: #000000;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #000000;
 }
 
 
 #menu {
-list-style: none;
-padding: 0;
-margin: 9px 0 0 0;
+    list-style: none;
+    padding: 0;
+    margin: 9px 0 0 0;
 }
 
 /*Lista do Menu Suspenso*/
 #menu li {
-padding: 6px;
-text-align: left; /* Alinha o texto à esquerda */
-font-family: 'Calibri';
+    padding: 6px;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    font-family: 'Calibri';
 }
 
 /*Botões do Menu Suspenso*/
 #menu li a {
-color: black;
-text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 @import url(tiny.css) (min-width:300px);

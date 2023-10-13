@@ -158,6 +158,9 @@ form .form-radio-checkbox {
     cursor: pointer;
 }
 
+.input:checked{
+    background-color: #8de2b3;
+}
 .input-checkbox {
     display: inline-block;
     min-width: 1.25rem;
@@ -169,6 +172,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 
 .form-textarea {
     display: grid;

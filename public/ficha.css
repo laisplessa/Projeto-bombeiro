@@ -211,10 +211,10 @@ a {
     column-gap: 40px;
     column-count: 2;
 }
-
+/* 
 .c3 {
-    column-count: 3;
-}
+    column-count: 2;
+} */
 
 /* Tabela */
 .table {
@@ -236,7 +236,9 @@ th,
 td {
     border: 1px solid black;
     border-collapse: collapse;
+    
 }
+    
 
 /* Colunas sinais e sintomas */
 .ss {
@@ -412,7 +414,11 @@ left: 20px;
 cursor: pointer;
 color: #000000;
 }
-
+#menu li:hover {
+    background-color:#84c9a3;
+    transform: scale(1);
+    font-family: 'Calibri';
+}
 
 #menu {
 list-style: none;

@@ -7,6 +7,7 @@
     <title>Ficha de Ocorrência</title>
     <link rel="stylesheet" href="ficha.css">
     <link rel="stylesheet" href="signaturepad/signaturepad.css">
+    
     <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
     <script src="signaturepad/signaturepad.min.js"></script>
     <script>
@@ -881,24 +882,61 @@ menuContainer.style.left = "-300px";
                         <titulos id="localtraumas">Localização dos Traumas</titulos>
                         <br><br>
 
-                        <div class="c3"> 
-                            <div class="dest2">
-                            <img src="braco-direito.png" alt="Minha Figura" height="130px" width="130px"> 
-                            <div>Braço direito </div>
+                              <!-- <div class="dest2"> -->
+                            <!-- <img src="braco-direito.png" alt="Minha Figura" height="130px" width="130px"> 
+                            <div>Braço direito </div> -->
+                            <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Número corpo</th>
+                                    <th>trauma</th>
+                                </tr>
+                                <tr class="destaque">
+                                    <td>
+                                        <input type="text" class="form-control" id="numerocorpo" name="numerocorpo"
+                                        placeholder="Digite o número do local do corpo" required />
+                                    </td>
+        
+                                    <td>
+                                <input type="checkbox" id="fratura" name="fratura" value=""/>Fraturas/Luxações/
+                                Entorses <br>
+                                <input type="checkbox" id="ferimentos" name="ferimentos" value=""/>Ferimentos diversos <br>
+                                <input type="checkbox" id="hemorragias" name="hemorragias" value=""/>Hemorragias  <br>
+                                <input type="checkbox" id="esviceracao" name="esviceracao" value=""/>Esviceração  <br>
+                                <input type="checkbox" id="fab" name="fab" value=""/>F.A.B/ F.A.F  <br>
+                                <input type="checkbox" id="amputacao" name="amputacao" value=""/>Amputação <br>
+                                <input type="checkbox" id="queimadura1" name="queimadura1" value=""/>Queimadura 1° grau  <br>
+                                <input type="checkbox" id="queimadura2" name="queimadura2" value=""/>Queimadura 2° grau  <br>
+                                <input type="checkbox" id="queimadura3" name="queimadura3" value=""/>Queimadura 3° grau  <br> 
+                                    </td>
+                                
+                                    
+                                        
+                                
+                                
+                                </tr>
 
-                            <input type="checkbox" id="bd-queimadura" name="f-cabeca" value=""/>Fraturas/Luxações/
+
+
+                            </table>
+                           
+                            <!-- <input type="checkbox" id="bd-fratura" name="bd-fratura" value=""/>Fraturas/Luxações/
                             Entorses <br>
-                            <input type="checkbox" id="bd-fratura" name="f-cabeca" value=""/>Ferimentos diversos <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Hemorragias  <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Esviceração  <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>F.A.B/ F.A.F  <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Amputação <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Queimadura 1° grau  <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Queimadura 2° grau  <br>
-                            <input type="checkbox" id="f-cabeca" name="f-cabeca" value=""/>Queimadura 3° grau  <br>
-                        </div>
+                            <input type="checkbox" id="bd-ferimentos" name="bd-ferimentos" value=""/>Ferimentos diversos <br>
+                            <input type="checkbox" id="bd-hemorragias" name="bd-hemorragias" value=""/>Hemorragias  <br>
+                            <input type="checkbox" id="bd-esviceracao" name="bd-esviceracao" value=""/>Esviceração  <br>
+                            <input type="checkbox" id="bd-fab" name="bd-fab" value=""/>F.A.B/ F.A.F  <br>
+                            <input type="checkbox" id="bd-amputacao" name="bd-amputacao" value=""/>Amputação <br>
+                            <input type="checkbox" id="bd-queimadura1" name="bd-queimadura1" value=""/>Queimadura 1° grau  <br>
+                            <input type="checkbox" id="bd-queimadura2" name="bd-queimadura2" value=""/>Queimadura 2° grau  <br>
+                            <input type="checkbox" id="bd-queimadura3" name="bd-queimadura3" value=""/>Queimadura 3° grau  <br> -->
+
+                            </div>
                       
-                    </div>
+                    <!-- </div> -->
+                      <br>
+                    
+                
                     </banner>
 
                     <!--Formulário sobre o ferimento-->

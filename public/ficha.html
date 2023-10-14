@@ -124,11 +124,11 @@
                                 <div>Aconteceu outras vezes?</div>
                                 <div>
 
-                                    <input type="radio" class="espass" id="s_aconteceu" name="s_aconteceu"
+                                    <input type="radio" class="espass" id="s_aconteceu" name="outras_vezes"
                                         value="s_aconteceu">
                                     <label for="s_aconteceu">Sim</label>
-                                    <input type="radio" class="espass" id="n_aconteceu" name="n_aconteceu"
-                                        value="n_aconteceu">
+                                    <input type="radio" class="espass" id="n_aconteceu" name="outras_vezes"
+                                        value="n_aconteceu" checked>
                                     <label for="n_aconteceu">Não</label>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
 
                         <div class="destaqueclaro">
                             <div>A quanto tempo aconteceu?</div>
-                            <div><input class="tam90" type="text" id="tempo_aconteceu" name="tempo_aconteceu"
+                            <div><input class="tam90" type="text" id="tempo_aconteceu" name="quanto_tempo"
                                     placeholder="Digite a quanto tempo aconteceu" required />
                             </div>
                         </div>
@@ -146,11 +146,11 @@
 
                                 <div>Possui algum problema de saúde?</div>
 
-                                <input type="radio" id="s_problema_saude" name="s_problema_saude"
+                                <input type="radio" id="s_problema_saude" name="problema_saude"
                                     value="s_problema_saude">
                                 <label for="s_problema_saude">Sim</label>
-                                <input type="radio" id="n_problema_saude" name="n_problema_saude"
-                                    value="n_problema_saude">
+                                <input type="radio" id="n_problema_saude" name="problema_saude"
+                                    value="n_problema_saude" checked>
                                 <label for="n_problema_saude">Não</label>
                             </div>
                         </div>
@@ -166,9 +166,9 @@
                             <div class="simnao">
                                 <div>Faz uso de medicação?</div>
 
-                                <input type="radio" id="s-faz" name="s_faz" value="s_faz">
+                                <input type="radio" id="s-faz" name="medicacao" value="s_faz">
                                 <label for="s_faz">Sim</label>
-                                <input type="radio" id="n_faz" name="n_faz" value="n_faz">
+                                <input type="radio" id="n_faz" name="medicacao" value="n_faz"checked >
                                 <label for="n_faz">Não</label>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
 
                             <input type="radio" id="alergico" name="alergico" value="alergico">
                             <label for="alergico">Sim</label>
-                            <input type="radio" id="alergico" name="nao_alergico" value="alergico">
+                            <input type="radio" id="alergico" name="alergico" value="alergico" checked>
                             <label for="nao_alergico">Não</label>
                         </div>
 
@@ -208,9 +208,9 @@
                             <div class="simnao">
                                 <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
 
-                                <input type="radio" class="espass" id="ingeriu" name="s_ingeriu" value="s_ingeriu">
+                                <input type="radio" class="espass" id="ingeriu" name="ingeriu" value="s_ingeriu">
                                 <label for="s_ingeriu">Sim</label>
-                                <input type="radio" class="espass" id="ingeriu" name="n_ingeriu" value="n_ingeriu">
+                                <input type="radio" class="espass" id="ingeriu" name="ingeriu" value="n_ingeriu"checked>
                                 <label for="n_ingeriu">Não</label>
                             </div>
                         </div>
@@ -315,9 +315,9 @@
                         <div class="simnao">
                             <div>Faz uso de medicação?</div>
 
-                            <input type="radio" class="espass" id="s_faz" name="s_faz" value="s_faz">
+                            <input type="radio" class="espass" id="s_faz" name="faz" value="s_faz">
                             <label for="s_faz">Sim</label>
-                            <input type="radio" class="espass" id="n_faz" name="n_faz" value="n_faz">
+                            <input type="radio" class="espass" id="n_faz" name="faz" value="n_faz" checked>
                             <label for="n_faz">Não</label>
                         </div>
                     </div>
@@ -333,9 +333,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Existe possibilidade de complicações?</div>
-                            <input type="radio" id="s_existe" name="s_existe" value="s_existe">
+                            <input type="radio" id="s_existe" name="existe" value="s_existe">
                             <label for="s_existe">Sim</label>
-                            <input type="radio" id="n_existe" name="n_existe" value="n_existe">
+                            <input type="radio" id="n_existe" name="existe" value="n_existe" checked>
                             <label for="n_existe">Não</label>
                         </div>
                     </div>
@@ -344,9 +344,9 @@
                         <div class="simnao">
                             <div>É o primeiro filho?</div>
 
-                            <input type="radio" id="s_primeiro" name="s_primeiro" value="s_primeiro">
+                            <input type="radio" id="s_primeiro" name="primeiro" value="s_primeiro">
                             <label for="s_primeiro">Sim</label>
-                            <input type="radio" id="s-primeiro" name="n_primeiro" value="n_primeiro">
+                            <input type="radio" id="s-primeiro" name="primeiro" value="n_primeiro" checked>
                             <label for="n_primeiro">Não</label>
                         </div>
                     </div>
@@ -382,9 +382,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Sente pressão na região do quadril ou vontade de evacuar?</div>
-                            <input type="radio" id="s_sente" name="s_sente" value="s_sente">
+                            <input type="radio" id="s_sente" name="sente" value="s_sente">
                             <label for="s_sente">Sim</label>
-                            <input type="radio" id="n_sente" name="n_sente" value="n_sente">
+                            <input type="radio" id="n_sente" name="sente" value="n_sente" checked>
                             <label for="n_sente">Não</label>
                         </div>
                     </div>
@@ -392,9 +392,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Já houve ruptura da bolsa?</div>
-                            <input type="radio" id="s_ruptura" name="s_ruptura" value="s_ruptura">
+                            <input type="radio" id="s_ruptura" name="ruptura" value="s_ruptura">
                             <label for="s_ruptura">Sim</label>
-                            <input type="radio" id="n_ruptura" name="n_ruptura" value="n_ruptura">
+                            <input type="radio" id="n_ruptura" name="ruptura" value="n_ruptura" checked>
                             <label for="n_ruptura">Não</label>
                         </div>
                     </div>
@@ -402,9 +402,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Foi feito inspeção visual?</div>
-                            <input type="radio" id="s_inspecao" name="s_inspecao" value="s_inspecao">
+                            <input type="radio" id="s_inspecao" name="inspecao" value="s_inspecao">
                             <label for="s_inspecao">Sim</label>
-                            <input type="radio" id="n_inspecao" name="n_inspecao" value="n_inspecao">
+                            <input type="radio" id="n_inspecao" name="inspecao" value="n_inspecao" checked>
                             <label for="n_inspecao">Não</label>
                         </div>
                     </div>
@@ -413,9 +413,9 @@
                         <div class="simnao">
                             <div class="simnao">
                                 <div>Parto realizado?</div>
-                                <input type="radio" id="s_parto" name="s_parto" value="s_parto">
+                                <input type="radio" id="s_parto" name="parto" value="s_parto">
                                 <label for="s_parto">Sim</label>
-                                <input type="radio" id="n_parto" name="n_parto" value="n_parto">
+                                <input type="radio" id="n_parto" name="parto" value="n_parto" checked>
                                 <label for="n_parto">Não</label>
                             </div>
                             <div class="simnao">
@@ -429,9 +429,9 @@
                         <div class="simnao">
                             <div class="simnao">
                                 <div>Sexo do bebê</div>
-                                <input class="form-check-input" type="radio" name="sexo_bebef" id="sexo_bebef">
+                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebef">
                                 <label class="form-check-label" for="sexo_bebef">Fem</label>
-                                <input class="form-check-input" type="radio" name="sexo_bebem" id="sexo_bebem">
+                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebem">
                                 <label class="form-check-label" for="sexo_bebem">Mas</label>
                             </div>
                         </div>
@@ -832,7 +832,7 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="radio" id="anormal" name="anormal" value="anormal">
+                            <input type="radio" id="anormal" name="normal" value="anormal">
                             <label for="anormal">Anormal</label>
                             <input type="radio" id="normal" name="normal" value="normal">
                             <label for="normal">Normal</label>
@@ -1740,17 +1740,17 @@
                     <div>
                         <div class="coluna3">
                             <div class="destaqueclaro">
-                                <input type="radio" id="deitada" name="deitada" value="deitada">
+                                <input type="radio" id="deitada" name="condução" value="deitada">
                                 <label for="deitada">Deitada</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="radio" id="semi_deitada" name="semi_deitada" value="semi_deitada">
+                                <input type="radio" id="semi_deitada" name="condução" value="semi_deitada">
                                 <label for="semi_deitada">Semi-sentada</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="radio" id="sentada" name="sentada" value="sentada">
+                                <input type="radio" id="sentada" name="condução" value="sentada">
                                 <label for="sentada">Sentada</label>
                             </div>
                         </div>
@@ -1766,21 +1766,21 @@
 
                             <div class="destaqueclaro">
                                 <div class="emoji">&#128534;<br>
-                                    <input type="radio" id="critico" name="critico" value="critico">
+                                    <input type="radio" id="critico" name="decisao" value="critico">
                                     <label for="critico">Crítico</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
                                 <div class="emoji">&#128577;<br>
-                                    <input type="radio" id="instavel" name="instavel" value="instavel">
+                                    <input type="radio" id="instavel" name="decisao" value="instavel">
                                     <label for="instavel">Instável</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
                                 <div class="emoji">&#128528;<br>
-                                    <input type="radio" id="potencialmente_instavel" name="potencialmente_instavel"
+                                    <input type="radio" id="potencialmente_instavel" name="decisao"
                                         value="potencialmente_instavel">
                                     <label for="potencialmente_instavel">Potencialmente instável</label>
                                 </div>
@@ -1788,7 +1788,7 @@
 
                             <div class="destaqueclaro">
                                 <div class="emoji">&#128578;<br>
-                                    <input type="radio" id="estavel" name="estavel" value="estavel">
+                                    <input type="radio" id="estavel" name="decisao" value="estavel">
                                     <label for="estavel">Estável</label>
                                 </div>
                             </div>

@@ -335,13 +335,6 @@ a {
     text-decoration: none;
 }
 
-
-/* Tabela */
-.cell {
-    flex: 1;
-    padding: 5px;
-}
-
 /* tamanho local ferimento */
 input.form-control {
     width: 90%;

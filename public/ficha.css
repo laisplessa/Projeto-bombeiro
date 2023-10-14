@@ -7,6 +7,10 @@ body {
     /* align-items: center; */
 }
 
+.imagem{
+    align-items: center;
+}
+
 /* fundo */
 .fundo {
     padding: 5px 35px;

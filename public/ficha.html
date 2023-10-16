@@ -240,8 +240,8 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <label for="sexo">Sexo:</label>
-                                <input name="radios" type="radio" id="sexo_feminino">Feminino
-                                <input name="radios" type="radio" id="sexo_masculino" checked>Masculino
+                                <input name="sexo_paciente" type="radio" id="sexo_feminino">Feminino
+                                <input name="sexo_paciente" type="radio" id="sexo_masculino" checked>Masculino
                             </div>
                         </div>
                     </div>
@@ -315,9 +315,9 @@
                         <div class="simnao">
                             <div>Faz uso de medicação?</div>
 
-                            <input type="radio" class="espass" id="s_faz" name="faz" value="s_faz">
+                            <input type="radio" class="espass" id="s_faz" name="medicacao_gestacao" value="s_faz">
                             <label for="s_faz">Sim</label>
-                            <input type="radio" class="espass" id="n_faz" name="faz" value="n_faz" checked>
+                            <input type="radio" class="espass" id="n_faz" name="medicacao_gestacao" value="n_faz" checked>
                             <label for="n_faz">Não</label>
                         </div>
                     </div>
@@ -333,9 +333,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Existe possibilidade de complicações?</div>
-                            <input type="radio" id="s_existe" name="existe" value="s_existe">
+                            <input type="radio" id="s_existe" name="complicacoes" value="s_existe">
                             <label for="s_existe">Sim</label>
-                            <input type="radio" id="n_existe" name="existe" value="n_existe" checked>
+                            <input type="radio" id="n_existe" name="complicacoes" value="n_existe" checked>
                             <label for="n_existe">Não</label>
                         </div>
                     </div>
@@ -382,9 +382,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Sente pressão na região do quadril ou vontade de evacuar?</div>
-                            <input type="radio" id="s_sente" name="sente" value="s_sente">
+                            <input type="radio" id="s_sente" name="pressao_quadril" value="s_sente">
                             <label for="s_sente">Sim</label>
-                            <input type="radio" id="n_sente" name="sente" value="n_sente" checked>
+                            <input type="radio" id="n_sente" name="pressao_quadril" value="n_sente" checked>
                             <label for="n_sente">Não</label>
                         </div>
                     </div>
@@ -556,9 +556,9 @@
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="tipo_ocorrencia" name="outros_tipos" value="outros_tipos">
+                                <input type="checkbox" id="tipo_ocorrencia" name="outros" value="outros_tipos">
                                 <label for="outros_tipos"></label>
-                                <input class="tam75" type="text" id="nome_bebe" name="nome_bebe" placeholder="Digite"
+                                <input class="tam75" type="text" id="outros_texto" name="outros_texto" placeholder="Digite"
                                     required />
                             </div>
                         </div>
@@ -591,29 +591,29 @@
                                 </td>
 
                                 <td><label for="espontanea">Espontânea</label>
-                                    <input type="checkbox" id="espontanea" name="espontanea" value="espontanea">4
+                                    <input type="checkbox" id="espontanea" name="espontanea_menor" value="espontanea">4
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="comando_verbal">Comando Verbal</label>
-                                    <input type="checkbox" id="comando_verbal" name="comando_verbal"
+                                    <input type="checkbox" id="comando_verbal" name="comando"
                                         value="comando_verbal">3
                                 </td>
 
                                 <td><label for="comando_verbal">Comando Verbal</label>
-                                    <input type="checkbox" id="comando_verbal" name="comando_verbal"
+                                    <input type="checkbox" id="comando_verbal" name="comando_menor"
                                         value="comando_verbal">3
                                 </td>
                             </tr>
 
                             <tr class="destaque">
                                 <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
-                                    <input type="checkbox" id="estimulo_doloroso" name="estimulo_doloroso"
+                                    <input type="checkbox" id="estimulo_doloroso" name="estimulo"
                                         value="estimulo_doloroso">2
                                 </td>
                                 <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
-                                    <input type="checkbox" id="estimulo_doloroso" name="estimulo_doloroso"
+                                    <input type="checkbox" id="estimulo_doloroso" name="estimulo_menor"
                                         value="estimulo_doloroso">2
                                 </td>
                             </tr>
@@ -832,9 +832,9 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="radio" id="anormal" name="normal" value="anormal">
+                            <input type="radio" id="anormal" name="anormal_normal" value="anormal">
                             <label for="anormal">Anormal</label>
-                            <input type="radio" id="normal" name="normal" value="normal">
+                            <input type="radio" id="normal" name="anormal_normal" value="normal">
                             <label for="normal">Normal</label>
                         </div>
                     </div>
@@ -857,8 +857,8 @@
                             <label for="respiratorio">Respiratório:</label> <br>
                             <select class="problema" name="respiratorio">
                                 <option value=""></option>
-                                <option name="DPC">DPOC</option>
-                                <option name="inalacao_fumaca">Inalação Fumaça</option>
+                                <option value="DPC">DPOC</option>
+                                <option value="inalacao_fumaca">Inalação Fumaça</option>
                             </select>
                         </div>
 
@@ -867,8 +867,8 @@
                             <label for="diabetes">Diabetes:</label> <br>
                             <select class="problema" name="diabetes">
                                 <option value=""></option>
-                                <option name="hiperglicemia">Hiperglicemia</option>
-                                <option name="hipoglicemia">Hipoglicemia</option>
+                                <option value="hiperglicemia">Hiperglicemia</option>
+                                <option value="hipoglicemia">Hipoglicemia</option>
                             </select>
                         </div>
 
@@ -877,9 +877,9 @@
                             <label for="obstetrico">Obstétrico:</label><br>
                             <select class="problema" name="obstetrico">
                                 <option value=""></option>
-                                <option name="parto_emergencial">Parto Emergencial</option>
-                                <option name="gestante">Gestante</option>
-                                <option name="hemor_excessiva">Hemor. Excessiva</option>
+                                <option value="parto_emergencial">Parto Emergencial</option>
+                                <option value="gestante">Gestante</option>
+                                <option value="hemor_excessiva">Hemor. Excessiva</option>
                             </select>
                         </div>
 
@@ -888,13 +888,13 @@
                             <label for="transporte">Transporte:</label><br>
                             <select class="problema" name="transporte">
                                 <option value=""></option>
-                                <option name="aereo">Aéreo</option>
-                                <option name="clinico">Clínico</option>
-                                <option name="emergencial">Emergencial</option>
-                                <option name="pos_trauma">Pós-trauma</option>
-                                <option name="samu">Samu</option>
-                                <option name="sem_remocao">Sem remoção</option>
-                                <option name="outros">Outros</option>
+                                <option value="aereo">Aéreo</option>
+                                <option value="clinico">Clínico</option>
+                                <option value="emergencial">Emergencial</option>
+                                <option value="pos_trauma">Pós-trauma</option>
+                                <option value="samu">Samu</option>
+                                <option value="sem_remocao">Sem remoção</option>
+                                <option value="outros">Outros</option>
                             </select>
                         </div>
 
@@ -934,7 +934,7 @@
                                 <td>
                                     <input type="checkbox" id="fratura" name="fratura" value="" />Fraturas/Luxações/
                                     Entorses <br>
-                                    <input type="checkbox" id="ferimentos" name="ferimentos" value="" />Ferimentos
+                                    <input type="checkbox" id="ferimento" name="ferimento" value="" />Ferimentos
                                     diversos <br>
                                     <input type="checkbox" id="hemorragias" name="hemorragias" value="" />Hemorragias
                                     <br>
@@ -960,7 +960,7 @@
                             <td>
                                 <input type="checkbox" id="fratura" name="fratura" value="" />Fraturas/Luxações/
                                 Entorses <br>
-                                <input type="checkbox" id="ferimentos" name="ferimentos" value="" />Ferimentos diversos
+                                <input type="checkbox" id="ferimento" name="ferimento" value="" />Ferimentos diversos
                                 <br>
                                 <input type="checkbox" id="hemorragias" name="hemorragias" value="" />Hemorragias <br>
                                 <input type="checkbox" id="esviceracao" name="esviceracao" value="" />Esviceração <br>
@@ -984,7 +984,7 @@
                                 <td>
                                     <input type="checkbox" id="fratura" name="fratura" value="" />Fraturas/Luxações/
                                     Entorses <br>
-                                    <input type="checkbox" id="ferimentos" name="ferimentos" value="" />Ferimentos
+                                    <input type="checkbox" id="ferimento" name="ferimento" value="" />Ferimentos
                                     diversos <br>
                                     <input type="checkbox" id="hemorragias" name="hemorragias" value="" />Hemorragias
                                     <br>
@@ -1032,29 +1032,29 @@
                                 </td>
 
                                 <td>
-                                    <select name="lado">
+                                    <select name="lado_ferimento">
                                         <option value=""></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
+                                        <option value="direito">Direito</option>
+                                        <option value="esquerdo">Esquerdo</option>
                                     </select>
                                 </td>
 
                                 <td>
-                                    <select name="face">
+                                    <select name="face_ferimento">
                                         <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
                                     </select>
                                 </td>
 
                                 <td>
-                                    <select name="tipo">
+                                    <select name="tipo_ferimento">
                                         <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
                                     </select>
                                 </td>
                             </tr>
@@ -1068,27 +1068,95 @@
                                 <td>
                                     <select name="lado">
                                         <option value=""></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
+                                        <option value="direito">Direito</option>
+                                        <option value="esquerdo">Esquerdo</option>
                                     </select>
                                 </td>
 
                                 <td>
                                     <select name="face">
                                         <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
                                     </select>
                                 </td>
 
                                 <td>
                                     <select name="tipo">
                                         <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr class="destaque">
+                                <td>
+                                    <input type="text" class="form-control" id="ferimentos" name="local_ferimento"
+                                        placeholder="Digite o local do ferimento" required />
+                                </td>
+
+                                <td>
+                                    <select name="lado">
+                                        <option value=""></option>
+                                        <option value="direito">Direito</option>
+                                        <option value="esquerdo">Esquerdo</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select name="face">
+                                        <option value=""></option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select name="tipo">
+                                        <option value=""></option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" id="ferimentos" name="local_ferimento"
+                                        placeholder="Digite o local do ferimento" required />
+                                </td>
+
+                                <td>
+                                    <select name="lado">
+                                        <option value=""></option>
+                                        <option value="direito">Direito</option>
+                                        <option value="esquerdo">Esquerdo</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select name="face">
+                                        <option value=""></option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select name="tipo">
+                                        <option value=""></option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
                                     </select>
                                 </td>
                             </tr>
@@ -1110,87 +1178,19 @@
                                 <td>
                                     <select name="face">
                                         <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
                                     </select>
                                 </td>
 
                                 <td>
                                     <select name="tipo">
                                         <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="text" class="form-control" id="ferimentos" name="local_ferimento"
-                                        placeholder="Digite o local do ferimento" required />
-                                </td>
-
-                                <td>
-                                    <select name="lado">
-                                        <option value=""></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face">
-                                        <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo">
-                                        <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr class="destaque">
-                                <td>
-                                    <input type="text" class="form-control" id="ferimentos" name="local_ferimento"
-                                        placeholder="Digite o local do ferimento" required />
-                                </td>
-
-                                <td>
-                                    <select name="lado">
-                                        <option value=""></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face">
-                                        <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo">
-                                        <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
                                     </select>
                                 </td>
                             </tr>
@@ -1203,27 +1203,27 @@
                             <td>
                                 <select name="lado">
                                     <option value=""></option>
-                                    <option name="direito">Direito</option>
-                                    <option name="esquerdo">Esquerdo</option>
+                                    <option value="direito">Direito</option>
+                                    <option value="esquerdo">Esquerdo</option>
                                 </select>
                             </td>
 
                             <td>
                                 <select name="face">
                                     <option value=""></option>
-                                    <option name="frontal">Frontal</option>
-                                    <option name="posterior">Posterior</option>
+                                    <option value="frontal">Frontal</option>
+                                    <option value="posterior">Posterior</option>
                                 </select>
                             </td>
 
                             <td>
                                 <select name="tipo">
                                     <option value=""></option>
-                                    <option name="ferimento">Ferimento</option>
-                                    <option name="fratura">Fraturas</option>
-                                    <option name="entorses">Entorses</option>
-                                    <option name="luxacao">Luxação</option>
-                                    <option name="contusao">Contusão</option>
+                                    <option value="ferimento">Ferimento</option>
+                                    <option value="fratura">Fraturas</option>
+                                    <option value="entorses">Entorses</option>
+                                    <option value="luxacao">Luxação</option>
+                                    <option value="contusao">Contusão</option>
                                 </select>
                             </td>
                             </tr>
@@ -1237,27 +1237,27 @@
                                 <td>
                                     <select name="lado">
                                         <option value=""></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
+                                        <option value="direito">Direito</option>
+                                        <option value="esquerdo">Esquerdo</option>
                                     </select>
                                 </td>
 
                                 <td>
                                     <select name="face">
                                         <option value=""></option>
-                                        <option name="frontal">Frontal</option>
-                                        <option name="posterior">Posterior</option>
+                                        <option value="frontal">Frontal</option>
+                                        <option value="posterior">Posterior</option>
                                     </select>
                                 </td>
 
                                 <td>
                                     <select name="tipo">
                                         <option value=""></option>
-                                        <option name="ferimento">Ferimento</option>
-                                        <option name="fratura">Fraturas</option>
-                                        <option name="entorses">Entorses</option>
-                                        <option name="luxacao">Luxação</option>
-                                        <option name="contusao">Contusão</option>
+                                        <option value="ferimento">Ferimento</option>
+                                        <option value="fratura">Fraturas</option>
+                                        <option value="entorses">Entorses</option>
+                                        <option value="luxacao">Luxação</option>
+                                        <option value="contusao">Contusão</option>
                                     </select>
                                 </td>
                             </tr>
@@ -1652,9 +1652,9 @@
                                 <label for="taquipneia">Taquipnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="taquicarfia" name="taquicarfia"
-                                    value="taquicarfia">
-                                <label for="taquicarfia">Taquicarfia</label>
+                            <div class="destaqueclaro"><input type="checkbox" id="taquicardia" name="taquicardia"
+                                    value="taquicardia">
+                                <label for="taquicardia">Taquicardia</label>
                             </div>
 
                             <div class="destaqueclaro"><input type="checkbox" id="tontura" name="tontura"
@@ -1740,17 +1740,17 @@
                     <div>
                         <div class="coluna3">
                             <div class="destaqueclaro">
-                                <input type="radio" id="deitada" name="condução" value="deitada">
+                                <input type="radio" id="deitada" name="conducao" value="deitada">
                                 <label for="deitada">Deitada</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="radio" id="semi_deitada" name="condução" value="semi_deitada">
+                                <input type="radio" id="semi_deitada" name="conducao" value="semi_deitada">
                                 <label for="semi_deitada">Semi-sentada</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="radio" id="sentada" name="condução" value="sentada">
+                                <input type="radio" id="sentada" name="conducao" value="sentada">
                                 <label for="sentada">Sentada</label>
                             </div>
                         </div>
@@ -2066,7 +2066,7 @@
                             <input type="checkbox" id="outros_procedimentos" name="outros_procedimentos"
                                 value="outros_procedimentos">
 
-                            <input type="text" id="outros_procedimentos" name="outros_procedimentos"
+                            <input type="text" id="outrosp_texto" name="outrosp_texto"
                                 placeholder="Digite" required />
                         </div>
                     </div>
@@ -2380,7 +2380,7 @@
     <banner>
         <titulos id="observ">Observações Importantes</titulos>
         <div class="escrever">
-            <input type="text" class="objetos" id="objetos-recolhidos" name="objetos-recolhidos"
+            <input type="text" class="objetos" id="objetos_recolhidos" name="objetos_recolhidos"
                 placeholder="Digite os objetos recolhidos" required />
         </div>
     </banner>

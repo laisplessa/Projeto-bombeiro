@@ -403,13 +403,8 @@ $fibra = $_POST["fibra"];
 $mensagemErro = "";
 
 if ($oqAconteceu == null) {
-  $mensagemErro = "O campo Outro campo é obrigatório \n";
+  $mensagemErro = "O campo n é obrigatório \n";
 }
-
-if ($outrasVezes == null) {
-    $mensagemErro = "O campo aconteceu outras vezes é obrigatório \n";
-}
-
 
 if ($mensagemErro != "") {
   $data = array("erro" => true, "mensagem" => "Dados inválidos: " + $mensagemErro);
@@ -419,7 +414,13 @@ if ($mensagemErro != "") {
 
 } else {
 
-    $sql = "INSERT INTO usuario (CAMPO DA TABELA QUE EU QUERO, cpf, senha) VALUES ('$VARIAVEL_QUE_EU_QUISER', '$cpf', '$senha')";
+    // $sql = "INSERT INTO ficha (CAMPO DA TABELA QUE EU QUERO) VALUES ('$VARIAVEL_QUE_EU_QUISER')";
+    $sql = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu)
+    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblema', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
+
+    $sql = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu)
+    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblema', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
+
     $run_query = mysqli_query($con, $sql);
 
 }

@@ -9,16 +9,16 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 session_start();
 
 $oqAconteceu = $_POST["oq_aconteceu"];
-$outrasVezes = $_POST["outras_vezes"];
+$outrasVezes = ($_POST['outrasVezes'] === 'sim') ? true : false;
 $quantoTempo = $_POST["quanto_tempo"];
-$problemaSaude = $_POST["problema_saude"];
+$problemaSaude = ($_POST['problemaSaude'] === 'sim') ? true : false;
 $quaisProblemas = $_POST["quais_problemas"];
-$medicacao = $_POST["medicacao"];
-$horaMedicacao  = $_POST["hora_medicacao"];
+$medicacao = ($_POST['medicacao'] === 'sim') ? true : false;
+$horaMedicacao = $_POST["hora_medicacao"];
 $quaisMedicacoes = $_POST["quais_medicacoes"];
-$alergico = $_POST["alergico"];
+$alergico = ($_POST['alergico'] === 'sim') ? true : false;
 $alergia = $_POST["alergia"];
-$ingeriu = $_POST["ingeriu"];
+$ingeriu = ($_POST["ingeriu"] === 'sim') ? true : false;
 $ingeriuHorario = $_POST["ingeriu_horario"];
 
 $data = $_POST["data"];
@@ -26,82 +26,82 @@ $sexoPaciente = $_POST["sexo_paciente"];
 $nomeHospital = $_POST["nome_hospital"];
 $nomePaciente = $_POST["nome_paciente"];
 $idade = $_POST["idade"];
-$telefonePaciente  = $_POST["telefone_paciente"];
+$telefonePaciente = $_POST["telefone_paciente"];
 $rgCpf = $_POST["rg_cpf"];
 $nomeAcompanhante = $_POST["nome_acompanhante"];
 $idadeAcompanhante = $_POST["idade_acompanhante"];
 $localOcorrencia = $_POST["local_ocorrencia"];
 
 $periodoGestacao = $_POST["periodo_gestacao"];
-$medicacaoGestacao = $_POST["medicacao_gestacao"];
+$medicacaoGestacao = ($_POST['medicacaoGestacao'] === 'sim') ? true : false;
 $nomeMedico = $_POST["nome_medico"];
-$complicacoes = $_POST["complicacoes"];
-$primeiro_filho = $_POST["primeiro"];
-$quantosFilhos  = $_POST["quantos_filhos"];
+$complicacoes = ($_POST['complicacoes'] === 'sim') ? true : false;
+$primeiroFilho = ($_POST['primeiroFilho'] === 'sim') ? true : false;
+$quantosFilhos = $_POST["quantos_filhos"];
 $inicioContracao = $_POST["inicio_contracao"];
-$tempoContracao = $_POST["tempo_contracao"];
+$duracaoContracao = $_POST["duracao_contracao"];
 $intervaloContracao = $_POST["intervalo_contracao"];
-$sentePressao = $_POST["pressao_quadril"];
-$rupturaBolsa = $_POST["ruptura"];
-$inspecaoVisual = $_POST["inspecao"];
-$partoRealizado = $_POST["parto"];
+$sentePressao = ($_POST['pressao_quadril'] === 'sim') ? true : false;
+$rupturaBolsa = ($_POST['ruptura'] === 'sim') ? true : false;
+$inspecaoVisual = ($_POST['inspecao'] === 'sim') ? true : false;
+$partoRealizado = ($_POST['parto'] === 'sim') ? true : false;
 $horaNascimento = $_POST["hora_nascimento"];
 $sexoBebe = $_POST["sexo_bebe"];
 $nomeBebe = $_POST["nome_bebe"];
 
-$causadoAnimais = $_POST["causado_animais"];
-$meioTransporte = $_POST["meio_transporte"];
-$desmoronamentoDeslizamento = $_POST["desmoronamento_deslizamento"];
-$emergenciaMedica = $_POST["emergencia_medica"];
-$queda2m = $_POST["queda_2m"];
-$tentativaSuicidio  = $_POST["tentativa_suicidio"];
-$quedaPropriaAltura = $_POST["queda_propriaAltura"];
-$afogamento = $_POST["afogamento"];
-$agressao = $_POST["agressao"];
-$atropelamento = $_POST["atropelamento"];
-$choqueEletrico = $_POST["choque_eletrico"];
-$desabamento = $_POST["desabamento"];
-$domestico = $_POST["domestico"];
-$esportivo = $_POST["esportivo"];
-$intoxicacao = $_POST["intoxicacao"];
-$quedaBicicleta = $_POST["queda_bicicleta"];
-$quedaMoto = $_POST["queda_moto"];
-$quedaNivel = $_POST["queda_nivel"];
-$trabalho = $_POST["trabalho"];
-$transferencia = $_POST["transferencia"];
-$outros = $_POST["outros"];
+$causadoAnimais = ($_POST['causado_animais'] === 'true') ? 1 : 0;
+$meioTransporte = ($_POST['meio_transporte'] === 'true') ? 1 : 0;
+$desmoronamentoDeslizamento = ($_POST['desmoronamento_deslizamento'] === 'true') ? 1 : 0;
+$emergenciaMedica = ($_POST['emergencia_medica'] === 'true') ? 1 : 0;
+$queda2m = ($_POST['queda_2m'] === 'true') ? 1 : 0;
+$tentativaSuicidio = ($_POST['tentativa_suicidio'] === 'true') ? 1 : 0;
+$quedaPropriaAltura = ($_POST['queda_propriaAltura'] === 'true') ? 1 : 0;
+$afogamento = ($_POST['afogamento'] === 'true') ? 1 : 0;
+$agressao = ($_POST['agressao'] === 'true') ? 1 : 0;
+$atropelamento = ($_POST['atropelamento'] === 'true') ? 1 : 0;
+$choqueEletrico = ($_POST['choque_eletrico'] === 'true') ? 1 : 0;
+$desabamento = ($_POST['desabamento'] === 'true') ? 1 : 0;
+$domestico = ($_POST['domestico'] === 'true') ? 1 : 0;
+$esportivo = ($_POST['esportivo'] === 'true') ? 1 : 0;
+$intoxicacao = ($_POST['intoxicacao'] === 'true') ? 1 : 0;
+$quedaBicicleta = ($_POST['queda_bicicleta'] === 'true') ? 1 : 0;
+$quedaMoto = ($_POST['queda_moto'] === 'true') ? 1 : 0;
+$quedaNivel = ($_POST['queda_nivel'] === 'true') ? 1 : 0;
+$trabalho = ($_POST['trabalho'] === 'true') ? 1 : 0;
+$transferencia = ($_POST['transferencia'] === 'true') ? 1 : 0;
+$outros = ($_POST['outros'] === 'true') ? 1 : 0;
 $outrosTexto = $_POST["outros_texto"];
 
-$espontanea = $_POST["espontanea"];
-$espontaneaMenor = $_POST["espontanea_menor"];
-$comando = $_POST["comando"];
-$comandoMenor = $_POST["comando_menor"];
-$estimulo = $_POST["estimulo"];
-$estimuloMenor = $_POST["estimulo_menor"];
-$nenhuma = $_POST["nenhuma"];
-$nenhumaMenor = $_POST["nenhuma_menor"];
-$orientado = $_POST["orientado"];
-$pfApropriadas = $_POST["pf_apropriadas"];
-$confuso = $_POST["confuso"];
-$palavrasInapropriadas = $_POST["palavras_inapropriadas"];
-$inapropriadasMenor = $_POST["inapropriadas_menor"];
-$choroGrito = $_POST["choro_grito"];
-$pIncompreensiveis = $_POST["p_incompreensiveis"];
-$sIncompreensiveis = $_POST["s_incompreensiveis"];
-$nenhumaMenor2 = $_POST["nenhuma_menor2"];
-$nenhumaResposta = $_POST["nenhuma_resposta"];
-$oComandos = $_POST["o_comandos"];
-$oProtamente = $_POST["o_protamente"];
-$localizaMenor = $_POST["localiza_menor"];
-$localiza = $_POST["localiza"];
-$movimentoRetirada = $_POST["movimento_retirada"];
-$retiradaEstimulado = $_POST["retirada_estimulado"];
-$flexaoAnormal = $_POST["flexao_anormal"];
-$flexaoMenor = $_POST["flexao_menor"];
-$extensaoAnormal = $_POST["extensao_anormal"];
-$extensaoMenor = $_POST["extensao_menor"];
-$nenhuma3 = $_POST["nenhuma_3"];
-$ausencia = $_POST["ausencia"];
+$espontanea = ($_POST['espontanea'] === 'true') ? 1 : 0;
+$espontaneaMenor = ($_POST['espontanea_menor'] === 'true') ? 1 : 0;
+$comando = ($_POST['comando'] === 'true') ? 1 : 0;
+$comandoMenor = ($_POST['comando_menor'] === 'true') ? 1 : 0;
+$estimulo = ($_POST['estimulo'] === 'true') ? 1 : 0;
+$estimuloMenor = ($_POST['estimulo_menor'] === 'true') ? 1 : 0;
+$nenhuma = ($_POST['nenhuma'] === 'true') ? 1 : 0;
+$nenhumaMenor = ($_POST['nenhuma_menor'] === 'true') ? 1 : 0;
+$orientado = ($_POST['orientado'] === 'true') ? 1 : 0;
+$pfApropriadas = ($_POST['pf_apropriadas'] === 'true') ? 1 : 0;
+$confuso = ($_POST['confuso'] === 'true') ? 1 : 0;
+$palavrasInapropriadas = ($_POST['palavras_inapropriadas'] === 'true') ? 1 : 0;
+$inapropriadasMenor = ($_POST['inapropriadas_menor'] === 'true') ? 1 : 0;
+$choroGrito = ($_POST['choro_grito'] === 'true') ? 1 : 0;
+$pIncompreensiveis = ($_POST['p_incompreensiveis'] === 'true') ? 1 : 0;
+$sIncompreensiveis = ($_POST['s_incompreensiveis'] === 'true') ? 1 : 0;
+$nenhumaMenor2 = ($_POST['nenhuma_menor2'] === 'true') ? 1 : 0;
+$nenhumaResposta = ($_POST['nenhuma_resposta'] === 'true') ? 1 : 0;
+$oComandos = ($_POST['o_comandos'] === 'true') ? 1 : 0;
+$oProtamente = ($_POST['o_protamente'] === 'true') ? 1 : 0;
+$localizaMenor = ($_POST['localiza_menor'] === 'true') ? 1 : 0;
+$localiza = ($_POST['localiza'] === 'true') ? 1 : 0;
+$movimentoRetirada = ($_POST['movimento_retirada'] === 'true') ? 1 : 0;
+$retiradaEstimulado = ($_POST['retirada_estimulado'] === 'true') ? 1 : 0;
+$flexaoAnormal = ($_POST['flexao_anormal'] === 'true') ? 1 : 0;
+$flexaoMenor = ($_POST['flexao_menor'] === 'true') ? 1 : 0;
+$extensaoAnormal = ($_POST['extensao_anormal'] === 'true') ? 1 : 0;
+$extensaoMenor = ($_POST['extensao_menor'] === 'true') ? 1 : 0;
+$nenhuma3 = ($_POST['nenhuma_3'] === 'true') ? 1 : 0;
+$ausencia = ($_POST['ausencia'] === 'true') ? 1 : 0;
 $total = $_POST["total"];
 $totalMenor = $_POST["total_menor"];
 
@@ -113,189 +113,199 @@ $temperatura = $_POST["temperatura"];
 $perfusao = $_POST["perfusao"];
 $anormalNormal = $_POST["anormal_normal"];
 
-$psiquiatrico = $_POST["psiquiatrico"];
-$respiratorio = $_POST["respiratorio"];
-$diabetes = $_POST["diabetes"];
-$obstetrico = $_POST["obstetrico"];
-$transporte = $_POST["transporte"];
-$outrosProblemas = $_POST["outros_problemas"];
-$outrosText = $_POST["outros_text"];
+$psiquiatrico = ($_POST['psiquiatrico'] === 'true') ? 1 : 0;
+$respiratorio = ($_POST['respiratorio'] === 'true') ? 1 : 0;
+$respiratorioOpcoes = $_POST['respiratorio_opcoes'];
+$diabetes = ($_POST['diabetes'] === 'true') ? 1 : 0;
+$diabetesOpcoes = $_POST['diabetes_opcoes'];
+$obstetrico = ($_POST['obstetrico'] === 'true') ? 1 : 0;
+$obstetricoOpcoes = $_POST['obstetrico_opcoes'];
+$transporte = ($_POST['transporte'] === 'true') ? 1 : 0;
+$transporteOpcoes = $_POST['transporte_opcoes'];
+$outrosProblemas = ($_POST['outros_problemas'] === 'true') ? 1 : 0;
+$outrosText = $_POST['outros_text'];
 
 $numeroCorpo = $_POST["numerocorpo"];
-$fratura = $_POST["fratura"];
-$ferimento = $_POST["ferimento"];
-$hemorragias = $_POST["hemorragias"];
-$esviceracao = $_POST["esviceracao"];
-$fab = $_POST["fab"];
-$amputacao = $_POST["amputacao"];
-$queimadura1 = $_POST["queimadura1"];
-$queimadura2 = $_POST["queimadura2"];
-$queimadura3 = $_POST["queimadura3"];
+$fratura = ($_POST['fratura'] === 'true') ? 1 : 0;
+$ferimento = ($_POST['ferimento'] === 'true') ? 1 : 0;
+$hemorragias = ($_POST['hemorragias'] === 'true') ? 1 : 0;
+$esviceracao = ($_POST['esviceracao'] === 'true') ? 1 : 0;
+$fab = ($_POST['fab'] === 'true') ? 1 : 0;
+$amputacao = ($_POST['amputacao'] === 'true') ? 1 : 0;
+$queimadura1 = ($_POST['queimadura1'] === 'true') ? 1 : 0;
+$queimadura2 = ($_POST['queimadura2'] === 'true') ? 1 : 0;
+$queimadura3 = ($_POST['queimadura3'] === 'true') ? 1 : 0;
 
 $ferimentos = $_POST["ferimentos"];
 $ladoFerimento = $_POST["lado_ferimento"];
 $faceFerimento = $_POST["face_ferimento"];
 $tipoFerimento = $_POST["tipo_ferimento"];
 
-$qcabeca1grau = $_POST["qcabeca_1grau"];
-$qcabeca2grau = $_POST["qcabeca_2grau"];
-$qcabeca3grau = $_POST["qcabeca_3grau"];
-$qcabeca4grau = $_POST["qcabeca_4grau"];
-$qpescoco1grau = $_POST["qpescoco_1grau"];
-$qpescoco2grau = $_POST["qpescoco_2grau"];
-$qpescoco3grau = $_POST["qpescoco_3grau"];
-$qpescoco4grau = $_POST["qpescoco_4grau"];
-$qtant1grau = $_POST["qtant_1grau"];
-$qtant2grau = $_POST["qtant_2grau"];
-$qtant3grau = $_POST["qtant_3grau"];
-$qtant4grau = $_POST["qtant_4grau"];
-$qtpos1grau = $_POST["qtpos_1grau"];
-$qtpos2grau = $_POST["qtpos_2grau"];
-$qtpos3grau = $_POST["qtpos_3grau"];
-$qtpos4grau = $_POST["qtpos_4grau"];
-$qgenital1grau = $_POST["qgenital_1grau"];
-$qgenital2grau = $_POST["qgenital_2grau"];
-$qgenital3grau = $_POST["qgenital_3grau"];
-$qgenital4grau = $_POST["qgenital_4grau"];
-$qmembroid1grau = $_POST["qmembroid_1grau"];
-$qmembroid2grau = $_POST["qmembroid_2grau"];
-$qmembroid3grau = $_POST["qmembroid_3grau"];
-$qmembroid4grau = $_POST["qmembroid_4grau"];
-$qmembroie1grau = $_POST["qmembroie_1grau"];
-$qmembroie2grau = $_POST["qmembroie_2grau"];
-$qmembroie3grau = $_POST["qmembroie_3grau"];
-$qmembroie4grau = $_POST["qmembroie_4grau"];
-$qmembrosd1grau = $_POST["qmembrosd_1grau"];
-$qmembrosd2grau = $_POST["qmembrosd_2grau"];
-$qmembrosd3grau = $_POST["qmembrosd_3grau"];
-$qmembrosd4grau = $_POST["qmembrosd_4grau"];
-$qmembrose1grau = $_POST["qmembrose_1grau"];
-$qmembrose2grau = $_POST["qmembrose_2grau"];
-$qmembrose3grau = $_POST["qmembrose_3grau"];
-$qmembrose4grau = $_POST["qmembrose_4grau"];
+$qcabeca1grau = ($_POST['qcabeca_1grau'] === 'true') ? 1 : 0;
+$qcabeca2grau = ($_POST['qcabeca_2grau'] === 'true') ? 1 : 0;
+$qcabeca3grau = ($_POST['qcabeca_3grau'] === 'true') ? 1 : 0;
+$qcabeca4grau = ($_POST['qcabeca_4grau'] === 'true') ? 1 : 0;
+$qpescoco1grau = ($_POST['qpescoco_1grau'] === 'true') ? 1 : 0;
+$qpescoco2grau = ($_POST['qpescoco_2grau'] === 'true') ? 1 : 0;
+$qpescoco3grau = ($_POST['qpescoco_3grau'] === 'true') ? 1 : 0;
+$qpescoco4grau = ($_POST['qpescoco_4grau'] === 'true') ? 1 : 0;
+$qtant1grau = ($_POST['qtant_1grau'] === 'true') ? 1 : 0;
+$qtant2grau = ($_POST['qtant_2grau'] === 'true') ? 1 : 0;
+$qtant3grau = ($_POST['qtant_3grau'] === 'true') ? 1 : 0;
+$qtant4grau = ($_POST['qtant_4grau'] === 'true') ? 1 : 0;
+$qtpos1grau = ($_POST['qtpos_1grau'] === 'true') ? 1 : 0;
+$qtpos2grau = ($_POST['qtpos_2grau'] === 'true') ? 1 : 0;
+$qtpos3grau = ($_POST['qtpos_3grau'] === 'true') ? 1 : 0;
+$qtpos4grau = ($_POST['qtpos_4grau'] === 'true') ? 1 : 0;
+$qgenital1grau = ($_POST['qgenital_1grau'] === 'true') ? 1 : 0;
+$qgenital2grau = ($_POST['qgenital_2grau'] === 'true') ? 1 : 0;
+$qgenital3grau = ($_POST['qgenital_3grau'] === 'true') ? 1 : 0;
+$qgenital4grau = ($_POST['qgenital_4grau'] === 'true') ? 1 : 0;
+$qmembroid1grau = ($_POST['qmembroid_1grau'] === 'true') ? 1 : 0;
+$qmembroid2grau = ($_POST['qmembroid_2grau'] === 'true') ? 1 : 0;
+$qmembroid3grau = ($_POST['qmembroid_3grau'] === 'true') ? 1 : 0;
+$qmembroid4grau = ($_POST['qmembroid_4grau'] === 'true') ? 1 : 0;
+$qmembroie1grau = ($_POST['qmembroie_1grau'] === 'true') ? 1 : 0;
+$qmembroie2grau = ($_POST['qmembroie_2grau'] === 'true') ? 1 : 0;
+$qmembroie3grau = ($_POST['qmembroie_3grau'] === 'true') ? 1 : 0;
+$qmembroie4grau = ($_POST['qmembroie_4grau'] === 'true') ? 1 : 0;
+$qmembrosd1grau = ($_POST['qmembrosd_1grau'] === 'true') ? 1 : 0;
+$qmembrosd2grau = ($_POST['qmembrosd_2grau'] === 'true') ? 1 : 0;
+$qmembrosd3grau = ($_POST['qmembrosd_3grau'] === 'true') ? 1 : 0;
+$qmembrosd4grau = ($_POST['qmembrosd_4grau'] === 'true') ? 1 : 0;
+$qmembrose1grau = ($_POST['qmembrose_1grau'] === 'true') ? 1 : 0;
+$qmembrose2grau = ($_POST['qmembrose_2grau'] === 'true') ? 1 : 0;
+$qmembrose3grau = ($_POST['qmembrose_3grau'] === 'true') ? 1 : 0;
+$qmembrose4grau = ($_POST['qmembrose_4grau'] === 'true') ? 1 : 0;
 
 $objetosRecolhidos = $_POST["objetos_recolhidos"];
 
-$abdomen = $_POST["abdomen"];
-$afundamentoCranio = $_POST["afundamento_cranio"];
-$agitacao = $_POST["agitacao"];
-$apineia = $_POST["apineia"];
-$bradicardia = $_POST["bradicardia"];
-$bradipneia = $_POST["bradipneia"];
-$cefaleia = $_POST["cefaleia"];
-$cianoseLabios = $_POST["cianose_labios"];
-$cianoseExtremidade = $_POST["cianose_extremidade"];
-$convulsao = $_POST["convulsao"];
-$decorticacao = $_POST["decorticacao"];
-$deformidade = $_POST["deformidade"];
-$descerebracao = $_POST["descerebracao"];
-$desmaio = $_POST["desmaio"];
-$desvioTraqueia = $_POST["desvio_traqueia"];
-$dispineia = $_POST["dispneia"];
-$dorLocal = $_POST["dor_local"];
-$edemaGeneralizados = $_POST["edema_generalizados"];
-$edemaLocalizados = $_POST["edema_localizados"];
-$enfisemaSubcutaneo = $_POST["enfisema_subcutaneo"];
-$entaseJugular = $_POST["entase_jugular"];
-$facePalida = $_POST["face_palida"];
-$hipertensao = $_POST["hipertensao"];
-$hipotensao = $_POST["hipotensao"];
-$hemorragiaInterna = $_POST["hemorragia_interna"];
-$hemorragiaExterna = $_POST["hemorragia_externa"];
-$nauseaVomito = $_POST["nausea_vomito"];
-$nasoragia = $_POST["nasoragia"];
-$obito = $_POST["obito"];
-$otorreia = $_POST["otorreia"];
-$ovace = $_POST["ovace"];
-$paradaCardiaca = $_POST["parada_cardiaca"];
-$paradaRespiratoria = $_POST["parada_respiratoria"];
-$priapismo = $_POST["priapismo"];
-$pruridoPele = $_POST["prurido_pele"];
-$pupilasAnisocoria = $_POST["pupilas_anisocoria"];
-$pupilasIsocoria = $_POST["pupilas_isocoria"];
-$pupilasMidriase = $_POST["pupilas_midriase"];
-$pupilasMiose = $_POST["pupilas_miose"];
-$pupilasReagente = $_POST["pupilas_reagente"];
-$pupilasNreagente = $_POST["pupilas_nreagente"];
-$sede = $_POST["sede"];
-$sinalBattle = $_POST["sinal_battle"];
-$sinalGuaxinim = $_POST["sinal_guaxinim"];
-$sudorese = $_POST["sudorese"];
-$taquipneia = $_POST["taquipneia"];
-$taquicardia = $_POST["taquicardia"];
-$tontura = $_POST["tontura"];
-$outrosSintomas = $_POST["outros_sintomas"];
+$abdomen = ($_POST['abdomen'] === 'true') ? 1 : 0;
+$afundamentoCranio = ($_POST['afundamento_cranio'] === 'true') ? 1 : 0;
+$agitacao = ($_POST['agitacao'] === 'true') ? 1 : 0;
+$apineia = ($_POST['apineia'] === 'true') ? 1 : 0;
+$bradicardia = ($_POST['bradicardia'] === 'true') ? 1 : 0;
+$bradipneia = ($_POST['bradipneia'] === 'true') ? 1 : 0;
+$broncoAspirando = ($_POST['bronco_aspirando'] === 'true') ? 1 : 0;
+$cefaleia = ($_POST['cefaleia'] === 'true') ? 1 : 0;
+$cianose = ($_POST['cianose'] === 'true') ? 1 : 0;
+$cianoseLabios = ($_POST['cianoseLabios'] === 'true') ? 1 : $cianose;
+$cianoseExtremidade = ($_POST['cianoseExtremidade'] === 'true') ? 1 : $cianose;
+$convulsao = ($_POST['convulsao'] === 'true') ? 1 : 0;
+$decorticacao = ($_POST['decorticacao'] === 'true') ? 1 : 0;
+$deformidade = ($_POST['deformidade'] === 'true') ? 1 : 0;
+$descerebracao = ($_POST['descerebracao'] === 'true') ? 1 : 0;
+$desmaio = ($_POST['desmaio'] === 'true') ? 1 : 0;
+$desvioTraqueia = ($_POST['desvioTraqueia'] === 'true') ? 1 : 0;
+$dispineia = ($_POST['dispneia'] === 'true') ? 1 : 0;
+$dorLocal = ($_POST['dorLocal'] === 'true') ? 1 : 0;
+$edema = ($_POST['edema'] === 'true') ? 1 : 0;
+$edemaGeneralizados = ($_POST['edemaGeneralizados'] === 'true') ? 1 : $edema;
+$edemaLocalizados = ($_POST['edemaLocalizados'] === 'true') ? 1 : $edema;
+$enfisemaSubcutaneo = ($_POST['enfisemaSubcutaneo'] === 'true') ? 1 : 0;
+$entaseJugular = ($_POST['entaseJugular'] === 'true') ? 1 : 0;
+$facePalida = ($_POST['facePalida'] === 'true') ? 1 : 0;
+$hipertensao = ($_POST['hipertensao'] === 'true') ? 1 : 0;
+$hipotensao = ($_POST['hipotensao'] === 'true') ? 1 : 0;
+$hemorragia = ($_POST['hemorragia'] === 'true') ? 1 : 0;
+$hemorragiaInterna = ($_POST['hemorragiaInterna'] === 'true') ? 1 : $hemorragia;
+$hemorragiaExterna = ($_POST['hemorragiaExterna'] === 'true') ? 1 : $hemorragia;
+$nauseaVomito = ($_POST['nauseaVomito'] === 'true') ? 1 : 0;
+$nasoragia = ($_POST['nasoragia'] === 'true') ? 1 : 0;
+$obito = ($_POST['obito'] === 'true') ? 1 : 0;
+$otorreia = ($_POST['otorreia'] === 'true') ? 1 : 0;
+$ovace = ($_POST['ovace'] === 'true') ? 1 : 0;
+$paradaCardiaca = ($_POST['paradaCardiaca'] === 'true') ? 1 : $parada;
+$paradaRespiratoria = ($_POST['paradaRespiratoria'] === 'true') ? 1 : $parada;
+$priapismo = ($_POST['priapismo'] === 'true') ? 1 : 0;
+$pruridoPele = ($_POST['pruridoPele'] === 'true') ? 1 : 0;
+$pupilasAnisocoria = ($_POST['pupilasAnisocoria'] === 'true') ? 1 : $pupilas;
+$pupilasIsocoria = ($_POST['pupilasIsocoria'] === 'true') ? 1 : $pupilas;
+$pupilasMidriase = ($_POST['pupilasMidriase'] === 'true') ? 1 : $pupilas;
+$pupilasMiose = ($_POST['pupilasMiose'] === 'true') ? 1 : $pupilas;
+$pupilasReagente = ($_POST['pupilasReagente'] === 'true') ? 1 : $pupilas;
+$pupilasNreagente = ($_POST['pupilasNreagente'] === 'true') ? 1 : $pupilas;
+$sede = ($_POST['sede'] === 'true') ? 1 : 0;
+$sinalBattle = ($_POST['sinalBattle'] === 'true') ? 1 : 0;
+$sinalGuaxinim = ($_POST['sinalGuaxinim'] === 'true') ? 1 : 0;
+$sudorese = ($_POST['sudorese'] === 'true') ? 1 : 0;
+$taquipneia = ($_POST['taquipneia'] === 'true') ? 1 : 0;
+$taquicardia = ($_POST['taquicardia'] === 'true') ? 1 : 0;
+$tontura = ($_POST['tontura'] === 'true') ? 1 : 0;
+$outrosSintomas = ($_POST['outrosSintomas'] === 'true') ? 1 : 0;
 $osintomasTexto = $_POST["osintomas_texto"];
 
-$ciclista = $_POST["ciclista"];
-$condutorMoto = $_POST["condutor_moto"];
-$gestante = $_POST["gestante"];
-$passageiroBancofrente = $_POST["passageiro_bancofrente"];
-$passageiroMoto = $_POST["passageiro_moto"];
-$condutorCarro = $_POST["condutor_carro"];
-$clinico = $_POST["clinico"];
-$trauma = $_POST["trauma"];
-$passageiroBtras = $_POST["passageiro_btras"];
-$pedestre = $_POST["pedestre"];
+$ciclista = ($_POST["ciclista"] === 'true') ? 1 : 0;
+$condutorMoto = ($_POST["condutorMoto"] === 'true') ? 1 : 0;
+$gestante = ($_POST["gestante"] === 'true') ? 1 : 0;
+$passageiroBancofrente = ($_POST["passageiroBancofrente"] === 'true') ? 1 : 0;
+$passageiroMoto = ($_POST["passageiroMoto"] === 'true') ? 1 : 0;
+$condutorCarro = ($_POST["condutorCarro"] === 'true') ? 1 : 0;
+$clinico = ($_POST["clinico"] === 'true') ? 1 : 0;
+$trauma = ($_POST["trauma"] === 'true') ? 1 : 0;
+$passageiroBtras = ($_POST["passageiroBtras"] === 'true') ? 1 : 0;
+$pedestre = ($_POST["pedestre"] === 'true') ? 1 : 0;
 
 $conducao = $_POST["conducao"];
 
 $decisao = $_POST["decisao"];
 
-$aspiracao = $_POST["aspiracao"];
-$avaliacao = $_POST["avaliacao_inicial"];
-$avaliacaoDirigida = $_POST["avaliacao_dirigida"];
-$avaliacaoContinuada = $_POST["avaliacao_continuada"];
-$chaveRautek = $_POST["chave_rautek"];
-$canudaGuedel = $_POST["canula_guedel"];
-$desobstrucaoVa = $_POST["desobstrucao_va"];
-$empregoDea = $_POST["emprego_dea"];
-$gerenciamentoRiscos = $_POST["gerenciamento_riscos"];
-$limpezaFerimento = $_POST["limpeza_ferimento"];
-$curativos = $_POST["curativos"];
-$compressivo = $_POST["compressivo"];
-$encravamento = $_POST["encravamento"];
-$ocular = $_POST["ocular"];
-$queimadura = $_POST["queimadura"];
-$simples = $_POST["simples"];
-$trespontas = $_POST["3_pontas"];
-$imobilizacoes = $_POST["imobilizacoes"];
-$membroInfd = $_POST["membro_infd"];
-$membroInfe = $_POST["membro_infe"];
-$membroSupd = $_POST["membro_supd"];
-$membroSupe = $_POST["membro_supe"];
-$quadril = $_POST["quadril"];
-$cervical = $_POST["cervical"];
-$macaRodas = $_POST["maca_rodas"];
-$macaRigida = $_POST["maca_rigida"];
-$ponte = $_POST["ponte"];
-$retiradoCapacete = $_POST["retirado_capacete"];
-$rcp = $_POST["rcp"];
-$rolamento90 = $_POST["rolamento_90"];
-$rolamento180 = $_POST["rolamento_180"];
-$tomadaDecisao = $_POST["tomada_decisao"];
-$tratadoChoque = $_POST["tratado_choque"];
-$usoCanula = $_POST["uso_canula"];
-$usoColar = $_POST["uso_colar"];
-$tamanhoUsocolar = $_POST["tamanho_usocolar"];
-$usoKed = $_POST["uso_ked"];
-$usoTtf = $_POST["uso_ttf"];
-$ventilacaoSuporte = $_POST["ventilacao_suporte"];
-$oxigenioTerapia = $_POST["oxigenioterapia"];
-$oxigenioterapiaTexto = $_POST["oxigenioterapia_texto"];
-$reanimador = $_POST["reanimador"];
-$reanimadorTexto = $_POST["reanimador_texto"];
-$meioa = $_POST["meioa"];
-$meioaCelesc = $_POST["meioa_celesc"];
-$meioaDefesacivil = $_POST["meioa_defesacivil"];
-$meioaCivil = $_POST["meioa_civil"];
-$meioaMilitar = $_POST["meioa_militar"];
-$meioaPre = $_POST["meioa_pre"];
-$meioaPrf = $_POST["meioa_prf"];
-$meioaUsa = $_POST["meioa_usa"];
-$meioaUsb = $_POST["meioa_usb"];
-$meioaCit = $_POST["meioa_cit"];
-$outrosProcedimentos = $_POST["outros_procedimentos"];
+$aspiracao = ($_POST['aspiracao'] === 'sim') ? 1 : 0;
+$avaliacao = ($_POST['avaliacao_inicial'] === 'sim') ? 1 : 0;
+$avaliacaoDirigida = ($_POST['avaliacao_dirigida'] === 'sim') ? 1 : 0;
+$avaliacaoContinuada = ($_POST['avaliacao_continuada'] === 'sim') ? 1 : 0;
+$chaveRautek = ($_POST['chave_rautek'] === 'sim') ? 1 : 0;
+$canulaGuedel = ($_POST['canula_guedel'] === 'sim') ? 1 : 0;
+$desobstrucaoVa = ($_POST['desobstrucao_va'] === 'sim') ? 1 : 0;
+$empregoDea = ($_POST['emprego_dea'] === 'sim') ? 1 : 0;
+$gerenciamentoRiscos = ($_POST['gerenciamento_riscos'] === 'sim') ? 1 : 0;
+$limpezaFerimento = ($_POST['limpeza_ferimento'] === 'sim') ? 1 : 0;
+$curativos = ($_POST['curativos'] === 'sim') ? 1 : 0;
+$compressivo = ($_POST['compressivo'] === 'sim') ? 1 : 0;
+$encravamento = ($_POST['encravamento'] === 'sim') ? 1 : 0;
+$ocular = ($_POST['ocular'] === 'sim') ? 1 : 0;
+$queimadura = ($_POST['queimadura'] === 'sim') ? 1 : 0;
+$simples = ($_POST['simples'] === 'sim') ? 1 : 0;
+$trespontas = ($_POST['3_pontas'] === 'sim') ? 1 : 0;
+$imobilizacoes = ($_POST['imobilizacoes'] === 'sim') ? 1 : 0;
+$membroInfd = ($_POST['membro_infd'] === 'sim') ? 1 : 0;
+$membroInfe = ($_POST['membro_infe'] === 'sim') ? 1 : 0;
+$membroSupd = ($_POST['membro_supd'] === 'sim') ? 1 : 0;
+$membroSupe = ($_POST['membro_supe'] === 'sim') ? 1 : 0;
+$quadril = ($_POST['quadril'] === 'sim') ? 1 : 0;
+$cervical = ($_POST['cervical'] === 'sim') ? 1 : 0;
+$macaRodas = ($_POST['maca_rodas'] === 'sim') ? 1 : 0;
+$macaRigida = ($_POST['maca_rigida'] === 'sim') ? 1 : 0;
+$ponte = ($_POST['ponte'] === 'sim') ? 1 : 0;
+$retiradoCapacete = ($_POST['retirado_capacete'] === 'sim') ? 1 : 0;
+$rcp = ($_POST['rcp'] === 'sim') ? 1 : 0;
+$rolamento90 = ($_POST['rolamento_90'] === 'sim') ? 1 : 0;
+$rolamento180 = ($_POST['rolamento_180'] === 'sim') ? 1 : 0;
+$tomadaDecisao = ($_POST['tomada_decisao'] === 'sim') ? 1 : 0;
+$tratadoChoque = ($_POST['tratado_choque'] === 'sim') ? 1 : 0;
+$usoCanula = ($_POST['uso_canula'] === 'sim') ? 1 : 0;
+$usoColar = ($_POST['uso_colar'] === 'sim') ? 1 : 0;
+$tamanhoUsoColar = $_POST['tamanho_usocolar'];
+$usoKed = ($_POST['uso_ked'] === 'sim') ? 1 : 0;
+$usoTtf = ($_POST['uso_ttf'] === 'sim') ? 1 : 0;
+$ventilacaoSuporte = ($_POST['ventilacao_suporte'] === 'sim') ? 1 : 0;
+$oxigenioTerapia = ($_POST['oxigenioterapia'] === 'sim') ? 1 : 0;
+$oxigenioterapiaTexto = $_POST['oxigenioterapia_texto'];
+$reanimador = ($_POST['reanimador'] === 'sim') ? 1 : 0;
+$reanimadorTexto = $_POST['reanimador_texto'];
+$meioa = ($_POST['meioa'] === 'sim') ? 1 : 0;
+$meioaCelesc = ($_POST['meioa_celesc'] === 'sim') ? 1 : 0;
+$meioaDefesacivil = ($_POST['meioa_defesacivil'] === 'sim') ? 1 : 0;
+$meioaPolicia = ($_POST['meioa_policia'] === 'sim') ? 1 : 0;
+$meioaCivil = ($_POST['meioa_civil'] === 'sim') ? 1 : 0;
+$meioaMilitar = ($_POST['meioa_militar'] === 'sim') ? 1 : 0;
+$meioaPre = ($_POST['meioa_pre'] === 'sim') ? 1 : 0;
+$meioaPrf = ($_POST['meioa_prf'] === 'sim') ? 1 : 0;
+$meioaSamu = ($_POST['meioa_samu'] === 'sim') ? 1 : 0;
+$meioaUsa = ($_POST['meioa_usa'] === 'sim') ? 1 : 0;
+$meioaUsb = ($_POST['meioa_usb'] === 'sim') ? 1 : 0;
+$meioaCit = ($_POST['meioa_cit'] === 'sim') ? 1 : 0;
+$outrosProcedimentos = ($_POST["outros_procedimentos"]  === 'sim') ? 1 : 0;
 $outrospTexto = $_POST["outrosp_texto"];
 
 $ataduras8 = $_POST["ataduras_8"];
@@ -402,27 +412,83 @@ $fibra = $_POST["fibra"];
 
 $mensagemErro = "";
 
-if ($oqAconteceu == null) {
-  $mensagemErro = "O campo n é obrigatório \n";
-}
 
 if ($mensagemErro != "") {
   $data = array("erro" => true, "mensagem" => "Dados inválidos: " + $mensagemErro);
   header("Content-Type: application/json");
   echo json_encode($data);
   exit();
+}
 
-} else {
+// Verifique se o valor de "conducao" é uma das opções válidas
+if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "sentada") {
 
-    // $sql = "INSERT INTO ficha (CAMPO DA TABELA QUE EU QUERO) VALUES ('$VARIAVEL_QUE_EU_QUISER')";
-    $sql = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu)
-    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblema', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
+  // Verifique se o valor de "decisao" é uma das opções válidas
+if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente instavel" || $decisao === "estavel") {
 
-    $sql = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu)
-    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblema', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
+if ($meioaCivil || $meioaMilitar || $meioaPre || $meioaPrf) {
+    $meioaPolicia = 1;
+}
 
-    $run_query = mysqli_query($con, $sql);
+if ($meioa_usa || $meioa_usb) {
+    $meioaSamu = 1;
+}
+  // Verificar a conexão
+  if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+  }
 
+  // Montar a consulta SQL para a tabela "ficha"
+  $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu) 
+    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
+
+  $sqlFicha = "INSERT INTO ficha (periodo_gestacao, medicacao_gestacao, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe) 
+    VALUES ('$periodoGestacao', '$medicacaoGestacao', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', '$sexoBebe', '$nomeBebe')";
+
+  $sqlFicha = "INSERT INTO ficha (causado_animais, meio_transporte, desmoronamento_deslizamento, emergencia_medica, queda_2m, tentativa_suicidio, queda_propriaAltura, afogamento, agressao, atropelamento, choque_eletrico, desabamento, domestico, esportivo, intoxicacao, queda_bicicleta, queda_moto, queda_nivel, trabalho, transferencia, outros, outros_texto) 
+    VALUES ('$causadoAnimais', '$meioTransporte', '$desmoronamentoDeslizamento', '$emergenciaMedica', '$queda2m', '$tentativaSuicidio', '$quedaPropriaAltura', '$afogamento', '$agressao', '$atropelamento', '$choqueEletrico', '$desabamento', '$domestico', '$esportivo', '$intoxicacao', '$quedaBicicleta', '$quedaMoto', '$quedaNivel', '$trabalho', '$transferencia', '$outros', '$outrosTexto')";
+
+  $sqlFicha = "INSERT INTO ficha (espontanea, espontanea_menor, comando, comando_menor, estimulo, estimulo_menor, nenhuma, nenhuma_menor, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_protamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_anormal, flexao_menor, extensao_anormal, extensao_menor, nenhuma_3, ausencia, total_menor, total) 
+    VALUES ('$espontanea', '$espontaneaMenor', '$comando', '$comandoMenor', '$estimulo', '$estimuloMenor', '$nenhuma', '$nenhumaMenor', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProtamente', '$localizaMenor', '$localiza', '$movimento_retirada', '$retiradaEstimulado', '$flexaoAnormal', '$flexaoMenor', '$extensaoAnormal', '$extensaoMenor', '$nenhuma3', '$ausencia', '$totalMenor', $total')";
+
+  $sqlFicha = "INSERT INTO ficha (psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text) 
+    VALUES ('$psiquiatrico', '$respiratorio', '$respiratorioOpcoes', '$diabetes', '$diabetesOpcoes', '$obstetrico', '$obstetricoOpcoes', '$transporte', '$transporteOpcoes', '$outrosProblemas', '$outrosTexto')";
+
+  $sqlFicha = "INSERT INTO ficha (numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3) 
+    VALUES ('$numeroCorpo', '$fratura', '$ferimento', '$hemorragias', '$esviceracao', '$fab', '$amputacao', '$queimadura1', '$queimadura2', '$queimadura3')";
+
+  $sqlFicha = "INSERT INTO ficha (local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento) 
+    VALUES ('$ferimentos', '$ladoFerimento', '$faceFerimento', '$tipoFerimento')";
+
+  $sqlFicha = "INSERT INTO ficha (qcabeca_1grau, qcabeca_2grau, qcabeca_3grau, qcabeca_4grau, qpescoco_1grau, qpescoco_2grau, qpescoco_3grau, qpescoco_4grau, qtant_1grau, qtant_2grau, qtant_3grau, qtant_4grau, qtpos_1grau, qtpos_2grau, qtpos_3grau, qtpos_4grau, qgenital_1grau, qgenital_2grau, qgenital_3grau, qgenital_4grau, qmembroid_1grau, qmembroid_2grau, qmembroid_3grau, qmembroid_4grau, qmembroie_1grau, qmembroie_2grau, qmembroie_3grau, qmembroie_4grau, qmembrosd_1grau, qmembrosd_2grau, qmembrosd_3grau, qmembrosd_4grau, qmembrose_1grau, qmembrose_2grau, qmembrose_3grau, qmembrose_4grau) 
+    VALUES ('$qcabeca1grau', '$qcabeca2grau', '$qcabeca3grau', '$qcabeca4grau', '$qpescoco1grau', '$qpescoco2grau', '$qpescoco3grau', '$qpescoco4grau', '$qtant1grau', '$qtant2grau', '$qtant3grau', '$qtant4grau', '$qtpos1grau', '$qtpos2grau', '$qtpos3grau', '$qtpos4grau', '$qgenital1grau', '$qgenital2grau', '$qgenital3grau', '$qgenital4grau', '$qmembroid1grau', '$qmembroid2grau', '$qmembroid3grau', '$qmembroid4grau', '$qmembroie1grau', '$qmembroie2grau', '$qmembroie3grau', '$qmembroie4grau', '$qmembrosd1grau', '$qmembrosd2grau', '$qmembrosd3grau', '$qmembrosd4grau', '$qmembrose1grau', '$qmembrose2grau', '$qmembrose3grau', '$qmembrose4grau')";
+
+  $sqlFicha = "INSERT INTO ficha (objetos_recolhidos) VALUES ('$objetosRecolhidos')";
+
+  $sqlFicha = "INSERT INTO ficha (abdomen, afundamento_cranio, agitacao, apineia, bradicardia, bradipneia, bronco_aspirando, cefaleia, cianose, cianose_labios, cianose_extremidade, convulsao, decorticacao, deformidade, descerebracao, desmaio, desvio_traqueia, dispineia, dor_local, edema, edema_generalizados, edema_localizados, enfisema_subcutaneo, entase_jugular, face_palida, hipertensao, hipotensao, hemorragia, hemorragia_interna, hemorragia_externa, nausea_vomito, nasoragia, obito, otorreia, ovace, parada_cardiaca, parada_respiratoria, priapismo, prurido_pele, pupilas_anisocoria, pupilas_isocoria, pupilas_midriase, pupilas_miose, pupilas_reagente, pupilas_nreagente, sede, sinal_battle, sinal_guaxinim, sudorese, taquipneia, taquicardia, tontura, outros_sintomas, osintomas_texto)
+    VALUES ('$abdomen', '$afundamentoCranio', '$agitacao', '$apineia', '$bradicardia', '$bradipneia', '$broncoAspirando' '$cefaleia', '$cianose', '$cianoseLabios', '$cianoseExtremidade', '$convulsao', '$decorticacao', '$deformidade', '$descerebracao', '$desmaio', '$desvioTraqueia', '$dispineia', '$dorLocal', '$edema', '$edemaGeneralizados', '$edemaLocalizados', '$enfisemaSubcutaneo', '$entaseJugular', '$facePalida', '$hipertensao', '$hipotensao', '$hemorragia', '$hemorragiaInterna', '$hemorragiaExterna', '$nauseaVomito', '$nasoragia', '$obito', '$otorreia', '$ovace', '$paradaCardiaca', '$paradaRespiratoria', '$priapismo', '$pruridoPele', '$pupilasAnisocoria', '$pupilasIsocoria', '$pupilasMidriase', '$pupilasMiose', '$pupilasReagente', '$pupilasNreagente', '$sede', '$sinalBattle', '$sinalGuaxinim', '$sudorese', '$taquipneia', '$taquicardia', '$tontura', '$outrosSintomas', '$osintomasTexto')";
+
+  $sqlFicha = "INSERT INTO ficha (ciclista, condutor_moto, gestante, passageiro_bancofrente, passageiro_moto, condutor_carro, clinico, trauma, passageiro_btras, pedestre)
+    VALUES ('$ciclista', '$condutorMoto', '$gestante', '$passageiroBancofrente', '$passageiroMoto', '$condutorCarro', '$clinico', '$trauma', '$passageiroBtras', '$pedestre')";
+
+  $sqlFicha = "INSERT INTO ficha (conducao) VALUES ('$conducao')";
+
+  $sqlFicha = "INSERT INTO ficha (decisao) VALUES ('$decisao')";
+
+  $sqlFicha = "INSERT INTO ficha (aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_policia, meioa_civil, meioa_militar, meioa_pre, meioa_prf, meioa_samu, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto)
+  VALUES ('$aspiracao', '$avaliacao', '$avaliacaoDirigida', '$avaliacaoContinuada', '$chaveRautek', '$canulaGuedel', '$desobstrucaoVa', '$empregoDea', '$gerenciamentoRiscos', '$limpezaFerimento', '$curativos', '$compressivo', '$encravamento', '$ocular', '$queimadura', '$simples', '$trespontas', '$imobilizacoes', '$membroInfd', '$membroInfe', '$membroSupd', '$membroSupe', '$quadril', '$cervical', '$macaRodas', '$macaRigida', '$ponte', '$retiradoCapacete', '$rcp', '$rolamento90', '$rolamento180', '$tomadaDecisao', '$tratadoChoque', '$usoCanula', '$usoColar', '$tamanhoUsoColar', '$usoKed', '$usoTtf', '$ventilacaoSuporte', '$oxigenioTerapia', '$oxigenioterapiaTexto', '$reanimador', '$reanimadorTexto', '$meioa', '$meioaCelesc', '$meioaDefesacivil', '$meioaPolicia', '$meioaCivil', '$meioaMilitar', '$meioaPre', '$meioaPrf', '$meioaSamu', '$meioaUsa', '$meioaUsb', '$meioaCit', '$outrosProcedimentos', '$outrospTexto')";
+
+  // Executar a consulta SQL
+
+  if ($conn->query($sqlFicha) === TRUE) {
+    echo "Registro inserido com sucesso!";
+  } else {
+    echo "Erro ao inserir o registro: " . $conn->error;
+  }
+
+  // Fechar a conexão
+  $conn->close();
+}
 }
 
 ?>

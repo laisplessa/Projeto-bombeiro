@@ -305,37 +305,40 @@ $meioaSamu = ($_POST['meioa_samu'] === 'sim') ? 1 : 0;
 $meioaUsa = ($_POST['meioa_usa'] === 'sim') ? 1 : 0;
 $meioaUsb = ($_POST['meioa_usb'] === 'sim') ? 1 : 0;
 $meioaCit = ($_POST['meioa_cit'] === 'sim') ? 1 : 0;
-$outrosProcedimentos = ($_POST["outros_procedimentos"]  === 'sim') ? 1 : 0;
+$outrosProcedimentos = ($_POST["outros_procedimentos"] === 'sim') ? 1 : 0;
 $outrospTexto = $_POST["outrosp_texto"];
 
-$ataduras8 = $_POST["ataduras_8"];
-$ataduras12 = $_POST["ataduras_12"];
-$ataduras20 = $_POST["ataduras_20"];
+$ataduras = ($_POST['ataduras'] === 'sim') ? 1 : 0;
+$ataduras8 = ($_POST['ataduras8'] === 'sim') ? 1 : 0;
+$ataduras12 = ($_POST['ataduras12'] === 'sim') ? 1 : 0;
+$ataduras20 = ($_POST['ataduras20'] === 'sim') ? 1 : 0;
 $ataduraQuantidade = $_POST["atadura_quantidade"];
-$mantaAluminizada = $_POST["manta_aluminizada"];
+$mantaAluminizada = ($_POST['manta_aluminizada'] === 'sim') ? 1 : 0;
 $mantaQuantidade = $_POST["manta_quantidade"];
-$cateterOculos = $_POST["cateter_oculos"];
+$cateterOculos = ($_POST['cateter_oculos'] === 'sim') ? 1 : 0;
 $cateterQuantidade = $_POST["cateter_quantidade"];
-$pasDea = $_POST["pas_dea"];
+$pasDea = ($_POST['pas_dea'] === 'sim') ? 1 : 0;
 $pasQuantidade = $_POST["pas_quantidade"];
-$compressaComum = $_POST["compressa_comum"];
+$compressaComum = ($_POST['compressa_comum'] === 'sim') ? 1 : 0;
 $compressaQuantidade = $_POST["compressa_quantidade"];
-$sondaAspiracao = $_POST["sonda_aspiracao"];
+$sondaAspiracao = ($_POST['sonda_aspiracao'] === 'sim') ? 1 : 0;
 $sondaQuantidade = $_POST["sonda_quantidade"];
-$kitsH = $_POST["kits_h"];
-$kitsP = $_POST["kits_p"];
-$kitsQ = $_POST["kits_q"];
+$kits = ($_POST['kits'] === 'sim') ? 1 : 0;
+$kitsH = ($_POST['kitsH'] === 'sim') ? 1 : 0;
+$kitsP = ($_POST['kitsP'] === 'sim') ? 1 : 0;
+$kitsQ = ($_POST['kitsQ'] === 'sim') ? 1 : 0;
 $kitsQuantidade = $_POST["kits_quantidade"];
-$soroFisiologico = $_POST["soro_fisiologico"];
+$soroFisiologico = ($_POST['soro_fisiologico'] === 'sim') ? 1 : 0;
 $soroQuantidade = $_POST["soro_quantidade"];
-$luvasDescartaveis = $_POST["luvas_descartaveis"];
+$luvasDescartaveis = ($_POST['luvas_descartaveis'] === 'sim') ? 1 : 0;
 $luvasQuantidade = $_POST["luvas_quantidade"];
-$talasPapp = $_POST["talas_papp"];
-$talasPapg = $_POST["talas_papg"];
+$talasPap = ($_POST['talas_pap'] === 'sim') ? 1 : 0;
+$talasPapp = ($_POST['talas_papp'] === 'sim') ? 1 : 0;
+$talasPapg = ($_POST['talas_papg'] === 'sim') ? 1 : 0;
 $talasQuantidade = $_POST["talas_quantidade"];
-$mascarasDescartaveis = $_POST["mascaras_descartaveis"];
+$mascarasDescartaveis = ($_POST['mascaras_descartaveis'] === 'sim') ? 1 : 0;
 $mascarasQuantidade = $_POST["mascara_quantidade"];
-$outroMaterial = $_POST["outro_material"];
+$outroMaterial = ($_POST["outro_material"] === 'sim') ? 1 : 0;
 $outroM = $_POST["outrom"];
 $outrosmQuantidade = $_POST["outrom_quantidade"];
 
@@ -373,7 +376,7 @@ $outroMaterial3 = $_POST["outro_material3"];
 $outrom3 = $_POST["outrom3"];
 $outrom3Quantidade = $_POST["outrom3_quantidade"];
 
-$objetosRecolhidos = $_POST["objetos_recolhidos"];
+$observacoesImportantes = $_POST["observacoes_importantes"];
 
 $disturbioComportamento = $_POST["disturbio_comportamento"];
 $encontradoCapacete = $_POST["encontrado_capacete"];
@@ -424,71 +427,95 @@ if ($mensagemErro != "") {
 if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "sentada") {
 
   // Verifique se o valor de "decisao" é uma das opções válidas
-if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente instavel" || $decisao === "estavel") {
+  if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente instavel" || $decisao === "estavel") {
 
-if ($meioaCivil || $meioaMilitar || $meioaPre || $meioaPrf) {
-    $meioaPolicia = 1;
-}
+    if ($meioaCivil || $meioaMilitar || $meioaPre || $meioaPrf) {
+      $meioaPolicia = 1;
+    }
 
-if ($meioa_usa || $meioa_usb) {
-    $meioaSamu = 1;
-}
-  // Verificar a conexão
-  if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
-  }
+    if ($meioa_usa || $meioa_usb) {
+      $meioaSamu = 1;
+    }
+    // Verifique a lógica para preencher automaticamente campos dependentes
+    if ($ataduras8 || $ataduras12 || $ataduras20) {
+      $ataduras = 1;
+    }
 
-  // Montar a consulta SQL para a tabela "ficha"
-  $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu) 
+    if ($kitsH || $kitsP || $kitsQ) {
+      $kits = 1;
+    }
+
+    if ($talasPapp || $talasPapg) {
+      $talasPap = 1;
+    }
+
+    // Verificar a conexão
+    if ($conn->connect_error) {
+      die("Erro na conexão: " . $conn->connect_error);
+    }
+
+    // Montar a consulta SQL para a tabela "ficha"
+    $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu) 
     VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
 
-  $sqlFicha = "INSERT INTO ficha (periodo_gestacao, medicacao_gestacao, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe) 
+//dados iniciais
+
+    $sqlFicha = "INSERT INTO ficha (periodo_gestacao, medicacao_gestacao, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe) 
     VALUES ('$periodoGestacao', '$medicacaoGestacao', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', '$sexoBebe', '$nomeBebe')";
 
-  $sqlFicha = "INSERT INTO ficha (causado_animais, meio_transporte, desmoronamento_deslizamento, emergencia_medica, queda_2m, tentativa_suicidio, queda_propriaAltura, afogamento, agressao, atropelamento, choque_eletrico, desabamento, domestico, esportivo, intoxicacao, queda_bicicleta, queda_moto, queda_nivel, trabalho, transferencia, outros, outros_texto) 
+    $sqlFicha = "INSERT INTO ficha (causado_animais, meio_transporte, desmoronamento_deslizamento, emergencia_medica, queda_2m, tentativa_suicidio, queda_propriaAltura, afogamento, agressao, atropelamento, choque_eletrico, desabamento, domestico, esportivo, intoxicacao, queda_bicicleta, queda_moto, queda_nivel, trabalho, transferencia, outros, outros_texto) 
     VALUES ('$causadoAnimais', '$meioTransporte', '$desmoronamentoDeslizamento', '$emergenciaMedica', '$queda2m', '$tentativaSuicidio', '$quedaPropriaAltura', '$afogamento', '$agressao', '$atropelamento', '$choqueEletrico', '$desabamento', '$domestico', '$esportivo', '$intoxicacao', '$quedaBicicleta', '$quedaMoto', '$quedaNivel', '$trabalho', '$transferencia', '$outros', '$outrosTexto')";
 
-  $sqlFicha = "INSERT INTO ficha (espontanea, espontanea_menor, comando, comando_menor, estimulo, estimulo_menor, nenhuma, nenhuma_menor, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_protamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_anormal, flexao_menor, extensao_anormal, extensao_menor, nenhuma_3, ausencia, total_menor, total) 
+    $sqlFicha = "INSERT INTO ficha (espontanea, espontanea_menor, comando, comando_menor, estimulo, estimulo_menor, nenhuma, nenhuma_menor, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_protamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_anormal, flexao_menor, extensao_anormal, extensao_menor, nenhuma_3, ausencia, total_menor, total) 
     VALUES ('$espontanea', '$espontaneaMenor', '$comando', '$comandoMenor', '$estimulo', '$estimuloMenor', '$nenhuma', '$nenhumaMenor', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProtamente', '$localizaMenor', '$localiza', '$movimento_retirada', '$retiradaEstimulado', '$flexaoAnormal', '$flexaoMenor', '$extensaoAnormal', '$extensaoMenor', '$nenhuma3', '$ausencia', '$totalMenor', $total')";
 
-  $sqlFicha = "INSERT INTO ficha (psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text) 
+//sinais vitais
+
+    $sqlFicha = "INSERT INTO ficha (psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text) 
     VALUES ('$psiquiatrico', '$respiratorio', '$respiratorioOpcoes', '$diabetes', '$diabetesOpcoes', '$obstetrico', '$obstetricoOpcoes', '$transporte', '$transporteOpcoes', '$outrosProblemas', '$outrosTexto')";
 
-  $sqlFicha = "INSERT INTO ficha (numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3) 
+    $sqlFicha = "INSERT INTO ficha (numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3) 
     VALUES ('$numeroCorpo', '$fratura', '$ferimento', '$hemorragias', '$esviceracao', '$fab', '$amputacao', '$queimadura1', '$queimadura2', '$queimadura3')";
 
-  $sqlFicha = "INSERT INTO ficha (local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento) 
+    $sqlFicha = "INSERT INTO ficha (local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento) 
     VALUES ('$ferimentos', '$ladoFerimento', '$faceFerimento', '$tipoFerimento')";
 
-  $sqlFicha = "INSERT INTO ficha (qcabeca_1grau, qcabeca_2grau, qcabeca_3grau, qcabeca_4grau, qpescoco_1grau, qpescoco_2grau, qpescoco_3grau, qpescoco_4grau, qtant_1grau, qtant_2grau, qtant_3grau, qtant_4grau, qtpos_1grau, qtpos_2grau, qtpos_3grau, qtpos_4grau, qgenital_1grau, qgenital_2grau, qgenital_3grau, qgenital_4grau, qmembroid_1grau, qmembroid_2grau, qmembroid_3grau, qmembroid_4grau, qmembroie_1grau, qmembroie_2grau, qmembroie_3grau, qmembroie_4grau, qmembrosd_1grau, qmembrosd_2grau, qmembrosd_3grau, qmembrosd_4grau, qmembrose_1grau, qmembrose_2grau, qmembrose_3grau, qmembrose_4grau) 
+    $sqlFicha = "INSERT INTO ficha (qcabeca_1grau, qcabeca_2grau, qcabeca_3grau, qcabeca_4grau, qpescoco_1grau, qpescoco_2grau, qpescoco_3grau, qpescoco_4grau, qtant_1grau, qtant_2grau, qtant_3grau, qtant_4grau, qtpos_1grau, qtpos_2grau, qtpos_3grau, qtpos_4grau, qgenital_1grau, qgenital_2grau, qgenital_3grau, qgenital_4grau, qmembroid_1grau, qmembroid_2grau, qmembroid_3grau, qmembroid_4grau, qmembroie_1grau, qmembroie_2grau, qmembroie_3grau, qmembroie_4grau, qmembrosd_1grau, qmembrosd_2grau, qmembrosd_3grau, qmembrosd_4grau, qmembrose_1grau, qmembrose_2grau, qmembrose_3grau, qmembrose_4grau) 
     VALUES ('$qcabeca1grau', '$qcabeca2grau', '$qcabeca3grau', '$qcabeca4grau', '$qpescoco1grau', '$qpescoco2grau', '$qpescoco3grau', '$qpescoco4grau', '$qtant1grau', '$qtant2grau', '$qtant3grau', '$qtant4grau', '$qtpos1grau', '$qtpos2grau', '$qtpos3grau', '$qtpos4grau', '$qgenital1grau', '$qgenital2grau', '$qgenital3grau', '$qgenital4grau', '$qmembroid1grau', '$qmembroid2grau', '$qmembroid3grau', '$qmembroid4grau', '$qmembroie1grau', '$qmembroie2grau', '$qmembroie3grau', '$qmembroie4grau', '$qmembrosd1grau', '$qmembrosd2grau', '$qmembrosd3grau', '$qmembrosd4grau', '$qmembrose1grau', '$qmembrose2grau', '$qmembrose3grau', '$qmembrose4grau')";
 
-  $sqlFicha = "INSERT INTO ficha (objetos_recolhidos) VALUES ('$objetosRecolhidos')";
+    $sqlFicha = "INSERT INTO ficha (objetos_recolhidos) VALUES ('$objetosRecolhidos')";
 
-  $sqlFicha = "INSERT INTO ficha (abdomen, afundamento_cranio, agitacao, apineia, bradicardia, bradipneia, bronco_aspirando, cefaleia, cianose, cianose_labios, cianose_extremidade, convulsao, decorticacao, deformidade, descerebracao, desmaio, desvio_traqueia, dispineia, dor_local, edema, edema_generalizados, edema_localizados, enfisema_subcutaneo, entase_jugular, face_palida, hipertensao, hipotensao, hemorragia, hemorragia_interna, hemorragia_externa, nausea_vomito, nasoragia, obito, otorreia, ovace, parada_cardiaca, parada_respiratoria, priapismo, prurido_pele, pupilas_anisocoria, pupilas_isocoria, pupilas_midriase, pupilas_miose, pupilas_reagente, pupilas_nreagente, sede, sinal_battle, sinal_guaxinim, sudorese, taquipneia, taquicardia, tontura, outros_sintomas, osintomas_texto)
+    $sqlFicha = "INSERT INTO ficha (abdomen, afundamento_cranio, agitacao, apineia, bradicardia, bradipneia, bronco_aspirando, cefaleia, cianose, cianose_labios, cianose_extremidade, convulsao, decorticacao, deformidade, descerebracao, desmaio, desvio_traqueia, dispineia, dor_local, edema, edema_generalizados, edema_localizados, enfisema_subcutaneo, entase_jugular, face_palida, hipertensao, hipotensao, hemorragia, hemorragia_interna, hemorragia_externa, nausea_vomito, nasoragia, obito, otorreia, ovace, parada_cardiaca, parada_respiratoria, priapismo, prurido_pele, pupilas_anisocoria, pupilas_isocoria, pupilas_midriase, pupilas_miose, pupilas_reagente, pupilas_nreagente, sede, sinal_battle, sinal_guaxinim, sudorese, taquipneia, taquicardia, tontura, outros_sintomas, osintomas_texto)
     VALUES ('$abdomen', '$afundamentoCranio', '$agitacao', '$apineia', '$bradicardia', '$bradipneia', '$broncoAspirando' '$cefaleia', '$cianose', '$cianoseLabios', '$cianoseExtremidade', '$convulsao', '$decorticacao', '$deformidade', '$descerebracao', '$desmaio', '$desvioTraqueia', '$dispineia', '$dorLocal', '$edema', '$edemaGeneralizados', '$edemaLocalizados', '$enfisemaSubcutaneo', '$entaseJugular', '$facePalida', '$hipertensao', '$hipotensao', '$hemorragia', '$hemorragiaInterna', '$hemorragiaExterna', '$nauseaVomito', '$nasoragia', '$obito', '$otorreia', '$ovace', '$paradaCardiaca', '$paradaRespiratoria', '$priapismo', '$pruridoPele', '$pupilasAnisocoria', '$pupilasIsocoria', '$pupilasMidriase', '$pupilasMiose', '$pupilasReagente', '$pupilasNreagente', '$sede', '$sinalBattle', '$sinalGuaxinim', '$sudorese', '$taquipneia', '$taquicardia', '$tontura', '$outrosSintomas', '$osintomasTexto')";
 
-  $sqlFicha = "INSERT INTO ficha (ciclista, condutor_moto, gestante, passageiro_bancofrente, passageiro_moto, condutor_carro, clinico, trauma, passageiro_btras, pedestre)
+    $sqlFicha = "INSERT INTO ficha (ciclista, condutor_moto, gestante, passageiro_bancofrente, passageiro_moto, condutor_carro, clinico, trauma, passageiro_btras, pedestre)
     VALUES ('$ciclista', '$condutorMoto', '$gestante', '$passageiroBancofrente', '$passageiroMoto', '$condutorCarro', '$clinico', '$trauma', '$passageiroBtras', '$pedestre')";
 
-  $sqlFicha = "INSERT INTO ficha (conducao) VALUES ('$conducao')";
+    $sqlFicha = "INSERT INTO ficha (conducao) VALUES ('$conducao')";
 
-  $sqlFicha = "INSERT INTO ficha (decisao) VALUES ('$decisao')";
+    $sqlFicha = "INSERT INTO ficha (decisao) VALUES ('$decisao')";
 
-  $sqlFicha = "INSERT INTO ficha (aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_policia, meioa_civil, meioa_militar, meioa_pre, meioa_prf, meioa_samu, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto)
+    $sqlFicha = "INSERT INTO ficha (aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_policia, meioa_civil, meioa_militar, meioa_pre, meioa_prf, meioa_samu, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto)
   VALUES ('$aspiracao', '$avaliacao', '$avaliacaoDirigida', '$avaliacaoContinuada', '$chaveRautek', '$canulaGuedel', '$desobstrucaoVa', '$empregoDea', '$gerenciamentoRiscos', '$limpezaFerimento', '$curativos', '$compressivo', '$encravamento', '$ocular', '$queimadura', '$simples', '$trespontas', '$imobilizacoes', '$membroInfd', '$membroInfe', '$membroSupd', '$membroSupe', '$quadril', '$cervical', '$macaRodas', '$macaRigida', '$ponte', '$retiradoCapacete', '$rcp', '$rolamento90', '$rolamento180', '$tomadaDecisao', '$tratadoChoque', '$usoCanula', '$usoColar', '$tamanhoUsoColar', '$usoKed', '$usoTtf', '$ventilacaoSuporte', '$oxigenioTerapia', '$oxigenioterapiaTexto', '$reanimador', '$reanimadorTexto', '$meioa', '$meioaCelesc', '$meioaDefesacivil', '$meioaPolicia', '$meioaCivil', '$meioaMilitar', '$meioaPre', '$meioaPrf', '$meioaSamu', '$meioaUsa', '$meioaUsb', '$meioaCit', '$outrosProcedimentos', '$outrospTexto')";
 
-  // Executar a consulta SQL
+    $sqlFicha = "INSERT INTO ficha (ataduras, ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_pap, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade)
+  VALUES ('$ataduras', '$ataduras8', '$ataduras12', '$ataduras20', '$ataduraQuantidade', '$mantaAluminizada', '$mantaQuantidade', '$cateterOculos', '$cateterQuantidade', '$pasDea', '$pasQuantidade','$compressaComum', '$compressaQuantidade', '$sondaAspiracao', '$sondaQuantidade', '$kits', '$kitsH', '$kitsP', '$kitsQ', '$kitsQuantidade', '$soroFisiologico', '$soroQuantidade', '$luvasDescartaveis', '$luvasQuantidade', '$talasPap', '$talasPapp', '$talasPapg', '$talasQuantidade', '$mascarasDescartaveis', '$mascaraQuantidades', '$outroMaterial', '$outroM', '$outromQuantidade')";
 
-  if ($conn->query($sqlFicha) === TRUE) {
-    echo "Registro inserido com sucesso!";
-  } else {
-    echo "Erro ao inserir o registro: " . $conn->error;
+//tabela material deixados no hospital
+
+$sqlFicha = "INSERT INTO ficha (observacoes_importantes) VALUES ('$observacoesImportantes')";
+
+    // Executar a consulta SQL
+
+    if ($conn->query($sqlFicha) === TRUE) {
+      echo "Registro inserido com sucesso!";
+    } else {
+      echo "Erro ao inserir o registro: " . $conn->error;
+    }
+
+    // Fechar a conexão
+    $conn->close();
   }
-
-  // Fechar a conexão
-  $conn->close();
-}
 }
 
 ?>

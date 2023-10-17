@@ -378,20 +378,20 @@ $outrom3Quantidade = $_POST["outrom3_quantidade"];
 
 $observacoesImportantes = $_POST["observacoes_importantes"];
 
-$disturbioComportamento = $_POST["disturbio_comportamento"];
-$encontradoCapacete = $_POST["encontrado_capacete"];
-$encontradoCinto = $_POST["encontrado_cinto"];
-$parabrisasAvariado = $_POST["parabrisas_avariado"];
-$caminhandoCena = $_POST["caminhando_cena"];
-$painelAvariado = $_POST["painel_avariado"];
-$volanteTorcido = $_POST["volante_torcido"];
+$disturbioComportamento = ($_POST['disturbio_comportamento'] === 'sim') ? 1 : 0;
+$encontradoCapacete = ($_POST['encontrado_capacete'] === 'sim') ? 1 : 0;
+$encontradoCinto = ($_POST['encontrado_cinto'] === 'sim') ? 1 : 0;
+$parabrisasAvariado = ($_POST['parabrisas_avariado'] === 'sim') ? 1 : 0;
+$caminhandoCena = ($_POST['caminhando_cena'] === 'sim') ? 1 : 0;
+$painelAvariado = ($_POST['painel_avariado'] === 'sim') ? 1 : 0;
+$volanteTorcido = ($_POST['volante_torcido'] === 'sim') ? 1 : 0;
 
 $nUsd = $_POST["n_usd"];
 $nOcorrencia = $_POST["n_ocorrencia"];
 $desp = $_POST["desp"];
 $kmFinal = $_POST["km_final"];
-$codIr = $_POST["cod_ir"];
-$codPs = $_POST["cod_ps"];
+$codIr = ($_POST['cod_ir'] === 'sim') ? 1 : 0;
+$codPs = ($_POST['cod_ps'] === 'sim') ? 1 : 0;
 $hCh = $_POST["h_ch"];
 $siaSus = $_POST["sia_sus"];
 
@@ -449,16 +449,12 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
       $talasPap = 1;
     }
 
-    // Verificar a conexão
-    if ($conn->connect_error) {
-      die("Erro na conexão: " . $conn->connect_error);
-    }
-
     // Montar a consulta SQL para a tabela "ficha"
+
     $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu) 
     VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario')";
 
-//dados iniciais
+    //dados iniciais
 
     $sqlFicha = "INSERT INTO ficha (periodo_gestacao, medicacao_gestacao, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe) 
     VALUES ('$periodoGestacao', '$medicacaoGestacao', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', '$sexoBebe', '$nomeBebe')";
@@ -469,7 +465,7 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
     $sqlFicha = "INSERT INTO ficha (espontanea, espontanea_menor, comando, comando_menor, estimulo, estimulo_menor, nenhuma, nenhuma_menor, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_protamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_anormal, flexao_menor, extensao_anormal, extensao_menor, nenhuma_3, ausencia, total_menor, total) 
     VALUES ('$espontanea', '$espontaneaMenor', '$comando', '$comandoMenor', '$estimulo', '$estimuloMenor', '$nenhuma', '$nenhumaMenor', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProtamente', '$localizaMenor', '$localiza', '$movimento_retirada', '$retiradaEstimulado', '$flexaoAnormal', '$flexaoMenor', '$extensaoAnormal', '$extensaoMenor', '$nenhuma3', '$ausencia', '$totalMenor', $total')";
 
-//sinais vitais
+    //sinais vitais
 
     $sqlFicha = "INSERT INTO ficha (psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text) 
     VALUES ('$psiquiatrico', '$respiratorio', '$respiratorioOpcoes', '$diabetes', '$diabetesOpcoes', '$obstetrico', '$obstetricoOpcoes', '$transporte', '$transporteOpcoes', '$outrosProblemas', '$outrosTexto')";
@@ -501,20 +497,35 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
     $sqlFicha = "INSERT INTO ficha (ataduras, ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_pap, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade)
   VALUES ('$ataduras', '$ataduras8', '$ataduras12', '$ataduras20', '$ataduraQuantidade', '$mantaAluminizada', '$mantaQuantidade', '$cateterOculos', '$cateterQuantidade', '$pasDea', '$pasQuantidade','$compressaComum', '$compressaQuantidade', '$sondaAspiracao', '$sondaQuantidade', '$kits', '$kitsH', '$kitsP', '$kitsQ', '$kitsQuantidade', '$soroFisiologico', '$soroQuantidade', '$luvasDescartaveis', '$luvasQuantidade', '$talasPap', '$talasPapp', '$talasPapg', '$talasQuantidade', '$mascarasDescartaveis', '$mascaraQuantidades', '$outroMaterial', '$outroM', '$outromQuantidade')";
 
-//tabela material deixados no hospital
+    //tabela material deixados no hospital
 
-$sqlFicha = "INSERT INTO ficha (observacoes_importantes) VALUES ('$observacoesImportantes')";
+    $sqlFicha = "INSERT INTO ficha (observacoes_importantes) VALUES ('$observacoesImportantes')";
 
-    // Executar a consulta SQL
+    $sqlFicha = "INSERT INTO ficha (disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido)
+  VALUES ('$disturbioComportamento', '$encontradoCapacete', '$encontradoCinto', '$parabrisasAvariado', '$caminhandoCena', '$painelAvariado', '$volanteTorcido')";
 
-    if ($conn->query($sqlFicha) === TRUE) {
-      echo "Registro inserido com sucesso!";
-    } else {
-      echo "Erro ao inserir o registro: " . $conn->error;
-    }
+    $sqlFicha = "INSERT INTO ficha (n_usd, n_ocorrencia, desp, km_final, cod_ir, cod_ps, h_ch, sia_sus)
+  VALUES ('$nUsd', '$Nocorrencia', '$desp', '$kmFinal', '$codIr', '$codPs', '$siaSus')";
 
-    // Fechar a conexão
-    $conn->close();
+    $sqlFicha = "INSERT INTO ficha (eu, rg_numero, cpf_numero, testemunha, doc_testemunha, testemunha2, doc_testemunha2)
+  VALUES ('$eu', '$rgNumero', '$cpfNumero', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2')";
+
+    $sqlFicha = "INSERT INTO ficha (medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe)
+  VALUES ('$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe')";
+
+    $sqlFicha = "INSERT INTO ficha (respon_ficha, respon_fibra) VALUES ('$ficha', '$fibra')";
+
+        // Executar a consulta SQL
+
+        if ($conn->query($sqlFicha) === TRUE) {
+          echo "Registro inserido com sucesso!";
+      } else {
+          echo "Erro ao inserir o registro: " . $conn->error;
+      }
+
+      // Fechar a conexão
+      
+      $conn->close();
   }
 }
 

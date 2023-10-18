@@ -2,10 +2,6 @@
 
 include "db.php";
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: PUT, GET, POST");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-
 session_start();
 
 $oqAconteceu = $_POST["oq_aconteceu"];
@@ -46,7 +42,7 @@ $rupturaBolsa = ($_POST['ruptura'] === 'sim') ? true : false;
 $inspecaoVisual = ($_POST['inspecao'] === 'sim') ? true : false;
 $partoRealizado = ($_POST['parto'] === 'sim') ? true : false;
 $horaNascimento = $_POST["hora_nascimento"];
-$sexoBebe = $_POST["sexo_bebe"];
+$sexoBebe = $_POST['sexo_bebe'];
 $nomeBebe = $_POST["nome_bebe"];
 
 $causadoAnimais = ($_POST['causado_animais'] === 'true') ? 1 : 0;
@@ -215,7 +211,7 @@ $nasoragia = ($_POST['nasoragia'] === 'true') ? 1 : 0;
 $obito = ($_POST['obito'] === 'true') ? 1 : 0;
 $otorreia = ($_POST['otorreia'] === 'true') ? 1 : 0;
 $ovace = ($_POST['ovace'] === 'true') ? 1 : 0;
-$paradaCardiaca = ($_POST['paradaCardiaca'] === 'true') ? 1 : $parada;
+$paradaCardiaca = ($_POST['paradaCardiaca'] === 'true') ? 1 : 0;
 $paradaRespiratoria = ($_POST['paradaRespiratoria'] === 'true') ? 1 : $parada;
 $priapismo = ($_POST['priapismo'] === 'true') ? 1 : 0;
 $pruridoPele = ($_POST['pruridoPele'] === 'true') ? 1 : 0;
@@ -297,21 +293,21 @@ $meioa = ($_POST['meioa'] === 'sim') ? 1 : 0;
 $meioaCelesc = ($_POST['meioa_celesc'] === 'sim') ? 1 : 0;
 $meioaDefesacivil = ($_POST['meioa_defesacivil'] === 'sim') ? 1 : 0;
 $meioaPolicia = ($_POST['meioa_policia'] === 'sim') ? 1 : 0;
-$meioaCivil = ($_POST['meioa_civil'] === 'sim') ? 1 : 0;
-$meioaMilitar = ($_POST['meioa_militar'] === 'sim') ? 1 : 0;
-$meioaPre = ($_POST['meioa_pre'] === 'sim') ? 1 : 0;
-$meioaPrf = ($_POST['meioa_prf'] === 'sim') ? 1 : 0;
+$meioaCivil = ($_POST['meioa_civil'] === 'sim') ? 1 : 0 $meioaPolicia;
+$meioaMilitar = ($_POST['meioa_militar'] === 'sim') ? 1 : 0 $meioaPolicia;
+$meioaPre = ($_POST['meioa_pre'] === 'sim') ? 1 : 0 $meioaPolicia;
+$meioaPrf = ($_POST['meioa_prf'] === 'sim') ? 1 : 0 $meioaPolicia;
 $meioaSamu = ($_POST['meioa_samu'] === 'sim') ? 1 : 0;
-$meioaUsa = ($_POST['meioa_usa'] === 'sim') ? 1 : 0;
-$meioaUsb = ($_POST['meioa_usb'] === 'sim') ? 1 : 0;
+$meioaUsa = ($_POST['meioa_usa'] === 'sim') ? 1 : 0 $meioaSamu;
+$meioaUsb = ($_POST['meioa_usb'] === 'sim') ? 1 : 0 $meioaSamu;
 $meioaCit = ($_POST['meioa_cit'] === 'sim') ? 1 : 0;
 $outrosProcedimentos = ($_POST["outros_procedimentos"] === 'sim') ? 1 : 0;
 $outrospTexto = $_POST["outrosp_texto"];
 
 $ataduras = ($_POST['ataduras'] === 'sim') ? 1 : 0;
-$ataduras8 = ($_POST['ataduras8'] === 'sim') ? 1 : 0;
-$ataduras12 = ($_POST['ataduras12'] === 'sim') ? 1 : 0;
-$ataduras20 = ($_POST['ataduras20'] === 'sim') ? 1 : 0;
+$ataduras8 = ($_POST['ataduras8'] === 'sim') ? 1 : 0 $ataduras;
+$ataduras12 = ($_POST['ataduras12'] === 'sim') ? 1 : 0 $ataduras;
+$ataduras20 = ($_POST['ataduras20'] === 'sim') ? 1 : 0 $ataduras;
 $ataduraQuantidade = $_POST["atadura_quantidade"];
 $mantaAluminizada = ($_POST['manta_aluminizada'] === 'sim') ? 1 : 0;
 $mantaQuantidade = $_POST["manta_quantidade"];
@@ -324,17 +320,17 @@ $compressaQuantidade = $_POST["compressa_quantidade"];
 $sondaAspiracao = ($_POST['sonda_aspiracao'] === 'sim') ? 1 : 0;
 $sondaQuantidade = $_POST["sonda_quantidade"];
 $kits = ($_POST['kits'] === 'sim') ? 1 : 0;
-$kitsH = ($_POST['kitsH'] === 'sim') ? 1 : 0;
-$kitsP = ($_POST['kitsP'] === 'sim') ? 1 : 0;
-$kitsQ = ($_POST['kitsQ'] === 'sim') ? 1 : 0;
+$kitsH = ($_POST['kitsH'] === 'sim') ? 1 : 0 $kits;
+$kitsP = ($_POST['kitsP'] === 'sim') ? 1 : 0 $kits;
+$kitsQ = ($_POST['kitsQ'] === 'sim') ? 1 : 0 $kits;
 $kitsQuantidade = $_POST["kits_quantidade"];
 $soroFisiologico = ($_POST['soro_fisiologico'] === 'sim') ? 1 : 0;
 $soroQuantidade = $_POST["soro_quantidade"];
 $luvasDescartaveis = ($_POST['luvas_descartaveis'] === 'sim') ? 1 : 0;
 $luvasQuantidade = $_POST["luvas_quantidade"];
 $talasPap = ($_POST['talas_pap'] === 'sim') ? 1 : 0;
-$talasPapp = ($_POST['talas_papp'] === 'sim') ? 1 : 0;
-$talasPapg = ($_POST['talas_papg'] === 'sim') ? 1 : 0;
+$talasPapp = ($_POST['talas_papp'] === 'sim') ? 1 : 0 $talasPap;
+$talasPapg = ($_POST['talas_papg'] === 'sim') ? 1 : 0 $talasPap;
 $talasQuantidade = $_POST["talas_quantidade"];
 $mascarasDescartaveis = ($_POST['mascaras_descartaveis'] === 'sim') ? 1 : 0;
 $mascarasQuantidade = $_POST["mascara_quantidade"];
@@ -342,37 +338,41 @@ $outroMaterial = ($_POST["outro_material"] === 'sim') ? 1 : 0;
 $outroM = $_POST["outrom"];
 $outrosmQuantidade = $_POST["outrom_quantidade"];
 
-$baseEstabiliza = $_POST["base_estabiliza"];
+$baseEstabiliza = ($_POST["base_estabiliza"]  === 'sim') ? 1 : 0;
 $baseQuantidade = $_POST["base_quantidade"];
-$ttfAdulto = $_POST["ttf_adulto"];
-$ttfInfantil = $_POST["ttf_infantil"];
+$ttf = ($_POST["ttf"]  === 'sim') ? 1 : 0;
+$ttfAdulto = ($_POST["ttf_adulto"]  === 'sim') ? 1 : 0 $ttf;
+$ttfInfantil = ($_POST["ttf_infantil"]  === 'sim') ? 1 : 0;
 $ttfQuantidade = $_POST["ttf_quantidade"];
-$colarN = $_POST["colar_n"];
-$colarPP = $_POST["colar_pp"];
-$colarP = $_POST["colar_p"];
+$colar = ($_POST["colar"]  === 'sim') ? 1 : 0;
+$colarN = ($_POST["colar_n"]  === 'sim') ? 1 : 0 $colar;
+$colarPP = ($_POST["colar_pp"]  === 'sim') ? 1 : 0 $colar;
+$colarP = ($_POST["colar_p"]  === 'sim') ? 1 : 0 $colar;
 $colarQuantidade = $_POST["colar_quantidade"];
-$tiranteAranha = $_POST["tirante_aranha"];
+$tiranteAranha = ($_POST["tirante_aranha"]  === 'sim') ? 1 : 0;
 $tiranteQuantidade = $_POST["tirante_quantidade"];
-$colarM = $_POST["colar_m"];
-$colarG = $_POST["colar_g"];
-$colarTam = $_POST["colar_tam"];
+$colar2 = ($_POST["colar2"]  === 'sim') ? 1 : 0;
+$colarM = ($_POST["colar_m"]  === 'sim') ? 1 : 0 $colar2;
+$colarG = ($_POST["colar_g"]   === 'sim') ? 1 : 0 $colar2;
+$colarTam = ($_POST["colar_tam"]  === 'sim') ? 1 : 0 $colar2;
 $colarTamm = $_POST["colar_tamm"];
 $colar2quantidade = $_POST["colar_2quantidade"];
-$tiranteCabeca = $_POST["tirante_cabeca"];
+$tiranteCabeca = ($_POST["tirante_cabeca"]  === 'sim') ? 1 : 0;
 $tirantecQuantidade = $_POST["tirantec_quantidade"];
-$coxinsEstabiliza = $_POST["coxins_estabiliza"];
+$coxinsEstabiliza = ($_POST["coxins_estabiliza"]  === 'sim') ? 1 : 0;
 $coxinsQuantidade = $_POST["coxins_quantidade"];
-$canula = $_POST["canula"];
+$canula = ($_POST["canula"]  === 'sim') ? 1 : 0;
 $canulaQuantidade = $_POST["canula_quantidade"];
-$kedAdulto = $_POST["ked_adulto"];
-$kedInfantil = $_POST["ked_infantil"];
+$ked = ($_POST["ked"]  === 'sim') ? 1 : 0;
+$kedAdulto = ($_POST["ked_adulto"]  === 'sim') ? 1 : 0 $ked;
+$kedInfantil = ($_POST["ked_infantil"]  === 'sim') ? 1 : 0 $ked;
 $kedQuantidade = $_POST["ked_quantidade"];
-$outroMaterial2 = $_POST["outro_material2"];
+$outroMaterial2 = ($_POST["outro_material2"]  === 'sim') ? 1 : 0;
 $outrom2 = $_POST["outrom2"];
 $outrom2Quantidade = $_POST["outrom2_quantidade"];
-$maca = $_POST["maca"];
+$maca = ($_POST["maca"]  === 'sim') ? 1 : 0;
 $macaQuantidade = $_POST["maca_quantidade"];
-$outroMaterial3 = $_POST["outro_material3"];
+$outroMaterial3 = ($_POST["outro_material3"]  === 'sim') ? 1 : 0;
 $outrom3 = $_POST["outrom3"];
 $outrom3Quantidade = $_POST["outrom3_quantidade"];
 
@@ -414,38 +414,12 @@ $ficha = $_POST["ficha"];
 $fibra = $_POST["fibra"];
 
 
-// Verifique se o valor de "conducao" é uma das opções válidas
-if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "sentada") {
-
-  // Verifique se o valor de "decisao" é uma das opções válidas
-  if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente_instavel" || $decisao === "estavel") {
-
-    if ($meioaCivil || $meioaMilitar || $meioaPre || $meioaPrf) {
-      $meioaPolicia = 1;
-    }
-
-    if ($meioa_usa || $meioa_usb) {
-      $meioaSamu = 1;
-    }
-    // Verifique a lógica para preencher automaticamente campos dependentes
-    if ($ataduras8 || $ataduras12 || $ataduras20) {
-      $ataduras = 1;
-    }
-
-    if ($kitsH || $kitsP || $kitsQ) {
-      $kits = 1;
-    }
-
-    if ($talasPapp || $talasPapg) {
-      $talasPap = 1;
-    }
-    
-    // Montar a consulta SQL para a tabela "ficha"
-
-    $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu,
+    $sqlFicha = "INSERT INTO ficha (id_ficha, oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu,
+    data_ocorrencia, sexo_paciente, nome_hospital, nome_paciente, idade_paciente, telefone, rg_cpf, nome_acompanhante, idade_acompanhante, local_ocorrencia,
     periodo_gestacao, medicacao_gestacao, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe,
     causado_animais, meio_transporte, desmoronamento_deslizamento, emergencia_medica, queda_2m, tentativa_suicidio, queda_propriaAltura, afogamento, agressao, atropelamento, choque_eletrico, desabamento, domestico, esportivo, intoxicacao, queda_bicicleta, queda_moto, queda_nivel, trabalho, transferencia, outros, outros_texto,
     espontanea, espontanea_menor, comando, comando_menor, estimulo, estimulo_menor, nenhuma, nenhuma_menor, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_protamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_anormal, flexao_menor, extensao_anormal, extensao_menor, nenhuma_3, ausencia, total_menor, total,
+    pressao, pulso, respiracao, saturacao, temperatura, perfusao, anormal_normal,
     psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text,
     numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3,
     local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento,
@@ -456,13 +430,16 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
     conducao, decisao,
     aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_policia, meioa_civil, meioa_militar, meioa_pre, meioa_prf, meioa_samu, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto,
     ataduras, ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_pap, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade,
+    base_estabiliza, base_quantidade, ttf, ttf_adulto, ttf_infantil, ttf_quantidade, colar, colar_n, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar2, colar_m, colar_g, 	colar_tam, 	colar_tamm, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade
     observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, cod_ir, cod_ps, h_ch, sia_sus,
     eu, rg_numero, cpf_numero, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra) 
     
-    VALUES ('$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario'
+    VALUES (null, '$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario',
+    '$data', '$sexoPaciente', '$nomeHospital', '$nomePaciente', '$idade', '$telefonePaciente', '$rgCpf', '$nomeAcompanhante', '$idadeAcompanhante', '$localOcorrencia',
     '$periodoGestacao', '$medicacaoGestacao', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', '$sexoBebe', '$nomeBebe',
     '$causadoAnimais', '$meioTransporte', '$desmoronamentoDeslizamento', '$emergenciaMedica', '$queda2m', '$tentativaSuicidio', '$quedaPropriaAltura', '$afogamento', '$agressao', '$atropelamento', '$choqueEletrico', '$desabamento', '$domestico', '$esportivo', '$intoxicacao', '$quedaBicicleta', '$quedaMoto', '$quedaNivel', '$trabalho', '$transferencia', '$outros', '$outrosTexto',
     '$espontanea', '$espontaneaMenor', '$comando', '$comandoMenor', '$estimulo', '$estimuloMenor', '$nenhuma', '$nenhumaMenor', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProtamente', '$localizaMenor', '$localiza', '$movimento_retirada', '$retiradaEstimulado', '$flexaoAnormal', '$flexaoMenor', '$extensaoAnormal', '$extensaoMenor', '$nenhuma3', '$ausencia', '$totalMenor', $total',
+    '$pressao', '$pulso', '$respiracao', '$saturacao', '$temperatura', '$perfusao', '$anormalNormal',
     '$psiquiatrico', '$respiratorio', '$respiratorioOpcoes', '$diabetes', '$diabetesOpcoes', '$obstetrico', '$obstetricoOpcoes', '$transporte', '$transporteOpcoes', '$outrosProblemas', '$outrosTexto',
     '$numeroCorpo', '$fratura', '$ferimento', '$hemorragias', '$esviceracao', '$fab', '$amputacao', '$queimadura1', '$queimadura2', '$queimadura3',
     '$ferimentos', '$ladoFerimento', '$faceFerimento', '$tipoFerimento',
@@ -473,20 +450,26 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
     '$conducao', '$decisao',
     '$aspiracao', '$avaliacao', '$avaliacaoDirigida', '$avaliacaoContinuada', '$chaveRautek', '$canulaGuedel', '$desobstrucaoVa', '$empregoDea', '$gerenciamentoRiscos', '$limpezaFerimento', '$curativos', '$compressivo', '$encravamento', '$ocular', '$queimadura', '$simples', '$trespontas', '$imobilizacoes', '$membroInfd', '$membroInfe', '$membroSupd', '$membroSupe', '$quadril', '$cervical', '$macaRodas', '$macaRigida', '$ponte', '$retiradoCapacete', '$rcp', '$rolamento90', '$rolamento180', '$tomadaDecisao', '$tratadoChoque', '$usoCanula', '$usoColar', '$tamanhoUsoColar', '$usoKed', '$usoTtf', '$ventilacaoSuporte', '$oxigenioTerapia', '$oxigenioterapiaTexto', '$reanimador', '$reanimadorTexto', '$meioa', '$meioaCelesc', '$meioaDefesacivil', '$meioaPolicia', '$meioaCivil', '$meioaMilitar', '$meioaPre', '$meioaPrf', '$meioaSamu', '$meioaUsa', '$meioaUsb', '$meioaCit', '$outrosProcedimentos', '$outrospTexto',
     '$ataduras', '$ataduras8', '$ataduras12', '$ataduras20', '$ataduraQuantidade', '$mantaAluminizada', '$mantaQuantidade', '$cateterOculos', '$cateterQuantidade', '$pasDea', '$pasQuantidade','$compressaComum', '$compressaQuantidade', '$sondaAspiracao', '$sondaQuantidade', '$kits', '$kitsH', '$kitsP', '$kitsQ', '$kitsQuantidade', '$soroFisiologico', '$soroQuantidade', '$luvasDescartaveis', '$luvasQuantidade', '$talasPap', '$talasPapp', '$talasPapg', '$talasQuantidade', '$mascarasDescartaveis', '$mascaraQuantidades', '$outroMaterial', '$outroM', '$outromQuantidade',
+    '$baseEstabiliza', '$baseQuantidade', '$ttf', '$ttfAdulto', '$ttfInfantil', '$ttfQuantidade', '$colar', '$colarN', '$colarPP', '$colarP', '$colarQuantidade', '$tiranteAranha', '$tiranteQuantidade', '$colar2', '$colarM', '$colarG', '$colarTam', '$colarTamm', '$colar2quantidade', '$tiranteCabeca', '$tirantecQuantidade', '$coxinsEstabiliza', '$coxinsQuantidade', '$canula', '$canulaQuantidade', '$ked', '$kedAdulto', '$kedInfantil', '$kedQuantidade', '$outroMaterial2', '$outrom2', '$outrom2Quantidade', '$maca', '$macaQuantidade', '$outroMaterial3', '$outrom3', '$outrom3Quantidade',
     '$observacoesImportantes', '$disturbioComportamento', '$encontradoCapacete', '$encontradoCinto', '$parabrisasAvariado', '$caminhandoCena', '$painelAvariado', '$volanteTorcido', '$nUsd', '$Nocorrencia', '$desp', '$kmFinal', '$codIr', '$codPs', '$siaSus',
     '$eu', '$rgNumero', '$cpfNumero', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
 
-    //dados iniciais
 
-    
+$execucao = mysqli_query($con, $sqlFicha);
 
-    //sinais vitais
+if($execucao){
+  $data = array("erro" => false, "mensagem" => "Login executado com sucesso");
+  header("Content-Type: application/json");
+  echo json_encode($data);
+  exit();
 
-    //tabela material deixados no hospital
+} else {
 
-  }
+  $data = array("erro" => true, "mensagem" => "Usuário não encontrado no sistema");
+  header("Content-Type: application/json");
+  echo json_encode($data);
+  exit();
 }
-
 // Fechar a conexão com o banco de dados
 $conn->close();
 ?>

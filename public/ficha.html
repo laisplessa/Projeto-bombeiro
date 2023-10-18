@@ -10,61 +10,7 @@
 
     <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
     <script src="signaturepad/signaturepad.min.js"></script>
-    <script>
-        (function (window) {
-            var $canvas,
-                onResize = function (event) {
-                    $canvas.attr({
-                        height: 200,
-                        width: 630
-                    });
-                };
-
-            $(document).ready(function () {
-                $canvas = $('canvas');
-                window.addEventListener('orientationchange', onResize, false);
-                window.addEventListener('resize', onResize, false);
-                onResize();
-
-
-
-                $('form').signaturePad({
-                    drawOnly: true,
-                    defaultAction: 'drawIt',
-                    validateFields: false,
-                    lineWidth: 0,
-                    output: '.assinatura',
-                    clear: 'input[type=reset]',
-                });//Exemplo para mostrar a assinatura já preenchida .regenerate([{"lx":70,"ly":101,"mx":70,"my":100},{"lx":72,"ly":100,"mx":70,"my":101},{"lx":77,"ly":98,"mx":72,"my":100},{"lx":85,"ly":95,"mx":77,"my":98},{"lx":96,"ly":90,"mx":85,"my":95},{"lx":107,"ly":85,"mx":96,"my":90},{"lx":119,"ly":80,"mx":107,"my":85},{"lx":131,"ly":73,"mx":119,"my":80},{"lx":142,"ly":67,"mx":131,"my":73},{"lx":153,"ly":62,"mx":142,"my":67},{"lx":163,"ly":56,"mx":153,"my":62},{"lx":172,"ly":52,"mx":163,"my":56},{"lx":178,"ly":49,"mx":172,"my":52},{"lx":178,"ly":48,"mx":178,"my":49},{"lx":178,"ly":47,"mx":178,"my":48},{"lx":178,"ly":46,"mx":178,"my":47},{"lx":175,"ly":46,"mx":178,"my":46},{"lx":172,"ly":46,"mx":175,"my":46},{"lx":167,"ly":46,"mx":172,"my":46},{"lx":157,"ly":46,"mx":167,"my":46},{"lx":148,"ly":46,"mx":157,"my":46},{"lx":140,"ly":46,"mx":148,"my":46},{"lx":132,"ly":47,"mx":140,"my":46},{"lx":123,"ly":49,"mx":132,"my":47},{"lx":115,"ly":51,"mx":123,"my":49},{"lx":108,"ly":52,"mx":115,"my":51},{"lx":103,"ly":53,"mx":108,"my":52},{"lx":102,"ly":54,"mx":103,"my":53},{"lx":101,"ly":54,"mx":102,"my":54},{"lx":101,"ly":55,"mx":101,"my":54},{"lx":102,"ly":59,"mx":101,"my":55},{"lx":107,"ly":63,"mx":102,"my":59},{"lx":110,"ly":65,"mx":107,"my":63},{"lx":115,"ly":69,"mx":110,"my":65},{"lx":121,"ly":73,"mx":115,"my":69},{"lx":127,"ly":78,"mx":121,"my":73},{"lx":131,"ly":82,"mx":127,"my":78},{"lx":134,"ly":87,"mx":131,"my":82},{"lx":136,"ly":91,"mx":134,"my":87},{"lx":137,"ly":94,"mx":136,"my":91},{"lx":138,"ly":98,"mx":137,"my":94},{"lx":138,"ly":101,"mx":138,"my":98},{"lx":135,"ly":104,"mx":138,"my":101},{"lx":127,"ly":108,"mx":135,"my":104},{"lx":118,"ly":111,"mx":127,"my":108},{"lx":108,"ly":113,"mx":118,"my":111},{"lx":97,"ly":115,"mx":108,"my":113},{"lx":89,"ly":116,"mx":97,"my":115},{"lx":82,"ly":117,"mx":89,"my":116},{"lx":86,"ly":118,"mx":82,"my":117},{"lx":93,"ly":118,"mx":86,"my":118},{"lx":104,"ly":118,"mx":93,"my":118},{"lx":120,"ly":117,"mx":104,"my":118},{"lx":144,"ly":113,"mx":120,"my":117},{"lx":161,"ly":108,"mx":144,"my":113},{"lx":175,"ly":102,"mx":161,"my":108},{"lx":186,"ly":96,"mx":175,"my":102},{"lx":197,"ly":92,"mx":186,"my":96},{"lx":199,"ly":90,"mx":197,"my":92},{"lx":199,"ly":89,"mx":199,"my":90},{"lx":199,"ly":88,"mx":199,"my":89},{"lx":198,"ly":88,"mx":199,"my":88},{"lx":193,"ly":88,"mx":198,"my":88},{"lx":190,"ly":88,"mx":193,"my":88},{"lx":185,"ly":88,"mx":190,"my":88},{"lx":180,"ly":89,"mx":185,"my":88},{"lx":177,"ly":90,"mx":180,"my":89},{"lx":172,"ly":90,"mx":177,"my":90},{"lx":166,"ly":91,"mx":172,"my":90},{"lx":162,"ly":92,"mx":166,"my":91},{"lx":161,"ly":94,"mx":162,"my":92},{"lx":164,"ly":94,"mx":161,"my":94},{"lx":171,"ly":94,"mx":164,"my":94},{"lx":184,"ly":94,"mx":171,"my":94},{"lx":200,"ly":94,"mx":184,"my":94},{"lx":228,"ly":94,"mx":200,"my":94},{"lx":250,"ly":93,"mx":228,"my":94},{"lx":271,"ly":90,"mx":250,"my":93},{"lx":285,"ly":89,"mx":271,"my":90},{"lx":297,"ly":88,"mx":285,"my":89},{"lx":304,"ly":87,"mx":297,"my":88},{"lx":303,"ly":87,"mx":304,"my":87},{"lx":295,"ly":86,"mx":303,"my":87},{"lx":286,"ly":86,"mx":295,"my":86},{"lx":275,"ly":86,"mx":286,"my":86},{"lx":267,"ly":86,"mx":275,"my":86},{"lx":261,"ly":86,"mx":267,"my":86},{"lx":264,"ly":86,"mx":261,"my":86},{"lx":271,"ly":86,"mx":264,"my":86},{"lx":283,"ly":87,"mx":271,"my":86},{"lx":293,"ly":88,"mx":283,"my":87},{"lx":301,"ly":89,"mx":293,"my":88},{"lx":308,"ly":89,"mx":301,"my":89},{"lx":308,"ly":90,"mx":308,"my":89},{"lx":304,"ly":91,"mx":308,"my":90},{"lx":300,"ly":92,"mx":304,"my":91},{"lx":293,"ly":92,"mx":300,"my":92},{"lx":286,"ly":93,"mx":293,"my":92},{"lx":279,"ly":93,"mx":286,"my":93},{"lx":281,"ly":94,"mx":279,"my":93},{"lx":284,"ly":94,"mx":281,"my":94},{"lx":293,"ly":95,"mx":284,"my":94},{"lx":308,"ly":96,"mx":293,"my":95},{"lx":324,"ly":96,"mx":308,"my":96},{"lx":341,"ly":97,"mx":324,"my":96},{"lx":356,"ly":98,"mx":341,"my":97},{"lx":366,"ly":99,"mx":356,"my":98},{"lx":374,"ly":100,"mx":366,"my":99},{"lx":375,"ly":100,"mx":374,"my":100},{"lx":376,"ly":101,"mx":375,"my":100},{"lx":377,"ly":101,"mx":376,"my":101},{"lx":373,"ly":101,"mx":377,"my":101},{"lx":366,"ly":101,"mx":373,"my":101},{"lx":358,"ly":101,"mx":366,"my":101},{"lx":352,"ly":101,"mx":358,"my":101},{"lx":355,"ly":101,"mx":352,"my":101},{"lx":364,"ly":101,"mx":355,"my":101},{"lx":377,"ly":100,"mx":364,"my":101},{"lx":397,"ly":98,"mx":377,"my":100},{"lx":421,"ly":96,"mx":397,"my":98},{"lx":447,"ly":91,"mx":421,"my":96},{"lx":471,"ly":85,"mx":447,"my":91},{"lx":487,"ly":81,"mx":471,"my":85},{"lx":498,"ly":78,"mx":487,"my":81},{"lx":505,"ly":76,"mx":498,"my":78},{"lx":505,"ly":75,"mx":505,"my":76},{"lx":505,"ly":74,"mx":505,"my":75},{"lx":502,"ly":71,"mx":505,"my":74},{"lx":498,"ly":70,"mx":502,"my":71},{"lx":495,"ly":69,"mx":498,"my":70},{"lx":493,"ly":69,"mx":495,"my":69},{"lx":490,"ly":69,"mx":493,"my":69},{"lx":486,"ly":69,"mx":490,"my":69},{"lx":482,"ly":69,"mx":486,"my":69},{"lx":478,"ly":69,"mx":482,"my":69},{"lx":473,"ly":69,"mx":478,"my":69},{"lx":467,"ly":71,"mx":473,"my":69},{"lx":461,"ly":74,"mx":467,"my":71},{"lx":456,"ly":77,"mx":461,"my":74},{"lx":451,"ly":81,"mx":456,"my":77},{"lx":446,"ly":86,"mx":451,"my":81},{"lx":442,"ly":92,"mx":446,"my":86},{"lx":439,"ly":101,"mx":442,"my":92},{"lx":437,"ly":109,"mx":439,"my":101},{"lx":436,"ly":116,"mx":437,"my":109},{"lx":436,"ly":124,"mx":436,"my":116},{"lx":437,"ly":135,"mx":436,"my":124},{"lx":443,"ly":145,"mx":437,"my":135},{"lx":453,"ly":153,"mx":443,"my":145},{"lx":469,"ly":161,"mx":453,"my":153},{"lx":499,"ly":168,"mx":469,"my":161},{"lx":524,"ly":171,"mx":499,"my":168},{"lx":542,"ly":172,"mx":524,"my":171},{"lx":554,"ly":172,"mx":542,"my":172},{"lx":560,"ly":172,"mx":554,"my":172},{"lx":560,"ly":171,"mx":560,"my":172},{"lx":560,"ly":168,"mx":560,"my":171},{"lx":559,"ly":163,"mx":560,"my":168},{"lx":554,"ly":159,"mx":559,"my":163},{"lx":543,"ly":155,"mx":554,"my":159},{"lx":529,"ly":150,"mx":543,"my":155},{"lx":507,"ly":144,"mx":529,"my":150},{"lx":489,"ly":142,"mx":507,"my":144},{"lx":476,"ly":140,"mx":489,"my":142},{"lx":464,"ly":137,"mx":476,"my":140},{"lx":454,"ly":135,"mx":464,"my":137},{"lx":447,"ly":134,"mx":454,"my":135},{"lx":446,"ly":134,"mx":447,"my":134},{"lx":444,"ly":133,"mx":446,"my":134},{"lx":441,"ly":132,"mx":444,"my":133},{"lx":437,"ly":132,"mx":441,"my":132},{"lx":427,"ly":132,"mx":437,"my":132},{"lx":413,"ly":132,"mx":427,"my":132},{"lx":395,"ly":132,"mx":413,"my":132},{"lx":371,"ly":132,"mx":395,"my":132},{"lx":342,"ly":136,"mx":371,"my":132}]);
-            });
-        }(this));
-
-        function enviarFormulario() {
-            var dados = $('#seu-formulario').serialize();
-
-            $.ajax({
-                type: "POST",
-                url: "ficha.php",
-                data: dados,
-                success: function (ret) {
-                    // Função de callback chamada quando a requisição é bem-sucedida
-                    if (ret.erro) {
-                        alert(ret.mensagem); // Trata erros, se houverem
-                    } else {
-                        // Trata o caso de sucesso, se não houver erros
-                        alert("Dados enviados com sucesso!");
-                        // Redirecione ou realize outras ações necessárias aqui
-                    }
-                },
-                error: function (xhr, status, error) {
-                    // Função de callback chamada em caso de erro na requisição
-                    alert("Erro: " + error);
-                }
-            });
-        }
-
-    </script>
-
+    
 </head>
 
 <body>
@@ -140,7 +86,7 @@
                     <div>
                         <div class="destaqueclaro">
                             <div>O que aconteceu (sinais e sintomas)</div>
-                            <div><input class="tam90" type="text" id="oq_aconteceu" name="oq_aconteceu"
+                            <div><input class="tam90" type="text" name="oq_aconteceu"
                                     placeholder="Digite o que aconteceu" required />
                             </div>
                         </div>
@@ -149,10 +95,10 @@
                                 <div>Aconteceu outras vezes?</div>
                                 <div>
 
-                                    <input type="radio" class="espass" id="s_aconteceu" name="outras_vezes"
+                                    <input type="radio" class="espass" name="outras_vezes"
                                         value="s_aconteceu">
                                     <label for="s_aconteceu">Sim</label>
-                                    <input type="radio" class="espass" id="n_aconteceu" name="outras_vezes"
+                                    <input type="radio" class="espass" name="outras_vezes"
                                         value="n_aconteceu" checked>
                                     <label for="n_aconteceu">Não</label>
                                 </div>
@@ -161,7 +107,7 @@
 
                         <div class="destaqueclaro">
                             <div>A quanto tempo aconteceu?</div>
-                            <div><input class="tam90" type="text" id="tempo_aconteceu" name="quanto_tempo"
+                            <div><input class="tam90" type="text" name="quanto_tempo"
                                     placeholder="Digite a quanto tempo aconteceu" required />
                             </div>
                         </div>
@@ -171,10 +117,10 @@
 
                                 <div>Possui algum problema de saúde?</div>
 
-                                <input type="radio" id="s_problema_saude" name="problema_saude"
+                                <input type="radio" name="problema_saude"
                                     value="s_problema_saude">
                                 <label for="s_problema_saude">Sim</label>
-                                <input type="radio" id="n_problema_saude" name="problema_saude" value="n_problema_saude"
+                                <input type="radio" name="problema_saude" value="n_problema_saude"
                                     checked>
                                 <label for="n_problema_saude">Não</label>
                             </div>
@@ -182,7 +128,7 @@
 
                         <div class="destaqueclaro">
                             <div>Quais?</div>
-                            <div><input class="tam90" type="text" id="quais_problemas" name="quais_problemas"
+                            <div><input class="tam90" type="text" name="quais_problemas"
                                     placeholder="Digite quais doenças" required />
                             </div>
                         </div>
@@ -191,9 +137,9 @@
                             <div class="simnao">
                                 <div>Faz uso de medicação?</div>
 
-                                <input type="radio" id="s-faz" name="medicacao" value="s_faz">
+                                <input type="radio" name="medicacao" value="s_faz">
                                 <label for="s_faz">Sim</label>
-                                <input type="radio" id="n_faz" name="medicacao" value="n_faz" checked>
+                                <input type="radio" name="medicacao" value="n_faz" checked>
                                 <label for="n_faz">Não</label>
                             </div>
                         </div>
@@ -201,14 +147,14 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Horário da última medicação:</div>
-                                <input type="text" class="insere" id="hora_medicacao" name="hora_medicacao"
+                                <input type="text" class="insere" name="hora_medicacao"
                                     placeholder="00:00">
                             </div>
                         </div>
 
                         <div class="destaqueclaro">
                             <div>Quais?</div>
-                            <div><input class="tam90" type="text" id="quais_medicacoes" name="quais_medicacoes"
+                            <div><input class="tam90" type="text" name="quais_medicacoes"
                                     placeholder="Digite quais medicações" required />
                             </div>
                         </div>
@@ -216,15 +162,15 @@
                         <div class="destaqueclaro">
                             <div>Alérgico a alguma coisa?</div>
 
-                            <input type="radio" id="alergico" name="alergico" value="alergico">
+                            <input type="radio" name="alergico" value="sim">
                             <label for="alergico">Sim</label>
-                            <input type="radio" id="alergico" name="alergico" value="alergico" checked>
+                            <input type="radio" name="alergico" value="nao" checked>
                             <label for="nao_alergico">Não</label>
                         </div>
 
                         <div class="destaqueclaro">
                             <div>Se sim, especifique</div>
-                            <div><input class="tam90" type="text" id="alergia" name="alergia"
+                            <div><input class="tam90" type="text" name="alergia"
                                     placeholder="Digite a alérgia" required />
                             </div>
                         </div>
@@ -233,9 +179,9 @@
                             <div class="simnao">
                                 <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
 
-                                <input type="radio" class="espass" id="ingeriu" name="ingeriu" value="s_ingeriu">
+                                <input type="radio" class="espass" name="ingeriu" value="s_ingeriu">
                                 <label for="s_ingeriu">Sim</label>
-                                <input type="radio" class="espass" id="ingeriu" name="ingeriu" value="n_ingeriu"
+                                <input type="radio" class="espass" name="ingeriu" value="n_ingeriu"
                                     checked>
                                 <label for="n_ingeriu">Não</label>
                             </div>
@@ -244,7 +190,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Que horas?:</div>
-                                <input type="text" id="i-horas" class="insere" name="ingeriu_horario"
+                                <input type="text" class="insere" name="ingeriu_horario"
                                     placeholder="00:00">
                             </div>
                         </div>
@@ -266,27 +212,27 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <label for="sexo">Sexo:</label>
-                                <input name="sexo_paciente" type="radio" id="sexo_feminino">Feminino
-                                <input name="sexo_paciente" type="radio" id="sexo_masculino" checked>Masculino
+                                <input name="sexo_paciente" type="radio" value="f">Feminino
+                                <input name="sexo_paciente" type="radio" value="m" checked>Masculino
                             </div>
                         </div>
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="nome-hospital">Nome do Hospital:</label><br>
-                        <input type="text" class="form-control" id="nome_hospital" name="nome_hospital"
+                        <input type="text" class="form-control" name="nome_hospital"
                             placeholder="Digite o nome do Hospital" required />
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="nome-paciente">Nome do paciente:</label><br>
-                        <input type="text" class="form-control" id="nome_paciente" name="nome_paciente"
+                        <input type="text" class="form-control" name="nome_paciente"
                             placeholder="Digite o nome do paciente" required />
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="idade">Idade do paciente:</label><br>
-                        <input type="number" class="form-control" id="idade" name="idade_paciente"
+                        <input type="number" class="form-control" name="idade_paciente"
                             placeholder="Digite a idade do paciente" required />
                     </div>
 
@@ -305,19 +251,19 @@
 
                     <div class="destaqueclaro">
                         <label for="nome-acompanhante">Nome do acompanhante:</label><br>
-                        <input type="text" class="form-control" id="nome_acompanhante" name="nome_acompanhante"
+                        <input type="text" class="form-control" name="nome_acompanhante"
                             placeholder="Digite o nome do acompanhante" required />
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="idade-acompanhante">Idade do acompanhante:</label><br>
-                        <input type="number" class="form-control" id="idade_acompanhante" name="idade_acompanhante"
+                        <input type="number" class="form-control" name="idade_acompanhante"
                             placeholder="Digite a idade do acompanhante" required />
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="local-ocorrencia">Local da Ocorrência:</label><br>
-                        <input type="text" class="form-control" id="local_ocorrencia" name="local_ocorrencia"
+                        <input type="text" class="form-control" name="local_ocorrencia"
                             placeholder="Digite o local da ocorrência" required />
                     </div>
                 </banner>
@@ -456,9 +402,9 @@
                         <div class="simnao">
                             <div class="simnao">
                                 <div>Sexo do bebê</div>
-                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebef">
+                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebef" value="f">
                                 <label class="form-check-label" for="sexo_bebef">Fem</label>
-                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebem">
+                                <input class="form-check-input" type="radio" name="sexo_bebe" id="sexo_bebem" value="m">
                                 <label class="form-check-label" for="sexo_bebem">Mas</label>
                             </div>
                         </div>
@@ -846,13 +792,13 @@
                                 <label for="perfusao">Perfusão:</label>
                                 <div>
                                     <label for="perfusao">> 2 seg.</label>
-                                    <input type="radio" class="glas" id="perfusao" name="perfusao" value="perfusao">
+                                    <input type="radio" class="glas" id="perfusao" name="perfusao" value="> 2 seg.">
                                 </div>
                                 <div>
                                     <label for="perfusao">
                                         < 2 seg.</label>
                                             <input type="radio" class="glas" id="perfusao" name="perfusao"
-                                                value="perfusao">
+                                                value="< 2 seg.">
                                 </div>
                             </div>
                         </div>
@@ -1417,7 +1363,7 @@
                 <banner>
                     <titulos id="objetosrec">Objetos Recolhidos</titulos>
                     <div class="escrever">
-                        <input type="text" class="objetos" id="objetos_recolhidos" name="objetos_recolhidos"
+                        <input type="text" class="objetos" name="objetos_recolhidos"
                             placeholder="Digite os objetos recolhidos" required />
                     </div>
                 </banner>
@@ -1430,260 +1376,252 @@
                     <div>
                         <div class="sinals">
 
-                            <div class="destaqueclaro"><input type="checkbox" id="abdomen" name="abdomen"
+                            <div class="destaqueclaro"><input type="checkbox" name="abdomen"
                                     value="abdomen">
                                 <label for="abdomen">Abdomen sensível ou rígido</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="afundamento_cranio"
+                            <div class="destaqueclaro"><input type="checkbox"
                                     name="afundamento_cranio" value="afundamento_cranio">
                                 <label for="afundamento_cranio">Afundamento de crânio</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="agitacao" name="agitacao"
+                            <div class="destaqueclaro"><input type="checkbox" name="agitacao"
                                     value="agitacao">
                                 <label for="agitacao">Agitação</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="apineia" name="apineia"
+                            <div class="destaqueclaro"><input type="checkbox" name="apineia"
                                     value="apineia">
                                 <label for="sinais-sintomas">Apinéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="bradicardia" name="bradicardia"
+                            <div class="destaqueclaro"><input type="checkbox" name="bradicardia"
                                     value="bradicardia">
                                 <label for="bradicardia">Bradicardia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="bradipneia" name="bradipneia"
+                            <div class="destaqueclaro"><input type="checkbox" name="bradipneia"
                                     value="bradipneia">
                                 <label for="bradipneia">Bradipnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="bronco_aspirando"
+                            <div class="destaqueclaro"><input type="checkbox" 
                                     name="bronco_aspirando" value="bronco_aspirando">
                                 <label for="bronco_aspirando">Bronco-aspirando</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="cefaleia" name="cefaleia"
+                            <div class="destaqueclaro"><input type="checkbox" name="cefaleia"
                                     value="cefaleia">
                                 <label for="cefaleia">Cefaléia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="cianose" name="cianose"
-                                    value="cianose">
-                                <label for="cianose">Cianose</label><br>
+                            <div class="destaqueclaro">Cianose
 
                                 <div class="auxiliar">
-                                    <input type="checkbox" id="cianose_labios" name="cianose_labios"
+                                    <input type="checkbox"  name="cianose_labios"
                                         value="cianose_labios">
                                     <label for="cianose_labios">Lábios</label>
                                     <br>
-                                    <input type="checkbox" id="cianose_extremidade" name="cianose_extremidade"
+                                    <input type="checkbox" name="cianose_extremidade"
                                         value="cianose_extremidade">
                                     <label for="cianose_extremidade">Extremidade</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="convulsao" name="convulsao" value="convulsao">
+                                <input type="checkbox" name="convulsao" value="convulsao">
                                 <label for="convulsao">Convulsão</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="decorticacao" name="decorticacao" value="decorticacao">
+                                <input type="checkbox" name="decorticacao" value="decorticacao">
                                 <label for="decorticacao">Decorticação</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="deformidade" name="deformidade" value="deformidade">
+                                <input type="checkbox" name="deformidade" value="deformidade">
                                 <label for="deformidade">Deformidade</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="descerebracao" name="descerebracao" value="descerebracao">
+                                <input type="checkbox" name="descerebracao" value="descerebracao">
                                 <label for="descerebracao">Descerebração</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="desmaio" name="desmaio" value="desmaio">
+                                <input type="checkbox" name="desmaio" value="desmaio">
                                 <label for="desmaio">Desmaio</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="desvio_traqueia"
+                            <div class="destaqueclaro"><input type="checkbox"
                                     name="desvio_traqueia" value="desvio_traqueia">
                                 <label for="desvio_traqueia">Desvio de Traquéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="dispneia" name="dispneia"
+                            <div class="destaqueclaro"><input type="checkbox" name="dispneia"
                                     value="dispneia">
                                 <label for="dispneia">Dispnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="dor_local" name="dor_local"
+                            <div class="destaqueclaro"><input type="checkbox" name="dor_local"
                                     value="dor_local">
                                 <label for="dor_local">Dor Local</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="edema" name="edema" value="edema">
+                                <input type="checkbox"  name="edema" value="edema">
                                 <label for="edema">Edema</label><br>
                                 <div class="auxiliar">
-                                    <input type="checkbox" id="edema_generalizados" name="edema_generalizados"
+                                    <input type="checkbox" name="edema_generalizados"
                                         value="edema_generalizados">
                                     <label for="edema_generalizados">Generalizados</label>
                                     <br>
-                                    <input type="checkbox" id="edema_localizados" name="edema_localizados"
+                                    <input type="checkbox" name="edema_localizados"
                                         value="edema_localizados">
                                     <label for="edema_localizados">Localizados</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="enfisema_subcutaneo" name="enfisema_subcutaneo"
+                                <input type="checkbox" name="enfisema_subcutaneo"
                                     value="enfisema_subcutaneo">
                                 <label for="enfisema_subcutaneo">Enfisema Subcutâneo</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="entase_jugular" name="entase_jugular" value="entase_jugular">
+                                <input type="checkbox" name="entase_jugular" value="entase_jugular">
                                 <label for="entase_jugular">Êstase de Jugular</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="face_palida" name="face_palida" value="face_palida">
+                                <input type="checkbox" name="face_palida" value="face_palida">
                                 <label for="face_palida">Face pálida</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="hipertensao" name="hipertensao" value="hipertensao">
+                                <input type="checkbox" name="hipertensao" value="hipertensao">
                                 <label for="hipertensao">Hipertensão</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="hipotensao" name="hipotensao" value="hipotensao">
+                                <input type="checkbox" name="hipotensao" value="hipotensao">
                                 <label for="hipotensao">Hipotensão</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="hemorragia" name="hemorragia" value="hemorragia">
+                                <input type="checkbox" name="hemorragia" value="hemorragia">
                                 <label for="hemorragia">Hemorragia</label><br>
 
                                 <div class="auxiliar">
-                                    <input type="checkbox" id="hemorragia_interna" name="hemorragia_interna"
+                                    <input type="checkbox" name="hemorragia_interna"
                                         value="hemorragia_interna">
                                     <label for="hemorragia_interna">Interna</label> <br>
 
-                                    <input type="checkbox" id="hemorragia_externa" name="hemorragia_externa"
+                                    <input type="checkbox" name="hemorragia_externa"
                                         value="hemorragia_externa">
                                     <label for="hemorragia_externa">Externa</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="nausea_vomito" name="nausea_vomito" value="nausea_vomito">
+                                <input type="checkbox" name="nausea_vomito" value="nausea_vomito">
                                 <label for="nausea_vomito">Náuseas e vômitos</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="nasoragia" name="nasoragia" value="nasoragia">
+                                <input type="checkbox" name="nasoragia" value="nasoragia">
                                 <label for="nasoragia">Nasoragia</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="obito" name="obito" value="obito">
+                                <input type="checkbox" name="obito" value="obito">
                                 <label for="obito">Óbito</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="otorreia" name="otorreia" value="otorreia">
+                                <input type="checkbox" name="otorreia" value="otorreia">
                                 <label for="otorreia">Otorréia</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="ovace" name="ovace" value="ovace">
+                                <input type="checkbox" name="ovace" value="ovace">
                                 <label for="ovace">O.V.A.C.E.</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" id="parada" name="parada" value="parada">
-                                <label for="parada">Parada</label><br>
-                                <div class="auxiliar">
-                                    <input type="checkbox" id="parada_cardiaca" name="parada_cardiaca"
-                                        value="parada_cardiaca">
-                                    <label for="parada_cardiaca">Cardíaca</label> <br>
-                                    <input type="checkbox" id="parada_respiratoria" name="parada_respiratoria"
-                                        value="parada_respiratoria">
-                                    <label for="parada_respiratoria">Respiratória</label>
-                                </div>
+                               
+                                    <input type="checkbox" name="parada_cardiaca" value="parada_cardiaca">
+                                    <label for="parada_cardiaca">Parada Cardíaca</label> <br>
+                                    <input type="checkbox" name="parada_respiratoria" value="parada_respiratoria">
+                                    <label for="parada_respiratoria">Parada Respiratória</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="priapismo" name="priapismo"
+                            <div class="destaqueclaro"><input type="checkbox" name="priapismo"
                                     value="priapismo">
                                 <label for="priapismo">Priapismo</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="prurido_pele" name="prurido_pele"
+                            <div class="destaqueclaro"><input type="checkbox" name="prurido_pele"
                                     value="prurido_pele">
                                 <label for="prurido_pele">Prurido na pele</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="pupilas" name="pupilas"
-                                    value="pupilas">
-                                <label for="pupilas">Pupilas</label><br>
+                            <div class="destaqueclaro">
+                                Pupilas
 
                                 <div class="auxiliar">
-                                    <input type="checkbox" id="pupilas_anisocoria" name="pupilas_anisocoria"
+                                    <input type="checkbox" name="pupilas_anisocoria"
                                         value="pupilas_anisocoria">
                                     <label for="pupilas_anisocoria">Anisocoria</label><br>
-                                    <input type="checkbox" id="pupilas_isocoria" name="pupilas_isocoria"
+                                    <input type="checkbox" name="pupilas_isocoria"
                                         value="pupilas_isocoria">
                                     <label for="pupilas_isocoria">Isocoria</label><br>
-                                    <input type="checkbox" id="pupilas_midriase" name="pupilas_midriase"
+                                    <input type="checkbox" name="pupilas_midriase"
                                         value="pupilas_midriase">
                                     <label for="pupilas_midriase">Midriase</label><br>
-                                    <input type="checkbox" id="pupilas_miose" name="pupilas_miose"
+                                    <input type="checkbox" name="pupilas_miose"
                                         value="pupilas_miose">
                                     <label for="pupilas_miose">Miose</label><br>
-                                    <input type="checkbox" id="pupilas_reagente" name="pupilas_reagente"
+                                    <input type="checkbox" name="pupilas_reagente"
                                         value="pupilas_reagente">
                                     <label for="pupilas_reagente">Reagente</label><br>
-                                    <input type="checkbox" id="pupilas_nreagente" name="pupilas_nreagente"
+                                    <input type="checkbox" name="pupilas_nreagente"
                                         value="pupilas_nreagente">
                                     <label for="pupilas_nreagente">Não Reagente</label>
                                 </div>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="sede" name="sede" value="sede">
+                            <div class="destaqueclaro"><input type="checkbox"  name="sede" value="sede">
                                 <label for="sede">Sede</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="sinal_battle" name="sinal_battle"
+                            <div class="destaqueclaro"><input type="checkbox"  name="sinal_battle"
                                     value="sinal_battle">
                                 <label for="sinal_battle">Sinal de Battle</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="sinal_guaxinim" name="sinal_guaxinim"
+                            <div class="destaqueclaro"><input type="checkbox" name="sinal_guaxinim"
                                     value="sinal_guaxinim">
                                 <label for="sinal_guaxinim">Sinal de Guaxinim</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="sudorese" name="sudorese"
+                            <div class="destaqueclaro"><input type="checkbox" name="sudorese"
                                     value="sudorese">
                                 <label for="sudorese">Sudorese</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="taquipneia" name="taquipneia"
+                            <div class="destaqueclaro"><input type="checkbox" name="taquipneia"
                                     value="taquipneia">
                                 <label for="taquipneia">Taquipnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="taquicardia" name="taquicardia"
+                            <div class="destaqueclaro"><input type="checkbox" name="taquicardia"
                                     value="taquicardia">
                                 <label for="taquicardia">Taquicardia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" id="tontura" name="tontura"
+                            <div class="destaqueclaro"><input type="checkbox" name="tontura"
                                     value="tontura">
                                 <label for="tontura">Tontura</label>
                             </div>
@@ -1985,7 +1923,7 @@
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" id="tratado_choque" name="tratado_choque"
-                                value="tratado_choque">
+                                value="sim">
                             <label for="tratado_choque">Tratado choque</label>
                         </div>
 
@@ -2047,10 +1985,7 @@
                                     <label for="meioa_defesacivil">Def. civil</label>
                                 </div>
 
-                                <div><input type="checkbox" id="meioa_policia" name="meioa_policia"
-                                        value="meioa_policia">
-
-                                    <label for="meioa_policia">Polícia</label>
+                                <div>Policia
 
                                     <div class="auxiliar">
 
@@ -2069,8 +2004,7 @@
                                     </div>
                                 </div>
 
-                                <div><input type="checkbox" id="meioa_samu" name="meioa_samu" value="meioa_samu">
-                                    <label for="meioa_samu">Samu</label>
+                                <div>Samu
 
                                     <div class="auxiliar">
 
@@ -2621,6 +2555,61 @@
     </div>
     </div>
     </form>
-</body>
 
+<script>
+    (function (window) {
+        var $canvas,
+            onResize = function (event) {
+                $canvas.attr({
+                    height: 200,
+                    width: 630
+                });
+            };
+
+        $(document).ready(function () {
+            $canvas = $('canvas');
+            window.addEventListener('orientationchange', onResize, false);
+            window.addEventListener('resize', onResize, false);
+            onResize();
+
+
+
+            $('form').signaturePad({
+                drawOnly: true,
+                defaultAction: 'drawIt',
+                validateFields: false,
+                lineWidth: 0,
+                output: '.assinatura',
+                clear: 'input[type=reset]',
+            });//Exemplo para mostrar a assinatura já preenchida .regenerate([{"lx":70,"ly":101,"mx":70,"my":100},{"lx":72,"ly":100,"mx":70,"my":101},{"lx":77,"ly":98,"mx":72,"my":100},{"lx":85,"ly":95,"mx":77,"my":98},{"lx":96,"ly":90,"mx":85,"my":95},{"lx":107,"ly":85,"mx":96,"my":90},{"lx":119,"ly":80,"mx":107,"my":85},{"lx":131,"ly":73,"mx":119,"my":80},{"lx":142,"ly":67,"mx":131,"my":73},{"lx":153,"ly":62,"mx":142,"my":67},{"lx":163,"ly":56,"mx":153,"my":62},{"lx":172,"ly":52,"mx":163,"my":56},{"lx":178,"ly":49,"mx":172,"my":52},{"lx":178,"ly":48,"mx":178,"my":49},{"lx":178,"ly":47,"mx":178,"my":48},{"lx":178,"ly":46,"mx":178,"my":47},{"lx":175,"ly":46,"mx":178,"my":46},{"lx":172,"ly":46,"mx":175,"my":46},{"lx":167,"ly":46,"mx":172,"my":46},{"lx":157,"ly":46,"mx":167,"my":46},{"lx":148,"ly":46,"mx":157,"my":46},{"lx":140,"ly":46,"mx":148,"my":46},{"lx":132,"ly":47,"mx":140,"my":46},{"lx":123,"ly":49,"mx":132,"my":47},{"lx":115,"ly":51,"mx":123,"my":49},{"lx":108,"ly":52,"mx":115,"my":51},{"lx":103,"ly":53,"mx":108,"my":52},{"lx":102,"ly":54,"mx":103,"my":53},{"lx":101,"ly":54,"mx":102,"my":54},{"lx":101,"ly":55,"mx":101,"my":54},{"lx":102,"ly":59,"mx":101,"my":55},{"lx":107,"ly":63,"mx":102,"my":59},{"lx":110,"ly":65,"mx":107,"my":63},{"lx":115,"ly":69,"mx":110,"my":65},{"lx":121,"ly":73,"mx":115,"my":69},{"lx":127,"ly":78,"mx":121,"my":73},{"lx":131,"ly":82,"mx":127,"my":78},{"lx":134,"ly":87,"mx":131,"my":82},{"lx":136,"ly":91,"mx":134,"my":87},{"lx":137,"ly":94,"mx":136,"my":91},{"lx":138,"ly":98,"mx":137,"my":94},{"lx":138,"ly":101,"mx":138,"my":98},{"lx":135,"ly":104,"mx":138,"my":101},{"lx":127,"ly":108,"mx":135,"my":104},{"lx":118,"ly":111,"mx":127,"my":108},{"lx":108,"ly":113,"mx":118,"my":111},{"lx":97,"ly":115,"mx":108,"my":113},{"lx":89,"ly":116,"mx":97,"my":115},{"lx":82,"ly":117,"mx":89,"my":116},{"lx":86,"ly":118,"mx":82,"my":117},{"lx":93,"ly":118,"mx":86,"my":118},{"lx":104,"ly":118,"mx":93,"my":118},{"lx":120,"ly":117,"mx":104,"my":118},{"lx":144,"ly":113,"mx":120,"my":117},{"lx":161,"ly":108,"mx":144,"my":113},{"lx":175,"ly":102,"mx":161,"my":108},{"lx":186,"ly":96,"mx":175,"my":102},{"lx":197,"ly":92,"mx":186,"my":96},{"lx":199,"ly":90,"mx":197,"my":92},{"lx":199,"ly":89,"mx":199,"my":90},{"lx":199,"ly":88,"mx":199,"my":89},{"lx":198,"ly":88,"mx":199,"my":88},{"lx":193,"ly":88,"mx":198,"my":88},{"lx":190,"ly":88,"mx":193,"my":88},{"lx":185,"ly":88,"mx":190,"my":88},{"lx":180,"ly":89,"mx":185,"my":88},{"lx":177,"ly":90,"mx":180,"my":89},{"lx":172,"ly":90,"mx":177,"my":90},{"lx":166,"ly":91,"mx":172,"my":90},{"lx":162,"ly":92,"mx":166,"my":91},{"lx":161,"ly":94,"mx":162,"my":92},{"lx":164,"ly":94,"mx":161,"my":94},{"lx":171,"ly":94,"mx":164,"my":94},{"lx":184,"ly":94,"mx":171,"my":94},{"lx":200,"ly":94,"mx":184,"my":94},{"lx":228,"ly":94,"mx":200,"my":94},{"lx":250,"ly":93,"mx":228,"my":94},{"lx":271,"ly":90,"mx":250,"my":93},{"lx":285,"ly":89,"mx":271,"my":90},{"lx":297,"ly":88,"mx":285,"my":89},{"lx":304,"ly":87,"mx":297,"my":88},{"lx":303,"ly":87,"mx":304,"my":87},{"lx":295,"ly":86,"mx":303,"my":87},{"lx":286,"ly":86,"mx":295,"my":86},{"lx":275,"ly":86,"mx":286,"my":86},{"lx":267,"ly":86,"mx":275,"my":86},{"lx":261,"ly":86,"mx":267,"my":86},{"lx":264,"ly":86,"mx":261,"my":86},{"lx":271,"ly":86,"mx":264,"my":86},{"lx":283,"ly":87,"mx":271,"my":86},{"lx":293,"ly":88,"mx":283,"my":87},{"lx":301,"ly":89,"mx":293,"my":88},{"lx":308,"ly":89,"mx":301,"my":89},{"lx":308,"ly":90,"mx":308,"my":89},{"lx":304,"ly":91,"mx":308,"my":90},{"lx":300,"ly":92,"mx":304,"my":91},{"lx":293,"ly":92,"mx":300,"my":92},{"lx":286,"ly":93,"mx":293,"my":92},{"lx":279,"ly":93,"mx":286,"my":93},{"lx":281,"ly":94,"mx":279,"my":93},{"lx":284,"ly":94,"mx":281,"my":94},{"lx":293,"ly":95,"mx":284,"my":94},{"lx":308,"ly":96,"mx":293,"my":95},{"lx":324,"ly":96,"mx":308,"my":96},{"lx":341,"ly":97,"mx":324,"my":96},{"lx":356,"ly":98,"mx":341,"my":97},{"lx":366,"ly":99,"mx":356,"my":98},{"lx":374,"ly":100,"mx":366,"my":99},{"lx":375,"ly":100,"mx":374,"my":100},{"lx":376,"ly":101,"mx":375,"my":100},{"lx":377,"ly":101,"mx":376,"my":101},{"lx":373,"ly":101,"mx":377,"my":101},{"lx":366,"ly":101,"mx":373,"my":101},{"lx":358,"ly":101,"mx":366,"my":101},{"lx":352,"ly":101,"mx":358,"my":101},{"lx":355,"ly":101,"mx":352,"my":101},{"lx":364,"ly":101,"mx":355,"my":101},{"lx":377,"ly":100,"mx":364,"my":101},{"lx":397,"ly":98,"mx":377,"my":100},{"lx":421,"ly":96,"mx":397,"my":98},{"lx":447,"ly":91,"mx":421,"my":96},{"lx":471,"ly":85,"mx":447,"my":91},{"lx":487,"ly":81,"mx":471,"my":85},{"lx":498,"ly":78,"mx":487,"my":81},{"lx":505,"ly":76,"mx":498,"my":78},{"lx":505,"ly":75,"mx":505,"my":76},{"lx":505,"ly":74,"mx":505,"my":75},{"lx":502,"ly":71,"mx":505,"my":74},{"lx":498,"ly":70,"mx":502,"my":71},{"lx":495,"ly":69,"mx":498,"my":70},{"lx":493,"ly":69,"mx":495,"my":69},{"lx":490,"ly":69,"mx":493,"my":69},{"lx":486,"ly":69,"mx":490,"my":69},{"lx":482,"ly":69,"mx":486,"my":69},{"lx":478,"ly":69,"mx":482,"my":69},{"lx":473,"ly":69,"mx":478,"my":69},{"lx":467,"ly":71,"mx":473,"my":69},{"lx":461,"ly":74,"mx":467,"my":71},{"lx":456,"ly":77,"mx":461,"my":74},{"lx":451,"ly":81,"mx":456,"my":77},{"lx":446,"ly":86,"mx":451,"my":81},{"lx":442,"ly":92,"mx":446,"my":86},{"lx":439,"ly":101,"mx":442,"my":92},{"lx":437,"ly":109,"mx":439,"my":101},{"lx":436,"ly":116,"mx":437,"my":109},{"lx":436,"ly":124,"mx":436,"my":116},{"lx":437,"ly":135,"mx":436,"my":124},{"lx":443,"ly":145,"mx":437,"my":135},{"lx":453,"ly":153,"mx":443,"my":145},{"lx":469,"ly":161,"mx":453,"my":153},{"lx":499,"ly":168,"mx":469,"my":161},{"lx":524,"ly":171,"mx":499,"my":168},{"lx":542,"ly":172,"mx":524,"my":171},{"lx":554,"ly":172,"mx":542,"my":172},{"lx":560,"ly":172,"mx":554,"my":172},{"lx":560,"ly":171,"mx":560,"my":172},{"lx":560,"ly":168,"mx":560,"my":171},{"lx":559,"ly":163,"mx":560,"my":168},{"lx":554,"ly":159,"mx":559,"my":163},{"lx":543,"ly":155,"mx":554,"my":159},{"lx":529,"ly":150,"mx":543,"my":155},{"lx":507,"ly":144,"mx":529,"my":150},{"lx":489,"ly":142,"mx":507,"my":144},{"lx":476,"ly":140,"mx":489,"my":142},{"lx":464,"ly":137,"mx":476,"my":140},{"lx":454,"ly":135,"mx":464,"my":137},{"lx":447,"ly":134,"mx":454,"my":135},{"lx":446,"ly":134,"mx":447,"my":134},{"lx":444,"ly":133,"mx":446,"my":134},{"lx":441,"ly":132,"mx":444,"my":133},{"lx":437,"ly":132,"mx":441,"my":132},{"lx":427,"ly":132,"mx":437,"my":132},{"lx":413,"ly":132,"mx":427,"my":132},{"lx":395,"ly":132,"mx":413,"my":132},{"lx":371,"ly":132,"mx":395,"my":132},{"lx":342,"ly":136,"mx":371,"my":132}]);
+        });
+    }(this));
+
+    function enviarFormulario() {
+        var dados = $('.form').serialize();
+console.log(dados);
+        $.ajax({
+            type: "POST",
+            url: "ficha.php",
+            data: dados,
+            success: function (ret) {
+                // Função de callback chamada quando a requisição é bem-sucedida
+                if (ret.erro) {
+                    alert(ret.mensagem); // Trata erros, se houverem
+                } else {
+                    // Trata o caso de sucesso, se não houver erros
+                    alert(ret.mensagem);
+                    // Redirecione ou realize outras ações necessárias aqui
+                }
+            },
+            error: function (xhr, status, error) {
+                // Função de callback chamada em caso de erro na requisição
+                alert("Erro: " + error);
+            }
+        });
+    }
+    
+</script>
+
+</body>
 </html>

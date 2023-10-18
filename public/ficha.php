@@ -413,21 +413,12 @@ $equipe = $_POST["equipe"];
 $ficha = $_POST["ficha"];
 $fibra = $_POST["fibra"];
 
-$mensagemErro = "";
-
-
-if ($mensagemErro != "") {
-  $data = array("erro" => true, "mensagem" => "Dados inválidos: " + $mensagemErro);
-  header("Content-Type: application/json");
-  echo json_encode($data);
-  exit();
-}
 
 // Verifique se o valor de "conducao" é uma das opções válidas
 if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "sentada") {
 
   // Verifique se o valor de "decisao" é uma das opções válidas
-  if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente instavel" || $decisao === "estavel") {
+  if ($decisao === "critico" || $decisao === "instavel" || $decisao === "potencialmente_instavel" || $decisao === "estavel") {
 
     if ($meioaCivil || $meioaMilitar || $meioaPre || $meioaPrf) {
       $meioaPolicia = 1;
@@ -448,7 +439,7 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
     if ($talasPapp || $talasPapg) {
       $talasPap = 1;
     }
-
+    
     // Montar a consulta SQL para a tabela "ficha"
 
     $sqlFicha = "INSERT INTO ficha (oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu,
@@ -493,18 +484,9 @@ if ($conducao === "deitada" || $conducao === "semi_sentada" || $conducao === "se
 
     //tabela material deixados no hospital
 
-        // Executar a consulta SQL
-
-        if ($conn->query($sqlFicha) === TRUE) {
-          echo "Registro inserido com sucesso!";
-      } else {
-          echo "Erro ao inserir o registro: " . $conn->error;
-      }
-
-      // Fechar a conexão
-      
-      $conn->close();
   }
 }
 
+// Fechar a conexão com o banco de dados
+$conn->close();
 ?>

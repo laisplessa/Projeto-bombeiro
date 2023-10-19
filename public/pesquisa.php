@@ -7,15 +7,15 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 session_start();
 
-$dataOcorrencia = $_POST["data_ocorrencia"];
+$cpf = $_POST["cpf"];
 
-if ($dataOcorrencia == null) {
+if ($cpf == null) {
     $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações");
     header("Content-Type: application/json");
     echo json_encode($data);
     exit();
 } else {
-    $sql = "SELECT * FROM ficha WHERE data_ocorrencia = '$dataOcorrencia'";
+    $sql = "SELECT * FROM usuario WHERE cpf = '$cpf'";
     $run_query = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($run_query) > 0) {

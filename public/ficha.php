@@ -394,6 +394,7 @@ $siaSus = $_POST["sia_sus"];
 $eu = $_POST["eu"];
 $rgNumero = $_POST["rg_numero"];
 $cpfNumero = $_POST["cpf_numero"];
+$assinatura = $_POST["assinatura"];
 $testemunha = $_POST["testemunha"];
 $docTestemunha = $_POST["doc_testemunha"];
 $testemunha2 = $_POST["testemunha2"];
@@ -428,7 +429,7 @@ $fibra = $_POST["fibra"];
     ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade,
     base_estabiliza, base_quantidade, ttf, ttf_adulto, ttf_infantil, ttf_quantidade, colar_n, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar_m, colar_g, 	colar_tam, 	colar_tamm, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade
     observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, cod_ir, cod_ps, h_ch, sia_sus,
-    eu, rg_numero, cpf_numero, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra) 
+    eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra)
     
     VALUES (null, '$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quaisProblemas', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario',
     '$data', '$sexoPaciente', '$nomeHospital', '$nomePaciente', '$idade', '$telefonePaciente', '$rgCpf', '$nomeAcompanhante', '$idadeAcompanhante', '$localOcorrencia',
@@ -448,7 +449,7 @@ $fibra = $_POST["fibra"];
     '$ataduras8', '$ataduras12', '$ataduras20', '$ataduraQuantidade', '$mantaAluminizada', '$mantaQuantidade', '$cateterOculos', '$cateterQuantidade', '$pasDea', '$pasQuantidade','$compressaComum', '$compressaQuantidade', '$sondaAspiracao', '$sondaQuantidade', '$kitsH', '$kitsP', '$kitsQ', '$kitsQuantidade', '$soroFisiologico', '$soroQuantidade', '$luvasDescartaveis', '$luvasQuantidade', '$talasPapp', '$talasPapg', '$talasQuantidade', '$mascarasDescartaveis', '$mascaraQuantidades', '$outroMaterial', '$outroM', '$outromQuantidade',
     '$baseEstabiliza', '$baseQuantidade', '$ttfAdulto', '$ttfInfantil', '$ttfQuantidade', '$colarN', '$colarPP', '$colarP', '$colarQuantidade', '$tiranteAranha', '$tiranteQuantidade', '$colarM', '$colarG', '$colarTam', '$colarTamm', '$colar2quantidade', '$tiranteCabeca', '$tirantecQuantidade', '$coxinsEstabiliza', '$coxinsQuantidade', '$canula', '$canulaQuantidade', '$ked', '$kedAdulto', '$kedInfantil', '$kedQuantidade', '$outroMaterial2', '$outrom2', '$outrom2Quantidade', '$maca', '$macaQuantidade', '$outroMaterial3', '$outrom3', '$outrom3Quantidade',
     '$observacoesImportantes', '$disturbioComportamento', '$encontradoCapacete', '$encontradoCinto', '$parabrisasAvariado', '$caminhandoCena', '$painelAvariado', '$volanteTorcido', '$nUsd', '$Nocorrencia', '$desp', '$kmFinal', '$codIr', '$codPs', '$siaSus',
-    '$eu', '$rgNumero', '$cpfNumero', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
+    '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
 
 
 $execucao = mysqli_query($con, $sqlFicha);

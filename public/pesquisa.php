@@ -7,29 +7,28 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 session_start();
 
-$cpfPaciente = $_POST["cpf_paciente"];
+$dataOcorrencia = $_POST["data_ocorrencia"];
 
-if ($cpfPaciente == null) {
+if ($dataOcorrencia == null) {
     $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações");
     header("Content-Type: application/json");
     echo json_encode($data);
     exit();
 } else {
-    $sql = "SELECT * FROM ficha WHERE rg_cpf = '$cpfPaciente'";
+    $sql = "SELECT * FROM ficha WHERE data_ocorrencia = '$dataOcorrencia'";
     $run_query = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($run_query) > 0) {
         $row = mysqli_fetch_assoc($run_query);
 
-        // Você pode acessar campos específicos assim:
-        $nomePaciente = $row["nome_paciente"];
+        $data = $row["data"];
 
-        $data = array("erro" => false, "mensagem" => "Paciente encontrado", "paciente" => $row);
+        $data = array("erro" => false, "mensagem" => "Ocorrência encontrada"=> $row);
         header("Content-Type: application/json");
         echo json_encode($data);
         exit();
     } else {
-        $data = array("erro" => true, "mensagem" => "Paciente não encontrado no sistema");
+        $data = array("erro" => true, "mensagem" => "Ocorrência não encontrada no sistema");
         header("Content-Type: application/json");
         echo json_encode($data);
         exit();

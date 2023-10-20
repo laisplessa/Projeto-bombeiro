@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>relatório de ocorrências</title>
     <link rel="stylesheet" href="relatorio.css">
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+
+    <script>
+        function Listar() {
+            var cpfInput = document.getElementById("cpf");
+            var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            
+            var errorDiv = document.getElementById("cpf-error");
+        
+            if (cpfValue.length !== 11) {
+                errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
+                errorDiv.style.display = "block";
+                return;
+            } else {
+                errorDiv.style.display = "none";
+            }
+        
+            var dados = $('.form1').serialize();
+            
+            // Chamar a API PHP para buscar o nome do usuário com base no CPF
+            $.ajax({
+                type: "POST",
+                url: "pesquisa.php",
+                data: dados,
+                success: function (ret) {
+                    if (ret.erro) {
+                        alert(ret.mensagem);
+                    } else {
+                        // Documento preenchido com CPF e Nome do Usuário
+                        var documento = "CPF: " + 'cpfValue' + " - Nome: " + ret.nome; 
+                        alert(documento);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("Erro: " + error);
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                },
+            });
+        }
+        </script>
+      
+
 </head>
 <body>
     <div class="fundo2">
@@ -18,9 +63,9 @@
         
     <div class="input__container input__container--variant">
         <div class="shadow__input shadow__input--variant"></div>
-        <input type="text" maxlength="11" minlength="11" name="text" class="input__search input__search--variant" placeholder="Digite o CPF...">
-        <button class="input__button__shadow input__button__shadow--variant">
-          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="1.3em" width="14em">
+        <input type="text" maxlength="11" minlength="11" name="cpf" id="cpf" class="input__search input__search--variant" placeholder="Digite o CPF..." >
+        <div id="cpf-error" style="display: none; color: black;"></div>
+        <input type="button" name="acessar" value="Acessar" class="login-button" onclick="Listar(); " /> <a href="atendimentorecusa.html"></a>
             <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#FFF"></path>
           </svg>
         </button>

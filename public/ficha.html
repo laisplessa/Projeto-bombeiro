@@ -147,7 +147,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Horário da última medicação:</div>
-                                <input type="text" class="insere" name="hora_medicacao"
+                                <input type="time" class="insere" name="hora_medicacao"
                                     placeholder="00:00">
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Que horas?</div>
-                                <input type="text" class="insere" name="ingeriu_horario"
+                                <input type="time" class="insere" name="ingeriu_horario"
                                     placeholder="00:00">
                             </div>
                         </div>
@@ -334,7 +334,7 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Que horas iniciaram as contrações?</div>
-                            <input type="text" class="insere" name="inicio_contracao" placeholder="00:00">
+                            <input type="time" class="insere" name="inicio_contracao" placeholder="00:00">
                         </div>
                     </div>
 
@@ -343,11 +343,13 @@
                             <div>Tempo das contrações</div>
                             <div class="simnao">
                                 <div>Duração:</div>
-                                <input type="text" class="insere" name="duracao_contracao" placeholder="00:00">
+                                <br>
+                                <input type="time" class="insere" name="duracao_contracao" placeholder="00:00">
                             </div>
+                            <br>
                             <div class="simnao">
                                 <div>Intervalo:</div>
-                                <input type="text" class="insere" name="intervalo_contracao" placeholder="00:00">
+                                <input type="time" class="insere" name="intervalo_contracao" placeholder="00:00">
                             </div>
                         </div>
                     </div>
@@ -393,7 +395,7 @@
                             </div>
                             <div class="simnao">
                                 <div>Hora do nascimento:</div>
-                                <input type="text" class="insere" name="hora_nascimento" placeholder="00:00">
+                                <input type="time" class="insere" name="hora_nascimento" placeholder="00:00">
                             </div>
                         </div>
                     </div>
@@ -2064,7 +2066,7 @@
                                     <label for="ataduras_20">20</label>
                     </div>
                     </td>
-                    <td><input class="tam75" type="number" name="atadura_quantidade"
+                    <td><input class="tam75" type="text" name="atadura_quantidade"
                             placeholder="Digite a quantidade" />
                     </td>
 
@@ -2073,7 +2075,7 @@
                             value="sim">
                         <label for="mmanta_aluminizadaud">Manta aluminizada</label>
                     </td>
-                    <td><input class="tam75" type="number" name="manta_quantidade"
+                    <td><input class="tam75" type="text" name="manta_quantidade"
                             placeholder="Digite a quantidade" />
                     </td>
                     </tr>
@@ -2083,14 +2085,14 @@
                             <input type="checkbox" name="cateter_oculos" value="sim">
                             <label for="cateter_oculos">Cateter TP. Ocúlos</label>
                         </td>
-                        <td><input class="tam75" type="number" name="cateter_quantidade"
+                        <td><input class="tam75" type="text" name="cateter_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                         <td>
                             <input type="checkbox" name="pas_dea" value="sim">
                             <label for="pas_dea">Pás do DEA</label>
                         </td>
-                        <td><input class="tam75" type="number" name="pas_quantidade"
+                        <td><input class="tam75" type="text" name="pas_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                     </tr>
@@ -2100,14 +2102,14 @@
                             <input type="checkbox" name="compressa_comum" value="sim">
                             <label for="compressa_comum">Compressa Comum</label>
                         </td>
-                        <td><input class="tam75" type="number" name="compressa_quantidade"
+                        <td><input class="tam75" type="text" name="compressa_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                         <td>
                             <input type="checkbox" name="sonda_aspiracao" value="sim">
                             <label for="sonda_aspiracao">Sonda de Aspiração</label>
                         </td>
-                        <td><input class="tam75" type="number" name="sonda_quantidade"
+                        <td><input class="tam75" type="text" name="sonda_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                     </tr>
@@ -2124,14 +2126,14 @@
                             <label for="kits_q">Q</label>
         </div>
         </td>
-        <td><input class="tam75" type="number" name="kits_quantidade"
+        <td><input class="tam75" type="text" name="kits_quantidade"
                 placeholder="Digite a quantidade"  />
         </td>
         <td>
             <input type="checkbox" name="soro_fisiologico" value="sim">
             <label for="soro_fisiologico">Soro Fisiológico</label>
         </td>
-        <td><input class="tam75" type="number" name="soro_quantidade"
+        <td><input class="tam75" type="text" name="soro_quantidade"
                 placeholder="Digite a quantidade"  />
         </td>
         </tr>
@@ -2141,7 +2143,7 @@
                 <input type="checkbox" name="luvas_descartaveis" value="sim">
                 <label for="luvas_descartaveis">Luvas Descartáveis (Pares)</label>
             </td>
-            <td><input class="tam75" type="number" name="luvas_quantidade"
+            <td><input class="tam75" type="text" name="luvas_quantidade"
                     placeholder="Digite a quantidade"  />
             </td>
             <td>
@@ -2153,7 +2155,7 @@
                 <label for="talas_papg">G</label>
     </div>
     </td>
-    <td><input class="tam75" type="number" name="talas_quantidade"
+    <td><input class="tam75" type="text" name="talas_quantidade"
             placeholder="Digite a quantidade"  />
     </td>
     </tr>
@@ -2164,14 +2166,14 @@
                 value="sim">
             <label for="mascaras_descartaveis">Máscaras Descartáveis</label>
         </td>
-        <td><input class="tam75" type="number" name="mascara_quantidade"
+        <td><input class="tam75" type="text" name="mascara_quantidade"
                 placeholder="Digite a quantidade"  />
         </td>
         <td>
             <input type="checkbox"  name="outro_material" value="sim">
             <input class="tam75" type="text" name="outrom" placeholder="Outro material"  />
         </td>
-        <td><input class="tam75" type="number" name="outrom_quantidade"
+        <td><input class="tam75" type="text" name="outrom_quantidade"
                 placeholder="Digite a quantidade"  />
         </td>
     </tr>

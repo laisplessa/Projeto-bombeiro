@@ -64,7 +64,7 @@ body {
 
 /* Colunas com sim e não */
 .simnao {
-    column-gap: 40px;
+    column-gap: 30px;
     column-count: 2;
 }
 
@@ -229,8 +229,8 @@ input::-webkit-inner-spin-button {
 
 /* Horários */
 .insere {
-    width: 37px;
-    margin-left: 2px;
+    width: 66px;
+    margin-left: -20px;
 }
 
 

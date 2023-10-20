@@ -30,7 +30,7 @@
 
       <!--Botão para acessar formulário de recusa de atendimento-->
       <div class="botaopesquisa">
-      <b><a href="#"> Pesquisar ocorrência </a></b>
+      <b><a href="relatorio.html"> Pesquisar ocorrência </a></b>
     </div>
   </div>
 

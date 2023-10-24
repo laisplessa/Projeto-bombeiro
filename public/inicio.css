@@ -5,7 +5,14 @@ body{
     background-color: #defdec;
 }
 
-.botaoatendimento{
+.logo{
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+  }
+
+  
+.iniciar{
 background:  #20643f;
 border: 0;
 color: #fff;
@@ -27,9 +34,3 @@ font-family: 'Roboto Condensed';
 a{
     color: #fff;
 }
-
-.logo{
-    block-size: 100px;
-    margin-top: 15px;
-    height: 140px;
-  }

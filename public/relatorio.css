@@ -21,13 +21,14 @@ body {
 
 .relatorio {
   position: absolute;
-  top: 38%;
-  margin-left: 25%;
-  width: 40%;
+  top: 33%;
+  margin-left: 35%;
+  width: 20%;
   padding: 2%;
   background-color: #defdec;
   background: rgba(160, 161, 161, 0.123);
   border-radius: 8px;
+  text-align: center;
 }
 
 .titulo {
@@ -36,7 +37,7 @@ body {
 }
 
 .relatorio-input {
-  width: 90%;
+  width: 60%;
   padding: 10px;
   margin-bottom: 15px;
   border: none;
@@ -67,8 +68,12 @@ body {
   color: black;
 }
 
-.text a {
-  text-decoration: none;
-  color:black;
-  font-family: 'Open Sans', coursive;
+.form input, .form select {
+  border-radius: 5px;
+  padding: 8px;
+  border: 1.5px solid #20643f;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  width: 60%
 }
+

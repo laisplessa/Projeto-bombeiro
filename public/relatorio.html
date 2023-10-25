@@ -6,68 +6,58 @@
     <title>relatório de ocorrências</title>
     <link rel="stylesheet" href="relatorio.css">
     <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <script src="relatorio.js"></script>
 
     <script>
-        function Listar() {
-            var cpfInput = document.getElementById("cpf");
-            var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-            
-            var errorDiv = document.getElementById("cpf-error");
-        
-            if (cpfValue.length !== 11) {
-                errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
-                errorDiv.style.display = "block";
-                return;
-            } else {
-                errorDiv.style.display = "none";
-            }
-        
-            var dados = $('.form1').serialize();
-            
-            // Chamar a API PHP para buscar o nome do usuário com base no CPF
-            $.ajax({
-                type: "POST",
-                url: "pesquisa.php",
-                data: dados,
-                success: function (ret) {
-                    if (ret.erro) {
-                        alert(ret.mensagem);
-                    } else {
-                        // Documento preenchido com CPF e Nome do Usuário
-                        var documento = "CPF: " + 'cpfValue' + " - Nome: " + ret.nome; 
-                        alert(documento);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    alert("Erro: " + error);
-                },
-                beforeSend: function () {
-                },
-                complete: function () {
-                },
-            });
-        }
-        </script>
-      
 
+function Listar() {
+    var dataOcorrenciaInput = document.getElementById("data_ocorrencia");
+    var dataOcorrenciaValue = dataOcorrenciaInput.value;
+
+    var dados = $('.form').serialize();
+    dados += "&data_ocorrencia=" + dataOcorrenciaValue;
+
+    $.ajax({
+        type: "POST",
+        url: "relatorio.php",
+        data: dados,
+        success: function (ret) {
+            if (ret.erro) {
+                alert(ret.mensagem);
+            }
+
+        },
+        error: function (xhr, status, error) {
+            alert("Erro: " + error);
+        },
+        beforeSend: function () {
+        },
+        complete: function () {
+        },
+    });
+        }
+    </script>
 </head>
+
 <body>
+    <form class="form">
+    <div id="app"></div>
     <div class="fundo2">
         <div class="logo">
             <img src="logobombeiros.png" height="140" width="140" align="right">
         <!-- </div>  -->
         
-        <h1>Relatório de Ocorrências<h1>
-        <h3>Use o CPF registrado na ocorrência para visualizar o relatório geral</h3>
+        <h1>Relatório de Ocorrências</h1>
+        <h4>Use a data da ocorrência para visualizar as ocorrências desejadas</h4>
     </div>
          
     <div class="relatorio">
-
-        <div class="text">Insira a data da ocorrência</div>
+<div class="text">Informe a data da ocorrência</div>
         <input type="date" class="form-control" name="data_ocorrencia" placeholder="dd/mm/aaaa"
-        data-mask="00/00/0000" maxlength="10" autocomplete="off">
-        <input type="button" name="buscar" value="Buscar" class="relatorio-button" onclick="Listar(); " /> <a href="atendimentorecusa.html"></a>
+        data-mask="00/00/0000" maxlength="10" autocomplete="off"> <br>
+        <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>
     </div>
     </div>
+</form>
 </body>
 </html>

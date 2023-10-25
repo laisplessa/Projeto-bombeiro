@@ -41,7 +41,7 @@ if ($dataOcorrencia == null) {
       $fichas[] = $row;
     }
 
-    $data["fichas"] = $fichas;
+    $data["ficha"] = $ficha;
 
     header("Content-Type: application/json");
     echo json_encode($data);

@@ -19,64 +19,56 @@ body {
     height: 140px;
 }
 
+.relatorio {
+  position: absolute;
+  top: 38%;
+  margin-left: 25%;
+  width: 40%;
+  padding: 2%;
+  background-color: #defdec;
+  background: rgba(160, 161, 161, 0.123);
+  border-radius: 8px;
+}
 
-.input__container--variant {
-    background: linear-gradient(to bottom, #F3FFF9, #F3FFF9);
-    border-radius: 30px;
-    max-width: 18em;
-    padding: 1em 1em;
-    position: absolute;
-    top: 40%;
-    margin-left: 35%;
-  }
-  
-  .shadow__input--variant {
-    filter: blur(25px);
-    border-radius: 30px;
-    background-color: #F3FFF9;
-    opacity: 0.5;
-  }
-  
-  .input__button__shadow--variant {
-    border-radius: 15px;
-    background-color: #07372C;
-    padding: 2px;
-    border: none;
-    margin-left: 13%;
-    text-align: center;
-  }
-  
-  .input__button__shadow--variant:hover {
-    background-color: #3C6659;
-  }
-  
-  .input__search--variant {
-    width: 13em;
-    align-items: center;
-    border-radius: 13em;
-    outline: none;
-    border: none;
-    padding: 0.8em;
-    font-size: 1.2em;
-    color: #002019;
-    background-color: transparent;
-  }
-  
-  .input__search--variant::placeholder {
-    color: #002019;
-    opacity: 0.7;
-  }
-  
-  .input__container--variant {
-    background: linear-gradient(to bottom, #F3FFF9, #F3FFF9);
-    border-radius: 1.5em;
-    max-width: 18em;
-    padding: 1em;
-    box-shadow: 0em 1em 3em #beecdc64;
-  }
-  
-  a{
-    font-size: 15px;
-    color: white;
-    text-align: center;
-  }
+.titulo {
+  color: black;
+  font-family: 'Open Sans', coursive;
+}
+
+.relatorio-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.relatorio-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #20643f;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.623);
+}
+
+.relatorio-button:hover {
+  background: #32945e;
+}
+
+.text {
+  font-size: 18px;
+  font-family: 'Open Sans', coursive;
+  color: black;
+}
+
+.text a {
+  text-decoration: none;
+  color:black;
+  font-family: 'Open Sans', coursive;
+}

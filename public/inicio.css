@@ -9,7 +9,8 @@ body{
     block-size: 100px;
     margin-top: 60px;
     height: 100%;
-    margin-left: 38%;
+    margin-left: 39%;
+    display: block;
   }
 
   

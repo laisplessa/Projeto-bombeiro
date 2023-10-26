@@ -1,0 +1,54 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #defdec;
+}
+
+.botaocadastrar{
+background:  #20643f;
+border: 0;
+color: #fff;
+cursor: pointer;
+padding: 15px 20px;
+text-decoration: none;
+transition: 0.2s;
+border-radius: 8px;
+margin-top: 55px;
+display: block;
+width: 32%;
+height: 3%;
+text-align: center;
+margin-left: 33%;
+font-size:  130%;
+font-family: 'Roboto Condensed';
+}
+
+a{
+    color: #fff;
+}
+
+.botaoinativa{
+    background:  #20643f;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    margin-top: 10vh;
+    display: block;
+    width: 32%;
+    height: 3%;
+    text-align: center;
+    margin-left: 33%;
+    font-size: 130%;
+    font-family: 'Roboto Condensed';
+    }
+
+.logo{
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+  }

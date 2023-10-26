@@ -74,16 +74,6 @@ font-weight: bold;
   text-align: center;
 }
 
-.text {
-  font-size: 12px;
-}
-
-.text a {
-  text-decoration: none;
-  color:black;
-  font-family: 'Open Sans', coursive;
-}
-
 .logo{
   block-size: 100px;
   margin-top: 15px;

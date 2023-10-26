@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relatório de ocorrências</title>
+    <link rel="stylesheet" href="relatorio.css">
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <script src="relatorio.js"></script>
+
+    <script>
+
+        function Listar() {
+            var cpfInput = document.getElementById("cpf");
+            var ncpfValue = cpfInput.value;
+
+            var dados = $('.form').serialize();
+            dados += "&data_ocorrencia=" + dataOcorrenciaValue;
+
+            $.ajax({
+                type: "POST",
+                url: "inativa.php",
+                data: dados,
+                success: function (ret) {
+                    if (ret.erro) {
+                        alert(ret.mensagem);
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    alert("Erro: " + error);
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <form class="form">
+        <div id="app"></div>
+        <div class="fundo2">
+            <div class="logo">
+                <img src="logobombeiros.png" height="140" width="140" align="right">
+                <!-- </div>  -->
+
+                <h1>Inativar bombeiros</h1>
+            </div>
+
+            <div class="relatorio">
+                <div class="text">Informe o cpf do bombeiro que você deseja desativar</div>
+                <input maxlength="11" type="text" class="login-input" name="cpf" value="" placeholder="xxx.xxx.xxx-xx"/>
+                <div id="cpf-error" style="display: none; color: black;"></div>
+
+                <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

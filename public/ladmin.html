@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="ladmin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
             var dados = $('#form1').serialize();
             $.ajax({
                 type: "POST",
-                url: "login.php",
+                url: "ladmin.php",
                 data: dados,
                 success: function (ret) {
                     
@@ -38,7 +38,7 @@
 
                     if (!ret.erro) {
                         //entrar na tela de atendimento
-                        location.href = 'atendimentorecusa.php';
+                        location.href = 'cinativa.html';
                     }
 
                 },
@@ -68,7 +68,7 @@
         </div>
 
         <p>Nome Completo</p>
-        <input type="text" class="login-input" id="nome" name="nome" value="" placeholder="Insira seu nome"
+        <input type="text" class="login-input" name="nome" value="" placeholder="Insira seu nome"
             maxlength="40">
 
         <p>Insira seu CPF</p>
@@ -76,7 +76,7 @@
         <div id="cpf-error" style="display: none; color: black;"></div>
 
         <p>Insira seu cargo</p>
-        <input type="text" class="login-input" id="nome" name="nome" value="" placeholder="Insira seu nome"
+        <input type="text" class="login-input" name="cargo" value="" placeholder="Insira seu cargo"
             maxlength="40">
         
         <p>Insira sua Senha</p><input type="password" class="login-input" id="senha" name="senha" value="" placeholder="********" maxlength="15" minlength="8"/>

@@ -10,9 +10,13 @@ session_start();
 
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
+$telefone = $_POST["telefone"];
+$cargo = $_POST["cargo"];
+$cidade = $_POST["cidade"];
+$dataNascimento = $_POST["data_nascimento"];
 $senha = $_POST["senha"];
 
-if ($nome == null || $cpf == null || $senha == null) {
+if ($nome == null || $cpf == null || $telefone == null || $cargo == null || $cidade == null || $dataNascimento == null || $senha == null) {
 
   $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações");
   header("Content-Type: application/json");
@@ -35,7 +39,7 @@ if ($nome == null || $cpf == null || $senha == null) {
 
   } else {
 
-    $sql = "INSERT INTO usuario (nome, cpf, senha) VALUES ('$nome', '$cpf', '$senha')";
+    $sql = "INSERT INTO usuario (nome, cpf, telefone, cargo, cidade, data_nascimento, senha) VALUES ('$nome', '$cpf', '$telefone', '$cargo', '$cidade', '$dataNascimento', '$senha')";
     $run_query = mysqli_query($con, $sql);
 
     if ($run_query) {

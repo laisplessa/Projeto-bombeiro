@@ -42,7 +42,7 @@
                     }
 
                     if (!ret.erro) {
-                        location.href = 'atendimentorecusa.php';
+                        location.href = 'admin.html';
                         console.log(ret);
                     }
                 },
@@ -79,7 +79,7 @@
             <div id="cpf-error" style="display: none; color: black;"></div>
 
             <p>Telefone</p>
-            <input type="tel" class="cadastro-input" name="telefone" placeholder="(00) 0000-0000">
+            <input type="tel" class="cadastro-input" name="telefone" placeholder="(00) 0000-0000" maxlength="11">
 
             <p>Cargo</p>
             <input type="text" class="cadastro-input" name="cargo" value="" placeholder="Insira seu nome"
@@ -99,7 +99,7 @@
             <div id="senhaInvalida" style="color: black;"></div>
 
             <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
-                href="login.html"></a 
+                href="admin.html"></a 
         </div>
     </form>
 </body>

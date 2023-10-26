@@ -25,7 +25,7 @@ if ($nome == null || $cpf == null || $telefone == null || $cargo == null || $cid
 
 } else {
 
-  $sql = "SELECT * FROM usuario WHERE cpf = '$cpf'";
+  SELECT * FROM usuario WHERE cpf = '$cpf' LIMIT 1;
 
   $run_query = mysqli_query($con, $sql);
   $count = mysqli_num_rows($run_query);
@@ -39,7 +39,7 @@ if ($nome == null || $cpf == null || $telefone == null || $cargo == null || $cid
 
   } else {
 
-    $sql = "INSERT INTO usuario (nome, cpf, telefone, cargo, cidade, data_nascimento, senha) VALUES ('$nome', '$cpf', '$telefone', '$cargo', '$cidade', '$dataNascimento', '$senha')";
+    INSERT INTO usuario (nome, cpf, telefone, cargo, cidade, data_nascimento, senha) VALUES ('$nome', '$cpf', '$telefone', '$cargo', '$cidade', '$dataNascimento', '$senha');
     $run_query = mysqli_query($con, $sql);
 
     if ($run_query) {

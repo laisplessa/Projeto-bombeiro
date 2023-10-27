@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: Arial, sans-serif;
-    background-color:rgb(253, 238, 255);
+    font-family: 'Calibri';
+    background-color:#fdfafa;
     /* align-items: center; */
 }
 
@@ -14,7 +14,7 @@ body {
 /* fundo */
 .fundo {
     padding: 5px 35px;
-    background: rgb(253, 238, 255);
+    background: #fdfafa;
     line-height: 30px;
 }
 
@@ -29,7 +29,7 @@ body {
     top: 25px;
     left: -20px;
     padding: 5px 5px;
-    background: rgb(253, 238, 255);
+    background: #fdfafa; 
     position: fixed;
     margin-top: -20px;
     margin-left: 12px;
@@ -51,7 +51,7 @@ body {
 
 /*Cor destaque do formulario*/
 .destaqueclaro {
-    background-color: #f9b8ff;
+    background-color: #e2d1d1d7;
     border-radius: 5px;
     margin-bottom: 5px;
     padding-left: 4px;
@@ -81,11 +81,6 @@ body {
     column-count: 3;
 }
 
-/*Cor de fundo formulário*/
-.destaque {
-    background-color: #db8de2;
-}
-
 /* tamanho caixa de texto */
 .tam18 {
     width: 18%;
@@ -102,7 +97,7 @@ body {
     margin-left: 100px;
     border-radius: 5px;
     padding: 2px;
-    border-color: rgb(212, 44, 218);
+    border-color: 660303;
     border: 1px solid #ced4da;
     margin-top: 13px;
     margin-bottom: 13px;
@@ -136,8 +131,8 @@ td {
 .form select {
     border-radius: 5px;
     padding: 8px;
-    border: 1.5px solid #5e2064;
-    background-color: #f8defd;
+    border: 1.5px solid #660303;
+    background-color: #f7f2f2;
     margin-top: 13px;
     margin-bottom: 13px;
 }
@@ -178,7 +173,7 @@ form .form-radio-checkbox {
 }
 
 .input:checked {
-    background-color: #db8de2;
+    background-color: #fdfafa;
 }
 
 .input-checkbox {
@@ -223,7 +218,7 @@ input::-webkit-inner-spin-button {
 .objetos {
     width: 97%;
     height: 100px;
-    background-color: #d9ceda86;
+    background-color: #e2d1d1d7;
 }
 
 
@@ -247,7 +242,7 @@ banner {
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    border-color: #592064;
+    border-color: #660303;
     border-image: initial;
 }
 
@@ -287,8 +282,8 @@ titulos {
 /* Botões do menu suspenso e de enviar */
 
 .button {
-    background: #562064;
-    color: #562064;
+    background: #660303;
+    color: #660303;
     margin-top: 30px;
     color: #000000;
     padding: 10px 10px;
@@ -298,7 +293,7 @@ titulos {
 }
 
 .button:hover {
-    background: #883294;
+    background: #c78383;
 }
 
 /* tamanho */
@@ -324,7 +319,7 @@ input.form-control {
     /* Inicialmente escondido à esquerda */
     width: 300px;
     height: 100%;
-    background-color: rgb(253, 238, 255);
+    background-color: #e2d1d1;
     transition: left 0.3s ease;
     /* Efeito de deslizamento suave */
     z-index: 1;
@@ -340,7 +335,7 @@ input.form-control {
 }
 
 #menu li:hover {
-    background-color: rgb(171, 49, 187);
+    background-color:#c78383;
     transform: scale(1);
     font-family: 'Calibri';
 }

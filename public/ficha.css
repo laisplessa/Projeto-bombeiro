@@ -39,7 +39,7 @@ body {
 .formulario {
     max-width: 800px;
     max-height: 90%;
-    background: rgba(161, 160, 160, 0.055);
+    background: #a1a0a00e;
     margin: 0px auto 40px auto;
     border-radius: 5px;
 }

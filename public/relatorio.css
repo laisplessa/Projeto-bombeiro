@@ -2,15 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    background-color: #defdec;
+    background-color: #fdfafa;
     /* align-items: center; */
 }
 
 .fundo2{
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family: Calibri;
+    font-size: 18px;
     padding: 5px 50px;
-    background: #defdec;
+    background: #fdfafa;
 }
 
 .logo{
@@ -25,8 +25,8 @@ body {
   margin-left: 35%;
   width: 20%;
   padding: 2%;
-  background-color: #defdec;
-  background: rgba(160, 161, 161, 0.123);
+  background-color: #e2d1d1d7;
+  background: e2d1d1d7;
   border-radius: 8px;
   text-align: center;
 }
@@ -50,7 +50,7 @@ body {
   width: 100%;
   padding: 10px;
   border: none;
-  background: #20643f;
+  background: #660303;
   color: #fff;
   font-weight: bold;
   border-radius: 30px;
@@ -59,7 +59,7 @@ body {
 }
 
 .relatorio-button:hover {
-  background: #32945e;
+  background: #ca6d6d;
 }
 
 .text {
@@ -71,7 +71,7 @@ body {
 .form input, .form select {
   border-radius: 5px;
   padding: 8px;
-  border: 1.5px solid #20643f;
+  border: 1.5px solid #660303;
   margin-top: 13px;
   margin-bottom: 13px;
   width: 60%

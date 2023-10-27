@@ -15,48 +15,47 @@
 <body>
     <script>
 
-        function cadastrar() {
-            var cpfInput = document.getElementById("cpf");
-            var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+function cadastrar() {
+  var cpfInput = document.getElementById("cpf");
+  var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-            var errorDiv = document.getElementById("cpf-error");
+  var errorDiv = document.getElementById("cpf-error");
 
-            if (cpfValue.length !== 11) {
-                errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
-                errorDiv.style.display = "block";
-                return;
-            } else {
-                errorDiv.style.display = "none";
-            }
+  if (cpfValue.length !== 11) {
+    errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
+    errorDiv.style.display = "block";
+    return;
+  } else {
+    errorDiv.style.display = "none";
+  }
 
-            var dados = $('#form1').serialize();
+  var dados = $('#form1').serialize();
 
-            $.ajax({
-                type: "POST",
-                url: "cadastro.php",
-                data: dados,
-                success: function (ret) {
+  $.ajax({
+    type: "POST",
+    url: "cadastro.php",
+    data: dados,
+    success: function (ret) {
 
-                    if (ret.erro) {
-                        alert(ret.mensagem);
-                    }
+      if (ret.erro) {
+        alert(ret.mensagem);
+      }
 
-                    if (!ret.erro) {
-                        location.href = 'admin.html';
-                        console.log(ret);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    alert("Erro: " + error);
-                },
-                beforeSend: function () {
-                    // Fazer algo antes de enviar a requisição
-                },
-                complete: function () {
-                    // Fazer algo após a conclusão da requisição
-                },
-            });
-        }
+      if (!ret.erro) {
+        location.href = 'admin.html';
+      }
+    },
+    error: function (xhr, status, error) {
+      alert("Erro: " + error);
+    },
+    beforeSend: function () {
+      // Fazer algo antes de enviar a requisição
+    },
+    complete: function () {
+      // Fazer algo após a conclusão da requisição
+    },
+  });
+}
     </script>
 
     <form action="" method="post" id="form1">
@@ -86,7 +85,7 @@
                 maxlength="40">
 
             <p>Cidade residente</p>
-            <input type="text" class="cadastro-input" id="cidade" name="nome" value="" placeholder="Insira a cidade"
+            <input type="text" class="cadastro-input" name="cidade" value="" placeholder="Insira a cidade"
                 maxlength="40">
 
             <p>Data nascimento</p>
@@ -99,7 +98,7 @@
             <div id="senhaInvalida" style="color: black;"></div>
 
             <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
-                href="admin.html"></a 
+                href="admin.html"></a>
         </div>
     </form>
 </body>

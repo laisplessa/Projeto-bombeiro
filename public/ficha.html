@@ -2183,9 +2183,8 @@
 
     <!--Formulário sobre materiais uilizados deixados no hospital-->
     <br>
-
     <banner>
-        <titulos>Materiais Utilizados Deixado no Hospital</titulos>
+        <titulos id="materiaisdesc">Materiais Utilizados Descartável</titulos>
         <div class="table">
             <table>
                 <tr>
@@ -2196,27 +2195,31 @@
                 </tr>
 
                 <tr class="destaque">
-                    <td>
-                        <input type="checkbox" name="base_estabiliza" value="sim">
-                        <label for="base_estabiliza">Base do Estabiliza</label>
-                    </td>
-                    <td><input class="tam75" type="number"  name="base_quantidade"
-                            placeholder="Digite a quantidade"  />
-                    </td>
 
                     <td>
-                        <label for="ttf">T.T.F.</label>
+                        <label for="ttf">T.T.F</label>
                         <br>
-                        <input type="checkbox"  name="ttf_adulto" value="sim">
+                        <input type="checkbox" name="ttf_adulto" value="sim">
                         <label for="ttf_adulto">Adulto</label>
-                        <input type="checkbox"  name="ttf_infantil" value="sim">
+                        <input type="checkbox" name="ttf_infantil" value="sim">
                         <label for="ttf_infantil">Infantil</label>
+            </div>
+            </td>
+            <td><input class="tam75" type="text" name="ttf_quantidade"
+            placeholder="Digite a quantidade"  />
+            </td>
+            
+                    <td>
+                        <input type="checkbox" name="base_estabiliza"
+                        value="sim">
+                    <label for="base_estabiliza">Base do Estabiliza</label>
         </div>
         </td>
-
-        <td><input class="tam75" type="number"  name="ttf_quantidade"
-                placeholder="Digite a quantidade"  />
+        <td><input class="tam75" type="text" name="base_quantidade"
+                placeholder="Digite a quantidade" />
         </td>
+
+
         </tr>
 
         <tr>
@@ -2224,113 +2227,115 @@
                 <label for="colar">Colar</label>
                 <br>
                 <input type="checkbox" name="colar_n" value="sim">
-                <label for="colar_n">N</label>
-                <input type="checkbox"  name="colar_pp" value="sim">
-                <label for="colar_pp">PP</label>
+                <label for="colar_n">H</label>
+                <input type="checkbox" name="colar_pp" value="sim">
+                <label for="colar_pp">P</label>
                 <input type="checkbox" name="colar_p" value="sim">
-                <label for="colar_p">P</label>
-                </div>
-            </td>
-            <td><input class="tam75" type="number" name="colar_quantidade"
-                    placeholder="Digite a quantidade"  />
-            </td>
+                <label for="colar_p">Q</label>
+</div>
+</td>
+<td><input class="tam75" type="text" name="colar_quantidade"
+    placeholder="Digite a quantidade"  />
+</td>
 
-            <td>
-                <input type="checkbox" name="tirante_aranha" value="sim">
-                <label for="tirante_aranha">Tirante Aranha</label>
-            </td>
-            <td><input class="tam75" type="number" name="tirante_quantidade"
-                    placeholder="Digite a quantidade"  />
-            </td>
-        </tr>
+<td>
+    <input type="checkbox" name="tirante_aranha" value="sim">
+    <label for="tirante_aranha">Tirante Aranha</label>
+</td>
+<td><input class="tam75" type="number" name="tirante_quantidade"
+        placeholder="Digite a quantidade"  />
+</td>
+</tr>   
 
-        <tr class="destaque">
-            <td>
-                <label for="colar2">Colar</label>
-                <br>
-                <input type="checkbox" name="colar_m" value="sim">
-                <label for="colar_m">M</label>
-                <input type="checkbox"  name="colar_g" value="sim">
-                <label for="colar_g">G</label> <br>
-                <input type="checkbox"  name="colar_tam" value="sim">
-                <input class="material" type="text" name="colar_tamm" placeholder="."  />
-                </div>
-            </td>
-            <td><input class="tam75" type="number" name="colar_2quantidade"
-                    placeholder="Digite a quantidade"  />
-            </td>
-
-            <td>
-                <input type="checkbox" name="tirante_cabeca" value="sim">
-                <label for="tirante_cabeca">Tirante de Cabeça</label>
-            </td>
-            <td><input class="tam75" type="number" name="tirantec_quantidade"
-                    placeholder="Digite a quantidade"  />
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <input type="checkbox" name="coxins_estabiliza" value="sim">
-                <label for="coxins_estabiliza">Coxins Estabiliza.</label>
-            </td>
-            <td><input class="tam75" type="number" name="coxins_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-
-            <td>
-                <input type="checkbox"  name="canula" value="sim">
-                <label for="canula">Cânula</label>
-            </td>
-            <td><input class="tam75" type="number" name="canula_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-        </tr>
-
-        <tr class="destaque">
-            <td>
-                <label for="ked">Ked</label>
-                <br>
-                    <input type="checkbox" name="ked_adulto" value="sim">
-                    <label for="ked_adulto">Adulto</label>
-                    <br>
-                    <input type="checkbox" name="ked_infantil" value="sim">
-                    <label for="ked_infantil">Infantil</label>
-                    </div>
-            </td>
-            <td><input class="tam75" type="number" name="ked_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-
-            <td>
-                <input type="checkbox" name="outro_material2" value="sim">
-                <input class="tam75" type="text" name="outrom2" placeholder="Outro material" />
-            </td>
-            <td><input class="tam75" type="number" name="outrom2_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <input type="checkbox" name="maca" value="sim">
-                <label for="maca">Maca Rígida</label>
-            </td>
-            <td><input class="tam75" type="number" name="maca_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-
-            <td>
-                <input type="checkbox" name="outro_material3" value="sim">
-                <input class="tam75" type="text" name="outrom3" placeholder="Outro material" />
-            </td>
-            <td><input class="tam75" type="number" name="outrom3_quantidade"
-                    placeholder="Digite a quantidade" />
-            </td>
-        </tr>
-        </table>
+<tr class="destaque">
+    <td>
+        <label for="colar">Colar</label>
+        <br>
+        <input type="checkbox" name="colar_n" value="sim">
+        <label for="colar_m">M</label>
+        <input type="checkbox" name="colar_pp" value="sim">
+        <label for="colar_g">G</label>
+        <input type="checkbox"  name="colar_tam" value="sim">
+        <input class="material" type="text" name="colar_tamm" placeholder="."  />
         </div>
-    </banner>
+    </td>
+    <td><input class="tam75" type="number" name="colar_2quantidade"
+            placeholder="Digite a quantidade"  />
+    </td>
+
+
+    <td>
+        <input type="checkbox" name="tirante_cabeca" value="sim">
+        <label for="tirante_cabeca">Tirante de Cabeça</label>
+    </td>
+    <td><input class="tam75" type="number" name="tirantec_quantidade"
+            placeholder="Digite a quantidade"  />
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <input type="checkbox" name="coxins_estabiliza" value="sim">
+        <label for="coxins_estabiliza">Coxins Estabilizantes</label>
+    </td>
+    <td><input class="tam75" type="number" name="coxins_quantidade"
+            placeholder="Digite a quantidade" />
+    </td>
+
+
+    <td>
+        <input type="checkbox"  name="canula" value="sim">
+        <label for="canula">Cânula</label>
+    </td>
+    <td><input class="tam75" type="number" name="canula_quantidade"
+            placeholder="Digite a quantidade" />
+    </td>
+</tr>
+
+<td>
+    <label for="ked">Ked</label>
+    <br>
+    <input type="checkbox"  name="ked_adulto" value="sim">
+    <label for="ked_adulto">Adulto</label>
+    <input type="checkbox" name="ked_infantil" value="sim">
+    <label for="ked_infantil">Infantil</label>
+</div>
+</td>
+<td><input class="tam75" type="text" name="ked_quantidade"
+placeholder="Digite a quantidade"  />
+</td>
+
+<td>
+    <input type="checkbox" name="outro_material2" value="sim">
+    <input class="tam75" type="text" name="outrom2" placeholder="Outro material" />
+</td>
+<td><input class="tam75" type="number" name="outrom2_quantidade"
+        placeholder="Digite a quantidade" />
+</td>
+</tr>
+
+
+<td>
+<input type="checkbox" name="maca"
+    value="sim">
+<label for="maca">Maca Rígida</label>
+</td>
+<td><input class="tam75" type="text" name="maca_quantidade"
+    placeholder="Digite a quantidade"  />
+</td>
+<td>
+<input type="checkbox"  name="outro_material3" value="sim">
+<input class="tam75" type="text" name="outrom3" placeholder="Outro material"  />
+</td>
+
+<td><input class="tam75" type="text" name="outrom3_quantidade"
+    placeholder="Digite a quantidade"  />
+</td>
+</tr>
+
+</table>
+</div>
+</banner>
 
     <!--Caixa de texto para observações-->
     <br>

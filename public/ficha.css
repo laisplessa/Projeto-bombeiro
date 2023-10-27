@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    background-color: #defdec;
+    background-color:rgb(253, 238, 255);
     /* align-items: center; */
 }
 
@@ -14,7 +14,7 @@ body {
 /* fundo */
 .fundo {
     padding: 5px 35px;
-    background: #defdec;
+    background: rgb(253, 238, 255);
     line-height: 30px;
 }
 
@@ -29,7 +29,7 @@ body {
     top: 25px;
     left: -20px;
     padding: 5px 5px;
-    background: #E4F1FF;
+    background: rgb(253, 238, 255);
     position: fixed;
     margin-top: -20px;
     margin-left: 12px;
@@ -51,7 +51,7 @@ body {
 
 /*Cor destaque do formulario*/
 .destaqueclaro {
-    background-color: #b4f5d1;
+    background-color: #f9b8ff;
     border-radius: 5px;
     margin-bottom: 5px;
     padding-left: 4px;
@@ -83,7 +83,7 @@ body {
 
 /*Cor de fundo formulário*/
 .destaque {
-    background-color: #8de2b3;
+    background-color: #db8de2;
 }
 
 /* tamanho caixa de texto */
@@ -102,7 +102,7 @@ body {
     margin-left: 100px;
     border-radius: 5px;
     padding: 2px;
-    border-color: rgba(218, 75, 44, 1);
+    border-color: rgb(212, 44, 218);
     border: 1px solid #ced4da;
     margin-top: 13px;
     margin-bottom: 13px;
@@ -136,8 +136,8 @@ td {
 .form select {
     border-radius: 5px;
     padding: 8px;
-    border: 1.5px solid #20643f;
-    background-color: #defdec;
+    border: 1.5px solid #5e2064;
+    background-color: #f8defd;
     margin-top: 13px;
     margin-bottom: 13px;
 }
@@ -178,7 +178,7 @@ form .form-radio-checkbox {
 }
 
 .input:checked {
-    background-color: #8de2b3;
+    background-color: #db8de2;
 }
 
 .input-checkbox {
@@ -223,7 +223,7 @@ input::-webkit-inner-spin-button {
 .objetos {
     width: 97%;
     height: 100px;
-    background-color: #ced4da86;
+    background-color: #d9ceda86;
 }
 
 
@@ -247,7 +247,7 @@ banner {
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    border-color: #20643f;
+    border-color: #592064;
     border-image: initial;
 }
 
@@ -287,8 +287,8 @@ titulos {
 /* Botões do menu suspenso e de enviar */
 
 .button {
-    background: #20643f;
-    color: #20643f;
+    background: #562064;
+    color: #562064;
     margin-top: 30px;
     color: #000000;
     padding: 10px 10px;
@@ -298,7 +298,7 @@ titulos {
 }
 
 .button:hover {
-    background: #32945e;
+    background: #883294;
 }
 
 /* tamanho */
@@ -324,7 +324,7 @@ input.form-control {
     /* Inicialmente escondido à esquerda */
     width: 300px;
     height: 100%;
-    background-color: #b4f5d1;
+    background-color: rgb(253, 238, 255);
     transition: left 0.3s ease;
     /* Efeito de deslizamento suave */
     z-index: 1;
@@ -340,7 +340,7 @@ input.form-control {
 }
 
 #menu li:hover {
-    background-color: #84c9a3;
+    background-color: rgb(171, 49, 187);
     transform: scale(1);
     font-family: 'Calibri';
 }

@@ -13,7 +13,7 @@
 <div class="logo">
             <img src="logobombeiros.png" height="140" width="140" align="right">
         </div> 
-    <div class="text"><b>O que você deseja?</b></div>
+    <div class="titulo"><b>O que você deseja?</b></div>
     <!--Botão para acessar formulário de atendimento-->
     <div class="botaoatendimento">
       <b><a href="ficha.html"> Atendimento </a></b>

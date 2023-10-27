@@ -2,11 +2,11 @@ body{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #defdec;
+    background-color: #fdfafa;
 }
 
 .botaocadastrar{
-background:  #20643f;
+background:  #660303 ;
 border: 0;
 color: #fff;
 cursor: pointer;
@@ -21,7 +21,7 @@ height: 3%;
 text-align: center;
 margin-left: 33%;
 font-size:  130%;
-font-family: 'Roboto Condensed';
+font-family: 'Calibri';
 }
 
 a{
@@ -29,7 +29,7 @@ a{
 }
 
 .botaoinativa{
-    background:  #20643f;
+    background:  #660303 ;
     border: 0;
     color: #fff;
     cursor: pointer;
@@ -44,8 +44,9 @@ a{
     text-align: center;
     margin-left: 33%;
     font-size: 130%;
-    font-family: 'Roboto Condensed';
+    font-family: 'Calibri';
     }
+
 
 .logo{
     block-size: 100px;

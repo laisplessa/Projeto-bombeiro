@@ -31,11 +31,6 @@ body {
   text-align: center;
 }
 
-.titulo {
-  color: black;
-  font-family: 'Open Sans', coursive;
-}
-
 .relatorio-input {
   width: 60%;
   padding: 10px;
@@ -64,7 +59,7 @@ body {
 
 .text {
   font-size: 18px;
-  font-family: 'Open Sans', coursive;
+  font-family: 'Calibri';
   color: black;
 }
 

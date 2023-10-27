@@ -5,6 +5,12 @@ body{
     background-color: #fdfafa ;
 }
 
+.titulo{
+    font-size:  150%;
+    font-family: 'Calibri';
+    text-align: center;
+}
+
 .botaoadmin{
 background:  #660303;
 border: 0;

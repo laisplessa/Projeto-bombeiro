@@ -19,35 +19,25 @@ if ($dataOcorrencia == null) {
 
 } else {
 
-  $sql = "SELECT * FROM ficha WHERE data_ocorrencia = '$dataOcorrencia'";
+  $dataOcorrenciaIni = $dataOcorrencia . " 00:00:00";
+  $dataOcorrenciaFim = $dataOcorrencia . " 23:59:59";
+
+  $sql = "SELECT * FROM ficha WHERE data >= '$dataOcorrenciaIni' and data <= '$dataOcorrenciaFim'";
 
   $run_query = mysqli_query($con, $sql);
-  $count = mysqli_num_rows($run_query);
 
-  if ($count == 0) {
+  // Retorno todas as fichas daquela data
+  $fichas = array();
 
-    $data = array("erro" => true, "mensagem" => "Data não encontrada");
-    header("Content-Type: application/json");
-    echo json_encode($data);
-    exit();
-
-  } else {
-
-    $data = array("erro" => false, "mensagem" => "Consulta executada com sucesso");
-
-    // Retorno todas as fichas daquela data
-    $fichas = array();
-    while ($row = mysqli_fetch_assoc($run_query)) {
-      $fichas[] = $row;
-    }
-
-    $data["ficha"] = $ficha;
-
-    header("Content-Type: application/json");
-    echo json_encode($data);
-    exit();
-
+  while ($row = mysqli_fetch_assoc($run_query)) {
+    array_push($fichas, $row);
   }
+
+  $data["fichas"] = $fichas;
+
+  header("Content-Type: application/json");
+  echo json_encode($data);
+  exit();
 
 }
 

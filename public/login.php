@@ -20,7 +20,7 @@ if ($cpf == null || $senha == null) {
 
 } else {
 
-  $sql = "SELECT * FROM usuario WHERE cpf = '$cpf' AND senha = '$senha' LIMIT 1";
+  $sql = "SELECT * FROM usuario WHERE cpf = '$cpf' AND senha = '$senha' AND inativo = 0 LIMIT 1";
 
   $run_query = mysqli_query($con, $sql);
   $count = mysqli_num_rows($run_query);

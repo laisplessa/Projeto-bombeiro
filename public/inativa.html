@@ -16,7 +16,6 @@
             var ncpfValue = cpfInput.value;
 
             var dados = $('.form').serialize();
-            dados += "&data_ocorrencia=" + dataOcorrenciaValue;
 
             $.ajax({
                 type: "POST",
@@ -25,6 +24,10 @@
                 success: function (ret) {
                     if (ret.erro) {
                         alert(ret.mensagem);
+                    }
+                    
+                    if (confirm('Confirma a inativação do usuário ' + ret.nome + '?')) {
+                        inativar(ret.id_cadastro);
                     }
 
                 },
@@ -37,6 +40,30 @@
                 },
             });
         }
+
+        function inativar(id) {
+
+            var data = {
+                'id': id
+            };
+
+            $.ajax({
+                type: "POST",
+                url: "inativa.php",
+                data: data,
+                success: function (ret) {
+                    alert(ret.mensagem);
+                },
+                error: function (xhr, status, error) {
+                    alert("Erro: " + error);
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                },
+            });
+        }
+
     </script>
 </head>
 
@@ -53,7 +80,7 @@
 
             <div class="relatorio">
                 <div class="text">Informe o cpf do bombeiro que você deseja desativar</div>
-                <input maxlength="11" type="text" class="login-input" name="cpf" value="" placeholder="xxx.xxx.xxx-xx"/>
+                <input maxlength="11" type="text" class="login-input" name="cpf" id="cpf" value="" placeholder="xxx.xxx.xxx-xx"/>
                 <div id="cpf-error" style="display: none; color: black;"></div>
 
                 <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>

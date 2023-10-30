@@ -72,3 +72,20 @@ body {
   width: 60%
 }
 
+
+/* Tabela */
+.table {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Tabelas */
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}

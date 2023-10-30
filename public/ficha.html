@@ -96,10 +96,10 @@
                                 <div>
 
                                     <input type="radio" class="espass" name="outras_vezes"
-                                        value="s_aconteceu">
+                                        value="1">
                                     <label for="s_aconteceu">Sim</label>
                                     <input type="radio" class="espass" name="outras_vezes"
-                                        value="n_aconteceu" checked>
+                                        value="0" checked>
                                     <label for="n_aconteceu">Não</label>
                                 </div>
                             </div>
@@ -430,7 +430,9 @@
                     <div>
                         <div class="tipoocor">
 
-                            <div class="destaqueclaro"><input type="checkbox" name="causado_animais" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="causado_animais" value="0">
+                                <input type="checkbox" name="causado_animais" value="1">
                                 <label for="causado_animais">Causado Por Animais</label>
                             </div>
 
@@ -2579,6 +2581,29 @@ placeholder="Digite a quantidade"  />
             window.addEventListener('resize', onResize, false);
             onResize();
 
+            const urlParams = new URLSearchParams(window.location.search);
+            const idFicha = urlParams.get('idFicha');
+
+            if (idFicha) {
+                $.ajax({
+                    type: "GET",
+                    url: "ficha.php?idFicha=" + idFicha,
+                    success: function (ret) {
+                        $('.form input,select').prop('disabled', true);
+                        preencherDados(ret);
+                    },
+                    error: function (xhr, status, error) {
+                        // Função de callback chamada em caso de erro na requisição
+                        alert("Erro: " + error);
+                    }
+                });
+            }
+
+            function preencherDados(data) {
+                $('input[name="oq_aconteceu"]').val(data['oq_aconteceu']);
+                $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
+                $('input:checkbox[name="causado_animais"]').filter('[value="' + data['causado_animais'] + '"]').attr('checked', true);
+            }
 
 
             $('.form').signaturePad({
@@ -2594,7 +2619,7 @@ placeholder="Digite a quantidade"  />
 
     function enviarFormulario() {
         var dados = $('.form').serialize();
-console.log(dados);
+
         $.ajax({
             type: "POST",
             url: "ficha.php",

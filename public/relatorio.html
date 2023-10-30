@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,54 +11,81 @@
 
     <script>
 
-function Listar() {
-    var dataOcorrenciaInput = document.getElementById("data_ocorrencia");
-    var dataOcorrenciaValue = dataOcorrenciaInput.value;
+        function Listar() {
 
-    var dados = $('.form').serialize();
-    dados += "&data_ocorrencia=" + dataOcorrenciaValue;
+            var dados = $('.form').serialize();
+            $('tr.resultado').remove();
 
-    $.ajax({
-        type: "POST",
-        url: "relatorio.php",
-        data: dados,
-        success: function (ret) {
-            if (ret.erro) {
-                alert(ret.mensagem);
-            }
+            $.ajax({
+                type: "POST",
+                url: "relatorio.php",
+                data: dados,
+                success: function (ret) {
 
-        },
-        error: function (xhr, status, error) {
-            alert("Erro: " + error);
-        },
-        beforeSend: function () {
-        },
-        complete: function () {
-        },
-    });
+                    if (ret && ret.fichas) {
+
+                        var result = '';
+
+                        ret.fichas.forEach(function(ficha) {
+                            result += '<tr class="resultado">';
+                            result += '<td>' + ficha.id_ficha + '</td>';
+                            result += '<td>' + ficha.data + '</td>';
+                            result += '<td>' + ficha.nome_paciente + '</td>';
+                            result += '<td><a href="ficha.html?idFicha=' + ficha.id_ficha + '">Visualizar</a></td>';
+                            result += '</tr>';
+                        });
+
+                        $('.resultado table').append(result);
+
+                    }
+                    if (ret.erro) {
+                        alert(ret.mensagem);
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    alert("Erro: " + error);
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                    $('div.resultado').show();
+                },
+            });
         }
     </script>
 </head>
 
 <body>
     <form class="form">
-    <div id="app"></div>
-    <div class="fundo2">
-        <div class="logo">
-            <img src="logobombeiros.png" height="140" width="140" align="right">
-        <!-- </div>  -->
-        
-        <h1>Relatório de Ocorrências</h1>
-        <h4>Use a data da ocorrência para visualizar as ocorrências desejadas</h4>
-    </div>
-         
-    <div class="relatorio">
-<div class="text">Informe a data da ocorrência</div>
-        <input type="date" class="form-control" name="data_ocorrencia" placeholder="dd/mm/aaaa"
-        data-mask="00/00/0000" maxlength="10" autocomplete="off"> <br>
-        <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>
-    </div>
-    </div>
-</form>
+        <div id="app"></div>
+        <div class="fundo2">
+            <div class="logo">
+                <img src="logobombeiros.png" height="140" width="140" align="right">
+                <!-- </div>  -->
+
+                <h1>Relatório de Ocorrências</h1>
+                <h4>Use a data da ocorrência para visualizar as ocorrências desejadas</h4>
+            </div>
+
+            <div class="relatorio">
+                <div class="text">Informe a data da ocorrência</div>
+                <input type="date" class="form-control" name="data_ocorrencia" id="data_ocorrencia"
+                    placeholder="dd/mm/aaaa" data-mask="00/00/0000" maxlength="10" autocomplete="off"> <br>
+                <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>
+            </div>
+            <div class="resultado" style="display: none;">
+                <table class="table">
+                    <tr>
+                        <td>Id Ficha</td>
+                        <td>Data</td>
+                        <td>Paciente</td>
+                        <td>Visualizar</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
 </body>
+
 </html>

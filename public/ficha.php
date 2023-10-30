@@ -4,8 +4,31 @@ include "db.php";
 
 session_start();
 
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
+
+  $idFicha = $_GET['idFicha'];
+  
+  $sql = "SELECT * FROM ficha WHERE id_ficha = $idFicha;";
+
+  $run_query = mysqli_query($con, $sql);
+
+  // Retorno todas as fichas daquela data
+  $ficha = (object)[];
+
+  while ($row = mysqli_fetch_assoc($run_query)) {
+    $ficha = $row;
+  }
+
+  header("Content-Type: application/json");
+  echo json_encode($ficha);
+  exit();
+
+}
+
 $oqAconteceu = $_POST["oq_aconteceu"];
-$outrasVezes = ($_POST['outrasVezes'] === 'sim') ? 1 : 0;
+$outrasVezes = $_POST['outras_vezes'];
 $quantoTempo = $_POST["quanto_tempo"];
 $problemaSaude = ($_POST['problemaSaude'] === 'sim') ? 1 : 0;
 $quaisProblemas = $_POST["quais_problemas"];
@@ -188,8 +211,8 @@ $bradipneia = ($_POST['bradipneia'] === 'sim') ? 1 : 0;
 $broncoAspirando = ($_POST['bronco_aspirando'] === 'sim') ? 1 : 0;
 $cefaleia = ($_POST['cefaleia'] === 'sim') ? 1 : 0;
 $cianose = ($_POST['cianose'] === 'sim') ? 1 : 0;
-$cianoseLabios = ($_POST['cianoseLabios'] === 'sim') ? 1 :;
-$cianoseExtremidade = ($_POST['cianoseExtremidade'] === 'sim') ? 1 :;
+$cianoseLabios = ($_POST['cianoseLabios'] === 'sim') ? 1 : 0;
+$cianoseExtremidade = ($_POST['cianoseExtremidade'] === 'sim') ? 1 : 0;
 $convulsao = ($_POST['convulsao'] === 'sim') ? 1 : 0;
 $decorticacao = ($_POST['decorticacao'] === 'sim') ? 1 : 0;
 $deformidade = ($_POST['deformidade'] === 'sim') ? 1 : 0;
@@ -198,15 +221,15 @@ $desmaio = ($_POST['desmaio'] === 'sim') ? 1 : 0;
 $desvioTraqueia = ($_POST['desvioTraqueia'] === 'sim') ? 1 : 0;
 $dispineia = ($_POST['dispneia'] === 'sim') ? 1 : 0;
 $dorLocal = ($_POST['dorLocal'] === 'sim') ? 1 : 0;
-$edemaGeneralizados = ($_POST['edemaGeneralizados'] === 'sim') ? 1 :;
-$edemaLocalizados = ($_POST['edemaLocalizados'] === 'sim') ? 1 : ;
+$edemaGeneralizados = ($_POST['edemaGeneralizados'] === 'sim') ? 1 : 0;
+$edemaLocalizados = ($_POST['edemaLocalizados'] === 'sim') ? 1 : 0;
 $enfisemaSubcutaneo = ($_POST['enfisemaSubcutaneo'] === 'sim') ? 1 : 0;
 $entaseJugular = ($_POST['entaseJugular'] === 'sim') ? 1 : 0;
 $facePalida = ($_POST['facePalida'] === 'sim') ? 1 : 0;
 $hipertensao = ($_POST['hipertensao'] === 'sim') ? 1 : 0;
 $hipotensao = ($_POST['hipotensao'] === 'sim') ? 1 : 0;
-$hemorragiaInterna = ($_POST['hemorragiaInterna'] === 'sim') ? 1 : ;
-$hemorragiaExterna = ($_POST['hemorragiaExterna'] === 'sim') ? 1 : ;
+$hemorragiaInterna = ($_POST['hemorragiaInterna'] === 'sim') ? 1 : 0;
+$hemorragiaExterna = ($_POST['hemorragiaExterna'] === 'sim') ? 1 : 0;
 $nauseaVomito = ($_POST['nauseaVomito'] === 'sim') ? 1 : 0;
 $nasoragia = ($_POST['nasoragia'] === 'sim') ? 1 : 0;
 $obito = ($_POST['obito'] === 'sim') ? 1 : 0;
@@ -214,15 +237,15 @@ $otorreia = ($_POST['otorreia'] === 'sim') ? 1 : 0;
 $otorragia = ($_POST['otorragia'] === 'sim') ? 1 : 0;
 $ovace = ($_POST['ovace'] === 'sim') ? 1 : 0;
 $paradaCardiaca = ($_POST['paradaCardiaca'] === 'sim') ? 1 : 0;
-$paradaRespiratoria = ($_POST['paradaRespiratoria'] === 'sim') ? 1 : ;
+$paradaRespiratoria = ($_POST['paradaRespiratoria'] === 'sim') ? 1 : 0;
 $priapismo = ($_POST['priapismo'] === 'sim') ? 1 : 0;
 $pruridoPele = ($_POST['pruridoPele'] === 'sim') ? 1 : 0;
-$pupilasAnisocoria = ($_POST['pupilasAnisocoria'] === 'sim') ? 1 : ;
-$pupilasIsocoria = ($_POST['pupilasIsocoria'] === 'sim') ? 1 : ;
-$pupilasMidriase = ($_POST['pupilasMidriase'] === 'sim') ? 1 : ;
-$pupilasMiose = ($_POST['pupilasMiose'] === 'sim') ? 1 : ;
-$pupilasReagente = ($_POST['pupilasReagente'] === 'sim') ? 1 : ;
-$pupilasNreagente = ($_POST['pupilasNreagente'] === 'sim') ? 1 :;
+$pupilasAnisocoria = ($_POST['pupilasAnisocoria'] === 'sim') ? 1 : 0;
+$pupilasIsocoria = ($_POST['pupilasIsocoria'] === 'sim') ? 1 : 0;
+$pupilasMidriase = ($_POST['pupilasMidriase'] === 'sim') ? 1 : 0;
+$pupilasMiose = ($_POST['pupilasMiose'] === 'sim') ? 1 : 0;
+$pupilasReagente = ($_POST['pupilasReagente'] === 'sim') ? 1 : 0;
+$pupilasNreagente = ($_POST['pupilasNreagente'] === 'sim') ? 1 : 0;
 $sede = ($_POST['sede'] === 'sim') ? 1 : 0;
 $sinalBattle = ($_POST['sinalBattle'] === 'sim') ? 1 : 0;
 $sinalGuaxinim = ($_POST['sinalGuaxinim'] === 'sim') ? 1 : 0;
@@ -305,9 +328,9 @@ $outrosProcedimentos = ($_POST["outros_procedimentos"] === 'sim') ? 1 : 0;
 $outrospTexto = $_POST["outrosp_texto"];
 
 $ataduras = ($_POST['ataduras'] === 'sim') ? 1 : 0;
-$ataduras8 = ($_POST['ataduras8'] === 'sim') ? 1 : 0 $ataduras;
-$ataduras12 = ($_POST['ataduras12'] === 'sim') ? 1 : 0 $ataduras;
-$ataduras20 = ($_POST['ataduras20'] === 'sim') ? 1 : 0 $ataduras;
+$ataduras8 = ($_POST['ataduras8'] === 'sim') ? 1 : 0;
+$ataduras12 = ($_POST['ataduras12'] === 'sim') ? 1 : 0;
+$ataduras20 = ($_POST['ataduras20'] === 'sim') ? 1 : 0;
 $ataduraQuantidade = $_POST["atadura_quantidade"];
 $mantaAluminizada = ($_POST['manta_aluminizada'] === 'sim') ? 1 : 0;
 $mantaQuantidade = $_POST["manta_quantidade"];
@@ -319,16 +342,16 @@ $compressaComum = ($_POST['compressa_comum'] === 'sim') ? 1 : 0;
 $compressaQuantidade = $_POST["compressa_quantidade"];
 $sondaAspiracao = ($_POST['sonda_aspiracao'] === 'sim') ? 1 : 0;
 $sondaQuantidade = $_POST["sonda_quantidade"];
-$kitsH = ($_POST['kitsH'] === 'sim') ? 1 : 0 $kits;
-$kitsP = ($_POST['kitsP'] === 'sim') ? 1 : 0 $kits;
-$kitsQ = ($_POST['kitsQ'] === 'sim') ? 1 : 0 $kits;
+$kitsH = ($_POST['kitsH'] === 'sim') ? 1 : 0;
+$kitsP = ($_POST['kitsP'] === 'sim') ? 1 : 0;
+$kitsQ = ($_POST['kitsQ'] === 'sim') ? 1 : 0;
 $kitsQuantidade = $_POST["kits_quantidade"];
 $soroFisiologico = ($_POST['soro_fisiologico'] === 'sim') ? 1 : 0;
 $soroQuantidade = $_POST["soro_quantidade"];
 $luvasDescartaveis = ($_POST['luvas_descartaveis'] === 'sim') ? 1 : 0;
 $luvasQuantidade = $_POST["luvas_quantidade"];
-$talasPapp = ($_POST['talas_papp'] === 'sim') ? 1 : 0 $talasPap;
-$talasPapg = ($_POST['talas_papg'] === 'sim') ? 1 : 0 $talasPap;
+$talasPapp = ($_POST['talas_papp'] === 'sim') ? 1 : 0;
+$talasPapg = ($_POST['talas_papg'] === 'sim') ? 1 : 0;
 $talasQuantidade = $_POST["talas_quantidade"];
 $mascarasDescartaveis = ($_POST['mascaras_descartaveis'] === 'sim') ? 1 : 0;
 $mascarasQuantidade = $_POST["mascara_quantidade"];
@@ -338,18 +361,18 @@ $outrosmQuantidade = $_POST["outrom_quantidade"];
 
 $baseEstabiliza = ($_POST["base_estabiliza"]  === 'sim') ? 1 : 0;
 $baseQuantidade = $_POST["base_quantidade"];
-$ttfAdulto = ($_POST["ttf_adulto"]  === 'sim') ? 1 : 0 $ttf;
+$ttfAdulto = ($_POST["ttf_adulto"]  === 'sim') ? 1 : 0;
 $ttfInfantil = ($_POST["ttf_infantil"]  === 'sim') ? 1 : 0;
 $ttfQuantidade = $_POST["ttf_quantidade"];
-$colarN = ($_POST["colar_n"]  === 'sim') ? 1 : 0 $colar;
-$colarPP = ($_POST["colar_pp"]  === 'sim') ? 1 : 0 $colar;
-$colarP = ($_POST["colar_p"]  === 'sim') ? 1 : 0 $colar;
+$colarN = ($_POST["colar_n"]  === 'sim') ? 1 : 0;
+$colarPP = ($_POST["colar_pp"]  === 'sim') ? 1 : 0;
+$colarP = ($_POST["colar_p"]  === 'sim') ? 1 : 0;
 $colarQuantidade = $_POST["colar_quantidade"];
 $tiranteAranha = ($_POST["tirante_aranha"]  === 'sim') ? 1 : 0;
 $tiranteQuantidade = $_POST["tirante_quantidade"];
-$colarM = ($_POST["colar_m"]  === 'sim') ? 1 : 0 $colar2;
-$colarG = ($_POST["colar_g"]   === 'sim') ? 1 : 0 $colar2;
-$colarTam = ($_POST["colar_tam"]  === 'sim') ? 1 : 0 $colar2;
+$colarM = ($_POST["colar_m"]  === 'sim') ? 1 : 0;
+$colarG = ($_POST["colar_g"]   === 'sim') ? 1 : 0;
+$colarTam = ($_POST["colar_tam"]  === 'sim') ? 1 : 0;
 $colarTamm = $_POST["colar_tamm"];
 $colar2quantidade = $_POST["colar_2quantidade"];
 $tiranteCabeca = ($_POST["tirante_cabeca"]  === 'sim') ? 1 : 0;
@@ -358,8 +381,8 @@ $coxinsEstabiliza = ($_POST["coxins_estabiliza"]  === 'sim') ? 1 : 0;
 $coxinsQuantidade = $_POST["coxins_quantidade"];
 $canula = ($_POST["canula"]  === 'sim') ? 1 : 0;
 $canulaQuantidade = $_POST["canula_quantidade"];
-$kedAdulto = ($_POST["ked_adulto"]  === 'sim') ? 1 : 0 $ked;
-$kedInfantil = ($_POST["ked_infantil"]  === 'sim') ? 1 : 0 $ked;
+$kedAdulto = ($_POST["ked_adulto"]  === 'sim') ? 1 : 0;
+$kedInfantil = ($_POST["ked_infantil"]  === 'sim') ? 1 : 0;
 $kedQuantidade = $_POST["ked_quantidade"];
 $outroMaterial2 = ($_POST["outro_material2"]  === 'sim') ? 1 : 0;
 $outrom2 = $_POST["outrom2"];

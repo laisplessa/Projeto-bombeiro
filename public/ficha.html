@@ -118,9 +118,9 @@
                                 <div>Possui algum problema de saúde?</div>
 
                                 <input type="radio" name="problema_saude"
-                                    value="s_problema_saude">
+                                    value="1">
                                 <label for="s_problema_saude">Sim</label>
-                                <input type="radio" name="problema_saude" value="n_problema_saude"
+                                <input type="radio" name="problema_saude" value="0"
                                     checked>
                                 <label for="n_problema_saude">Não</label>
                             </div>
@@ -137,9 +137,9 @@
                             <div class="simnao">
                                 <div>Faz uso de medicação?</div>
 
-                                <input type="radio" name="medicacao" value="s_faz">
+                                <input type="radio" name="medicacao" value="1">
                                 <label for="s_faz">Sim</label>
-                                <input type="radio" name="medicacao" value="n_faz" checked>
+                                <input type="radio" name="medicacao" value="0" checked>
                                 <label for="n_faz">Não</label>
                             </div>
                         </div>
@@ -162,9 +162,9 @@
                         <div class="destaqueclaro">
                             <div>Alérgico a alguma coisa?</div>
 
-                            <input type="radio" name="alergico" value="sim">
+                            <input type="radio" name="alergico" value="1">
                             <label for="alergico">Sim</label>
-                            <input type="radio" name="alergico" value="nao" checked>
+                            <input type="radio" name="alergico" value="0" checked>
                             <label for="nao_alergico">Não</label>
                         </div>
 
@@ -179,9 +179,9 @@
                             <div class="simnao">
                                 <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
 
-                                <input type="radio" class="espass" name="ingeriu" value="s_ingeriu">
+                                <input type="radio" class="espass" name="ingeriu" value="1">
                                 <label for="s_ingeriu">Sim</label>
-                                <input type="radio" class="espass" name="ingeriu" value="n_ingeriu"
+                                <input type="radio" class="espass" name="ingeriu" value="0"
                                     checked>
                                 <label for="n_ingeriu">Não</label>
                             </div>
@@ -205,15 +205,15 @@
                     <div>
                         <div class="destaqueclaro">
                             <label for="data">Data:</label><br>
-                            <input type="date" class="form-control" name="data_ocorrencia" placeholder="dd/mm/aaaa"
+                            <input type="date" class="form-control" name="data" placeholder="dd/mm/aaaa"
                                 data-mask="00/00/0000" maxlength="10" autocomplete="off">
                         </div>
 
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <label for="sexo">Sexo:</label>
-                                <input name="sexo_paciente" type="radio" value="f">Feminino
-                                <input name="sexo_paciente" type="radio" value="m" checked>Masculino
+                                <input name="sexo_paciente" type="radio" value="1">Feminino
+                                <input name="sexo_paciente" type="radio" value="0" checked>Masculino
                             </div>
                         </div>
                     </div>
@@ -287,9 +287,9 @@
                         <div class="simnao">
                             <div>Fez pré-natal?</div>
 
-                            <input type="radio" class="espass" name="pre_natal" value="s_faz">
+                            <input type="radio" class="espass" name="pre_natal" value="1">
                             <label for="s_faz">Sim</label>
-                            <input type="radio" class="espass" name="pre_natal" value="n_faz"
+                            <input type="radio" class="espass" name="pre_natal" value="0"
                                 checked>
                             <label for="n_faz">Não</label>
                         </div>
@@ -306,9 +306,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Existe possibilidade de complicações?</div>
-                            <input type="radio" name="complicacoes" value="s_existe">
+                            <input type="radio" name="complicacoes" value="1">
                             <label for="s_existe">Sim</label>
-                            <input type="radio" name="complicacoes" value="n_existe" checked>
+                            <input type="radio" name="complicacoes" value="0" checked>
                             <label for="n_existe">Não</label>
                         </div>
                     </div>
@@ -317,9 +317,9 @@
                         <div class="simnao">
                             <div>É o primeiro filho?</div>
 
-                            <input type="radio" name="primeiro" value="s_primeiro">
+                            <input type="radio" name="primeiro" value="1">
                             <label for="s_primeiro">Sim</label>
-                            <input type="radio" name="primeiro" value="n_primeiro" checked>
+                            <input type="radio" name="primeiro" value="0" checked>
                             <label for="n_primeiro">Não</label>
                         </div>
                     </div>
@@ -357,9 +357,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Sente pressão na região do quadril ou vontade de evacuar?</div>
-                            <input type="radio" name="pressao_quadril" value="s_sente">
+                            <input type="radio" name="pressao_quadril" value="1">
                             <label for="s_sente">Sim</label>
-                            <input type="radio" name="pressao_quadril" value="n_sente" checked>
+                            <input type="radio" name="pressao_quadril" value="0" checked>
                             <label for="n_sente">Não</label>
                         </div>
                     </div>
@@ -367,9 +367,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Já houve ruptura da bolsa?</div>
-                            <input type="radio" name="ruptura" value="s_ruptura">
+                            <input type="radio" name="ruptura" value="1">
                             <label for="s_ruptura">Sim</label>
-                            <input type="radio" name="ruptura" value="n_ruptura" checked>
+                            <input type="radio" name="ruptura" value="0" checked>
                             <label for="n_ruptura">Não</label>
                         </div>
                     </div>
@@ -377,9 +377,9 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Foi feito inspeção visual?</div>
-                            <input type="radio" name="inspecao" value="s_inspecao">
+                            <input type="radio" name="inspecao" value="1">
                             <label for="s_inspecao">Sim</label>
-                            <input type="radio" name="inspecao" value="n_inspecao" checked>
+                            <input type="radio" name="inspecao" value="0" checked>
                             <label for="n_inspecao">Não</label>
                         </div>
                     </div>
@@ -388,9 +388,9 @@
                         <div class="simnao">
                             <div class="simnao">
                                 <div>Parto realizado?</div>
-                                <input type="radio" name="parto" value="s_parto">
+                                <input type="radio" name="parto" value="1">
                                 <label for="s_parto">Sim</label>
-                                <input type="radio" name="parto" value="n_parto" checked>
+                                <input type="radio" name="parto" value="0" checked>
                                 <label for="n_parto">Não</label>
                             </div>
                             <div class="simnao">
@@ -404,10 +404,10 @@
                         <div class="simnao">
                             <div class="simnao">
                                 <div>Sexo do bebê</div>
-                                <input class="form-check-input" type="radio" name="sexo_bebe" value="f">
-                                <label class="form-check-label" for="sexo_bebef">Fem</label>
-                                <input class="form-check-input" type="radio" name="sexo_bebe" value="m">
-                                <label class="form-check-label" for="sexo_bebem">Mas</label>
+                                <input class="form-check-input" type="radio" name="sexobebe" value="1">
+                                <label class="form-check-label" for="sexobebef">Fem</label>
+                                <input class="form-check-input" type="radio" name="sexobebe" value="0">
+                                <label class="form-check-label" for="sexobebem">Mas</label>
                             </div>
                         </div>
                     </div>
@@ -436,99 +436,138 @@
                                 <label for="causado_animais">Causado Por Animais</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"name="meio_transporte" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="meio_transporte" value="0">
+                                <input type="checkbox"name="meio_transporte" value="1">
                                 <label for="meio_transporte">Com Meio de Transporte</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="desmoronamento_deslizamento" value="Sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="desmoronamento_deslizamento" value="0">
+                                <input type="checkbox" name="desmoronamento_deslizamento" value="1">
                                 <label for="desmoronamento_deslizamento">Desmoronamento / Deslizamento</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="emergencia_medica" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="emergencia_medica" value="0">
+                                <input type="checkbox" name="emergencia_medica" value="1">
                                 <label for="emergencia_medica">Emergência Médica</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="queda_2m" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="queda_2m" value="0">
+                                <input type="checkbox" name="queda_2m" value="1">
                                 <label for="queda_2m">Queda de Altura 2M</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="tentativa_suicidio" 
-                                value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="tentativa_suicidio" value="0">
+                                <input type="checkbox" name="tentativa_suicidio" 
+                                value="1">
                                 <label for="tentativa_suicidio">Tentativa de Suicídio</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="queda_propriaAltura" 
-                                value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="queda_propriaAltura" value="0">
+                                <input type="checkbox" name="queda_propriaAltura" 
+                                value="1">
                                 <label for="queda_propriaAltura">Queda Própria Altura</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="afogamento"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="afogamento" value="0">
+                                <input type="checkbox" name="afogamento"
+                                    value="1">
                                 <label for="afogamento">Afogamento</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="agressao"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="agressao" value="0">
+                                <input type="checkbox" name="agressao"
+                                  value="1">
                                 <label for="agressao">Agressão</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"  name="atropelamento"   
-                                value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="atropelamento" value="0">
+                                <input type="checkbox"  name="atropelamento"   
+                                value="1">
                                 <label for="atropelamento">Atropelamento</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="choque_eletrico" 
-                                value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="choque_eletrico" value="0">
+                                <input type="checkbox" name="choque_eletrico" 
+                                value="1">
                                 <label for="choque_eletrico">Choque Elétrico</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="desabamento"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="desabamento" value="0">
+                                <input type="checkbox" name="desabamento"
+                                    value="1">
                                 <label for="desabamento">Desabamento</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="domestico"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="domestico" value="0">
+                                <input type="checkbox" name="domestico"
+                                    value="1">
                                 <label for="domestico">Doméstico</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="esportivo"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="esportivo" value="0">
+                                <input type="checkbox" name="esportivo"
+                                    value="1">
                                 <label for="esportivo">Esportivo</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="intoxicacao"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="intoxicacao" value="0">
+                                <input type="checkbox" name="intoxicacao"
+                                    value="1">
                                 <label for="intoxicacao">Intoxicação</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"
-                                    name="queda_bicicleta" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="queda_bicicleta" value="0">
+                                <input type="checkbox"name="queda_bicicleta" 
+                                    value="1">
                                 <label for="queda_bicicleta">Queda de Bicicleta</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="queda_moto"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="queda_moto" value="0">
+                                <input type="checkbox" name="queda_moto"
+                                    value="1">
                                 <label for="queda_moto">Queda Moto</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="queda_nivel"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="queda_nivel" value="0">
+                                <input type="checkbox" name="queda_nivel"
+                                    value="1">
                                 <label for="queda_nivel">Queda Nível < 2M </label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="trabalho"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="trabalho" value="0">
+                                <input type="checkbox" name="trabalho"
+                                    value="1">
                                 <label for="trabalho">Trabalho</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="transferencia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="transferencia" value="0">
+                                <input type="checkbox" name="transferencia"
+                                    value="1">
                                 <label for="transferencia">Transferência</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="outros" value="sim">
+                                <input type="hidden" name="outros" value="0">
+                                <input type="checkbox" name="outros" value="1">
                                 <label for="outros_tipos"></label>
                                 <input class="tam75" type="text" name="outros_texto"
                                     placeholder="Digite"  />
@@ -559,169 +598,199 @@
 
                             <tr class="destaqueclaro">
                                 <td><label for="espontanea">Espontânea</label>
-                                    <input type="checkbox" name="espontanea" value="sim">4
+                                    <input type="hidden" name="espontanea" value="0">
+                                    <input type="checkbox" name="espontanea" value="1">4
                                 </td>
 
                                 <td><label for="espontanea">Espontânea</label>
-                                    <input type="checkbox" name="espontanea_menor" value="sim">4
+                                    <input type="hidden" name="espontanea_menor" value="0">
+                                    <input type="checkbox" name="espontanea_menor" value="1">4
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="comando_verbal">Comando Verbal</label>
-                                    <input type="checkbox" name="comando" value="sim">3
+                                    <input type="hidden" name="comando" value="0">
+                                    <input type="checkbox" name="comando" value="1">3
                                 </td>
 
                                 <td><label for="comando_verbal">Comando Verbal</label>
+                                    <input type="hidden" name="comando_menor" value="0">
                                     <input type="checkbox" name="comando_menor"
-                                        value="sim">3
+                                        value="1">3
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
+                                    <input type="hidden" name="estimulo" value="0">
                                     <input type="checkbox" name="estimulo"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
                                 <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
+                                    <input type="hidden" name="estimulo_menor" value="0">
                                     <input type="checkbox"  name="estimulo_menor"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="nenhuma">Nenhuma</label>
-                                    <input type="checkbox" name="nenhuma" value="sim">1
+                                    <input type="hidden" name="nenhuma" value="0">
+                                    <input type="checkbox" name="nenhuma" value="1">1
                                 </td>
 
                                 <td><label for="nenhuma_menor">Nenhuma</label>
+                                    <input type="hidden" name="nenhuma_menor" value="0">
                                     <input type="checkbox" name="nenhuma_menor"
-                                        value="sim">1
+                                        value="1">1
                                 </td>
                             </tr>
 
                             <th rowspan="6">RESPOSTA <br> VERBAL</th>
                             <tr class="destaqueclaro">
                                 <td><label for="orientado">Orientado</label>
-                                    <input type="checkbox" name="orientado" value="sim">5
+                                    <input type="hidden" name="orientado" value="0">
+                                    <input type="checkbox" name="orientado" value="1">5
                                 </td>
 
                                 <td><label for="pf_apropriadas">Palavras e Frase Apropriadas</label>
+                                    <input type="hidden" name="pf_apropriadas" value="0">
                                     <input type="checkbox" name="pf_apropriadas"
-                                        value="sim">5
+                                        value="1">5
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="confuso">Confuso</label>
-                                    <input type="checkbox" name="confuso" value="sim">4
+                                    <input type="hidden" name="confuso" value="0">
+                                    <input type="checkbox" name="confuso" value="1">4
                                 </td>
 
                                 <td><label for="palavras_inapropriadas">Palavras Inapropriadas</label>
+                                    <input type="hidden" name="palavras_inapropriadas" value="0">
                                     <input type="checkbox" name="palavras_inapropriadas"
-                                        value="sim">4
+                                        value="1">4
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="inapropriadas_menor">Palavras Inapropriadas</label>
+                                    <input type="hidden" name="inapropriadas_menor" value="0">
                                     <input type="checkbox" name="inapropriadas_menor"
-                                        value="sim">3
+                                        value="1">3
                                 </td>
 
                                 <td><label for="choro_grito">Choro Persistente ou Gritos</label>
-                                    <input type="checkbox" name="choro_grito" value="sim">3
+                                    <input type="hidden" name="choro_grito" value="0">
+                                    <input type="checkbox" name="choro_grito" value="1">3
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="p_incompreensiveis">Palavras Incompreensíveis</label>
+                                    <input type="hidden" name="p_incompreensiveis" value="0">
                                     <input type="checkbox" name="p_incompreensiveis"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
 
                                 <td><label for="s_incompreensiveis">Sons Incompreensíveis</label>
+                                    <input type="hidden" name="s_incompreensiveis" value="0">
                                     <input type="checkbox" name="s_incompreensiveis"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="nenhuma_menor2">Nenhuma</label>
+                                    <input type="hidden" name="nenhuma_menor2" value="0">
                                     <input type="checkbox" name="nenhuma_menor2"
-                                        value="sim">1
+                                        value="1">1
                                 </td>
 
                                 <td><label for="nenhuma_resposta">Nenhuma Resposta Verbal</label>
+                                    <input type="hidden" name="nenhuma_resposta" value="0">
                                     <input type="checkbox" name="nenhuma_resposta"
-                                        value="sim">1
+                                        value="1">1
                                 </td>
                             </tr>
 
                             <th rowspan="7">RESPOSTA <br> MOTORA</th>
                             <tr>
                                 <td><label for="o_comandos">Obedece Comandos</label>
-                                    <input type="checkbox" name="o_comandos" value="sim">6
+                                    <input type="hidden" name="o_comandos" value="0">
+                                    <input type="checkbox" name="o_comandos" value="1">6
                                 </td>
 
                                 <td><label for="o_protamente">Obedece Prontamente</label>
-                                    <input type="checkbox" name="o_protamente" value="sim">6
+                                    <input type="hidden" name="o_protamente" value="0">
+                                    <input type="checkbox" name="o_protamente" value="1">6
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="localiza_menor">Localiza Dor</label>
+                                    <input type="hidden" name="localiza_menor" value="0">
                                     <input type="checkbox" name="localiza_menor"
-                                        value="sim">5
+                                        value="1">5
                                 </td>
 
                                 <td><label for="localiza">Localiza Dor ou Estímulo Tatil</label>
-                                    <input type="checkbox" name="localiza" value="sim">5
+                                    <input type="hidden" name="localiza" value="0">
+                                    <input type="checkbox" name="localiza" value="1">5
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="movimento_retirada">Movimento de retirada</label>
+                                    <input type="hidden" name="movimento_retirada" value="0">
                                     <input type="checkbox" name="movimento_retirada"
-                                        value="sim">4
+                                        value="1">4
                                 </td>
 
                                 <td><label for="retirada_estimulado">Retirada do Segmento Estimulado</label>
+                                    <input type="hidden" name="retirada_estimulado" value="0">
                                     <input type="checkbox" name="retirada_estimulado"
-                                        value="sim">4
+                                        value="1">4
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="flexao_anormal">Flexão Anormal</label>
+                                    <input type="hidden" name="flexao_anormal" value="0">
                                     <input type="checkbox" name="flexao_anormal"
-                                        value="sim">3
+                                        value="1">3
                                 </td>
 
                                 <td><label for="flexao_menor">Flexão Anormal (Decorticação)</label>
-                                    <input type="checkbox" name="flexao_menor" value="sim">3
+                                    <input type="hidden" name="flexao_menor" value="0">
+                                    <input type="checkbox" name="flexao_menor" value="1">3
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="extensao_anormal">Extensão Anormal</label>
+                                    <input type="hidden" name="extensao_anormal" value="0">
                                     <input type="checkbox" name="extensao_anormal"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
 
                                 <td><label for="extensao_menor">Extensão Anormal (Decerebração)</label>
+                                    <input type="hidden" name="extensao_menor" value="0">
                                     <input type="checkbox" name="extensao_menor"
-                                        value="sim">2
+                                        value="1">2
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td><label for="nenhuma_3">Nenhuma</label>
-                                    <input type="checkbox" name="nenhuma_3" value="sim">1
+                                    <input type="hidden" name="nenhuma_3" value="0">
+                                    <input type="checkbox" name="nenhuma_3" value="1">1
                                 </td>
 
                                 <td><label for="ausencia">Ausência (Paralisia Flácida, Hipotônia)</label>
-                                    <input type="checkbox" name="ausencia" value="sim">1
+                                    <input type="hidden" name="ausencia" value="0">
+                                    <input type="checkbox" name="ausencia" value="1">1
                                 </td>
                             </tr>
 
@@ -773,7 +842,7 @@
                             <input type="number" class="tam18" name="saturacao" placeholder="Digite"
                                  />
                             <label for="saturacao"> % / HGT:</label>
-                            <input type="text" class="tam18" name="saturacao" placeholder="Digite"
+                            <input type="text" class="tam18" name="hgt" placeholder="Digite"
                                  />
                         </div>
 
@@ -803,9 +872,9 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="radio" name="anormal_normal" value="anormal">
+                            <input type="radio" name="anormal_normal" value="1">
                             <label for="anormal">Anormal</label>
-                            <input type="radio" name="anormal_normal" value="normal">
+                            <input type="radio" name="anormal_normal" value="0" checked>
                             <label for="normal">Normal</label>
                         </div>
                     </div>
@@ -819,12 +888,14 @@
                     <div>
 
                         <div class="destaqueclaro">
-                            <input type="checkbox" name="psiquiatrico" value="sim">
+                            <input type="hidden" name="psiquiatrico" value="0">
+                            <input type="checkbox" name="psiquiatrico" value="1">
                             <label for="psiquiatrico">Psiquiátrico</label>
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="checkbox" name="respiratorio" value="sim">
+                            <input type="hidden" name="respiratorio" value="0">
+                            <input type="checkbox" name="respiratorio" value="1">
                             <label for="respiratorio">Respiratório:</label> <br>
                             <select class="problema" name="respiratorio_opcoes">
                                 <option value=""></option>
@@ -834,7 +905,8 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="checkbox" name="diabetes" value="sim">
+                            <input type="hidden" name="diabetes" value="0">
+                            <input type="checkbox" name="diabetes" value="1">
                             <label for="diabetes">Diabetes:</label> <br>
                             <select class="problema" name="diabetes_opcoes">
                                 <option value=""></option>
@@ -844,7 +916,8 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="checkbox" name="obstetrico" value="sim">
+                            <input type="hidden" name="obstetrico" value="0">
+                            <input type="checkbox" name="obstetrico" value="1">
                             <label for="obstetrico">Obstétrico:</label><br>
                             <select class="problema" name="obstetrico_opcoes">
                                 <option value=""></option>
@@ -855,7 +928,8 @@
                         </div>
 
                         <div class="destaqueclaro">
-                            <input type="checkbox" name="transporte" value="sim">
+                            <input type="hidden" name="transporte" value="0">
+                            <input type="checkbox" name="transporte" value="1">
                             <label for="transporte">Transporte:</label><br>
                             <select class="problema" name="transporte_opcoes">
                                 <option value=""></option>
@@ -870,8 +944,9 @@
                         </div>
 
                         <div class="destaqueclaro">
+                            <input type="hidden" name="outros_problemas" value="0">
                             <input type="checkbox" name="outros_problemas"
-                                value="sim">
+                                value="1">
                             <label for="outros_problemas">Outros:</label><br>
                             <input type="text" class="form-control" name="outros_text"
                                 placeholder="Digite os outros"  />
@@ -903,21 +978,38 @@
                                 </td>
 
                                 <td>
-                                    <input type="checkbox" name="fratura" value="sim" />Fraturas/Luxações/
+                                    <input type="hidden" name="fratura" value="0">
+                                    <input type="checkbox" name="fratura" value="1" />Fraturas/Luxações/
                                     Entorses <br>
-                                    <input type="checkbox" name="ferimento" value="sim" />Ferimentos
+
+                                    <input type="hidden" name="ferimento" value="0">
+                                    <input type="checkbox" name="ferimento" value="1" />Ferimentos
                                     diversos <br>
-                                    <input type="checkbox" name="hemorragias" value="sim" />Hemorragias
+
+                                    <input type="hidden" name="hemorragias" value="0">
+                                    <input type="checkbox" name="hemorragias" value="1" />Hemorragias
                                     <br>
-                                    <input type="checkbox" name="esviceracao" value="sim" />Esviceração
+
+                                    <input type="hidden" name="esviceracao" value="0">
+                                    <input type="checkbox" name="esviceracao" value="1" />Esviceração
                                     <br>
+
+                                    <input type="hidden" name="fab" value="0">
                                     <input type="checkbox" name="fab" value="" />F.A.B/ F.A.F <br>
-                                    <input type="checkbox" name="amputacao" value="sim" />Amputação <br>
-                                    <input type="checkbox" name="queimadura1" value="sim" />Queimadura 1°
+
+                                    <input type="hidden" name="amputacao" value="0">
+                                    <input type="checkbox" name="amputacao" value="1" />Amputação <br>
+
+                                    <input type="hidden" name="queimadura1" value="0">
+                                    <input type="checkbox" name="queimadura1" value="1" />Queimadura 1°
                                     grau <br>
-                                    <input type="checkbox" name="queimadura2" value="sim" />Queimadura 2°
-                                    grau <br>
-                                    <input type="checkbox" name="queimadura3" value="sim" />Queimadura 3°
+                                    
+                                    <input type="hidden" name="queimadura2" value="0">
+                                    <input type="checkbox" name="queimadura2" value="1" />Queimadura 2°
+                                     grau <br>
+
+                                    <input type="hidden" name="queimadura3" value="0">
+                                    <input type="checkbox" name="queimadura3" value="1" />Queimadura 3°
                                     grau <br>
                                 </td>
 
@@ -929,20 +1021,30 @@
                             </td>
 
                             <td>
-                                <input type="checkbox" name="fratura" value="sim" />Fraturas/Luxações/
+                                <input type="hidden" name="fratura" value="0">
+                                <input type="checkbox" name="fratura" value="1" />Fraturas/Luxações/
                                 Entorses <br>
-                                <input type="checkbox" name="ferimento" value="sim" />Ferimentos diversos
+                                <input type="hidden" name="ferimento" value="0">
+                                <input type="checkbox" name="ferimento" value="1" />Ferimentos diversos
                                 <br>
-                                <input type="checkbox" name="hemorragias" value="sim" />Hemorragias <br>
-                                <input type="checkbox" name="esviceracao" value="sim" />Esviceração <br>
-                                <input type="checkbox" name="fab" value="sim" />F.A.B/ F.A.F <br>
-                                <input type="checkbox" name="amputacao" value="sim" />Amputação <br>
-                                <input type="checkbox" name="queimadura1" value="sim" />Queimadura 1° grau
+                                <input type="hidden" name="hemorragias" value="0">
+                                <input type="checkbox" name="hemorragias" value="1" />Hemorragias <br>
+                                <input type="hidden" name="esviceracao" value="0">
+                                <input type="checkbox" name="esviceracao" value="1" />Esviceração <br>
+                                <input type="hidden" name="fab" value="0">
+                                <input type="checkbox" name="fab" value="1" />F.A.B/ F.A.F <br>
+                                <input type="hidden" name="amputacao" value="0">
+                                <input type="checkbox" name="amputacao" value="1" />Amputação <br>
+                                <input type="hidden" name="queimadura1" value="0">
+                                <input type="checkbox" name="queimadura1" value="1" />Queimadura 1° grau
                                 <br>
-                                <input type="checkbox" name="queimadura2" value="sim" />Queimadura 2° grau
+                                <input type="hidden" name="queimadura2" value="0">
+                                <input type="checkbox" name="queimadura2" value="1" />Queimadura 2° grau
                                 <br>
-                                <input type="checkbox" name="queimadura3" value="sim" />Queimadura 3° grau
+                                <input type="hidden" name="queimadura3" value="0">
+                                <input type="checkbox" name="queimadura3" value="1" />Queimadura 3° grau
                                 <br>
+
                             </td>
 
                             </tr>
@@ -953,21 +1055,37 @@
                                 </td>
 
                                 <td>
-                                    <input type="checkbox" name="fratura" value="sim" />Fraturas/Luxações/
+                                    <input type="hidden" name="fratura" value="0">
+                                    <input type="checkbox" name="fratura" value="1" />Fraturas/Luxações/
                                     Entorses <br>
-                                    <input type="checkbox" name="ferimento" value="sim" />Ferimentos
+                                    <input type="hidden" name="ferimento" value="0">
+                                    <input type="checkbox" name="ferimento" value="1" />Ferimentos
                                     diversos <br>
-                                    <input type="checkbox" name="hemorragias" value="sim" />Hemorragias
+
+                                    <input type="hidden" name="hemorragias" value="0">
+                                    <input type="checkbox" name="hemorragias" value="1" />Hemorragias
                                     <br>
-                                    <input type="checkbox" name="esviceracao" value="sim" />Esviceração
+
+                                    <input type="hidden" name="esviceracao" value="0">
+                                    <input type="checkbox" name="esviceracao" value="1" />Esviceração
                                     <br>
-                                    <input type="checkbox" name="fab" value="sim" />F.A.B/ F.A.F <br>
-                                    <input type="checkbox" name="amputacao" value="sim" />Amputação <br>
-                                    <input type="checkbox" name="queimadura1" value="sim" />Queimadura 1°
+
+                                    <input type="hidden" name="fab" value="0">
+                                    <input type="checkbox" name="fab" value="1" />F.A.B/ F.A.F <br>
+
+                                    <input type="hidden" name="amputacao" value="0">
+                                    <input type="checkbox" name="amputacao" value="1" />Amputação <br>
+
+                                    <input type="hidden" name="queimadura1" value="0">
+                                    <input type="checkbox" name="queimadura1" value="1" />Queimadura 1°
                                     grau <br>
-                                    <input type="checkbox" name="queimadura2" value="sim" />Queimadura 2°
+
+                                    <input type="hidden" name="queimadura2" value="0">
+                                    <input type="checkbox" name="queimadura2" value="1" />Queimadura 2°
                                     grau <br>
-                                    <input type="checkbox" name="queimadura3" value="sim" />Queimadura 3°
+
+                                    <input type="hidden" name="queimadura3" value="0">
+                                    <input type="checkbox" name="queimadura3" value="1" />Queimadura 3°
                                     grau <br>
                                 </td>
 
@@ -1254,103 +1372,151 @@
 
                             <tr class="destaqueclaro">
                                 <td>Cabeça</td>
+
+                                <input type="hidden" name="qcabeca_1grau" value="0">
                                 <td><input type="checkbox" name="qcabeca_1grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+
+                                <input type="hidden" name="qcabeca_2grau" value="0">
                                 <td><input type="checkbox" name="qcabeca_2grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+
+                                <input type="hidden" name="qcabeca_3grau" value="0">
                                 <td><input type="checkbox" name="qcabeca_3grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+
+                                <input type="hidden" name="qcabeca_4grau" value="0">
                                 <td><input type="checkbox" name="qcabeca_4grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+
+
                             </tr>
 
                             <tr>
                                 <td>Pescoço</td>
+                                <input type="hidden" name="qpescoco_1grau" value="0">
                                 <td><input type="checkbox" name="qpescoco_1grau"
-                                        value="sim">
+                                        value="1">
+
+                                <input type="hidden" name="qpescoco_2grau" value="0">
                                 <td><input type="checkbox" name="qpescoco_2grau"
-                                        value="sim">
+                                        value="1">
+                                <input type="hidden" name="qpescoco_3grau" value="0">
                                 <td><input type="checkbox" name="qpescoco_3grau"
-                                        value="sim">
+                                        value="1">
+                                <input type="hidden" name="qpescoco_4grau" value="0">
                                 <td><input type="checkbox" name="qpescoco_4grau"
-                                        value="sim">
+                                        value="1">
+
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td>T. ant</td>
-                                <td><input type="checkbox" name="qtant_1grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtant_2grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtant_3grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtant_4grau" value="sim"></td>
+                                <input type="hidden" name="qtant_1grau" value="0">
+                                <td><input type="checkbox" name="qtant_1grau" value="1"></td>
+                                <input type="hidden" name="qtant_2grau" value="0">
+                                <td><input type="checkbox" name="qtant_2grau" value="1"></td>
+                                <input type="hidden" name="qtant_3grau" value="0">
+                                <td><input type="checkbox" name="qtant_3grau" value="1"></td>
+                                <input type="hidden" name="qtant_4grau" value="0">
+                                <td><input type="checkbox" name="qtant_4grau" value="1"></td>
                             </tr>
 
                             <tr>
                                 <td>T. pos</td>
-                                <td><input type="checkbox" name="qtpos_1grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtpos_2grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtpos_3grau" value="sim"></td>
-                                <td><input type="checkbox" name="qtpos_4grau" value="sim"></td>
+                                <input type="hidden" name="qtpos_1grau" value="0">
+                                <td><input type="checkbox" name="qtpos_1grau" value="1"></td>
+                                <input type="hidden" name="qtpos_2grau" value="0">
+                                <td><input type="checkbox" name="qtpos_2grau" value="1"></td>
+                                <input type="hidden" name="qtpos_3grau" value="0">
+                                <td><input type="checkbox" name="qtpos_3grau" value="1"></td>
+                                <input type="hidden" name="qtpos_4grau" value="0">
+                                <td><input type="checkbox" name="qtpos_4grau" value="1"></td>
+
+
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td>Genital</td>
+                                <input type="hidden" name="qgenital_1grau" value="0">
                                 <td><input type="checkbox" name="qgenital_1grau"
-                                        value="sim">
+                                        value="1">
+                                <input type="hidden" name="qgenital_2grau" value="0">
                                 <td><input type="checkbox" name="qgenital_2grau"
-                                        value="sim">
+                                        value="1">
+                                <input type="hidden" name="qgenital_3grau" value="0">
                                 <td><input type="checkbox"  name="qgenital_3grau"
-                                        value="sim">
+                                        value="1">
+                                <input type="hidden" name="qgenital_4grau" value="0">
                                 <td><input type="checkbox"  name="qgenital_4grau"
-                                        value="sim">
+                                        value="1">
+
+
                             </tr>
 
                             <tr>
                                 <td>Membro Inferior Direito</td>
+                                <input type="hidden" name="qmembroid_1grau" value="0">
                                 <td><input type="checkbox" name="qmembroid_1grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroid_2grau" value="0">
                                 <td><input type="checkbox" name="qmembroid_2grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroid_3grau" value="0">
                                 <td><input type="checkbox" name="qmembroid_3grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroid_4grau" value="0">
                                 <td><input type="checkbox" name="qmembroid_4grau"
-                                        value="sim"></td>
+                                        value="1"></td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td>Membro Inferior Esquerdo</td>
+                                <input type="hidden" name="qmembroie_1grau" value="0">
                                 <td><input type="checkbox" name="qmembroie_1grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroie_2grau" value="0">
                                 <td><input type="checkbox" name="qmembroie_2grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroie_3grau" value="0">
                                 <td><input type="checkbox" name="qmembroie_3grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembroie_4grau" value="0">
                                 <td><input type="checkbox" name="qmembroie_4grau"
-                                        value="sim"></td>
+                                        value="1"></td>
                             </tr>
 
                             <tr>
                                 <td>Membro Superior Direito</td>
+                                <input type="hidden" name="qmembrosd_1grau" value="0">
                                 <td><input type="checkbox" name="qmembrosd_1grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrosd_2grau" value="0">
                                 <td><input type="checkbox" name="qmembrosd_2grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrosd_3grau" value="0">
                                 <td><input type="checkbox" name="qmembrosd_3grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrosd_4grau" value="0">
                                 <td><input type="checkbox" name="qmembrosd_4grau"
-                                        value="sim"></td>
+                                        value="1"></td>
                             </tr>
 
                             <tr class="destaqueclaro">
                                 <td>Membro Superior Esquerdo</td>
+                                <input type="hidden" name="qmembrose_1grau" value="0">
                                 <td><input type="checkbox" name="qmembrose_1grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrose_2grau" value="0">
                                 <td><input type="checkbox" name="qmembrose_2grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrose_3grau" value="0">
                                 <td><input type="checkbox" name="qmembrose_3grau"
-                                        value="sim"></td>
+                                        value="1"></td>
+                                <input type="hidden" name="qmembrose_4grau" value="0">
                                 <td><input type="checkbox" name="qmembrose_4grau"
-                                        value="sim"></td>
+                                        value="1"></td>
                             </tr>
                         </table>
                     </div>
@@ -1375,205 +1541,253 @@
                     <div>
                         <div class="sinals">
 
-                            <div class="destaqueclaro"><input type="checkbox" name="abdomen"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="abdomen" value="0">
+                                <input type="checkbox" name="abdomen"
+                                    value="1">
                                 <label for="abdomen">Abdomen Sensível ou Rígido</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"
-                                    name="afundamento_cranio" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="afundamento_cranio" value="0">
+                                <input type="checkbox" name="afundamento_cranio" 
+                                value="1">
                                 <label for="afundamento_cranio">Afundamento de Crânio</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="agitacao"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="agitacao" value="0">
+                                <input type="checkbox" name="agitacao"
+                                    value="1">
                                 <label for="agitacao">Agitação</label>
                             </div>
-
-                            <div class="destaqueclaro"><input type="checkbox" name="amnesia"
-                                value="sim">
+        
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="amnesia" value="0">
+                                <input type="checkbox" name="amnesia"
+                                value="1">
                             <label for="sinais-sintomas">Amnésia</label>
                         </div>
                         
-                        <div class="destaqueclaro"><input type="checkbox" name="angina_peito"
-                            value="sim">
+                        <div class="destaqueclaro">
+                            <input type="hidden" name="angina_peito" value="0">
+                            <input type="checkbox" name="angina_peito"
+                            value="1">
                         <label for="sinais-sintomas">Angina de peito</label>
                     </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="apineia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="apineia" value="0">
+                                <input type="checkbox" name="apineia"
+                                    value="1">
                                 <label for="sinais-sintomas">Apinéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="bradicardia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="bradicardia" value="0">
+                                <input type="checkbox" name="bradicardia"
+                                    value="1">
                                 <label for="bradicardia">Bradicardia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="bradipneia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="bradipneia" value="0">
+                                <input type="checkbox" name="bradipneia"
+                                    value="1">
                                 <label for="bradipneia">Bradipnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" 
-                                    name="bronco_aspirando" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="bronco_aspirando" value="0">
+                                <input type="checkbox" name="bronco_aspirando"
+                                 value="1">
                                 <label for="bronco_aspirando">Bronco-Aspirando</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="cefaleia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="cefaleia" value="0">
+                                <input type="checkbox" name="cefaleia"
+                                    value="1">
                                 <label for="cefaleia">Cefaléia</label>
                             </div>
 
                             <div class="destaqueclaro">Cianose
 
                                 <div class="auxiliar">
+                                    <input type="hidden" name="cianose_labios" value="0">
                                     <input type="checkbox"  name="cianose_labios"
-                                        value="sim">
+                                        value="1">
                                     <label for="cianose_labios">Lábios</label>
                                     <br>
+                                    <input type="hidden" name="cianose_extremidade" value="0">
                                     <input type="checkbox" name="cianose_extremidade"
-                                        value="sim">
+                                        value="1">
                                     <label for="cianose_extremidade">Extremidade</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="convulsao" value="sim">
+                                <input type="hidden" name="convulsao" value="0">
+                                <input type="checkbox" name="convulsao" value="1">
                                 <label for="convulsao">Convulsão</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="decorticacao" value="sim">
+                                <input type="hidden" name="decorticacao" value="0">
+                                <input type="checkbox" name="decorticacao" value="1">
                                 <label for="decorticacao">Decorticação</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="deformidade" value="sim">
+                                <input type="hidden" name="deformidade" value="0">
+                                <input type="checkbox" name="deformidade" value="1">
                                 <label for="deformidade">Deformidade</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="descerebracao" value="sim">
+                                <input type="hidden" name="descerebracao" value="0">
+                                <input type="checkbox" name="descerebracao" value="1">
                                 <label for="descerebracao">Descerebração</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="desmaio" value="sim">
+                                <input type="hidden" name="desmaio" value="0">
+                                <input type="checkbox" name="desmaio" value="1">
                                 <label for="desmaio">Desmaio</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"
-                                    name="desvio_traqueia" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="desvio_traqueia" value="0">
+                                <input type="checkbox" name="desvio_traqueia" value="1">
                                 <label for="desvio_traqueia">Desvio de Traquéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="dispneia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="dispneia" value="0">
+                                <input type="checkbox" name="dispneia"
+                                    value="1">
                                 <label for="dispneia">Dispnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="dor_local"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="dor_local" value="0">
+                                <input type="checkbox" name="dor_local"
+                                    value="1">
                                 <label for="dor_local">Dor Local</label>
                             </div>
 
                             <div class="destaqueclaro">Edema
                                 <div class="auxiliar">
+                                    <input type="hidden" name="edema_generalizados" value="0">
                                     <input type="checkbox" name="edema_generalizados"
-                                        value="sim">
+                                        value="1">
                                     <label for="edema_generalizados">Generalizados</label>
                                     <br>
+                                    <input type="hidden" name="edema_localizados" value="0">
                                     <input type="checkbox" name="edema_localizados"
-                                        value="sim">
+                                        value="1">
                                     <label for="edema_localizados">Localizados</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
+                                <input type="hidden" name="enfisema_subcutaneo" value="0">
                                 <input type="checkbox" name="enfisema_subcutaneo"
-                                    value="sim">
+                                    value="1">
                                 <label for="enfisema_subcutaneo">Enfisema Subcutâneo</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="entase_jugular" value="sim">
+                                <input type="hidden" name="entase_jugular" value="0">
+                                <input type="checkbox" name="entase_jugular" value="1">
                                 <label for="entase_jugular">Êstase de Jugular</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="face_palida" value="sim">
+                                <input type="hidden" name="face_palida" value="0">
+                                <input type="checkbox" name="face_palida" value="1">
                                 <label for="face_palida">Face Pálida</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="hipertensao" value="sim">
+                                <input type="hidden" name="hipertensao" value="0">
+                                <input type="checkbox" name="hipertensao" value="1">
                                 <label for="hipertensao">Hipertensão</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="hipotensao" value="sim">
+                                <input type="hidden" name="hipotensao" value="0">
+                                <input type="checkbox" name="hipotensao" value="1">
                                 <label for="hipotensao">Hipotensão</label>
                             </div>
 
                             <div class="destaqueclaro">Hemorragia
 
                                 <div class="auxiliar">
+                                    <input type="hidden" name="hemorragia_interna" value="0">
                                     <input type="checkbox" name="hemorragia_interna"
-                                        value="sim">
+                                        value="1">
                                     <label for="hemorragia_interna">Interna</label> <br>
-
+                                    <input type="hidden" name="hemorragia_externa" value="0">
                                     <input type="checkbox" name="hemorragia_externa"
-                                        value="sim">
+                                        value="1">
                                     <label for="hemorragia_externa">Externa</label>
                                 </div>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="nausea_vomito" value="sim">
+                                <input type="hidden" name="nausea_vomito" value="0">
+                                <input type="checkbox" name="nausea_vomito" value="1">
                                 <label for="nausea_vomito">Náuseas e Vômitos</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="nasoragia" value="sim">
+                                <input type="hidden" name="nasoragia" value="0">
+                                <input type="checkbox" name="nasoragia" value="1">
                                 <label for="nasoragia">Nasoragia</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="obito" value="sim">
+                                <input type="hidden" name="obito" value="0">
+                                <input type="checkbox" name="obito" value="1">
                                 <label for="obito">Óbito</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="otorreia" value="sim">
+                                <input type="hidden" name="otorreia" value="0">
+                                <input type="checkbox" name="otorreia" value="1">
                                 <label for="otorreia">Otorréia</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="otorragia" value="sim">
+                                <input type="hidden" name="otorragia" value="0">
+                                <input type="checkbox" name="otorragia" value="1">
                                 <label for="otorragia">Otorragia</label>
                             </div>
 
                             <div class="destaqueclaro">
-                                <input type="checkbox" name="ovace" value="sim">
+                                <input type="hidden" name="ovace" value="0">
+                                <input type="checkbox" name="ovace" value="1">
                                 <label for="ovace">O.V.A.C.E.</label>
                             </div>
 
                             <div class="destaqueclaro">
-                               
-                                    <input type="checkbox" name="parada_cardiaca" value="sim">
+                                    <input type="hidden" name="parada_cardiaca" value="0">
+                                    <input type="checkbox" name="parada_cardiaca" value="1">
                                     <label for="parada_cardiaca">Parada Cardíaca</label> <br>
-                                    <input type="checkbox" name="parada_respiratoria" value="sim">
+
+                                    <input type="hidden" name="parada_respiratoria" value="0">
+                                    <input type="checkbox" name="parada_respiratoria" value="1">
                                     <label for="parada_respiratoria">Parada Respiratória</label>
                             </div>
-
+                            <input type="hidden" name="priapismo" value="0">
                             <div class="destaqueclaro"><input type="checkbox" name="priapismo"
-                                    value="sim">
+                                    value="1">
                                 <label for="priapismo">Priapismo</label>
                             </div>
-
+                            <input type="hidden" name="prurido_pele" value="0">
                             <div class="destaqueclaro"><input type="checkbox" name="prurido_pele"
-                                    value="sim">
+                                    value="1">
                                 <label for="prurido_pele">Prurido na Pele</label>
                             </div>
 
@@ -1581,58 +1795,79 @@
                                 Pupilas
 
                                 <div class="auxiliar">
+                                    <input type="hidden" name="pupilas_anisocoria" value="0">
                                     <input type="checkbox" name="pupilas_anisocoria"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_anisocoria">Anisocoria</label><br>
+                                    <input type="hidden" name="pupilas_isocoria" value="0">
                                     <input type="checkbox" name="pupilas_isocoria"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_isocoria">Isocoria</label><br>
+                                    <input type="hidden" name="pupilas_midriase" value="0">
                                     <input type="checkbox" name="pupilas_midriase"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_midriase">Midriase</label><br>
+                                    <input type="hidden" name="pupilas_miose" value="0">
                                     <input type="checkbox" name="pupilas_miose"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_miose">Miose</label><br>
+                                    <input type="hidden" name="pupilas_reagente" value="0">
                                     <input type="checkbox" name="pupilas_reagente"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_reagente">Reagente</label><br>
+                                    <input type="hidden" name="pupilas_nreagente" value="0">
                                     <input type="checkbox" name="pupilas_nreagente"
-                                        value="sim">
+                                        value="1">
                                     <label for="pupilas_nreagente">Não Reagente</label>
+
                                 </div>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"  name="sede" value="sim>
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="sede" value="0">
+                                <input type="checkbox"  name="sede" value="1>
                                 <label for="sede">Sede</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"  name="sinal_battle"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="sinal_battle" value="0">
+                                <input type="checkbox"  name="sinal_battle"
+                                    value="1">
                                 <label for="sinal_battle">Sinal de Battle</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="sinal_guaxinim"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="sinal_guaxinim" value="0">
+                                <input type="checkbox" name="sinal_guaxinim"
+                                    value="1">
                                 <label for="sinal_guaxinim">Sinal de Guaxinim</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="sudorese"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="sudorese" value="0">
+                                <input type="checkbox" name="sudorese"
+                                    value="1">
                                 <label for="sudorese">Sudorese</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="taquipneia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="taquipneia" value="0">
+                                <input type="checkbox" name="taquipneia"
+                                    value="1">
                                 <label for="taquipneia">Taquipnéia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="taquicardia"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="taquicardia" value="0">
+                                <input type="checkbox" name="taquicardia"
+                                    value="1">
                                 <label for="taquicardia">Taquicardia</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="tontura"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="tontura" value="0">
+                                <input type="checkbox" name="tontura"
+                                    value="1">
                                 <label for="tontura">Tontura</label>
                             </div>
 
@@ -1654,52 +1889,72 @@
                     <titulos id="vitimaera">Vítima era</titulos>
                     <div>
                         <div class="simnao">
-                            <div class="destaqueclaro"><input type="checkbox" name="ciclista"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="ciclista" value="0">
+                                <input type="checkbox" name="ciclista"
+                                    value="1">
                                 <label for="ciclista">Ciclista</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="condutor_moto"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="condutor_moto" value="0">
+                                <input type="checkbox" name="condutor_moto"
+                                    value="1">
                                 <label for="condutor_moto">Condutor moto</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"  name="gestante"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="gestante" value="0">
+                                <input type="checkbox"  name="gestante"
+                                    value="1">
                                 <label for="gestante">Gestante</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox"
-                                    name="passageiro_bancofrente" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="passageiro_bancofrente" value="0">
+                                <input type="checkbox" name="passageiro_bancofrente" 
+                                    value="1">
                                 <label for="passageiro_bancofrente">Passageiro Banco Frente</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" 
-                                    name="passageiro_moto" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="passageiro_moto" value="0">
+                                <input type="checkbox" name="passageiro_moto"
+                                 value="1">
                                 <label for="passageiro_moto">Passageiro Moto</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="condutor_carro"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="condutor_carro" value="0">
+                                <input type="checkbox" name="condutor_carro"
+                                    value="1">
                                 <label for="condutor_carro">Condutor Carro</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="clinico"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="clinico" value="0">
+                                <input type="checkbox" name="clinico"
+                                    value="1">
                                 <label for="clinico">Clínico</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="trauma" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="trauma" value="0">
+                                <input type="checkbox" name="trauma" value="1">
                                 <label for="trauma">Trauma</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" 
-                                    name="passageiro_btras" value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="passageiro_btras" value="0">
+                                <input type="checkbox" name="passageiro_btras"
+                                 value="1">
                                 <label for="passageiro_btras">Passageiro Banco Trás</label>
                             </div>
 
-                            <div class="destaqueclaro"><input type="checkbox" name="pedestre"
-                                    value="sim">
+                            <div class="destaqueclaro">
+                                <input type="hidden" name="pedestre" value="0">
+                                <input type="checkbox" name="pedestre"
+                                    value="1">
                                 <label for="pedestre">Pedestre</label>
                             </div>
                         </div>
@@ -1778,172 +2033,172 @@
                     <titulos id="procedimentosefetuados">Procedimentos Efetuados</titulos>
                     <div class="coluna3">
                         <div class="destaqueclaro"><input type="checkbox" name="aspiracao"
-                                value="sim">
+                                value="1">
                             <label for="aspiracao">Aspiração</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox"
-                                name="avaliacao_inicial" value="sim">
+                                name="avaliacao_inicial" value="1">
                             <label for="avaliacao_inicial">Avaliação Inicial</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" 
-                                name="avaliacao_dirigida" value="sim">
+                                name="avaliacao_dirigida" value="1">
                             <label for="avaliacao_dirigida">Avaliação Dirigida</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox"
-                                name="avaliacao_continuada" value="sim">
+                                name="avaliacao_continuada" value="1">
                             <label for="avaliacao_continuada">Avaliação Continuada</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="chave_rautek"
-                                value="sim">
+                                value="1">
                             <label for="chave_rautek">Chave de Rautek</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="canula_guedel"
-                                value="sim">
+                                value="1">
                             <label for="canula_guedel">Cânula de Guedel</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="desobstrucao_va"
-                                value="sim">
+                                value="1">
                             <label for="desobstrucao_va">Desobstrução de V.A.</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="emprego_dea"
-                                value="sim">
+                                value="1">
                             <label for="emprego_dea">Emprego do D.E.A.</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" 
-                                name="gerenciamento_riscos" value="sim">
+                                name="gerenciamento_riscos" value="1">
                             <label for="gerenciamento_riscos">Gerenciamento de Riscos</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" 
-                                name="limpeza_ferimento" value="sim">
+                                name="limpeza_ferimento" value="1">
                             <label for="limpeza_ferimento">Limpeza de Ferimento</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="curativos"
-                                value="sim">
+                                value="1">
                             <label for="curativos">Curativos</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="compressivo"
-                                value="sim">
+                                value="1">
                             <label for="compressivo">Compressivo</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="encravamento"
-                                value="sim">
+                                value="1">
                             <label for="encravamento">Encravamento</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="ocular" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="ocular" value="1">
                             <label for="ocular">Ocular</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="queimadura"
-                                value="sim">
+                                value="1">
                             <label for="queimadura">Queimadura</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="simples" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="simples" value="1">
                             <label for="simples">Simples</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="3_pontas"
-                                value="sim">
+                                value="1">
                             <label for="3_pontas">3 pontas</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="imobilizacoes"
-                                value="sim">
+                                value="1">
                             <label for="imobilizacoes">Imobilizações</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="membro_infd"
-                                value="sim">
+                                value="1">
                             <label for="membro_infd">Membro Inferior Direito</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="membro_infe"
-                                value="sim">
+                                value="1">
                             <label for="membro_infe">Membro Inferior Esquerdo</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="membro_supd"
-                                value="sim">
+                                value="1">
                             <label for="membro_supd">Membro Superior Direito</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="membro_supe"
-                                value="sim">
+                                value="1">
                             <label for="membro_supe">Membro Superior Esquerdo</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="quadril" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="quadril" value="1">
                             <label for="quadril">Quadril</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="cervical"
-                                value="sim">
+                                value="1">
                             <label for="cervical">Cervical</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="maca_rodas"
-                                value="sim">
+                                value="1">
                             <label for="maca_rodas">Maca Sobre Rodas</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="maca_rigida"
-                                value="sim">
+                                value="1">
                             <label for="maca_rigida">Maca Rígida</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="ponte" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="ponte" value="1">
                             <label for="ponte">Ponte</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox"
-                                name="retirado_capacete" value="sim">
+                                name="retirado_capacete" value="1">
                             <label for="retirado_capacete">Retirado Capacete</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="rcp" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="rcp" value="1">
                             <label for="rcp">R.C.P.</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="rolamento_90"
-                                value="sim">
+                                value="1">
                             <label for="rolamento_90">Rolamento 90°</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="rolamento_180"
-                                value="sim">
+                                value="1">
                             <label for="rolamento_180">Rolamento 180°</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="tomada_decisao"
-                                value="sim">
+                                value="1">
                             <label for="tomada_decisao">Tomada Decisão</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="tratado_choque"
-                                value="sim">
+                                value="1">
                             <label for="tratado_choque">Tratado Choque</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="uso_canula"
-                                value="sim">
+                                value="1">
                             <label for="uso_canula">Uso de Cânula</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="uso_colar"
-                                value="sim">
+                                value="1">
                             <label for="uso_colar">Uso Colar</label>
 
                             <div><label for="tamanho_usocolar">Tam:</label>
@@ -1952,20 +2207,20 @@
                             </div>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="uso_ked" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="uso_ked" value="1">
                             <label for="uso_ked">Uso Ked</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="uso_ttf" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="uso_ttf" value="1">
                             <label for="uso_ttf">Uso Ttf</label>
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox"
-                                name="ventilacao_suporte" value="sim">
+                                name="ventilacao_suporte" value="1">
                             <label for="ventilacao_suporte">Ventilação Suporte</label>
 
                             <div><input type="checkbox" name="oxigenioterapia"
-                                    value="sim">
+                                    value="1">
                                 <label for="oxigenioterapia">Oxigenioterapia</label>
 
                                 <input class="tam18" type="oxigenioterapia_texto" 
@@ -1975,7 +2230,7 @@
                         </div>
 
                         <div class="destaqueclaro"><input type="checkbox" name="reanimador"
-                                value="sim">
+                                value="1">
                             <label for="reanimador">Reanimador</label>
 
                             <input class="tam18" type="text" name="reanimador_texto"
@@ -1983,14 +2238,14 @@
                             <label for="reanimador_texto">LPM</label>
                         </div>
 
-                        <div class="destaqueclaro"><input type="checkbox" name="meioa" value="sim">
+                        <div class="destaqueclaro"><input type="checkbox" name="meioa" value="1">
                             <label for="meioa">Meio Auxiliares</label>
                             <div>
-                                <div><input type="checkbox" name="meioa_celesc" value="sim">
+                                <div><input type="checkbox" name="meioa_celesc" value="1">
                                     <label for="meioa_celesc">CELESC</label>
                                 </div>
 
-                                <div><input type="checkbox" name="sim"
+                                <div><input type="checkbox" name="1"
                                         value="sim">
                                     <label for="meioa_defesacivil">Def. Civil</label>
                                 </div>
@@ -1999,17 +2254,17 @@
 
                                     <div class="auxiliar">
 
-                                        <input type="checkbox" name="meioa_civil" value="sim">
+                                        <input type="checkbox" name="meioa_civil" value="1">
                                         <label for="meioa_civil">Civil</label>
 
                                         <input type="checkbox" name="meioa_militar"
-                                            value="sim">
+                                            value="1">
                                         <label for="meioa_militar">Militar</label>
 
-                                        <input type="checkbox" name="meioa_pre" value="sim">
+                                        <input type="checkbox" name="meioa_pre" value="1">
                                         <label for="meioa_pre">PRE</label>
 
-                                        <input type="checkbox" name="meioa_prf" value="sim">
+                                        <input type="checkbox" name="meioa_prf" value="1">
                                         <label for="meioa_prf">PRF</label>
                                     </div>
                                 </div>
@@ -2018,15 +2273,15 @@
 
                                     <div class="auxiliar">
 
-                                        <input type="checkbox" name="meioa_usa" value="sim">
+                                        <input type="checkbox" name="meioa_usa" value="1">
                                         <label for="meioa_usa">USA</label>
 
-                                        <input type="checkbox" name="meioa_usb" value="sim">
+                                        <input type="checkbox" name="meioa_usb" value="1">
                                         <label for="meioa_usb">USB</label>
                                     </div>
                                 </div>
 
-                                <div><input type="checkbox" name="meioa_cit" value="sim">
+                                <div><input type="checkbox" name="meioa_cit" value="1">
                                     <label for="meioa_cit">CIT</label>
                                 </div>
                             </div>
@@ -2034,7 +2289,7 @@
 
                         <div class="destaqueclaro">
                             <input type="checkbox" id="outros_procedimentos" name="outros_procedimentos"
-                                value="sim">
+                                value="1">
 
                             <input type="text" name="outrosp_texto" placeholder="Digite" />
                         </div>
@@ -2058,13 +2313,13 @@
                                 <td>
                                     <label for="ataduras">Ataduras</label>
                                     <br>
-                                    <input type="checkbox" name="ataduras_8" value="sim">
+                                    <input type="checkbox" name="ataduras_8" value="1">
                                     <label for="ataduras_8">8</label>
 
-                                    <input type="checkbox" name="ataduras_12" value="sim">
+                                    <input type="checkbox" name="ataduras_12" value="1">
                                     <label for="ataduras_12">12</label>
 
-                                    <input type="checkbox" name="ataduras_20" value="sim">
+                                    <input type="checkbox" name="ataduras_20" value="1">
                                     <label for="ataduras_20">20</label>
                     </div>
                     </td>
@@ -2074,7 +2329,7 @@
 
                     <td>
                         <input type="checkbox" name="manta_aluminizada"
-                            value="sim">
+                            value="1">
                         <label for="mmanta_aluminizadaud">Manta aluminizada</label>
                     </td>
                     <td><input class="tam75" type="text" name="manta_quantidade"
@@ -2084,14 +2339,14 @@
 
                     <tr>
                         <td>
-                            <input type="checkbox" name="cateter_oculos" value="sim">
+                            <input type="checkbox" name="cateter_oculos" value="1">
                             <label for="cateter_oculos">Cateter TP. Ocúlos</label>
                         </td>
                         <td><input class="tam75" type="text" name="cateter_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                         <td>
-                            <input type="checkbox" name="pas_dea" value="sim">
+                            <input type="checkbox" name="pas_dea" value="1">
                             <label for="pas_dea">Pás do DEA</label>
                         </td>
                         <td><input class="tam75" type="text" name="pas_quantidade"
@@ -2101,14 +2356,14 @@
 
                     <tr class="destaqueclaro">
                         <td>
-                            <input type="checkbox" name="compressa_comum" value="sim">
+                            <input type="checkbox" name="compressa_comum" value="1">
                             <label for="compressa_comum">Compressa Comum</label>
                         </td>
                         <td><input class="tam75" type="text" name="compressa_quantidade"
                                 placeholder="Digite a quantidade" />
                         </td>
                         <td>
-                            <input type="checkbox" name="sonda_aspiracao" value="sim">
+                            <input type="checkbox" name="sonda_aspiracao" value="1">
                             <label for="sonda_aspiracao">Sonda de Aspiração</label>
                         </td>
                         <td><input class="tam75" type="text" name="sonda_quantidade"
@@ -2120,11 +2375,11 @@
                         <td>
                             <label for="kits">Kit's</label>
                             <br>
-                            <input type="checkbox" name="kits_h" value="sim">
+                            <input type="checkbox" name="kits_h" value="1">
                             <label for="kits_h">H</label>
-                            <input type="checkbox" name="kits_p" value="sim">
+                            <input type="checkbox" name="kits_p" value="1">
                             <label for="kits_p">P</label>
-                            <input type="checkbox" name="kits_q" value="sim">
+                            <input type="checkbox" name="kits_q" value="1">
                             <label for="kits_q">Q</label>
         </div>
         </td>
@@ -2132,7 +2387,7 @@
                 placeholder="Digite a quantidade"  />
         </td>
         <td>
-            <input type="checkbox" name="soro_fisiologico" value="sim">
+            <input type="checkbox" name="soro_fisiologico" value="1">
             <label for="soro_fisiologico">Soro Fisiológico</label>
         </td>
         <td><input class="tam75" type="text" name="soro_quantidade"
@@ -2142,7 +2397,7 @@
 
         <tr class="destaqueclaro">
             <td>
-                <input type="checkbox" name="luvas_descartaveis" value="sim">
+                <input type="checkbox" name="luvas_descartaveis" value="1">
                 <label for="luvas_descartaveis">Luvas Descartáveis (Pares)</label>
             </td>
             <td><input class="tam75" type="text" name="luvas_quantidade"
@@ -2151,9 +2406,9 @@
             <td>
                 <label for="talas_pap">Talas Pap.</label>
                 <br>
-                <input type="checkbox"  name="talas_papp" value="sim">
+                <input type="checkbox"  name="talas_papp" value="1">
                 <label for="talas_papp">P</label>
-                <input type="checkbox" name="talas_papg" value="sim">
+                <input type="checkbox" name="talas_papg" value="1">
                 <label for="talas_papg">G</label>
     </div>
     </td>
@@ -2165,14 +2420,14 @@
     <tr>
         <td>
             <input type="checkbox" name="mascaras_descartaveis"
-                value="sim">
+                value="1">
             <label for="mascaras_descartaveis">Máscaras Descartáveis</label>
         </td>
         <td><input class="tam75" type="text" name="mascara_quantidade"
                 placeholder="Digite a quantidade"  />
         </td>
         <td>
-            <input type="checkbox"  name="outro_material" value="sim">
+            <input type="checkbox"  name="outro_material" value="1">
             <input class="tam75" type="text" name="outrom" placeholder="Outro material"  />
         </td>
         <td><input class="tam75" type="text" name="outrom_quantidade"
@@ -2201,9 +2456,9 @@
                     <td>
                         <label for="ttf">T.T.F</label>
                         <br>
-                        <input type="checkbox" name="ttf_adulto" value="sim">
+                        <input type="checkbox" name="ttf_adulto" value="1">
                         <label for="ttf_adulto">Adulto</label>
-                        <input type="checkbox" name="ttf_infantil" value="sim">
+                        <input type="checkbox" name="ttf_infantil" value="1">
                         <label for="ttf_infantil">Infantil</label>
             </div>
             </td>
@@ -2213,7 +2468,7 @@
             
                     <td>
                         <input type="checkbox" name="base_estabiliza"
-                        value="sim">
+                        value="1">
                     <label for="base_estabiliza">Base do Estabiliza</label>
         </div>
         </td>
@@ -2228,11 +2483,11 @@
             <td>
                 <label for="colar">Colar</label>
                 <br>
-                <input type="checkbox" name="colar_n" value="sim">
+                <input type="checkbox" name="colar_n" value="1">
                 <label for="colar_n">H</label>
-                <input type="checkbox" name="colar_pp" value="sim">
+                <input type="checkbox" name="colar_pp" value="1">
                 <label for="colar_pp">P</label>
-                <input type="checkbox" name="colar_p" value="sim">
+                <input type="checkbox" name="colar_p" value="1">
                 <label for="colar_p">Q</label>
 </div>
 </td>
@@ -2241,7 +2496,7 @@
 </td>
 
 <td>
-    <input type="checkbox" name="tirante_aranha" value="sim">
+    <input type="checkbox" name="tirante_aranha" value="1">
     <label for="tirante_aranha">Tirante Aranha</label>
 </td>
 <td><input class="tam75" type="number" name="tirante_quantidade"
@@ -2253,11 +2508,11 @@
     <td>
         <label for="colar">Colar</label>
         <br>
-        <input type="checkbox" name="colar_n" value="sim">
+        <input type="checkbox" name="colar_n" value="1">
         <label for="colar_m">M</label>
-        <input type="checkbox" name="colar_pp" value="sim">
+        <input type="checkbox" name="colar_pp" value="1">
         <label for="colar_g">G</label>
-        <input type="checkbox"  name="colar_tam" value="sim">
+        <input type="checkbox"  name="colar_tam" value="1">
         <input class="material" type="text" name="colar_tamm" placeholder="."  />
         </div>
     </td>
@@ -2267,7 +2522,7 @@
 
 
     <td>
-        <input type="checkbox" name="tirante_cabeca" value="sim">
+        <input type="checkbox" name="tirante_cabeca" value="1">
         <label for="tirante_cabeca">Tirante de Cabeça</label>
     </td>
     <td><input class="tam75" type="number" name="tirantec_quantidade"
@@ -2277,7 +2532,7 @@
 
 <tr>
     <td>
-        <input type="checkbox" name="coxins_estabiliza" value="sim">
+        <input type="checkbox" name="coxins_estabiliza" value="1">
         <label for="coxins_estabiliza">Coxins Estabilizantes</label>
     </td>
     <td><input class="tam75" type="number" name="coxins_quantidade"
@@ -2286,7 +2541,7 @@
 
 
     <td>
-        <input type="checkbox"  name="canula" value="sim">
+        <input type="checkbox"  name="canula" value="1">
         <label for="canula">Cânula</label>
     </td>
     <td><input class="tam75" type="number" name="canula_quantidade"
@@ -2297,9 +2552,9 @@
 <td>
     <label for="ked">Ked</label>
     <br>
-    <input type="checkbox"  name="ked_adulto" value="sim">
+    <input type="checkbox"  name="ked_adulto" value="1">
     <label for="ked_adulto">Adulto</label>
-    <input type="checkbox" name="ked_infantil" value="sim">
+    <input type="checkbox" name="ked_infantil" value="1">
     <label for="ked_infantil">Infantil</label>
 </div>
 </td>
@@ -2308,7 +2563,7 @@ placeholder="Digite a quantidade"  />
 </td>
 
 <td>
-    <input type="checkbox" name="outro_material2" value="sim">
+    <input type="checkbox" name="outro_material2" value="1">
     <input class="tam75" type="text" name="outrom2" placeholder="Outro material" />
 </td>
 <td><input class="tam75" type="number" name="outrom2_quantidade"
@@ -2319,14 +2574,14 @@ placeholder="Digite a quantidade"  />
 
 <td>
 <input type="checkbox" name="maca"
-    value="sim">
+    value="1">
 <label for="maca">Maca Rígida</label>
 </td>
 <td><input class="tam75" type="text" name="maca_quantidade"
     placeholder="Digite a quantidade"  />
 </td>
 <td>
-<input type="checkbox"  name="outro_material3" value="sim">
+<input type="checkbox"  name="outro_material3" value="1">
 <input class="tam75" type="text" name="outrom3" placeholder="Outro material"  />
 </td>
 
@@ -2360,19 +2615,19 @@ placeholder="Digite a quantidade"  />
                 <div class="coluna3">
                     <div>Distúrbio de Comportamento</div>
                     <input type="radio" name="disturbio_comportamento"
-                        value="disturbio_comportamento">
+                        value="1">
                     <label for="sdisturbio_comportamento">Sim</label>
                     <input type="radio" name="disturbio_comportamento"
-                        value="disturbio_comportamento" checked>
+                        value="0" checked>
                     <label for="ndisturbio_comportamento">Não</label>
                 </div>
             </div>
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Encontrado de Capacete</div>
-                    <input type="radio" name="encontrado_capacete" value="encontrado_capacete">
+                    <input type="radio" name="encontrado_capacete" value="1">
                     <label for="sencontrado_capacete">Sim</label>
-                    <input type="radio" name="encontrado_capacete" value="encontrado_capacete"
+                    <input type="radio" name="encontrado_capacete" value="0"
                         checked>
                     <label for="nencontrado_capacete">Não</label>
                 </div>
@@ -2380,18 +2635,18 @@ placeholder="Digite a quantidade"  />
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Encontrado de Cinto</div>
-                    <input type="radio" name="encontrado_cinto" value="encontrado_cinto">
+                    <input type="radio" name="encontrado_cinto" value="1">
                     <label for="sencontrado_cinto">Sim</label>
-                    <input type="radio" name="encontrado_cinto" value="encontrado_cinto" checked>
+                    <input type="radio" name="encontrado_cinto" value="0" checked>
                     <label for="nencontrado_cinto">Não</label>
                 </div>
             </div>
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Para-brisas Avariado</div>
-                    <input type="radio" name="parabrisas_avariado" value="parabrisas_avariado">
+                    <input type="radio" name="parabrisas_avariado" value="1">
                     <label for="sparabrisas_avariado">Sim</label>
-                    <input type="radio" name="parabrisas_avariado" value="parabrisas_avariado"
+                    <input type="radio" name="parabrisas_avariado" value="0"
                         checked>
                     <label for="nparabrisas_avariado">Não</label>
                 </div>
@@ -2399,27 +2654,27 @@ placeholder="Digite a quantidade"  />
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Caminhando na Cena</div>
-                    <input type="radio" name="caminhando_cena" value="caminhando_cena">
+                    <input type="radio" name="caminhando_cena" value="1">
                     <label for="scaminhando_cena">Sim</label>
-                    <input type="radio" name="caminhando_cena" value="caminhando_cena" checked>
+                    <input type="radio" name="caminhando_cena" value="0" checked>
                     <label for="ncaminhando_cena">Não</label>
                 </div>
             </div>
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Painel Avariado</div>
-                    <input type="radio" name="painel_avariado" value="painel_avariado">
+                    <input type="radio" name="painel_avariado" value="1">
                     <label for="spainel_avariado">Sim</label>
-                    <input type="radio" name="painel_avariado" value="painel_avariado" checked>
+                    <input type="radio" name="painel_avariado" value="0" checked>
                     <label for="npainel_avariado">Não</label>
                 </div>
             </div>
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Volante Torcido</div>
-                    <input type="radio" name="volante_torcido" value="volante_torcido">
+                    <input type="radio" name="volante_torcido" value="1">
                     <label for="svolante_torcido">Sim</label>
-                    <input type="radio" name="volante_torcido" value="volante_torcido" checked>
+                    <input type="radio" name="volante_torcido" value="0" checked>
                     <label for="nvolante_torcido">Não</label>
                 </div>
             </div>
@@ -2452,11 +2707,11 @@ placeholder="Digite a quantidade"  />
                 </div>
                 <div class="destaqueclaro">
                     <label for="cod_ir">Cód. Ir</label><br>
-                    <input type="checkbox" name="cod_ir" value="sim">
+                    <input type="checkbox" name="cod_ir" value="1">
                 </div>
                 <div class="destaqueclaro">
                     <label for="cod_ps">Cód. Ps</label><br>
-                    <input type="checkbox" name="cod_ps" value="sim">
+                    <input type="checkbox" name="cod_ps" value="1">
                 </div>
                 <div class="destaqueclaro">
                     <label for="h_ch">H. Ch.</label><br>

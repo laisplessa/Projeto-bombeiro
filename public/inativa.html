@@ -25,7 +25,7 @@
                     if (ret.erro) {
                         alert(ret.mensagem);
                     }
-                    
+
                     if (confirm('Confirma a inativação do usuário ' + ret.nome + '?')) {
                         inativar(ret.id_cadastro);
                     }
@@ -80,7 +80,8 @@
 
             <div class="relatorio">
                 <div class="text">Informe o cpf do bombeiro que você deseja desativar</div>
-                <input maxlength="11" type="text" class="login-input" name="cpf" id="cpf" value="" placeholder="xxx.xxx.xxx-xx"/>
+                <input maxlength="11" type="text" class="login-input" name="cpf" id="cpf" value=""
+                    placeholder="xxx.xxx.xxx-xx" />
                 <div id="cpf-error" style="display: none; color: black;"></div>
 
                 <button type="button" class="relatorio-button" onClick="Listar()">Buscar</button>

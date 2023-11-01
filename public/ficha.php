@@ -155,6 +155,27 @@ $amputacao = $_POST["amputacao"] ;
 $queimadura1 = $_POST["queimadura1"] ;
 $queimadura2 = $_POST["queimadura2"] ;
 $queimadura3 = $_POST["queimadura3"] ;
+$numeroCorpo2 = $_POST["numeroCorpo2"];
+$fratura2 = $_POST["fratura2"] ;
+$ferimento2 = $_POST["ferimento2"] ;
+$hemorragias2 = $_POST["hemorragias2"] ;
+$esviceracao2 = $_POST["esviceracao2"] ;
+$fab2 = $_POST["fab2"] ;
+$amputacao2 = $_POST["amputacao2"] ;
+$queimadura12 = $_POST["queimadura1_2"] ;
+$queimadura22 = $_POST["queimadura2_2"] ;
+$queimadura32 = $_POST["queimadura3_2"] ;
+$numeroCorpo3 = $_POST["numeroCorpo3"];
+$fratura3 = $_POST["fratura3"] ;
+$ferimento3 = $_POST["ferimento3"] ;
+$hemorragias3 = $_POST["hemorragias3"] ;
+$esviceracao3 = $_POST["esviceracao3"] ;
+$fab3 = $_POST["fab3"] ;
+$amputacao3 = $_POST["amputacao3"] ;
+$queimadura13 = $_POST["queimadura1_3"] ;
+$queimadura23 = $_POST["queimadura2_3"] ;
+$queimadura33 = $_POST["queimadura3_3"] ;
+
 
 $Localferimento = $_POST["ferimento"];
 $ladoFerimento = $_POST["lado_ferimento"];
@@ -439,7 +460,7 @@ $fibra = $_POST["fibra"];
     espontanea_menor, espontanea, comando_menor, comando, estimulo_menor,  estimulo, nenhuma_menor, nenhuma, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_prontamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_menor, flexao_anormal,  extensao_menor, extensao_anormal, nenhuma_3, ausencia, total_menor, total,
     pressao, pulso, respiracao, saturacao, hgt, temperatura, perfusao, anormal_normal,
     psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text,
-    numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3,
+    numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3, numero_corpo2, fratura2, ferimento2, hemorragias2, esviceracao2, fab2, amputacao2, queimadura1_2, queimadura2_2, queimadura3_2, numero_corpo3, fratura3, ferimento3, hemorragias3, esviceracao3, fab3, amputacao3, queimadura1_3, queimadura2_3, queimadura3_3,
     local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento,
     qcabeca_1grau, qcabeca_2grau, qcabeca_3grau, qcabeca_4grau, qpescoco_1grau, qpescoco_2grau, qpescoco_3grau, qpescoco_4grau, qtant_1grau, qtant_2grau, qtant_3grau, qtant_4grau, qtpos_1grau, qtpos_2grau, qtpos_3grau, qtpos_4grau, qgenital_1grau, qgenital_2grau, qgenital_3grau, qgenital_4grau, qmembroid_1grau, qmembroid_2grau, qmembroid_3grau, qmembroid_4grau, qmembroie_1grau, qmembroie_2grau, qmembroie_3grau, qmembroie_4grau, qmembrosd_1grau, qmembrosd_2grau, qmembrosd_3grau, qmembrosd_4grau, qmembrose_1grau, qmembrose_2grau, qmembrose_3grau, qmembrose_4grau,
     objetos_recolhidos,
@@ -459,7 +480,7 @@ $fibra = $_POST["fibra"];
     '$espontaneaMenor', '$espontanea','$comandoMenor', '$comando','$estimuloMenor', '$estimulo', '$nenhumaMenor','$nenhuma', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProntamente', '$localizaMenor', '$localiza', '$movimentoRetirada', '$retiradaEstimulado','$flexaoMenor', '$flexaoAnormal', '$extensaoMenor', '$extensaoAnormal', '$nenhuma3', '$ausencia', '$totalMenor', $total',
     '$pressao', '$pulso', '$respiracao', '$saturacao', '$hgt', '$temperatura', $perfusao, $anormalNormal,
     '$psiquiatrico', '$respiratorio', '$respiratorioOpcoes', '$diabetes', '$diabetesOpcoes', '$obstetrico', '$obstetricoOpcoes', '$transporte', '$transporteOpcoes', '$outrosProblemas', '$outrosTexto',
-    '$numeroCorpo', '$fratura', '$ferimento', '$hemorragias', '$esviceracao', '$fab', '$amputacao', '$queimadura1', '$queimadura2', '$queimadura3',
+    '$numeroCorpo', '$fratura', '$ferimento', '$hemorragias', '$esviceracao', '$fab', '$amputacao', '$queimadura1', '$queimadura2', '$queimadura3', '$numeroCorpo2', '$fratura2', '$ferimento2', '$hemorragias2', '$esviceracao2', '$fab2', '$amputacao2', '$queimadura12', '$queimadura22', '$queimadura32',  '$numeroCorpo3', '$fratura3', '$ferimento3', '$hemorragias3', '$esviceracao3', '$fab3', '$amputacao3', '$queimadura13', '$queimadura23', '$queimadura33',
     '$Localferimento', '$ladoFerimento', '$faceFerimento', '$tipoFerimento',
     '$qcabeca1grau', '$qcabeca2grau', '$qcabeca3grau', '$qcabeca4grau', '$qpescoco1grau', '$qpescoco2grau', '$qpescoco3grau', '$qpescoco4grau', '$qtant1grau', '$qtant2grau', '$qtant3grau', '$qtant4grau', '$qtpos1grau', '$qtpos2grau', '$qtpos3grau', '$qtpos4grau', '$qgenital1grau', '$qgenital2grau', '$qgenital3grau', '$qgenital4grau', '$qmembroid1grau', '$qmembroid2grau', '$qmembroid3grau', '$qmembroid4grau', '$qmembroie1grau', '$qmembroie2grau', '$qmembroie3grau', '$qmembroie4grau', '$qmembrosd1grau', '$qmembrosd2grau', '$qmembrosd3grau', '$qmembrosd4grau', '$qmembrose1grau', '$qmembrose2grau', '$qmembrose3grau', '$qmembrose4grau',
     '$objetosRecolhidos',

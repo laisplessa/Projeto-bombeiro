@@ -1,98 +1,97 @@
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #fdfafa ;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #fdfafa;
 }
 
-.titulo{
-    font-size:  150%;
-    font-family: 'Calibri';
-    text-align: center;
+.titulo {
+  font-size: 150%;
+  font-family: "Calibri";
+  text-align: center;
 }
 
-.botaoatendimento{
-background:  #660303;
-border: 0;
-color: #fff;
-cursor: pointer;
-padding: 15px 20px;
-text-decoration: none;
-transition: 0.2s;
-border-radius: 8px;
-margin-top: 55px;
-display: block;
-width: 32%;
-height: 3%;
-text-align: center;
-margin-left: 33%;
-font-size:  130%;
-font-family: 'Calibri';
+.botaoatendimento {
+  background: #660303;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 8px;
+  margin-top: 55px;
+  display: block;
+  width: 32%;
+  height: 3%;
+  text-align: center;
+  margin-left: 33%;
+  font-size: 130%;
+  font-family: "Calibri";
 }
 
-.botaoatendimento:hover{
-    background-color:#ca6d6d;
-    transform: scale(1);
-    font-family: 'Calibri';
+.botaoatendimento:hover {
+  background-color: #ca6d6d;
+  transform: scale(1);
+  font-family: "Calibri";
 }
 
-a{
-    color: #fff;
+a {
+  color: #fff;
 }
 
-.botaorecusa{
-    background:  #660303;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    padding: 15px 20px;
-    text-decoration: none;
-    transition: 0.2s;
-    border-radius: 8px;
-    margin-top: 10vh;
-    display: block;
-    width: 32%;
-    height: 3%;
-    text-align: center;
-    margin-left: 33%;
-    font-size: 130%;
-    font-family: 'Calibri';
-    }
-
-
-.botaorecusa:hover{
-    background-color:#ca6d6d;
-    transform: scale(1);
-    font-family: 'Calibri';
+.botaorecusa {
+  background: #660303;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 8px;
+  margin-top: 10vh;
+  display: block;
+  width: 32%;
+  height: 3%;
+  text-align: center;
+  margin-left: 33%;
+  font-size: 130%;
+  font-family: "Calibri";
 }
 
-.botaopesquisa{
-    background:  #660303;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    padding: 15px 20px;
-    text-decoration: none;
-    transition: 0.2s;
-    border-radius: 8px;
-    margin-top: 10vh;
-    display: block;
-    width: 32%;
-    height: 3%;
-    text-align: center;
-    margin-left: 33%;
-    font-size: 130%;
-    font-family: 'Calibri';
-    }
-
-.botaopesquisa:hover{
-    background-color:#ca6d6d;
-    transform: scale(1);
-    font-family: 'Calibri';
+.botaorecusa:hover {
+  background-color: #ca6d6d;
+  transform: scale(1);
+  font-family: "Calibri";
 }
 
-.logo{
-    block-size: 100px;
-    margin-top: 15px;
-    height: 140px;
-  }
+.botaopesquisa {
+  background: #660303;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 8px;
+  margin-top: 10vh;
+  display: block;
+  width: 32%;
+  height: 3%;
+  text-align: center;
+  margin-left: 33%;
+  font-size: 130%;
+  font-family: "Calibri";
+}
+
+.botaopesquisa:hover {
+  background-color: #ca6d6d;
+  transform: scale(1);
+  font-family: "Calibri";
+}
+
+.logo {
+  block-size: 100px;
+  margin-top: 15px;
+  height: 140px;
+}

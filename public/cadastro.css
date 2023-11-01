@@ -1,8 +1,8 @@
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #fdfafa;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #fdfafa;
 }
 
 .cadastro-container {
@@ -16,66 +16,65 @@ body{
   /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 0px 0px 3px #9D0000   , inset 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
 
-.cadastro-container >p {
-  font-family: 'Calibri';
+.cadastro-container > p {
+  font-family: "Calibri";
   text-align: center;
   font-weight: bold;
 }
 
+.cadastro-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 300%;
+}
+.titulo {
+  color: black;
+  font-family: "Calibri";
+}
 
-  .cadastro-header {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 300%;
+.cadastro-input {
+  width: 90%;
+  margin-top: -10%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  background: #f7f2f2;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  .titulo{
-    color: black;
-    font-family: 'Calibri';
-  }
- 
-  .cadastro-input {
-    width: 90%;
-    margin-top: -10%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    background: #f7f2f2;
-    border-radius: 4px;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cadastro-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #660303;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.623);
-   }
-  
-  .cadastro-button:hover {
-    background: #ca6d6d;
-  }
+.cadastro-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #660303;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.623);
+}
 
-  .logo{
-    block-size: 100px;
-    margin-top: 15px;
-    height: 140px;
-  }
+.cadastro-button:hover {
+  background: #ca6d6d;
+}
 
-  .form input, .form select {
-    border-radius: 5px;
-    padding: 8px;
-    border: 1.5px solid #660303;
-    margin-top: 13px;
-    margin-bottom: 13px;
-    width: 60%
-  }
-  
-  input.form-control {
-    width: 90%;
+.logo {
+  block-size: 100px;
+  margin-top: 15px;
+  height: 140px;
+}
+
+.form input,
+.form select {
+  border-radius: 5px;
+  padding: 8px;
+  border: 1.5px solid #660303;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  width: 60%;
+}
+
+input.form-control {
+  width: 90%;
 }

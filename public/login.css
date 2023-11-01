@@ -16,11 +16,11 @@ body {
   border-radius: 8px;
 }
 
-.login-container >p {
-font-family: 'Open Sans', coursive;
-text-align: center;
-font-weight: bold;
-background-color: #e2d1d1d7;
+.login-container>p {
+  font-family: 'Open Sans', coursive;
+  text-align: center;
+  font-weight: bold;
+  background-color: #e2d1d1d7;
 }
 
 
@@ -74,7 +74,7 @@ background-color: #e2d1d1d7;
   text-align: center;
 }
 
-.logo{
+.logo {
   block-size: 100px;
   margin-top: 15px;
   height: 140px;

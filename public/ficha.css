@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: 'Calibri';
-    background-color:#fdfafa;
+    background-color: #fdfafa;
     /* align-items: center; */
 }
 
@@ -29,7 +29,7 @@ body {
     top: 25px;
     left: -20px;
     padding: 5px 5px;
-    background: #fdfafa; 
+    background: #fdfafa;
     position: fixed;
     margin-top: -20px;
     margin-left: 12px;
@@ -336,7 +336,7 @@ input.form-control {
 
 
 #menu li:hover {
-    background-color:#c78383;
+    background-color: #c78383;
     transform: scale(1);
     font-family: 'Calibri';
 }

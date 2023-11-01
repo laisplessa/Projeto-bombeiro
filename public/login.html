@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
         function Listar() {
             var cpfInput = document.getElementById("cpf");
             var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-          
+
             var errorDiv = document.getElementById("cpf-error");
 
             if (cpfValue.length !== 11) {
@@ -31,7 +32,7 @@
                 url: "login.php",
                 data: dados,
                 success: function (ret) {
-                    
+
                     if (ret.erro) {
                         alert(ret.mensagem);
                     }
@@ -55,26 +56,31 @@
         }
     </script>
 </head>
+
 <body>
     <form action="" method="post" id="form1">
 
-            <div class="logo">
-                <img src="logobombeiros.png" height="140" width="140" align="right">
-            </div> 
-
-    <div class="login-container">
-        <div class="login-header">
-            <div class="titulo">LOGIN</div>
+        <div class="logo">
+            <img src="logobombeiros.png" height="140" width="140" align="right">
         </div>
-        <p>Insira seu CPF</p>
-        <input maxlength="11" type="text" class="login-input" id="cpf" name="cpf" value="" placeholder="xxx.xxx.xxx-xx"/>
-        <div id="cpf-error" style="display: none; color: black;"></div>
-        
-        <p>Insira sua Senha</p><input type="password" class="login-input" id="senha" name="senha" value="" placeholder="********" maxlength="15" minlength="8"/>
-       
-        <input type="button" name="acessar" value="Acessar" class="login-button" onclick="Listar(); " /> <a href="arecusa.php"></a>
 
-    </div>
+        <div class="login-container">
+            <div class="login-header">
+                <div class="titulo">LOGIN</div>
+            </div>
+            <p>Insira seu CPF</p>
+            <input maxlength="11" type="text" class="login-input" id="cpf" name="cpf" value=""
+                placeholder="xxx.xxx.xxx-xx" />
+            <div id="cpf-error" style="display: none; color: black;"></div>
+
+            <p>Insira sua Senha</p><input type="password" class="login-input" id="senha" name="senha" value=""
+                placeholder="********" maxlength="15" minlength="8" />
+
+            <input type="button" name="acessar" value="Acessar" class="login-button" onclick="Listar(); " /> <a
+                href="arecusa.php"></a>
+
+        </div>
     </form>
 </body>
+
 </html>

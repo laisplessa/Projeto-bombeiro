@@ -1,44 +1,44 @@
-body{
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     background-color: #fdfafa;
 }
 
-.logo{
+.logo {
     block-size: 100px;
     margin-top: 60px;
     height: 100%;
     margin-left: 39%;
     display: block;
-  }
-
-  
-.iniciar{
-background:  #660303;
-border: 0;
-color: #fff;
-cursor: pointer;
-padding: 13px 18px;
-text-decoration: none;
-transition: 0.2s;
-border-radius: 8px;
-margin-top: 55px;
-display: block;
-width: 30%;
-height: 3%;
-text-align: center;
-margin-left: 33%;
-font-size:  130%;
-font-family: 'Calibri';
 }
 
-.iniciar:hover{
-    background-color:#ca6d6d;
+
+.iniciar {
+    background: #660303;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 18px;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    margin-top: 55px;
+    display: block;
+    width: 30%;
+    height: 3%;
+    text-align: center;
+    margin-left: 33%;
+    font-size: 130%;
+    font-family: 'Calibri';
+}
+
+.iniciar:hover {
+    background-color: #ca6d6d;
     transform: scale(1);
     font-family: 'Calibri';
 }
 
-a{
+a {
     color: #fff;
 }

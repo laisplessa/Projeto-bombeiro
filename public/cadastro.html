@@ -2,105 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 </head>
 
 <body>
-    <script>
+  <script>
 
-function cadastrar() {
-  var cpfInput = document.getElementById("cpf");
-  var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    function cadastrar() {
+      var cpfInput = document.getElementById("cpf");
+      var cpfValue = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-  var errorDiv = document.getElementById("cpf-error");
+      var errorDiv = document.getElementById("cpf-error");
 
-  if (cpfValue.length !== 11) {
-    errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
-    errorDiv.style.display = "block";
-    return;
-  } else {
-    errorDiv.style.display = "none";
-  }
-
-  var dados = $('#form1').serialize();
-
-  $.ajax({
-    type: "POST",
-    url: "cadastro.php",
-    data: dados,
-    success: function (ret) {
-
-      if (ret.erro) {
-        alert(ret.mensagem);
+      if (cpfValue.length !== 11) {
+        errorDiv.textContent = "Insira o CPF corretamente (11 Números).";
+        errorDiv.style.display = "block";
+        return;
+      } else {
+        errorDiv.style.display = "none";
       }
 
-      if (!ret.erro) {
-        location.href = 'admin.html';
-      }
-    },
-    error: function (xhr, status, error) {
-      alert("Erro: " + error);
-    },
-    beforeSend: function () {
-      // Fazer algo antes de enviar a requisição
-    },
-    complete: function () {
-      // Fazer algo após a conclusão da requisição
-    },
-  });
-}
-    </script>
+      var dados = $('#form1').serialize();
 
-    <form action="" method="post" id="form1">
+      $.ajax({
+        type: "POST",
+        url: "cadastro.php",
+        data: dados,
+        success: function (ret) {
 
-        <div class="logo">
-            <img src="logobombeiros.png" height="140" width="140" align="right">
-        </div>
+          if (ret.erro) {
+            alert(ret.mensagem);
+          }
 
-        <div class="cadastro-container">
-            <div class="cadastro-header">
-                <div class="titulo">CADASTRO BOMBEIRO</div>
-            </div>
-            <p>Nome Completo</p>
-            <input type="text" class="cadastro-input" id="nome" name="nome" value="" placeholder="Insira o nome"
-                maxlength="40">
+          if (!ret.erro) {
+            location.href = 'admin.html';
+          }
+        },
+        error: function (xhr, status, error) {
+          alert("Erro: " + error);
+        },
+        beforeSend: function () {
+          // Fazer algo antes de enviar a requisição
+        },
+        complete: function () {
+          // Fazer algo após a conclusão da requisição
+        },
+      });
+    }
+  </script>
 
-            <p>CPF</p>
-            <input type="text" class="cadastro-input" id="cpf" name="cpf" value="" placeholder="xxx.xxx.xxx-xx"
-                maxlength="11">
-            <div id="cpf-error" style="display: none; color: black;"></div>
+  <form action="" method="post" id="form1">
 
-            <p>Telefone</p>
-            <input type="tel" class="cadastro-input" name="telefone" placeholder="(00) 0000-0000" maxlength="11">
+    <div class="logo">
+      <img src="logobombeiros.png" height="140" width="140" align="right">
+    </div>
 
-            <p>Cargo</p>
-            <input type="text" class="cadastro-input" name="cargo" value="" placeholder="Insira o cargo"
-                maxlength="40">
+    <div class="cadastro-container">
+      <div class="cadastro-header">
+        <div class="titulo">CADASTRO BOMBEIRO</div>
+      </div>
+      <p>Nome Completo</p>
+      <input type="text" class="cadastro-input" id="nome" name="nome" value="" placeholder="Insira o nome"
+        maxlength="40">
 
-            <p>Cidade residente</p>
-            <input type="text" class="cadastro-input" name="cidade" value="" placeholder="Insira a cidade"
-                maxlength="40">
+      <p>CPF</p>
+      <input type="text" class="cadastro-input" id="cpf" name="cpf" value="" placeholder="xxx.xxx.xxx-xx"
+        maxlength="11">
+      <div id="cpf-error" style="display: none; color: black;"></div>
 
-            <p>Data nascimento</p>
-            <input type="date" class="cadastro-input" name="data_nascimento" placeholder="dd/mm/aaaa"
-                data-mask="00/00/0000" maxlength="10" autocomplete="off">
+      <p>Telefone</p>
+      <input type="tel" class="cadastro-input" name="telefone" placeholder="(00) 0000-0000" maxlength="11">
 
-            <p>Crie sua Senha</p>
-            <input type="password" class="cadastro-input" id="senha" name="senha" value="" placeholder="********"
-                maxlength="15" minlength="8" onblur="validarSenha()" />
-            <div id="senhaInvalida" style="color: black;"></div>
+      <p>Cargo</p>
+      <input type="text" class="cadastro-input" name="cargo" value="" placeholder="Insira o cargo" maxlength="40">
 
-            <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
-                href="admin.html"></a>
-        </div>
-    </form>
+      <p>Cidade residente</p>
+      <input type="text" class="cadastro-input" name="cidade" value="" placeholder="Insira a cidade" maxlength="40">
+
+      <p>Data nascimento</p>
+      <input type="date" class="cadastro-input" name="data_nascimento" placeholder="dd/mm/aaaa" data-mask="00/00/0000"
+        maxlength="10" autocomplete="off">
+
+      <p>Crie sua Senha</p>
+      <input type="password" class="cadastro-input" id="senha" name="senha" value="" placeholder="********"
+        maxlength="15" minlength="8" onblur="validarSenha()" />
+      <div id="senhaInvalida" style="color: black;"></div>
+
+      <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
+        href="admin.html"></a>
+    </div>
+  </form>
 </body>
 
 </html>

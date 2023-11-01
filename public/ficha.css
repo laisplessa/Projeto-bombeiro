@@ -312,6 +312,39 @@ input.form-control {
     column-count: 2;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 22vh;
+    left: 35vw;
+    width: 25vw;
+    padding: 20px;
+    background-color: black;
+    text-align: center;
+  }
+
+  .checkmark {
+height: 100%;
+width: 100%;  
+background-color: rgba(0, 0, 0, 0.37);
+}
+
+.res{
+    font-family: 'Abril Fatface', coursive;
+    margin: 5vh 0 0 6.5vw;
+    color: #ccc;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.res2{
+  font-family: 'Abril Fatface', coursive;
+  margin-top: -5vh;
+  margin-left: 9vw;
+  color: #ccc;
+  position: absolute;
+}
+
+
 #menu-container {
     position: fixed;
     top: 0;

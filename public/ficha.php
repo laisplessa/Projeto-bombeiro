@@ -391,10 +391,10 @@ $colarP = $_POST["colar_p"]  ;
 $colarQuantidade = $_POST["colar_quantidade"];
 $tiranteAranha = $_POST["tirante_aranha"]  ;
 $tiranteQuantidade = $_POST["tirante_quantidade"];
-$colarM = $_POST["colar_m"]  ;
-$colarG = $_POST["colar_g"]   ;
+$colarM = $_POST["colar_m"];
+$colarG = $_POST["colar_g"];
 $colarTam = $_POST["colar_tam"]  ;
-$colarTamm = $_POST["colar_tamm"];
+$tamanhoColar = $_POST["tamanho_colar"];
 $colar2quantidade = $_POST["colar_2quantidade"];
 $tiranteCabeca = $_POST["tirante_cabeca"]  ;
 $tirantecQuantidade = $_POST["tirantec_quantidade"];
@@ -489,7 +489,7 @@ $fibra = $_POST["fibra"];
     $conducao, $decisao,
     '$aspiracao', '$avaliacao', '$avaliacaoDirigida', '$avaliacaoContinuada', '$chaveRautek', '$canulaGuedel', '$desobstrucaoVa', '$empregoDea', '$gerenciamentoRiscos', '$limpezaFerimento', '$curativos', '$compressivo', '$encravamento', '$ocular', '$queimadura', '$simples', '$trespontas', '$imobilizacoes', '$membroInfd', '$membroInfe', '$membroSupd', '$membroSupe', '$quadril', '$cervical', '$macaRodas', '$macaRigida', '$ponte', '$retiradoCapacete', '$rcp', '$rolamento90', '$rolamento180', '$tomadaDecisao', '$tratadoChoque', '$usoCanula', '$usoColar', '$tamanhoUsoColar', '$usoKed', '$usoTtf', '$ventilacaoSuporte', '$oxigenioTerapia', '$oxigenioterapiaTexto', '$reanimador', '$reanimadorTexto', '$meioa', '$meioaCelesc', '$meioaDefesacivil', '$meioaCivil', '$meioaPre', '$meioaPrf',  '$meioaMilitar','$meioaUsa', '$meioaUsb', '$meioaCit', '$outrosProcedimentos', '$outrospTexto',
     '$ataduras8', '$ataduras12', '$ataduras20', '$ataduraQuantidade', '$mantaAluminizada', '$mantaQuantidade', '$cateterOculos', '$cateterQuantidade', '$pasDea', '$pasQuantidade','$compressaComum', '$compressaQuantidade', '$sondaAspiracao', '$sondaQuantidade', '$kitsH', '$kitsP', '$kitsQ', '$kitsQuantidade', '$soroFisiologico', '$soroQuantidade', '$luvasDescartaveis', '$luvasQuantidade', '$talasPapp', '$talasPapg', '$talasQuantidade', '$mascarasDescartaveis', '$mascaraQuantidade', '$outroMaterial', '$outroM', '$outromQuantidade',
-    '$baseEstabiliza', '$baseQuantidade', '$ttfAdulto', '$ttfInfantil', '$ttfQuantidade', '$colarN', '$colarPP', '$colarP', '$colarQuantidade', '$tiranteAranha', '$tiranteQuantidade', '$colarM', '$colarG', '$colarTam', '$colarTamm', '$colar2quantidade', '$tiranteCabeca', '$tirantecQuantidade', '$coxinsEstabiliza', '$coxinsQuantidade', '$canula', '$canulaQuantidade', '$kedAdulto', '$kedInfantil', '$kedQuantidade', '$outroMaterial2', '$outrom2', '$outrom2Quantidade', '$maca', '$macaQuantidade', '$outroMaterial3', '$outrom3', '$outrom3Quantidade',
+    '$baseEstabiliza', '$baseQuantidade', '$ttfAdulto', '$ttfInfantil', '$ttfQuantidade', '$colarN', '$colarPP', '$colarP', '$colarQuantidade', '$tiranteAranha', '$tiranteQuantidade', '$colarM', '$colarG', '$colarTam', '$tamanhoColar', '$colar2quantidade', '$tiranteCabeca', '$tirantecQuantidade', '$coxinsEstabiliza', '$coxinsQuantidade', '$canula', '$canulaQuantidade', '$kedAdulto', '$kedInfantil', '$kedQuantidade', '$outroMaterial2', '$outrom2', '$outrom2Quantidade', '$maca', '$macaQuantidade', '$outroMaterial3', '$outrom3', '$outrom3Quantidade',
     '$observacoesImportantes', '$disturbioComportamento', '$encontradoCapacete', '$encontradoCinto', '$parabrisasAvariado', '$caminhandoCena', '$painelAvariado', '$volanteTorcido', '$nUsd', '$nOcorrencia', '$desp', '$kmFinal', '$codIr', '$codPs', '$siaSus',
     '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
 

@@ -65,7 +65,7 @@ $rupturaBolsa = $_POST["ruptura"];
 $inspecaoVisual = $_POST["inspecao"];
 $partoRealizado = $_POST["parto"];
 $horaNascimento = $_POST["hora_nascimento"];
-$sexoBebe = $_POST["sexobebe"];
+$bebe = $_POST["bebe"];
 $nomeBebe = $_POST["nome_bebe"];
 
 $causadoAnimais = $_POST["causado_animais"];
@@ -428,8 +428,8 @@ $nUsd = $_POST["n_usd"];
 $nOcorrencia = $_POST["n_ocorrencia"];
 $desp = $_POST["desp"];
 $kmFinal = $_POST["km_final"];
-$codIr = $_POST["cod_ir"] ;
-$codPs = $_POST["cod_ps"] ;
+$codIr = $_POST["codigo_ir"];
+$codPs = $_POST["codigo_ps"];
 $hCh = $_POST["h_ch"];
 $siaSus = $_POST["sia_sus"];
 
@@ -470,12 +470,12 @@ $fibra = $_POST["fibra"];
     aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_civil, meioa_pre, meioa_prf, meioa_militar, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto,
     ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade,
     base_estabiliza, base_quantidade, ttf_adulto, ttf_infantil, ttf_quantidade, colar_n, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar_m, colar_g, colar_tam, 	colar_tamm, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade
-    observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, cod_ir, cod_ps, h_ch, sia_sus,
+    observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, codigo_ir, codigo_ps, h_ch, sia_sus,
     eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra)
     
     VALUES (null, '$oqAconteceu', '$outrasVezes', '$quantoTempo', '$problemaSaude', '$quais', '$medicacao', '$horaMedicacao', '$quaisMedicacoes', '$alergico', '$alergia', '$ingeriu', '$ingeriuHorario',
     '$data', '$sexoPaciente', '$nomeHospital', '$nomePaciente', '$idade', $telefonePaciente, $rgCpf, '$nomeAcompanhante', '$idadeAcompanhante', '$localOcorrencia',
-    '$periodoGestacao', '$preNatal', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', $sexoBebe, '$nomeBebe',
+    '$periodoGestacao', '$preNatal', '$nomeMedico', '$complicacoes', '$primeiroFilho', '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', '$sentePressao', '$rupturaBolsa', '$inspecaoVisual', '$partoRealizado', '$horaNascimento', $bebe, '$nomeBebe',
     '$causadoAnimais', '$meioTransporte', '$desmoronamentoDeslizamento', '$emergenciaMedica', '$queda2m', '$tentativaSuicidio', '$quedaPropriaAltura', '$afogamento', '$agressao', '$atropelamento', '$choqueEletrico', '$desabamento', '$domestico', '$esportivo', '$intoxicacao', '$quedaBicicleta', '$quedaMoto', '$quedaNivel', '$trabalho', '$transferencia', '$outros', '$outrosTexto',
     '$espontaneaMenor', '$espontanea','$comandoMenor', '$comando','$estimuloMenor', '$estimulo', '$nenhumaMenor','$nenhuma', '$orientado', '$pfApropriadas', '$confuso', '$palavrasInapropriadas', '$inapropriadasMenor', '$choroGrito', '$pIncompreensiveis', '$sIncompreensiveis', '$nenhumaMenor2', '$nenhumaResposta', '$oComandos', '$oProntamente', '$localizaMenor', '$localiza', '$movimentoRetirada', '$retiradaEstimulado','$flexaoMenor', '$flexaoAnormal', '$extensaoMenor', '$extensaoAnormal', '$nenhuma3', '$ausencia', '$totalMenor', $total',
     '$pressao', '$pulso', '$respiracao', '$saturacao', '$hgt', '$temperatura', $perfusao, $anormalNormal,

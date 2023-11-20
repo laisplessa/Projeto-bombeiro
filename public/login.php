@@ -27,7 +27,13 @@ if ($cpf == null || $senha == null) {
 
   if ($count >= 1) {
     
-    $_SESSION['cpf'] = $cpf;
+    $usuario = (object)[];
+  
+    while ($row = mysqli_fetch_assoc($run_query)) {
+      $usuario = $row;
+    }
+
+    $_SESSION['id'] = $usuario['id_cadastro'];
 
     $data = array("erro" => false, "mensagem" => "Login executado com sucesso");
     header("Content-Type: application/json");

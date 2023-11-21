@@ -224,7 +224,7 @@
 
                     <div class="destaqueclaro">
                         <label for="idade">Idade do paciente:</label><br>
-                        <input type="number" class="form-control" name="idade_paciente"
+                        <input type="text" class="form-control" name="idade_paciente"
                             placeholder="Digite a idade do paciente" />
                     </div>
 
@@ -2790,10 +2790,66 @@
 
                 function preencherDados(data) {
                     //Exemplo: name= "NOME DO INPUT NO HTML" val = NOME DO CAMPO NO BANCO DE DADOS, TABLE FICHA
+                    //$('input:text[name="quanto_tempo"]').val(data['quanto_tempo']);
+                    // $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
+                    // $('input:checkbox[name="causado_animais"]').filter('[value="' + data['causado_animais'] + '"]').attr('checked', true);
                     $('input:text[name="oq_aconteceu"]').val(data['oq_aconteceu']);
-                    $('input:text[name="quanto_tempo"]').val(data['quanto_tempo']);
-                    $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="causado_animais"]').filter('[value="' + data['causado_animais'] + '"]').attr('checked', true);
+                    $('input:radio[name="outras_vezes"]').filter('[value="outras_vezes' + data['outras_vezes'] + '"]').attr('checked', true);
+                    $('input:text[name="quanto_tempo"]').val(data['quanto_tempo']); 
+                    $('input:radio[name="problema_saude"]').filter('[value="problema_saude' + data['problema_saude'] + '"]').attr('checked', true);
+                    $('input:text[name="quais_problemas"]').val(data['quais']);
+                    $('input:radio[name="medicacao"]').filter('[value="medicacao' + data['medicacao'] + '"]').attr('checked', true);
+                    $('input:text[name="quais_medicacoes"]').val(data['quais_medicacao']);
+                    $('input:radio[name="alergico"]').filter('[value="alergico' + data['alergico'] + '"]').attr('checked', true);
+                    $('input:text[name="alergia"]').val(data['especifique']);
+                    $('input:radio[name="ingeriu"]').filter('[value="ingeriu' + data['ingeriu'] + '"]').attr('checked', true);
+
+                    $('input:radio[name="sexo_paciente"]').filter('[value="sexo_paciente' + data['sexo_paciente'] + '"]').attr('checked', true);
+                    $('input:text[name="nome_hospital"]').val(data['nome_hospital']);
+                    $('input:text[name="nome_paciente"]').val(data['nome_paciente']);
+                    $('input:text[name="idade_paciente"]').val(data['idade_paciente']);
+                    $('input:text[name="rg_cpf"]').val(data['rg_cpf']);
+                    $('input:text[name="nome_acompanhante"]').val(data['nome_acompanhante']);
+                    $('input:text[name="idade_acompanhante"]').val(data['idade_acompanhante']);
+                    $('input:text[name="local_ocorrencia"]').val(data['local']);
+
+                    $('input:text[name="periodo_gestacao"]').val(data['periodo_gestacao']);
+                    $('input:radio[name="pre_natal"]').filter('[value="pre_natal' + data['pre_natal'] + '"]').attr('checked', true);
+                    $('input:text[name="nome_medico"]').val(data['nome_medico']);
+                    $('input:radio[name="complicacoes"]').filter('[value="complicacoes' + data['complicacoes'] + '"]').attr('checked', true);
+                    $('input:radio[name="primeiro"]').filter('[value="primeiro_filho' + data['primeiro_filho'] + '"]').attr('checked', true);
+                    $('input:text[name="quantos_filhos"]').val(data['quantos_filhos']);
+                    $('input:radio[name="pressao_quadril"]').filter('[value="sente_pressao' + data['sente_pressao'] + '"]').attr('checked', true);
+                    $('input:radio[name="ruptura"]').filter('[value="ruptura_bolsa' + data['ruptura_bolsa'] + '"]').attr('checked', true);
+                    $('input:radio[name="inspecao"]').filter('[value="inspecao_visual' + data['inspecao_visual'] + '"]').attr('checked', true);
+                    $('input:radio[name="parto"]').filter('[value="parto_realizado' + data['parto_realizado'] + '"]').attr('checked', true);
+                    $('input:radio[name="bebe"]').filter('[value="sexo_bebe' + data['sexo_bebe'] + '"]').attr('checked', true);
+                    $('input:text[name="nome_bebe"]').val(data['nome_bebe']);
+
+                    $('input:checkbox[name="causado_animais"]').filter('[value="causado_animais' + data['causado_animais'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meio_transporte"]').filter('[value="meio_transporte' + data['meio_transporte'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="desmoronamento_deslizamento"]').filter('[value="desmoronamento_deslizamento' + data['desmoronamento_deslizamento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="emergencia_medica"]').filter('[value="emergencia_medica' + data['emergencia_medica'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queda_2m"]').filter('[value="queda_2m' + data['queda_2m'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="tentativa_suicidio"]').filter('[value="tentativa_suicidio' + data['tentativa_suicidio'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queda_propriaAltura"]').filter('[value="queda_propriaAltura' + data['queda_propriaAltura'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="afogamento"]').filter('[value="afogamento' + data['afogamento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="agressao"]').filter('[value="agressao' + data['agressao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="atropelamento"]').filter('[value="atropelamento' + data['atropelamento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="choque_eletrico"]').filter('[value="choque_eletrico' + data['choque_eletrico'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="desabamento"]').filter('[value="desabamento' + data['desabamento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="domestico"]').filter('[value="domestico' + data['domestico'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="esportivo"]').filter('[value="esportivo' + data['esportivo'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="intoxicacao"]').filter('[value="intoxicacao' + data['intoxicacao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queda_bicicleta"]').filter('[value="queda_bicicleta' + data['queda_bicicleta'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queda_moto"]').filter('[value="queda_moto' + data['queda_moto'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queda_nivel"]').filter('[value="queda_nivel' + data['queda_nivel'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="trabalho"]').filter('[value="trabalho' + data['trabalho'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="transferencia"]').filter('[value="transferencia' + data['transferencia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="outros"]').filter('[value="outros' + data['outros'] + '"]').attr('checked', true);
+                    $('input:text[name="outros_texto"]').val(data['outros_texto']);
+
+                    
                 }
 
 

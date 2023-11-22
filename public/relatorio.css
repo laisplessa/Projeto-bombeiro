@@ -80,16 +80,15 @@ body {
   border-collapse: collapse;
   text-align: center;
   margin-top: 19%;
-  margin-left: 41%; 
-  width: 18.8%;
+  margin-left: 31%; 
+  width: 40%;
 }
 
 /* Tabelas */
 table,
 th,
 td {
-  position: fixed;
   border: 1px solid black;
   border-collapse: collapse;
-  width: 10%;
+  width: 30vw;
 }

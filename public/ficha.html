@@ -779,19 +779,19 @@
 
                         <div class="destaqueclaro">
                             <label for="pulso">Pulso:</label>
-                            <input type="number" class="tam18" name="pulso" placeholder="Digite" />
+                            <input type="text" class="tam18" name="pulso" placeholder="Digite" />
                             <label for="pulso"> B.C.P.M.</label>
                         </div>
 
                         <div class="destaqueclaro">
                             <label for="respiracao">Respiração: </label>
-                            <input type="number" class="tam18" name="respiracao" placeholder="Digite" />
+                            <input type="text" class="tam18" name="respiracao" placeholder="Digite" />
                             <label for="respiracao"> M.R.M. </label>
                         </div>
 
                         <div class="destaqueclaro">
                             <label for="saturacao">Saturação:</label>
-                            <input type="number" class="tam18" name="saturacao" placeholder="Digite" />
+                            <input type="text" class="tam18" name="saturacao" placeholder="Digite" />
                             <label for="saturacao"> % / HGT:</label>
                             <input type="text" class="tam18" name="hgt" placeholder="Digite" />
                         </div>
@@ -799,7 +799,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <label for="temperatura">Temperatura:</label>
-                                <input type="number" class="tam18" name="temperatura" placeholder="Digite" />
+                                <input type="text" class="tam18" name="temperatura" placeholder="Digite" />
                                 <label for="temperatura"> °C </label>
                             </div>
                         </div>
@@ -2377,7 +2377,7 @@
     <!--Formulário sobre materiais uilizados deixados no hospital-->
     <br>
     <banner>
-        <titulos id="materiaisdesc">Materiais Utilizados Descartável</titulos>
+        <titulos id="materiaisdesc">Materiais Utilizados Deixados No Hospital</titulos>
         <div class="table">
             <table>
                 <tr>
@@ -2438,7 +2438,7 @@
                 <input type="checkbox" name="tirante_aranha" value="1">
                 <label for="tirante_aranha">Tirante Aranha</label>
             </td>
-            <td><input class="tam75" type="number" name="tirante_quantidade" placeholder="Digite a quantidade" />
+            <td><input class="tam75" type="text" name="tirante_quantidade" placeholder="Digite a quantidade" />
             </td>
         </tr>
 
@@ -2449,12 +2449,12 @@
                 <input type="hidden" name="colar_m" value="0">
                 <input type="checkbox" name="colar_m" value="1">
                 <label for="colar_m">M</label>
-                <input type="hidden" name="colar_pp" value="0">
-                <input type="checkbox" name="colar_pp" value="1">
-                <label for="colar_g">G</label>
                 <input type="hidden" name="colar_g" value="0">
                 <input type="checkbox" name="colar_g" value="1">
-                <input class="material" type="text" name="tamanho_colar" placeholder="." />
+                <label for="colar_?">G</label>
+                <input type="hidden" name="colar_?" value="0">
+                <input type="checkbox" name="colar_?" value="1">
+                <input class="material" type="text" name="colar_tamm" placeholder="." />
                 </div>
             </td>
             <td><input class="tam75" type="number" name="colar_2quantidade" placeholder="Digite a quantidade" />
@@ -2793,39 +2793,51 @@
                     //$('input:text[name="quanto_tempo"]').val(data['quanto_tempo']);
                     // $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
                     // $('input:checkbox[name="causado_animais"]').filter('[value="' + data['causado_animais'] + '"]').attr('checked', true);
+                   
+                   //Anamnese de emergência médica
                     $('input:text[name="oq_aconteceu"]').val(data['oq_aconteceu']);
-                    $('input:radio[name="outras_vezes"]').filter('[value="outras_vezes' + data['outras_vezes'] + '"]').attr('checked', true);
+                    $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
                     $('input:text[name="quanto_tempo"]').val(data['quanto_tempo']); 
-                    $('input:radio[name="problema_saude"]').filter('[value="problema_saude' + data['problema_saude'] + '"]').attr('checked', true);
+                    $('input:radio[name="problema_saude"]').filter('[value="' + data['problema_saude'] + '"]').attr('checked', true);
                     $('input:text[name="quais_problemas"]').val(data['quais']);
-                    $('input:radio[name="medicacao"]').filter('[value="medicacao' + data['medicacao'] + '"]').attr('checked', true);
+                    $('input:radio[name="medicacao"]').filter('[value="' + data['medicacao'] + '"]').attr('checked', true);
+                    //HORÁRIO MEDICAÇÃO, TYPE: TIME
                     $('input:text[name="quais_medicacoes"]').val(data['quais_medicacao']);
-                    $('input:radio[name="alergico"]').filter('[value="alergico' + data['alergico'] + '"]').attr('checked', true);
+                    $('input:radio[name="alergico"]').filter('[value="' + data['alergico'] + '"]').attr('checked', true);
                     $('input:text[name="alergia"]').val(data['especifique']);
-                    $('input:radio[name="ingeriu"]').filter('[value="ingeriu' + data['ingeriu'] + '"]').attr('checked', true);
+                    $('input:radio[name="ingeriu"]').filter('[value="' + data['ingeriu'] + '"]').attr('checked', true);
+                    //QUE HORAS INGERIU, TYPE:TIME
 
-                    $('input:radio[name="sexo_paciente"]').filter('[value="sexo_paciente' + data['sexo_paciente'] + '"]').attr('checked', true);
+                    //Dados inicias
+                    //DATA, TYPE: DATE
+                    $('input:radio[name="sexo_paciente"]').filter('[value="' + data['sexo_paciente'] + '"]').attr('checked', true);
                     $('input:text[name="nome_hospital"]').val(data['nome_hospital']);
                     $('input:text[name="nome_paciente"]').val(data['nome_paciente']);
                     $('input:text[name="idade_paciente"]').val(data['idade_paciente']);
+                    //TELEFONE PACIENTE, TYPE: TEL
                     $('input:text[name="rg_cpf"]').val(data['rg_cpf']);
                     $('input:text[name="nome_acompanhante"]').val(data['nome_acompanhante']);
                     $('input:text[name="idade_acompanhante"]').val(data['idade_acompanhante']);
                     $('input:text[name="local_ocorrencia"]').val(data['local']);
 
+                    //Anamnese Gestacional
                     $('input:text[name="periodo_gestacao"]').val(data['periodo_gestacao']);
                     $('input:radio[name="pre_natal"]').filter('[value="pre_natal' + data['pre_natal'] + '"]').attr('checked', true);
                     $('input:text[name="nome_medico"]').val(data['nome_medico']);
                     $('input:radio[name="complicacoes"]').filter('[value="complicacoes' + data['complicacoes'] + '"]').attr('checked', true);
                     $('input:radio[name="primeiro"]').filter('[value="primeiro_filho' + data['primeiro_filho'] + '"]').attr('checked', true);
                     $('input:text[name="quantos_filhos"]').val(data['quantos_filhos']);
+                    //INICIARAM AS CONTRAÇÕES, TYPE:TIME
+                    //TEMPO DAS CONTRAÇÕES, TYPE: TIME
                     $('input:radio[name="pressao_quadril"]').filter('[value="sente_pressao' + data['sente_pressao'] + '"]').attr('checked', true);
                     $('input:radio[name="ruptura"]').filter('[value="ruptura_bolsa' + data['ruptura_bolsa'] + '"]').attr('checked', true);
                     $('input:radio[name="inspecao"]').filter('[value="inspecao_visual' + data['inspecao_visual'] + '"]').attr('checked', true);
                     $('input:radio[name="parto"]').filter('[value="parto_realizado' + data['parto_realizado'] + '"]').attr('checked', true);
+                    //HORÁRIO NASCIMENTO, TYPE:TIME 
                     $('input:radio[name="bebe"]').filter('[value="sexo_bebe' + data['sexo_bebe'] + '"]').attr('checked', true);
                     $('input:text[name="nome_bebe"]').val(data['nome_bebe']);
 
+                    //Tipo de ocorrência
                     $('input:checkbox[name="causado_animais"]').filter('[value="causado_animais' + data['causado_animais'] + '"]').attr('checked', true);
                     $('input:checkbox[name="meio_transporte"]').filter('[value="meio_transporte' + data['meio_transporte'] + '"]').attr('checked', true);
                     $('input:checkbox[name="desmoronamento_deslizamento"]').filter('[value="desmoronamento_deslizamento' + data['desmoronamento_deslizamento'] + '"]').attr('checked', true);
@@ -2849,9 +2861,321 @@
                     $('input:checkbox[name="outros"]').filter('[value="outros' + data['outros'] + '"]').attr('checked', true);
                     $('input:text[name="outros_texto"]').val(data['outros_texto']);
 
-                    $('input:checkbox[name="espontanea"]').filter('[value="espontanea' + data['espontanea'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="espontanea"]').filter('[value="espontanea' + data['espontanea'] + '"]').attr('checked', true);
-                }
+                    //Avalição do Paciente
+                    $('input:checkbox[name="espontanea"]').filter('[value="' + data['espontanea'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="espontanea_menor"]').filter('[value="' + data['espontanea_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="comando"]').filter('[value="' + data['comando'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="comando_menor"]').filter('[value="' + data['comando_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="estimulo"]').filter('[value="' + data['estimulo'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="estimulo_menor"]').filter('[value="' + data['estimulo_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nenhuma"]').filter('[value="' + data['nenhuma'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nenhuma_menor"]').filter('[value="' + data['nenhuma_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="orientado"]').filter('[value="' + data['orientado'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pf_apropriadas"]').filter('[value="' + data['pf_apropriadas'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="confuso"]').filter('[value="' + data['confuso'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="palavras_inapropriadas"]').filter('[value="' + data['nenhuma_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="inapropriadas_menor"]').filter('[value="' + data['inapropriadas_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="choro_grito"]').filter('[value="' + data['choro_grito'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="p_incompreensiveis"]').filter('[value="' + data['p_incompreensiveis'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="s_incompreensiveis"]').filter('[value="' + data['s_incompreensiveis'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nenhuma_menor2"]').filter('[value="' + data['nenhuma_menor2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nenhuma_resposta"]').filter('[value="' + data['nenhuma_resposta'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="o_comandos"]').filter('[value="' + data['o_comandos'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="o_prontamente"]').filter('[value="' + data['o_prontamente'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="localiza_menor"]').filter('[value="' + data['localiza_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="localiza"]').filter('[value="' + data['localiza'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="movimento_retirada"]').filter('[value="' + data['movimento_retirada'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="retirada_estimulado"]').filter('[value="' + data['retirada_estimulado'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="flexao_anormal"]').filter('[value="' + data['flexao_anormal'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="flexao_menor"]').filter('[value="' + data['flexao_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="extensao_anormal"]').filter('[value="' + data['extensao_anormal'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="extensao_menor"]').filter('[value="' + data['extensao_menor'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nenhuma_3"]').filter('[value="' + data['nenhuma_3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ausencia"]').filter('[value="' + data['ausencia'] + '"]').attr('checked', true);
+                    $('input:text[name="total"]').val(data['total']);
+                    $('input:text[name="total_menor"]').val(data['total_menor']);
+
+                    //Sinais Vitais
+                    $('input:text[name="pressao"]').val(data['pressao']);
+                    $('input:text[name="pulso"]').val(data['pulso']);
+                    $('input:text[name="respiracao"]').val(data['respiracao']);
+                    $('input:text[name="saturacao"]').val(data['saturacao']);
+                    $('input:text[name="hgt"]').val(data['hgt']);
+                    $('input:text[name="temperatura"]').val(data['temperatura']);
+                    $('input:radio[name="perfusao"]').filter('[value="' + data['perfusao'] + '"]').attr('checked', true);
+                    $('input:radio[name="anormal_normal"]').filter('[value="' + data['anormal_normal'] + '"]').attr('checked', true);
+
+                    //Problemas encontrados suspeitos
+                    $('input:checkbox[name="psiquiatrico"]').filter('[value="' + data['psiquiatrico'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="respiratorio"]').filter('[value="' + data['respiratorio'] + '"]').attr('checked', true);
+                    //OPTION VALUE
+
+                    //Localização dos traumas
+                    $('input:text[name="numerocorpo"]').val(data['numerocorpo']);
+                    $('input:checkbox[name="fratura"]').filter('[value="' + data['fratura'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ferimento"]').filter('[value="' + data['ferimento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragias"]').filter('[value="' + data['hemorragias'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="esviceracao"]').filter('[value="' + data['esviceracao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="fab"]').filter('[value="' + data['fab'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="amputacao"]').filter('[value="' + data['amputacao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura1"]').filter('[value="' + data['queimadura1'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura2"]').filter('[value="' + data['queimadura2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura3"]').filter('[value="' + data['queimadura3'] + '"]').attr('checked', true);
+                    $('input:text[name="numeroCorpo2"]').val(data['numero_corpo2']);
+                    $('input:checkbox[name="fratura2"]').filter('[value="' + data['fratura2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ferimento2"]').filter('[value="' + data['ferimento2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragias2"]').filter('[value="' + data['hemorragias2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="esviceracao2"]').filter('[value="' + data['esviceracao2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="fab2"]').filter('[value="' + data['fab2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="amputacao2"]').filter('[value="' + data['amputacao2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura1_2"]').filter('[value="' + data['queimadura1_2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura2_2"]').filter('[value="' + data['queimadura2_2'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura3_2"]').filter('[value="' + data['queimadura3_2'] + '"]').attr('checked', true);
+                    $('input:text[name="numeroCorpo3"]').val(data['numero_corpo3']);
+                    $('input:checkbox[name="fratura2"]').filter('[value="' + data['fratura3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ferimento2"]').filter('[value="' + data['ferimento3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragias2"]').filter('[value="' + data['hemorragias3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="esviceracao2"]').filter('[value="' + data['esviceracao3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="fab2"]').filter('[value="' + data['fab3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="amputacao2"]').filter('[value="' + data['amputacao3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura1_2"]').filter('[value="' + data['queimadura1_3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura2_2"]').filter('[value="' + data['queimadura2_3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura3_2"]').filter('[value="' + data['queimadura3_3'] + '"]').attr('checked', true);
+
+                    //Ferimentos
+                    $('input:text[name="local_ferimento"]').val(data['local_ferimento']);
+                    //OPTION VALUE
+                    
+                    //Queimaduras
+                    $('input:checkbox[name="qcabeca_1grau"]').filter('[value="' + data['qcabeca_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qcabeca_2grau"]').filter('[value="' + data['qcabeca_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qcabeca_3grau"]').filter('[value="' + data['qcabeca_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qcabeca_4grau"]').filter('[value="' + data['qcabeca_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qpescoco_1grau"]').filter('[value="' + data['qpescoco_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qpescoco_2grau"]').filter('[value="' + data['qpescoco_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qpescoco_3grau"]').filter('[value="' + data['qpescoco_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qpescoco_4grau"]').filter('[value="' + data['qpescoco_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtant_1grau"]').filter('[value="' + data['qtant_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtant_2grau"]').filter('[value="' + data['qtant_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtant_3grau"]').filter('[value="' + data['qtant_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtant_4grau"]').filter('[value="' + data['qtant_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtpos_1grau"]').filter('[value="' + data['qtpos_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtpos_2grau"]').filter('[value="' + data['qtpos_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtpos_3grau"]').filter('[value="' + data['qtpos_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qtpos_4grau"]').filter('[value="' + data['qtpos_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qgenital_1grau"]').filter('[value="' + data['qgenital_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qgenital_2grau"]').filter('[value="' + data['qgenital_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qgenital_3grau"]').filter('[value="' + data['qgenital_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qgenital_4grau"]').filter('[value="' + data['qgenital_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroid_1grau"]').filter('[value="' + data['qmembroid_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroid_2grau"]').filter('[value="' + data['qmembroid_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroid_3grau"]').filter('[value="' + data['qmembroid_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroid_4grau"]').filter('[value="' + data['qmembroid_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroie_1grau"]').filter('[value="' + data['qmembroie_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroie_2grau"]').filter('[value="' + data['qmembroie_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroie_3grau"]').filter('[value="' + data['qmembroie_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembroie_4grau"]').filter('[value="' + data['qmembroie_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrosd_1grau"]').filter('[value="' + data['qmembrosd_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrosd_2grau"]').filter('[value="' + data['qmembrosd_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrosd_3grau"]').filter('[value="' + data['qmembrosd_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrosd_4grau"]').filter('[value="' + data['qmembrosd_4grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrose_1grau"]').filter('[value="' + data['qmembrose_1grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrose_2grau"]').filter('[value="' + data['qmembrose_2grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrose_3grau"]').filter('[value="' + data['qmembrose_3grau'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="qmembrose_4grau"]').filter('[value="' + data['qmembrose_4grau'] + '"]').attr('checked', true);
+
+                    //Objetos Recolhidos
+                    $('input:text[name="objetos_recolhidos"]').val(data['objetos_recolhidos']);
+                    
+                    //Sinais e Sintomas
+                    $('input:checkbox[name="abdomen"]').filter('[value="' + data['abdomen'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="afundamento_cranio"]').filter('[value="' + data['afundamento_cranio'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="agitacao"]').filter('[value="' + data['agitacao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="amnesia"]').filter('[value="' + data['amnesia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="angina_peito"]').filter('[value="' + data['angina_peito'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="apineia"]').filter('[value="' + data['apineia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="bradicardia"]').filter('[value="' + data['bradicardia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="bradipneia"]').filter('[value="' + data['bradipneia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="bronco_aspirando"]').filter('[value="' + data['bronco_aspirando'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="cefalia"]').filter('[value="' + data['cefalia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="cianoseLabios"]').filter('[value="' + data['cianose_labios'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="cianoseExtremidade"]').filter('[value="' + data['cianose_extremidade'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="convulsao"]').filter('[value="' + data['convulsao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="decorticacao"]').filter('[value="' + data['decorticacao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="deformidade"]').filter('[value="' + data['deformidade'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="descerebracao"]').filter('[value="' + data['descerebracao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="desmaio"]').filter('[value="' + data['desmaio'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="desvioTraqueia"]').filter('[value="' + data['desvio_traqueia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="despneia"]').filter('[value="' + data['dispineia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="dorLocal"]').filter('[value="' + data['dor_local'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="edemaGeneralizados"]').filter('[value="' + data['edema_generalizados'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="edemaLocalizados"]').filter('[value="' + data['edema_localizados'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="enfisemaSubcutaneo"]').filter('[value="' + data['enfisema_subcutaneo'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="entaseJugular"]').filter('[value="' + data['entase_jugular'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="facePalida"]').filter('[value="' + data['face_palida'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hipertensao"]').filter('[value="' + data['hipertensao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hipotensao"]').filter('[value="' + data['hipotensao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragiaInterna"]').filter('[value="' + data['hemorragia_interna'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragiaExterna"]').filter('[value="' + data['hemorragia_externa'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nauseaVomito"]').filter('[value="' + data['nausea_vomito'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="nasoragia"]').filter('[value="' + data['nasoragia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="obito"]').filter('[value="' + data['obito'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="otorreia"]').filter('[value="' + data['otorreia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="otorragia"]').filter('[value="' + data['otorragia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ovace"]').filter('[value="' + data['ovace'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="paradaCardiaca"]').filter('[value="' + data['parada_cardiaca'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="paradaRespiratorio"]').filter('[value="' + data['parada_respiratoria'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="priapismo"]').filter('[value="' + data['priapismo'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pruridoPele"]').filter('[value="' + data['prurido_pele'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasAnisocoria"]').filter('[value="' + data['pupilas_anisocoria'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasIsocoria"]').filter('[value="' + data['pupilas_isocoria'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasMidriase"]').filter('[value="' + data['pupilas_midriase'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasMiose"]').filter('[value="' + data['pupilas_miose'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasReagente"]').filter('[value="' + data['pupilas_reagente'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pupilasNreagente"]').filter('[value="' + data['pupilas_nreagente'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="sede"]').filter('[value="' + data['sede'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="sinalBattle"]').filter('[value="' + data['sinal_battle'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="sinalGuaxinim"]').filter('[value="' + data['sinal_guaxinim'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="sudorese"]').filter('[value="' + data['sudorese'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="taquipneia"]').filter('[value="' + data['taquipneia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="taquicardia"]').filter('[value="' + data['taquicardia'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="tontura"]').filter('[value="' + data['tontura'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="outrosSintomas"]').filter('[value="' + data['outros_sintomas'] + '"]').attr('checked', true);
+                    $('input:text[name="osintomas_texto"]').val(data['osintomas_texto']);
+
+                    //Vitima Era
+                    $('input:checkbox[name="ciclista"]').filter('[value="' + data['ciclista'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="condutorMoto"]').filter('[value="' + data['condutor_moto'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="gestante"]').filter('[value="' + data['gestante'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="passageiroBancofrente"]').filter('[value="' + data['passageiro_bancofrente'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="passageiroMoto"]').filter('[value="' + data['passageiro_moto'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="condutorCarro"]').filter('[value="' + data['condutor_carro'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="clinico"]').filter('[value="' + data['clinico'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="trauma"]').filter('[value="' + data['trauma'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="passageiroBtras"]').filter('[value="' + data['passageiro_btras'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="pedestre"]').filter('[value="' + data['pedestre'] + '"]').attr('checked', true);
+
+
+                    //forma de condução
+                    $('input:radio[name="conducao"]').filter('[value="' + data['conducao'] + '"]').attr('checked', true);
+
+
+                    //decisão de transporte
+                    $('input:radio[name="decisao"]').filter('[value="' + data['decisao'] + '"]').attr('checked', true);
+
+                    //procedimentos efetuados
+                    $('input:checkbox[name="aspiracao"]').filter('[value="' + data['aspiracao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="avaliacao_inicial"]').filter('[value="' + data['avaliacao_inicial'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="avaliacao_dirigida"]').filter('[value="' + data['avaliacao_dirigida'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="avaliacao_continuada"]').filter('[value="' + data['avaliacao_continuada'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="chave_rautek"]').filter('[value="' + data['chave_rautek'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="desobstrucao_va"]').filter('[value="' + data['desobstrucao_va'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="emprego_dea"]').filter('[value="' + data['emprego_dea'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="gerenciamento_riscos"]').filter('[value="' + data['gerenciamento_riscos'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="limpeza_ferimento"]').filter('[value="' + data['limpeza_ferimento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="curativos"]').filter('[value="' + data['curativos'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="compressivo"]').filter('[value="' + data['compressivo'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="encravamento"]').filter('[value="' + data['encravamento'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ocular"]').filter('[value="' + data['ocular'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura"]').filter('[value="' + data['queimadura'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="simples"]').filter('[value="' + data['simples'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="3_pontas"]').filter('[value="' + data['3_pontas'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="imobilizacoes"]').filter('[value="' + data['imobilizacoes'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="membro_infd"]').filter('[value="' + data['membro_infd'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="membro_infe"]').filter('[value="' + data['membro_infe'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="membro_supd"]').filter('[value="' + data['membro_supd'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="membro_supe"]').filter('[value="' + data['membro_supe'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="quadril"]').filter('[value="' + data['quadril'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="cervical"]').filter('[value="' + data['cervical'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="maca_rodas"]').filter('[value="' + data['maca_rodas'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="maca_rigida"]').filter('[value="' + data['maca_rigida'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ponte"]').filter('[value="' + data['ponte'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="retirado_capacete"]').filter('[value="' + data['retirado_capacete'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="rcp"]').filter('[value="' + data['rcp'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="rolamento_90"]').filter('[value="' + data['rolamento_90'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="rolamento_180"]').filter('[value="' + data['rolamento_180'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="tomada_decisao"]').filter('[value="' + data['tomada_decisao'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="imobilizacoes"]').filter('[value="' + data['imobilizacoes'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="tratado_choque"]').filter('[value="' + data['tratado_choque'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="uso_canula"]').filter('[value="' + data['uso_canula'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="uso_colar"]').filter('[value="' + data['uso_colar'] + '"]').attr('checked', true);
+                    $('input:text[name="tamanho_usocolar"]').val(data['tamanho_usocolar']);
+                    $('input:checkbox[name="uso_ked"]').filter('[value="' + data['uso_ked'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="uso_ttf"]').filter('[value="' + data['uso_ttf'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ventilacao_suporte"]').filter('[value="' + data['ventilacao_suporte'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="oxigenioterapia"]').filter('[value="' + data['oxigenioterapia'] + '"]').attr('checked', true);
+                     //INPUT CLASS OXIGENIOTERAPIA_TEXTO
+                    $('input:checkbox[name="reanimador"]').filter('[value="' + data['reanimador'] + '"]').attr('checked', true);
+                        //INPUT CLASS REANIMADOR_TEXTO
+                    $('input:checkbox[name="meioa"]').filter('[value="' + data['meioa'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_celesc"]').filter('[value="' + data['meioa_celesc'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_defesacivil"]').filter('[value="' + data['meioa_defesacivil'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_civil"]').filter('[value="' + data['meioa_civil'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_militar"]').filter('[value="' + data['meioamilitar'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_pre"]').filter('[value="' + data['meioa_pre'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_prf"]').filter('[value="' + data['meioa_prf'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_usa"]').filter('[value="' + data['meioa_usa'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_usb"]').filter('[value="' + data['meioa_usb'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="meioa_cit"]').filter('[value="' + data['meioa_cit'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="outros_procedimentos"]').filter('[value="' + data['outros_procedimentos'] + '"]').attr('checked', true);
+                    $('input:text[name="outrosp_texto"]').val(data['outrosp_texto']);
+
+                    //materiais descartaveis
+                    $('input:checkbox[name="ataduras8"]').filter('[value="' + data['ataduras_8'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ataduras12"]').filter('[value="' + data['ataduras_12'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ataduras20"]').filter('[value="' + data['ataduras_20'] + '"]').attr('checked', true);
+                    $('input:text[name="ataduras_quantidade"]').val(data['ataduras_quantidade']);
+                    $('input:checkbox[name="manta_aluminizada"]').filter('[value="' + data['manta_aluminizada'] + '"]').attr('checked', true);
+                    $('input:text[name="manta_quantidade"]').val(data['manta_quantidade']);
+                    $('input:checkbox[name="cateter_oculos"]').filter('[value="' + data['cateter_oculos'] + '"]').attr('checked', true);
+                    $('input:text[name="cateter_quantidade"]').val(data['cateter_quantidade']);
+                    $('input:checkbox[name="pas_dea"]').filter('[value="' + data['pas_dea'] + '"]').attr('checked', true);
+                    $('input:text[name="pas_quantidade"]').val(data['pas_quantidade']);
+                    $('input:checkbox[name="compressa_comum"]').filter('[value="' + data['compressa_comum'] + '"]').attr('checked', true);
+                    $('input:text[name="compressa_quantidade"]').val(data['pascompressa_quantidade']);
+                    $('input:checkbox[name="sonda_aspiracao"]').filter('[value="' + data['sonda_aspiracao'] + '"]').attr('checked', true);
+                    $('input:text[name="sonda_quantidade"]').val(data['sonda_quantidade']);
+                    $('input:checkbox[name="kitsH"]').filter('[value="' + data['kits_h'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="kitsP"]').filter('[value="' + data['kits_p'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="kitsQ"]').filter('[value="' + data['kits_q'] + '"]').attr('checked', true);
+                    $('input:text[name="kits_quantidade"]').val(data['kits_quantidade']);
+                    $('input:checkbox[name="soro_fisiologico"]').filter('[value="' + data['soro_fisiologico'] + '"]').attr('checked', true);
+                    $('input:text[name="soro_quantidade"]').val(data['soro_quantidade']);
+                    $('input:checkbox[name="luvas_descartaveis "]').filter('[value="' + data['luvas_descartaveis'] + '"]').attr('checked', true);
+                    $('input:text[name="luvas_quantidade"]').val(data['luvas_quantidade']);
+                    $('input:checkbox[name="talas_papp"]').filter('[value="' + data['talas_papp'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="talas_papg"]').filter('[value="' + data['talas__papg'] + '"]').attr('checked', true);
+                    $('input:text[name="talas_quantidade"]').val(data['talas_quantidade']);
+                    $('input:checkbox[name="mascaras_descartaveis"]').filter('[value="' + data['mascaras_descartaveis'] + '"]').attr('checked', true);
+                    $('input:text[name="mascara_quantidade"]').val(data['mascara_quantidade']);
+                    $('input:checkbox[name="outro_material"]').filter('[value="' + data['outro_material'] + '"]').attr('checked', true);
+                    $('input:text[name="outrom"]').val(data['outrom']);
+                    $('input:text[name="outrom_quantidade"]').val(data['outrom_quantidade']);
+
+                    //materiais deixados no hospital
+                    $('input:checkbox[name="ttf_adulto"]').filter('[value="' + data['ttf_adulto'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ttf_infantil"]').filter('[value="' + data['ttf_infantil'] + '"]').attr('checked', true);
+                    $('input:text[name="ttf_quantidade"]').val(data['ttf_quantidade']);
+                    $('input:checkbox[name="base_estabiliza"]').filter('[value="' + data['base_estabiliza'] + '"]').attr('checked', true);
+                    $('input:text[name="base_quantidade"]').val(data['base_quantidade']);
+                    $('input:checkbox[name="colar_n"]').filter('[value="' + data['colar_n'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="colar_pp"]').filter('[value="' + data['colar_pp'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="colar_p"]').filter('[value="' + data['colar_p'] + '"]').attr('checked', true);
+                    $('input:text[name="colar_quantidade"]').val(data['colar_quantidade']);
+                    $('input:checkbox[name="tirante_aranha"]').filter('[value="' + data['tirante_aranha'] + '"]').attr('checked', true);
+                    $('input:text[name="tirante_quantidade"]').val(data['tirante_quantidade']);
+                    $('input:checkbox[name="colar_m"]').filter('[value="' + data['colar_m'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="colar_g"]').filter('[value="' + data['colar_g'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="colar_?"]').filter('[value="' + data['colar_?'] + '"]').attr('checked', true);
+                    $('input:text[name="colar_tamm"]').val(data['colar_tamm']);
+                    $('input:text[name="colar_2quantidade"]').val(data['colar_2quantidade']); //MUDAR NUMBER PRA TEXT
+                    $('input:checkbox[name="tirante_cabeca"]').filter('[value="' + data['tirante_cabeca'] + '"]').attr('checked', true);
+                    $('input:text[name="tirantec_quantidade"]').val(data['tirantec_quantidade']); //MUDAR NUMBER PRA TEXT
+
+
+
+
+                }   
                 
 
 
@@ -2894,4 +3218,4 @@
 
 </body>
 
-</html>
+</html

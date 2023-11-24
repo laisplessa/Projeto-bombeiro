@@ -176,10 +176,26 @@ $queimadura23 = $_POST["queimadura2_3"] ;
 $queimadura33 = $_POST["queimadura3_3"] ;
 
 
-$Localferimento = $_POST["ferimento"];
+$Localferimento = $_POST["local_ferimento"];
 $ladoFerimento = $_POST["lado_ferimento"];
 $faceFerimento = $_POST["face_ferimento"];
 $tipoFerimento = $_POST["tipo_ferimento"];
+$Localferimento2 = $_POST["local_ferimento2"];
+$lado = $_POST["lado"];
+$face = $_POST["face"];
+$tipo = $_POST["tipo"];
+$Localferimento3 = $_POST["local_ferimento3"];
+$lado3 = $_POST["lado3"];
+$face3 = $_POST["face3"];
+$tipo3 = $_POST["tipo3"];
+$Localferimento4 = $_POST["local_ferimento4"];
+$lado4 = $_POST["lado4"];
+$face4 = $_POST["face4"];
+$tipo4 = $_POST["tipo4"];
+$Localferimento5 = $_POST["local_ferimento5"];
+$lado5 = $_POST["lado5"];
+$face5 = $_POST["face5"];
+$tipo5 = $_POST["tipo5"];
 
 $qcabeca1grau = $_POST["qcabeca_1grau"] ;
 $qcabeca2grau = $_POST["qcabeca_2grau"] ;
@@ -461,7 +477,7 @@ $id = $_SESSION["id"];
     pressao, pulso, respiracao, saturacao, hgt, temperatura, perfusao, anormal_normal,
     psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text,
     numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3, numero_corpo2, fratura2, ferimento2, hemorragias2, esviceracao2, fab2, amputacao2, queimadura1_2, queimadura2_2, queimadura3_2, numero_corpo3, fratura3, ferimento3, hemorragias3, esviceracao3, fab3, amputacao3, queimadura1_3, queimadura2_3, queimadura3_3,
-    local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento,
+    local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento, local_ferimento2, lado, face, tipo, local_ferimento3, lado3, face3, tipo3, local_ferimento4, lado4, face4, tipo4, local_ferimento5, lado5, face5, tipo5,
     qcabeca_1grau, qcabeca_2grau, qcabeca_3grau, qcabeca_4grau, qpescoco_1grau, qpescoco_2grau, qpescoco_3grau, qpescoco_4grau, qtant_1grau, qtant_2grau, qtant_3grau, qtant_4grau, qtpos_1grau, qtpos_2grau, qtpos_3grau, qtpos_4grau, qgenital_1grau, qgenital_2grau, qgenital_3grau, qgenital_4grau, qmembroid_1grau, qmembroid_2grau, qmembroid_3grau, qmembroid_4grau, qmembroie_1grau, qmembroie_2grau, qmembroie_3grau, qmembroie_4grau, qmembrosd_1grau, qmembrosd_2grau, qmembrosd_3grau, qmembrosd_4grau, qmembrose_1grau, qmembrose_2grau, qmembrose_3grau, qmembrose_4grau,
     objetos_recolhidos,
     abdomen, afundamento_cranio, agitacao, amnesia, angina_peito, apineia, bradicardia, bradipneia, bronco_aspirando, cefaleia, cianose_labios, cianose_extremidade, convulsao, decorticacao, deformidade, descerebracao, desmaio, desvio_traqueia, dispineia, dor_local, edema_generalizados, edema_localizados, enfisema_subcutaneo, entase_jugular, face_palida, hipertensao, hipotensao, hemorragia_interna, hemorragia_externa, nausea_vomito, nasoragia, obito, otorreia, otorragia, ovace, parada_cardiaca, parada_respiratoria, priapismo, prurido_pele, pupilas_anisocoria, pupilas_isocoria, pupilas_midriase, pupilas_miose, pupilas_reagente, pupilas_nreagente, sede, sinal_battle, sinal_guaxinim, sudorese, taquipneia, taquicardia, tontura, outros_sintomas, osintomas_texto,
@@ -481,7 +497,7 @@ $id = $_SESSION["id"];
     '$pressao', '$pulso', '$respiracao', '$saturacao', '$hgt', '$temperatura', $perfusao, $anormalNormal,
     $psiquiatrico, $respiratorio, '$respiratorioOpcoes', $diabetes, '$diabetesOpcoes', $obstetrico, '$obstetricoOpcoes', $transporte, '$transporteOpcoes', '$outrosProblemas', '$outrosTexto',
     '$numeroCorpo', $fratura, $ferimento, $hemorragias, $esviceracao, $fab, $amputacao, $queimadura1, $queimadura2, $queimadura3, '$numeroCorpo2', $fratura2, $ferimento2, $hemorragias2, $esviceracao2, $fab2, $amputacao2, $queimadura12, $queimadura22, $queimadura32,  '$numeroCorpo3', $fratura3, $ferimento3, $hemorragias3, $esviceracao3, $fab3, $amputacao3, $queimadura13, $queimadura23, $queimadura33,
-    '$Localferimento', '$ladoFerimento', '$faceFerimento', '$tipoFerimento',
+    '$Localferimento', '$ladoFerimento', '$faceFerimento', '$tipoFerimento', '$Localferimento2', '$lado', '$face', '$tipo', '$Localferimento3', '$lado3', '$face3', '$tipo3', '$Localferimento4', '$lado4', '$face4', '$tipo4', '$Localferimento5', '$lado5', '$face5', '$tipo5',
     $qcabeca1grau, $qcabeca2grau, $qcabeca3grau, $qcabeca4grau, $qpescoco1grau, $qpescoco2grau, $qpescoco3grau, $qpescoco4grau, $qtant1grau, $qtant2grau, $qtant3grau, $qtant4grau, $qtpos1grau, $qtpos2grau, $qtpos3grau, $qtpos4grau, $qgenital1grau, $qgenital2grau, $qgenital3grau, $qgenital4grau, $qmembroid1grau, $qmembroid2grau, $qmembroid3grau, $qmembroid4grau, $qmembroie1grau, $qmembroie2grau, $qmembroie3grau, $qmembroie4grau, $qmembrosd1grau, $qmembrosd2grau, $qmembrosd3grau, $qmembrosd4grau, $qmembrose1grau, $qmembrose2grau, $qmembrose3grau, $qmembrose4grau,
     '$objetosRecolhidos',
     $abdomen, $afundamentoCranio, $agitacao, $amnesia, $anginaPeito,$apineia, $bradicardia, $bradipneia, $broncoAspirando, $cefaleia, $cianoseLabios, $cianoseExtremidade, $convulsao, $decorticacao, $deformidade, $descerebracao, $desmaio, $desvioTraqueia, $dispineia, $dorLocal, $edemaGeneralizados, $edemaLocalizados, $enfisemaSubcutaneo, $entaseJugular, $facePalida, $hipertensao, $hipotensao, $hemorragiaInterna, $hemorragiaExterna, $nauseaVomito, $nasoragia, $obito, $otorreia, $otorragia, $ovace, $paradaCardiaca, $paradaRespiratoria, $priapismo, $pruridoPele, $pupilasAnisocoria, $pupilasIsocoria, $pupilasMidriase, $pupilasMiose, $pupilasReagente, $pupilasNreagente, $sede, $sinalBattle, $sinalGuaxinim, $sudorese, $taquipneia, $taquicardia, $tontura, $outrosSintomas, '$osintomasTexto',

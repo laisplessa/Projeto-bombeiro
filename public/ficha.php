@@ -398,7 +398,7 @@ $baseQuantidade = $_POST["base_quantidade"];
 $ttfAdulto = $_POST["ttf_adulto"]  ;
 $ttfInfantil = $_POST["ttf_infantil"]  ;
 $ttfQuantidade = $_POST["ttf_quantidade"];
-$colarN = $_POST["colar_nd"]  ;
+$colarNd = $_POST["colar_nd"]  ;
 $colarPP = $_POST["colar_pp"]  ;
 $colarP = $_POST["colar_p"]  ;
 $colarQuantidade = $_POST["colar_quantidade"];
@@ -406,8 +406,8 @@ $tiranteAranha = $_POST["tirante_aranha"]  ;
 $tiranteQuantidade = $_POST["tirante_quantidade"];
 $colarM = $_POST["colar_m"];
 $colarG = $_POST["colar_g"];
-$colar_n = $_POST["colar_n"];
-$tamanhoColar = $_POST["tamanho_colar"];
+$colarN = $_POST["colar_n"];
+$tColar = isset($_POST["tamanho_colar"]) ? $_POST["tamanho_colar"] : 'NULL';
 $colar2quantidade = $_POST["colar_2quantidade"];
 $tiranteCabeca = $_POST["tirante_cabeca"]  ;
 $tirantecQuantidade = $_POST["tirantec_quantidade"];
@@ -467,8 +467,6 @@ $fibra = $_POST["fibra"];
 
 $id = $_SESSION["id"];
 
-
-
     $sqlFicha = "INSERT INTO ficha (id_usuario, oq_aconteceu, outras_vezes, quanto_tempo, problema_saude, quais, medicacao, ultima_medicacao, quais_medicacao, alergico, especifique, ingeriu, horario_ingeriu,
     data, sexo_paciente, nome_hospital, nome_paciente, idade_paciente, telefone, rg_cpf, nome_acompanhante, idade_acompanhante, local,
     periodo_gestacao, pre_natal, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe,
@@ -485,7 +483,7 @@ $id = $_SESSION["id"];
     conducao, decisao,
     aspiracao, avaliacao_inicial, avaliacao_dirigida, avaliacao_continuada, chave_rautek, canula_guedel, desobstrucao_va, emprego_dea, gerenciamento_riscos, limpeza_ferimento, curativos, compressivo, encravamento, ocular, queimadura, simples, 3_pontas, imobilizacoes, membro_infd, membro_infe, membro_supd, membro_supe, quadril, cervical, maca_rodas, maca_rigida, ponte, retirado_capacete, rcp, rolamento_90, rolamento_180, tomada_decisao, tratado_choque, uso_canula, uso_colar,tamanho_usocolar,  uso_ked, uso_ttf, ventilacao_suporte, oxigenioterapia, oxigenioterapia_texto, reanimador, reanimador_texto, meioa, meioa_celesc, meioa_defesacivil, meioa_civil, meioa_pre, meioa_prf, meioa_militar, meioa_usa, meioa_usb, meioa_cit, outros_procedimentos, outrosp_texto,
     ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade,
-    base_estabiliza, base_quantidade, ttf_adulto, ttf_infantil, ttf_quantidade, colar_n, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar_m, colar_g, colar_nd, colar_tamm, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade,
+    base_estabiliza, base_quantidade, ttf_adulto, ttf_infantil, ttf_quantidade, colar_nd, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar_m, colar_g, colar_n, tamanho_colar, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade,
     observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, codigo_ir, codigo_ps, h_ch, sia_sus,
     eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra)
     
@@ -505,7 +503,7 @@ $id = $_SESSION["id"];
     $conducao, $decisao,
     $aspiracao, $avaliacao, $avaliacaoDirigida, $avaliacaoContinuada, $chaveRautek, $canulaGuedel, $desobstrucaoVa, $empregoDea, $gerenciamentoRiscos, $limpezaFerimento, $curativos, $compressivo, $encravamento, $ocular, $queimadura, $simples, $trespontas, $imobilizacoes, $membroInfd, $membroInfe, $membroSupd, $membroSupe, $quadril, $cervical, $macaRodas, $macaRigida, $ponte, $retiradoCapacete, $rcp, $rolamento90, $rolamento180, $tomadaDecisao, $tratadoChoque, $usoCanula, $usoColar, '$tamanhoUsoColar', $usoKed, $usoTtf, $ventilacaoSuporte, $oxigenioTerapia, '$oxigenioterapiaTexto', $reanimador, '$reanimadorTexto', $meioa, $meioaCelesc, $meioaDefesacivil, $meioaCivil, $meioaPre, $meioaPrf,  $meioaMilitar,$meioaUsa, $meioaUsb, $meioaCit, $outrosProcedimentos, '$outrospTexto',
     $ataduras8, $ataduras12, $ataduras20, '$ataduraQuantidade', $mantaAluminizada, '$mantaQuantidade', $cateterOculos, '$cateterQuantidade', $pasDea, '$pasQuantidade', $compressaComum, '$compressaQuantidade', $sondaAspiracao, '$sondaQuantidade', $kitsH, $kitsP, $kitsQ, '$kitsQuantidade', $soroFisiologico, '$soroQuantidade', $luvasDescartaveis, '$luvasQuantidade', $talasPapp, $talasPapg, '$talasQuantidade', $mascarasDescartaveis, '$mascaraQuantidade', $outroMaterial, '$outroM', '$outromQuantidade',
-    $baseEstabiliza, '$baseQuantidade', $ttfAdulto, $ttfInfantil, '$ttfQuantidade', $colarN, $colarPP, $colarP, '$colarQuantidade', $tiranteAranha, '$tiranteQuantidade', $colarM, $colarG, $colar_nd, '$tamanhoColar', '$colar2quantidade', $tiranteCabeca, '$tirantecQuantidade', $coxinsEstabiliza, '$coxinsQuantidade', $canula, '$canulaQuantidade', $kedAdulto, $kedInfantil, '$kedQuantidade', '$outroMaterial2', $outrom2, '$outrom2Quantidade', $maca, '$macaQuantidade', $outroMaterial3, '$outrom3', '$outrom3Quantidade',
+    $baseEstabiliza, '$baseQuantidade', $ttfAdulto, $ttfInfantil, '$ttfQuantidade', $colarNd, $colarPP, $colarP, '$colarQuantidade', $tiranteAranha, '$tiranteQuantidade', $colarM, $colarG, $colarN, '$tColar', '$colar2quantidade', $tiranteCabeca, '$tirantecQuantidade', $coxinsEstabiliza, '$coxinsQuantidade', $canula, '$canulaQuantidade', $kedAdulto, $kedInfantil, '$kedQuantidade', '$outroMaterial2', $outrom2, '$outrom2Quantidade', $maca, '$macaQuantidade', $outroMaterial3, '$outrom3', '$outrom3Quantidade',
     '$observacoesImportantes', $disturbioComportamento, $encontradoCapacete, $encontradoCinto, $parabrisasAvariado, $caminhandoCena, $painelAvariado, $volanteTorcido, '$nUsd', '$nOcorrencia', '$desp', '$kmFinal', $codIr, $codPs, '$hCh', '$siaSus',
     '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
 
@@ -520,11 +518,12 @@ if($execucao){
 
 } else {
 
-  $data = array("erro" => true, "mensagem" => "Erro ao realizar cadastro de ficah");
+  $data = array("erro" => true, "mensagem" => "Erro ao realizar cadastro de ficha");
   header("Content-Type: application/json");
   echo json_encode($data);
   exit();
 }
 // Fechar a conexão com o banco de dados
-$conn->close();
+$conn-> close();
 ?>
+

@@ -37,17 +37,23 @@
                     <li><a href="#Tipoocor">Tipo de Ocorrência</a></li>
                     <li><a href="#resp">Avaliação do Paciente</a></li>
                     <li><a href="#Sinaisvitais">Sinais Vitais</a></li>
+                    <li><a href="#problemas">Problemas Encontrados Suspeitos</a></li>
                     <li><a href="#localtraumas">Localização dos Traumas</a></li>
+                    <li><a href="#ferimentos">Ferimentos</a></li>
+                    <li><a href="#queimaduras">Queimaduras</a></li>
                     <li><a href="#objetosrec">Objetos Recolhidos</a></li>
+                    <li><a href="#sinaissintomas">Sinais e Sintomas</a></li>
                     <li><a href="#vitimaera">Vítima Era</a></li>
+                    <li><a href="#formaconducao">Forma de condução</a></li>
+                    <li><a href="#decisaotransp">Decisão de transporte</a></li>
                     <li><a href="#procedimentosefetuados">Procedimentos Efetuados</a></li>
-                    <li><a href="#materiaisdesc">Materiais Utilizados Deixado no Hospital</a></li>
+                    <li><a href="#materiaisdesc">Materiais Utilizados Descartáveis</a></li>
+                    <li><a href="#materiaisdesc1">Materiais Utilizados Deixado no Hospital</a></li>
                     <li><a href="#observ">Observações Importantes</a></li>
                     <li><a href="#cinematica">Avaliação da Cinemática</a></li>
                     <li><a href="#Dadosamb">Dados ambulância</a></li>
                     <li><a href="#equipeatendimento">Equipe de Atendimento</a></li>
-
-
+                    <li><a href="#preenchimento">Resnposável pelo preenchimento</a></li>
 
                 </ul>
             </div>
@@ -773,7 +779,7 @@
                             <label for="pressao">Pressão Arterial:</label>
                             <input type="text" class="tam18" name="pressao" placeholder="Digite" />
                             <label for="pressao"> X </label>
-                            <input type="text" class="tam18" name="pressao" placeholder="Digite" />
+                            <input type="text" class="tam18" name="pressao1" placeholder="Digite" />
                             <label for="pressao"> mmHg </label>
                         </div>
 
@@ -808,13 +814,13 @@
                             <div class="coluna3">
                                 <label for="perfusao">Perfusão:</label>
                                 <div>
-                                    <label for="perfusao">> 2 seg.</label>
-                                    <input type="radio" name="perfusao" value="mais">
+                                    <label for="perfusao"> menor 2 seg.</label>
+                                    <input type="radio" name="perfusao" value="">
                                 </div>
                                 <div>
                                     <label for="perfusao">
-                                        < 2 seg.</label>
-                                            <input type="radio" name="perfusao" value="menos">
+                                        maior 2 seg.</label>
+                                            <input type="radio" name="perfusao" value="">
                                 </div>
                             </div>
                         </div>
@@ -1241,7 +1247,7 @@
                 <br>
 
                 <banner>
-                    <titulos>Queimaduras</titulos>
+                    <titulos id="queimaduras">Queimaduras</titulos>
                     <div class="table">
                         <table>
                             <tr>
@@ -2313,7 +2319,7 @@
     <!--Formulário sobre materiais uilizados deixados no hospital-->
     <br>
     <banner>
-        <titulos id="materiaisdesc">Materiais Utilizados Deixados No Hospital</titulos>
+        <titulos id="materiaisdesc1">Materiais Utilizados Deixados No Hospital</titulos>
         <div class="table">
             <table>
                 <tr>
@@ -2834,6 +2840,7 @@
 
                     //Sinais Vitais
                     $('input:text[name="pressao"]').val(data['pressao']);
+                    $('input:text[name="pressao1"]').val(data['pressao1']);
                     $('input:text[name="pulso"]').val(data['pulso']);
                     $('input:text[name="respiracao"]').val(data['respiracao']);
                     $('input:text[name="saturacao"]').val(data['saturacao']);

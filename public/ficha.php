@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   header("Content-Type: application/json");
   echo json_encode($ficha);
   exit();
-
 }
 
 $oqAconteceu = $_POST["oq_aconteceu"];
@@ -124,6 +123,7 @@ $total = $_POST["total"];
 $totalMenor = $_POST["total_menor"];
 
 $pressao = $_POST["pressao"];
+$pressao1 = $_POST["pressao1"];
 $pulso = $_POST["pulso"];
 $respiracao = $_POST["respiracao"];
 $saturacao = $_POST["saturacao"];
@@ -472,7 +472,7 @@ $id = $_SESSION["id"];
     periodo_gestacao, pre_natal, nome_medico, complicacoes, primeiro_filho, quantos_filhos, inicio_contracao, duracao_contracao, intervalo_contracao, sente_pressao, ruptura_bolsa, inspecao_visual, parto_realizado, hora_nascimento, sexo_bebe, nome_bebe,
     causado_animais, meio_transporte, desmoronamento_deslizamento, emergencia_medica, queda_2m, tentativa_suicidio, queda_propriaAltura, afogamento, agressao, atropelamento, choque_eletrico, desabamento, domestico, esportivo, intoxicacao, queda_bicicleta, queda_moto, queda_nivel, trabalho, transferencia, outros, outros_texto,
     espontanea_menor, espontanea, comando_menor, comando, estimulo_menor,  estimulo, nenhuma_menor, nenhuma, orientado, pf_apropriadas, confuso, palavras_inapropriadas, inapropriadas_menor, choro_grito, p_incompreensiveis, s_incompreensiveis, nenhuma_menor2, nenhuma_resposta, o_comandos, o_prontamente, localiza_menor, localiza, movimento_retirada, retirada_estimulado, flexao_menor, flexao_anormal,  extensao_menor, extensao_anormal, nenhuma_3, ausencia, total_menor, total,
-    pressao, pulso, respiracao, saturacao, hgt, temperatura, perfusao, anormal_normal,
+    pressao, pressao1, pulso, respiracao, saturacao, hgt, temperatura, perfusao, anormal_normal,
     psiquiatrico, respiratorio, respiratorio_opcoes, diabetes, diabetes_opcoes, obstetrico, obstetrico_opcoes, transporte, transporte_opcoes, outros_problemas, outros_text,
     numero_corpo, fratura, ferimento, hemorragias, esviceracao, fab, amputacao, queimadura1, queimadura2, queimadura3, numero_corpo2, fratura2, ferimento2, hemorragias2, esviceracao2, fab2, amputacao2, queimadura1_2, queimadura2_2, queimadura3_2, numero_corpo3, fratura3, ferimento3, hemorragias3, esviceracao3, fab3, amputacao3, queimadura1_3, queimadura2_3, queimadura3_3,
     local_ferimento, lado_ferimento, face_ferimento, tipo_ferimento, local_ferimento2, lado, face, tipo, local_ferimento3, lado3, face3, tipo3, local_ferimento4, lado4, face4, tipo4, local_ferimento5, lado5, face5, tipo5,
@@ -492,7 +492,7 @@ $id = $_SESSION["id"];
     '$periodoGestacao', $preNatal, '$nomeMedico', $complicacoes, $primeiroFilho, '$quantosFilhos', '$inicioContracao', '$duracaoContracao', '$intervaloContracao', $sentePressao, $rupturaBolsa, $inspecaoVisual, $partoRealizado, '$horaNascimento', $bebe, '$nomeBebe',
     $causadoAnimais, $meioTransporte, $desmoronamentoDeslizamento, $emergenciaMedica, $queda2m, $tentativaSuicidio, $quedaPropriaAltura, $afogamento, $agressao, $atropelamento, $choqueEletrico, $desabamento, $domestico, $esportivo, $intoxicacao, $quedaBicicleta, $quedaMoto, $quedaNivel, $trabalho, $transferencia, $outros, '$outrosTexto',
     $espontaneaMenor, $espontanea, $comandoMenor, $comando,$estimuloMenor, $estimulo, $nenhumaMenor, $nenhuma, $orientado, $pfApropriadas, $confuso, $palavrasInapropriadas, $inapropriadasMenor, $choroGrito, $pIncompreensiveis, $sIncompreensiveis, $nenhumaMenor2, $nenhumaResposta, $oComandos, $oProntamente, $localizaMenor, $localiza, $movimentoRetirada, $retiradaEstimulado,$flexaoMenor, $flexaoAnormal, $extensaoMenor, $extensaoAnormal, $nenhuma3, $ausencia, '$totalMenor', '$total',
-    '$pressao', '$pulso', '$respiracao', '$saturacao', '$hgt', '$temperatura', $perfusao, $anormalNormal,
+    '$pressao', '$pressao1', '$pulso', '$respiracao', '$saturacao', '$hgt', '$temperatura', $perfusao, $anormalNormal,
     $psiquiatrico, $respiratorio, '$respiratorioOpcoes', $diabetes, '$diabetesOpcoes', $obstetrico, '$obstetricoOpcoes', $transporte, '$transporteOpcoes', '$outrosProblemas', '$outrosTexto',
     '$numeroCorpo', $fratura, $ferimento, $hemorragias, $esviceracao, $fab, $amputacao, $queimadura1, $queimadura2, $queimadura3, '$numeroCorpo2', $fratura2, $ferimento2, $hemorragias2, $esviceracao2, $fab2, $amputacao2, $queimadura12, $queimadura22, $queimadura32,  '$numeroCorpo3', $fratura3, $ferimento3, $hemorragias3, $esviceracao3, $fab3, $amputacao3, $queimadura13, $queimadura23, $queimadura33,
     '$Localferimento', '$ladoFerimento', '$faceFerimento', '$tipoFerimento', '$Localferimento2', '$lado', '$face', '$tipo', '$Localferimento3', '$lado3', '$face3', '$tipo3', '$Localferimento4', '$lado4', '$face4', '$tipo4', '$Localferimento5', '$lado5', '$face5', '$tipo5',

@@ -356,6 +356,17 @@ background-color: rgba(0, 0, 0, 0.37);
     transition: left 0.3s ease;
     /* Efeito de deslizamento suave */
     z-index: 1;
+    overflow-y: auto
+}
+
+/*Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Cor*/
+::-webkit-scrollbar-thumb {
+    background-color: #660303;
 }
 
 /*Botão Menu Suspenso*/

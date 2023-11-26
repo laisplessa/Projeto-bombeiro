@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="ficha.css">
     <link rel="stylesheet" href="signaturepad/signaturepad.css">
 
-    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
     <script src="signaturepad/signaturepad.min.js"></script>
 
 </head>
@@ -149,7 +149,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Horário da última medicação:</div>
-                                <input type="time" class="insere" name="hora_medicacao" placeholder="00:00">
+                                <input type="time" class="hora_medicacao" name="hora_medicacao" placeholder="00:00">
                             </div>
                         </div>
 
@@ -189,7 +189,7 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <div>Que horas?</div>
-                                <input type="time" class="insere" name="ingeriu_horario" placeholder="00:00">
+                                <input type="time" class="ingeriu_horario" name="ingeriu_horario" placeholder="00:00">
                             </div>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
                     <div class="destaqueclaro">
                         <div class="simnao">
                             <div>Que horas iniciaram as contrações?</div>
-                            <input type="time" class="insere" name="inicio_contracao" placeholder="00:00">
+                            <input type="time" class="inicio_contracao" name="inicio_contracao" placeholder="00:00">
                         </div>
                     </div>
 
@@ -340,12 +340,12 @@
                             <div class="simnao">
                                 <div>Duração:</div>
                                 <br>
-                                <input type="time" class="insere" name="duracao_contracao" placeholder="00:00">
+                                <input type="time" class="duracao_contracao" name="duracao_contracao" placeholder="00:00">
                             </div>
                             <br>
                             <div class="simnao">
                                 <div>Intervalo:</div>
-                                <input type="time" class="insere" name="intervalo_contracao" placeholder="00:00">
+                                <input type="time" class="intervalo_contracao" name="intervalo_contracao" placeholder="00:00">
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                             </div>
                             <div class="simnao">
                                 <div>Hora do nascimento:</div>
-                                <input type="time" class="insere" name="hora_nascimento" placeholder="00:00">
+                                <input type="time" class="hora_nascimento" name="hora_nascimento" placeholder="00:00">
                             </div>
                         </div>
                     </div>
@@ -815,12 +815,12 @@
                                 <label for="perfusao">Perfusão:</label>
                                 <div>
                                     <label for="perfusao"> menor 2 seg.</label>
-                                    <input type="radio" name="perfusao" value="">
+                                    <input type="radio" name="perfusao" value="menor">
                                 </div>
                                 <div>
                                     <label for="perfusao">
                                         maior 2 seg.</label>
-                                            <input type="radio" name="perfusao" value="">
+                                            <input type="radio" name="perfusao" value="maior">
                                 </div>
                             </div>
                         </div>
@@ -2728,14 +2728,18 @@
                             alert("Erro: " + error);
                         }
                     });
+                } else {                    
+                    $('.form').signaturePad({
+                        drawOnly: true,
+                        defaultAction: 'drawIt',
+                        validateFields: false,
+                        lineWidth: 0,
+                        output: '.assinatura',
+                        clear: 'input[type=reset]',
+                    });
                 }
 
                 function preencherDados(data) {
-                    //Exemplo: name= "NOME DO INPUT NO HTML" val = NOME DO CAMPO NO BANCO DE DADOS, TABLE FICHA
-                    //$('input:text[name="quanto_tempo"]').val(data['quanto_tempo']);
-                    // $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
-                    // $('input:checkbox[name="causado_animais"]').filter('[value="' + data['causado_animais'] + '"]').attr('checked', true);
-
                     //Anamnese de emergência médica
                     $('input:text[name="oq_aconteceu"]').val(data['oq_aconteceu']);
                     $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
@@ -2743,12 +2747,12 @@
                     $('input:radio[name="problema_saude"]').filter('[value="' + data['problema_saude'] + '"]').attr('checked', true);
                     $('input:text[name="quais_problemas"]').val(data['quais']);
                     $('input:radio[name="medicacao"]').filter('[value="' + data['medicacao'] + '"]').attr('checked', true);
-                    $('input:time[name="hora_medicacao"]').val(data['ultima_medicacao']);
+                    $('input.hora_medicacao').val(data['ultima_medicacao']);
                     $('input:text[name="quais_medicacoes"]').val(data['quais_medicacao']);
                     $('input:radio[name="alergico"]').filter('[value="' + data['alergico'] + '"]').attr('checked', true);
                     $('input:text[name="alergia"]').val(data['especifique']);
                     $('input:radio[name="ingeriu"]').filter('[value="' + data['ingeriu'] + '"]').attr('checked', true);
-                    $('input:time[name="ingeriu_horario"]').val(data['horario_ingeriu']);
+                    $('input.ingeriu_horario').val(data['horario_ingeriu']);
 
                     //Dados inicias
                     $('input[type="date"][name="data"]').val(data['data'])
@@ -2756,7 +2760,7 @@
                     $('input:text[name="nome_hospital"]').val(data['nome_hospital']);
                     $('input:text[name="nome_paciente"]').val(data['nome_paciente']);
                     $('input:text[name="idade_paciente"]').val(data['idade_paciente']);
-                    ('input[type="tel"][name="telefone_paciente"]').val(data['telefone']);
+                    $('input[type="tel"][name="telefone_paciente"]').val(data['telefone']);
                     $('input:text[name="rg_cpf"]').val(data['rg_cpf']);
                     $('input:text[name="nome_acompanhante"]').val(data['nome_acompanhante']);
                     $('input:text[name="idade_acompanhante"]').val(data['idade_acompanhante']);
@@ -2768,15 +2772,15 @@
                     $('input:text[name="nome_medico"]').val(data['nome_medico']);
                     $('input:radio[name="complicacoes"]').filter('[value="' + data['complicacoes'] + '"]').attr('checked', true);
                     $('input:radio[name="primeiro"]').filter('[value="' + data['primeiro_filho'] + '"]').attr('checked', true);
-                    $('input:text[name="quantos_filhos"]').val(data['quantos_filhos']);
-                    $('input:time[name="inicio_contracao"]').val(data['inicio_contracao']);
-                    $('input:time[name="duracao_contracao"]').val(data['duracao_contracao']);
-                    $('input:time[name="intervalo_contracao"]').val(data['intervalo_contracao']);
+                    $('input[type="number"][name="quantos_filhos"]').val(data['quantos_filhos']);
+                    $('input.inicio_contracao').val(data['inicio_contracao']);
+                    $('input.duracao_contracao').val(data['duracao_contracao']);
+                    $('input.intervalo_contracao').val(data['intervalo_contracao']);
                     $('input:radio[name="pressao_quadril"]').filter('[value="' + data['sente_pressao'] + '"]').attr('checked', true);
                     $('input:radio[name="ruptura"]').filter('[value="' + data['ruptura_bolsa'] + '"]').attr('checked', true);
                     $('input:radio[name="inspecao"]').filter('[value="' + data['inspecao_visual'] + '"]').attr('checked', true);
                     $('input:radio[name="parto"]').filter('[value="' + data['parto_realizado'] + '"]').attr('checked', true);
-                    $('input:time[name="hora_nascimento"]').val(data['hora_nascimentos']);
+                    $('input.hora_nascimento').val(data['hora_nascimentos']);
                     $('input:radio[name="bebe"]').filter('[value="' + data['sexo_bebe'] + '"]').attr('checked', true);
                     $('input:text[name="nome_bebe"]').val(data['nome_bebe']);
 
@@ -3202,16 +3206,19 @@
                     //Responsávelo pelo preenchimento
                     $('input:text[name="ficha"]').val(data['respon_ficha']);
                     $('input:text[name="fibra"]').val(data['respon_fibra']);
+
+                    $('.form').signaturePad({
+                        drawOnly: true,
+                        defaultAction: 'drawIt',
+                        validateFields: false,
+                        lineWidth: 0,
+                        displayOnly: true,
+                        output: '.assinatura',
+                        clear: 'input[type=reset]',
+                    }).regenerate(data['assinatura']);
+
                 }
 
-                $('.form').signaturePad({
-                    drawOnly: true,
-                    defaultAction: 'drawIt',
-                    validateFields: false,
-                    lineWidth: 0,
-                    output: '.assinatura',
-                    clear: 'input[type=reset]',
-                });//Exemplo para mostrar a assinatura já preenchida .regenerate([{"lx":70,"ly":101,"mx":70,"my":100},{"lx":72,"ly":100,"mx":70,"my":101},{"lx":77,"ly":98,"mx":72,"my":100},{"lx":85,"ly":95,"mx":77,"my":98},{"lx":96,"ly":90,"mx":85,"my":95},{"lx":107,"ly":85,"mx":96,"my":90},{"lx":119,"ly":80,"mx":107,"my":85},{"lx":131,"ly":73,"mx":119,"my":80},{"lx":142,"ly":67,"mx":131,"my":73},{"lx":153,"ly":62,"mx":142,"my":67},{"lx":163,"ly":56,"mx":153,"my":62},{"lx":172,"ly":52,"mx":163,"my":56},{"lx":178,"ly":49,"mx":172,"my":52},{"lx":178,"ly":48,"mx":178,"my":49},{"lx":178,"ly":47,"mx":178,"my":48},{"lx":178,"ly":46,"mx":178,"my":47},{"lx":175,"ly":46,"mx":178,"my":46},{"lx":172,"ly":46,"mx":175,"my":46},{"lx":167,"ly":46,"mx":172,"my":46},{"lx":157,"ly":46,"mx":167,"my":46},{"lx":148,"ly":46,"mx":157,"my":46},{"lx":140,"ly":46,"mx":148,"my":46},{"lx":132,"ly":47,"mx":140,"my":46},{"lx":123,"ly":49,"mx":132,"my":47},{"lx":115,"ly":51,"mx":123,"my":49},{"lx":108,"ly":52,"mx":115,"my":51},{"lx":103,"ly":53,"mx":108,"my":52},{"lx":102,"ly":54,"mx":103,"my":53},{"lx":101,"ly":54,"mx":102,"my":54},{"lx":101,"ly":55,"mx":101,"my":54},{"lx":102,"ly":59,"mx":101,"my":55},{"lx":107,"ly":63,"mx":102,"my":59},{"lx":110,"ly":65,"mx":107,"my":63},{"lx":115,"ly":69,"mx":110,"my":65},{"lx":121,"ly":73,"mx":115,"my":69},{"lx":127,"ly":78,"mx":121,"my":73},{"lx":131,"ly":82,"mx":127,"my":78},{"lx":134,"ly":87,"mx":131,"my":82},{"lx":136,"ly":91,"mx":134,"my":87},{"lx":137,"ly":94,"mx":136,"my":91},{"lx":138,"ly":98,"mx":137,"my":94},{"lx":138,"ly":101,"mx":138,"my":98},{"lx":135,"ly":104,"mx":138,"my":101},{"lx":127,"ly":108,"mx":135,"my":104},{"lx":118,"ly":111,"mx":127,"my":108},{"lx":108,"ly":113,"mx":118,"my":111},{"lx":97,"ly":115,"mx":108,"my":113},{"lx":89,"ly":116,"mx":97,"my":115},{"lx":82,"ly":117,"mx":89,"my":116},{"lx":86,"ly":118,"mx":82,"my":117},{"lx":93,"ly":118,"mx":86,"my":118},{"lx":104,"ly":118,"mx":93,"my":118},{"lx":120,"ly":117,"mx":104,"my":118},{"lx":144,"ly":113,"mx":120,"my":117},{"lx":161,"ly":108,"mx":144,"my":113},{"lx":175,"ly":102,"mx":161,"my":108},{"lx":186,"ly":96,"mx":175,"my":102},{"lx":197,"ly":92,"mx":186,"my":96},{"lx":199,"ly":90,"mx":197,"my":92},{"lx":199,"ly":89,"mx":199,"my":90},{"lx":199,"ly":88,"mx":199,"my":89},{"lx":198,"ly":88,"mx":199,"my":88},{"lx":193,"ly":88,"mx":198,"my":88},{"lx":190,"ly":88,"mx":193,"my":88},{"lx":185,"ly":88,"mx":190,"my":88},{"lx":180,"ly":89,"mx":185,"my":88},{"lx":177,"ly":90,"mx":180,"my":89},{"lx":172,"ly":90,"mx":177,"my":90},{"lx":166,"ly":91,"mx":172,"my":90},{"lx":162,"ly":92,"mx":166,"my":91},{"lx":161,"ly":94,"mx":162,"my":92},{"lx":164,"ly":94,"mx":161,"my":94},{"lx":171,"ly":94,"mx":164,"my":94},{"lx":184,"ly":94,"mx":171,"my":94},{"lx":200,"ly":94,"mx":184,"my":94},{"lx":228,"ly":94,"mx":200,"my":94},{"lx":250,"ly":93,"mx":228,"my":94},{"lx":271,"ly":90,"mx":250,"my":93},{"lx":285,"ly":89,"mx":271,"my":90},{"lx":297,"ly":88,"mx":285,"my":89},{"lx":304,"ly":87,"mx":297,"my":88},{"lx":303,"ly":87,"mx":304,"my":87},{"lx":295,"ly":86,"mx":303,"my":87},{"lx":286,"ly":86,"mx":295,"my":86},{"lx":275,"ly":86,"mx":286,"my":86},{"lx":267,"ly":86,"mx":275,"my":86},{"lx":261,"ly":86,"mx":267,"my":86},{"lx":264,"ly":86,"mx":261,"my":86},{"lx":271,"ly":86,"mx":264,"my":86},{"lx":283,"ly":87,"mx":271,"my":86},{"lx":293,"ly":88,"mx":283,"my":87},{"lx":301,"ly":89,"mx":293,"my":88},{"lx":308,"ly":89,"mx":301,"my":89},{"lx":308,"ly":90,"mx":308,"my":89},{"lx":304,"ly":91,"mx":308,"my":90},{"lx":300,"ly":92,"mx":304,"my":91},{"lx":293,"ly":92,"mx":300,"my":92},{"lx":286,"ly":93,"mx":293,"my":92},{"lx":279,"ly":93,"mx":286,"my":93},{"lx":281,"ly":94,"mx":279,"my":93},{"lx":284,"ly":94,"mx":281,"my":94},{"lx":293,"ly":95,"mx":284,"my":94},{"lx":308,"ly":96,"mx":293,"my":95},{"lx":324,"ly":96,"mx":308,"my":96},{"lx":341,"ly":97,"mx":324,"my":96},{"lx":356,"ly":98,"mx":341,"my":97},{"lx":366,"ly":99,"mx":356,"my":98},{"lx":374,"ly":100,"mx":366,"my":99},{"lx":375,"ly":100,"mx":374,"my":100},{"lx":376,"ly":101,"mx":375,"my":100},{"lx":377,"ly":101,"mx":376,"my":101},{"lx":373,"ly":101,"mx":377,"my":101},{"lx":366,"ly":101,"mx":373,"my":101},{"lx":358,"ly":101,"mx":366,"my":101},{"lx":352,"ly":101,"mx":358,"my":101},{"lx":355,"ly":101,"mx":352,"my":101},{"lx":364,"ly":101,"mx":355,"my":101},{"lx":377,"ly":100,"mx":364,"my":101},{"lx":397,"ly":98,"mx":377,"my":100},{"lx":421,"ly":96,"mx":397,"my":98},{"lx":447,"ly":91,"mx":421,"my":96},{"lx":471,"ly":85,"mx":447,"my":91},{"lx":487,"ly":81,"mx":471,"my":85},{"lx":498,"ly":78,"mx":487,"my":81},{"lx":505,"ly":76,"mx":498,"my":78},{"lx":505,"ly":75,"mx":505,"my":76},{"lx":505,"ly":74,"mx":505,"my":75},{"lx":502,"ly":71,"mx":505,"my":74},{"lx":498,"ly":70,"mx":502,"my":71},{"lx":495,"ly":69,"mx":498,"my":70},{"lx":493,"ly":69,"mx":495,"my":69},{"lx":490,"ly":69,"mx":493,"my":69},{"lx":486,"ly":69,"mx":490,"my":69},{"lx":482,"ly":69,"mx":486,"my":69},{"lx":478,"ly":69,"mx":482,"my":69},{"lx":473,"ly":69,"mx":478,"my":69},{"lx":467,"ly":71,"mx":473,"my":69},{"lx":461,"ly":74,"mx":467,"my":71},{"lx":456,"ly":77,"mx":461,"my":74},{"lx":451,"ly":81,"mx":456,"my":77},{"lx":446,"ly":86,"mx":451,"my":81},{"lx":442,"ly":92,"mx":446,"my":86},{"lx":439,"ly":101,"mx":442,"my":92},{"lx":437,"ly":109,"mx":439,"my":101},{"lx":436,"ly":116,"mx":437,"my":109},{"lx":436,"ly":124,"mx":436,"my":116},{"lx":437,"ly":135,"mx":436,"my":124},{"lx":443,"ly":145,"mx":437,"my":135},{"lx":453,"ly":153,"mx":443,"my":145},{"lx":469,"ly":161,"mx":453,"my":153},{"lx":499,"ly":168,"mx":469,"my":161},{"lx":524,"ly":171,"mx":499,"my":168},{"lx":542,"ly":172,"mx":524,"my":171},{"lx":554,"ly":172,"mx":542,"my":172},{"lx":560,"ly":172,"mx":554,"my":172},{"lx":560,"ly":171,"mx":560,"my":172},{"lx":560,"ly":168,"mx":560,"my":171},{"lx":559,"ly":163,"mx":560,"my":168},{"lx":554,"ly":159,"mx":559,"my":163},{"lx":543,"ly":155,"mx":554,"my":159},{"lx":529,"ly":150,"mx":543,"my":155},{"lx":507,"ly":144,"mx":529,"my":150},{"lx":489,"ly":142,"mx":507,"my":144},{"lx":476,"ly":140,"mx":489,"my":142},{"lx":464,"ly":137,"mx":476,"my":140},{"lx":454,"ly":135,"mx":464,"my":137},{"lx":447,"ly":134,"mx":454,"my":135},{"lx":446,"ly":134,"mx":447,"my":134},{"lx":444,"ly":133,"mx":446,"my":134},{"lx":441,"ly":132,"mx":444,"my":133},{"lx":437,"ly":132,"mx":441,"my":132},{"lx":427,"ly":132,"mx":437,"my":132},{"lx":413,"ly":132,"mx":427,"my":132},{"lx":395,"ly":132,"mx":413,"my":132},{"lx":371,"ly":132,"mx":395,"my":132},{"lx":342,"ly":136,"mx":371,"my":132}]);
             });
         }(this));
 

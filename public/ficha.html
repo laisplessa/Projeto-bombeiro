@@ -2739,7 +2739,7 @@
                     });
                 }
 
-                function preencherDados(data) {
+                function preencherDados(data) { 
                     //Anamnese de emergência médica
                     $('input:text[name="oq_aconteceu"]').val(data['oq_aconteceu']);
                     $('input:radio[name="outras_vezes"]').filter('[value="' + data['outras_vezes'] + '"]').attr('checked', true);
@@ -2856,13 +2856,13 @@
                     //Problemas encontrados suspeitos
                     $('input:checkbox[name="psiquiatrico"]').filter('[value="' + data['psiquiatrico'] + '"]').attr('checked', true);
                     $('input:checkbox[name="respiratorio"]').filter('[value="' + data['respiratorio'] + '"]').attr('checked', true);
-                    $('#opcoes[name="respiratorio_opcoes"]').val(data['respiratorio_opcoes']);
+                    $('select[name="respiratorio_opcoes"] option[value=' + data['respiratorio_opcoes'] + ']').attr('selected', true);
                     $('input:checkbox[name="diabetes"]').filter('[value="' + data['diabetes'] + '"]').attr('checked', true);
-                    $('#opcoes[name="diabetes_opcoes"]').val(data['diabetes_opcoes']);
+                    $('select[name="diabetes_opcoes"] option[value=' + data['diabetes_opcoes'] + ']').attr('selected', true);
                     $('input:checkbox[name="obstetrico"]').filter('[value="' + data['obstetrico'] + '"]').attr('checked', true);
-                    $('#opcoes[name="obstetrico_opcoes"]').val(data['obstetrico_opcoes']);
+                    $('select[name="obstetrico_opcoes"] option[value=' + data['obstetrico_opcoes'] + ']').attr('selected', true);
                     $('input:checkbox[name="transporte"]').filter('[value="' + data['transporte'] + '"]').attr('checked', true);
-                    $('#opcoes[name="transporte_opcoes"]').val(data['transporte_opcoes']);
+                    $('select[name="transporte_opcoes"] option[value=' + data['transporte_opcoes'] + ']').attr('selected', true);
                     $('input:checkbox[name="outros_problemas"]').filter('[value="' + data['outros_problemas'] + '"]').attr('checked', true);
                     $('input:text[name="outros_text"]').val(data['outros_text']);
 
@@ -2900,25 +2900,27 @@
 
                     //Ferimentos
                     $('input:text[name="local_ferimento"]').val(data['local_ferimento']);
-                    $('#opcoes[name="lado_ferimento"]').val(data['lado_ferimento']);
-                    $('#opcoes[name="face_ferimento"]').val(data['face_ferimento']);
-                    $('#opcoes[name="tipo_ferimento"]').val(data['tipo_ferimento']);
+                    $('select[name="lado_ferimento"] option[value=' + data['lado_ferimento'] + ']').attr('selected', true);
+                    $('select[name="face_ferimento"] option[value=' + data['face_ferimento'] + ']').attr('selected', true);
+                    $('select[name="tipo_ferimento"] option[value=' + data['tipo_ferimento'] + ']').attr('selected', true);
                     $('input:text[name="local_ferimento2"]').val(data['local_ferimento2']);
-                    $('#opcoes[name="lado"]').val(data['lado']);
-                    $('#opcoes[name="face"]').val(data['face']);
-                    $('#opcoes[name="tipo"]').val(data['tipo']);
+                    $('select[name="lado"] option[value=' + data['lado'] + ']').attr('selected', true);
+                    $('select[name="face"] option[value=' + data['face'] + ']').attr('selected', true);
+                    $('select[name="tipo"] option[value=' + data['tipo'] + ']').attr('selected', true);
                     $('input:text[name="local_ferimento3"]').val(data['local_ferimento3']);
-                    $('#opcoes[name="lado3"]').val(data['lado3']);
-                    $('#opcoes[name="face3"]').val(data['face3']);
-                    $('#opcoes[name="tipo3"]').val(data['tipo3']);
+                    $('select[name="lado3"] option[value=' + data['lado3'] + ']').attr('selected', true);
+                    $('select[name="face3"] option[value=' + data['face3'] + ']').attr('selected', true);
+                    $('select[name="tipo3"] option[value=' + data['tipo3'] + ']').attr('selected', true);
                     $('input:text[name="local_ferimento4"]').val(data['local_ferimento4']);
-                    $('#opcoes[name="lado4"]').val(data['lado4']);
-                    $('#opcoes[name="face4"]').val(data['face4']);
-                    $('#opcoes[name="tipo4"]').val(data['tipo4']);
+                    
+                    $('select[name="lado4"] option[value=' + data['lado4'] + ']').attr('selected', true);
+                    $('select[name="face4"] option[value=' + data['face4'] + ']').attr('selected', true);
+                    $('select[name="tipo4"] option[value=' + data['tipo4'] + ']').attr('selected', true);
                     $('input:text[name="local_ferimento5"]').val(data['local_ferimento5']);
-                    $('#opcoes[name="lado5"]').val(data['lado5']);
-                    $('#opcoes[name="face5"]').val(data['face5']);
-                    $('#opcoes[name="tipo5"]').val(data['tipo5']);
+                    
+                    $('select[name="lado5"] option[value=' + data['lado5'] + ']').attr('selected', true);
+                    $('select[name="face5"] option[value=' + data['face5'] + ']').attr('selected', true);
+                    $('select[name="tipo5"] option[value=' + data['tipo5'] + ']').attr('selected', true);
 
                     //Queimaduras
                     $('input:checkbox[name="qcabeca_1grau"]').filter('[value="' + data['qcabeca_1grau'] + '"]').attr('checked', true);
@@ -3207,15 +3209,27 @@
                     $('input:text[name="ficha"]').val(data['respon_ficha']);
                     $('input:text[name="fibra"]').val(data['respon_fibra']);
 
-                    $('.form').signaturePad({
-                        drawOnly: true,
-                        defaultAction: 'drawIt',
-                        validateFields: false,
-                        lineWidth: 0,
-                        displayOnly: true,
-                        output: '.assinatura',
-                        clear: 'input[type=reset]',
-                    }).regenerate(data['assinatura']);
+                    if (data['assinatura'] == '') {
+                        $('.form').signaturePad({
+                            drawOnly: true,
+                            defaultAction: 'drawIt',
+                            validateFields: false,
+                            lineWidth: 0,
+                            displayOnly: true,
+                            output: '.assinatura',
+                            clear: 'input[type=reset]',
+                        });
+                    } else {
+                        $('.form').signaturePad({
+                            drawOnly: true,
+                            defaultAction: 'drawIt',
+                            validateFields: false,
+                            lineWidth: 0,
+                            displayOnly: true,
+                            output: '.assinatura',
+                            clear: 'input[type=reset]',
+                        }).regenerate(data['assinatura']);
+                    }
 
                 }
 

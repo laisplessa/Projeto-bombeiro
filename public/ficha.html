@@ -230,14 +230,14 @@
 
                     <div class="destaqueclaro">
                         <label for="idade">Idade do paciente:</label><br>
-                        <input type="text" class="form-control" name="idade_paciente"
+                        <input type="text" class="form-control" name="idade_paciente" maxlength="3"
                             placeholder="Digite a idade do paciente" />
                     </div>
 
                     <div class="destaqueclaro">
                         <label for="fone">Telefone:</label><br>
-                        <input type="tel" class="form-control phone-mask" name="telefone_paciente"
-                            placeholder="(00) 0000-0000">
+                        <input type="tel" class="form-control phone-mask" name="telefone_paciente" minlength="11" maxlength="11"
+                            placeholder="(00) 00000-0000">
                     </div>
 
                     <div class="destaqueclaro">
@@ -255,7 +255,7 @@
 
                     <div class="destaqueclaro">
                         <label for="idade-acompanhante">Idade do acompanhante:</label><br>
-                        <input type="number" class="form-control" name="idade_acompanhante"
+                        <input type="number" class="form-control" name="idade_acompanhante" maxlength="3"
                             placeholder="Digite a idade do acompanhante" />
                     </div>
 
@@ -757,11 +757,11 @@
                             </tr>
 
                             <th colspan="2"><label for="total">TOTAL (GCS)(3-15)</label><br>
-                                <input type="text" name="total" placeholder="Digite o total" />
+                                <input type="text" name="total" placeholder="Digite o total" maxlength="2"/>
                             </th>
 
                             <th colspan="2"><label for="total_menor">TOTAL (GCS)(3-15)</label><br>
-                                <input type="text" name="total_menor" placeholder="Digite o total" />
+                                <input type="text" name="total_menor" placeholder="Digite o total" maxlength="2"/>
                             </th>
 
                         </table>
@@ -926,7 +926,7 @@
                             <tr class="destaqueclaro">
                                 <td>
                                     <input type="text" class="form-control" name="numerocorpo"
-                                        placeholder="Digite o número do local do corpo" />
+                                        placeholder="Digite o número do local do corpo" maxlength="2" />
                                 </td>
 
                                 <td>
@@ -969,7 +969,7 @@
 
                             <td>
                                 <input type="text" class="form-control" name="numeroCorpo2"
-                                    placeholder="Digite o número do local do corpo" />
+                                    placeholder="Digite o número do local do corpo"  maxlength="2" />
                             </td>
 
                             <td>
@@ -1003,7 +1003,7 @@
                             <tr class="destaqueclaro">
                                 <td>
                                     <input type="text" class="form-control" name="numeroCorpo3"
-                                        placeholder="Digite o número do local do corpo" />
+                                        placeholder="Digite o número do local do corpo"  maxlength="2" />
                                 </td>
 
                                 <td>
@@ -2636,7 +2636,7 @@
             <div class="destaqueclaro">
                 <label for="doc_testemunha">Documento testemunha:</label> <br>
                 <input type="text" class="form-control" name="doc_testemunha"
-                    placeholder="Digite o CPF/RG da testemunha" />
+                    placeholder="Digite o CPF/RG da testemunha" minlength="7" maxlength="11"/>
             </div>
             <div class="destaqueclaro">
                 <label for="testemunha2">Testemunha:</label>
@@ -2645,7 +2645,7 @@
             <div class="destaqueclaro">
                 <label for="doc_testemunha2">Documento testemunha:</label> <br>
                 <input type="text" class="form-control" name="doc_testemunha2"
-                    placeholder="Digite o CPF/RG da testemunha" />
+                    placeholder="Digite o CPF/RG da testemunha"  minlength="7" maxlength="11" />
             </div>
         </div>
     </banner>
@@ -3190,7 +3190,6 @@
                     $('input:text[name="rg_numero"]').val(data['rg_numero']);
                     $('input:text[name="cpf_numero"]').val(data['cpf_numero']);
                     $('input:text[name="desp"]').val(data['desp']);
-                    //FALTA INPUT ASSINATURA
                     $('input:text[name="testemunha"]').val(data['testemunha']);
                     $('input:text[name="desp"]').val(data['desp']);
                     $('input:text[name="doc_testemunha"]').val(data['doc_testemunha']);

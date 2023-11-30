@@ -43,7 +43,7 @@
           }
 
           if (!ret.erro) {
-            location.href = 'cinativa.html';
+            location.href = 'admin.html';
           }
         },
         error: function (xhr, status, error) {
@@ -91,8 +91,7 @@
 
       <p>Crie sua Senha</p>
       <input type="password" class="cadastro-input" id="senha" name="senha" value="" placeholder="********"
-        maxlength="15" minlength="8" onblur="validarSenha()" />
-      <div id="senhaInvalida" style="color: black;"></div>
+        maxlength="15" minlength="8" />
 
       <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
         href="cinativa.html"></a>

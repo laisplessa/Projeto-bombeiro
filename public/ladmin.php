@@ -8,11 +8,10 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 session_start();
 
-$nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $senha = $_POST["senha"];
 
-if ($nome == null || $cpf == null || $senha == null) {
+if ($cpf == null || $senha == null) {
 
   $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações corretamente");
   header("Content-Type: application/json");
@@ -21,7 +20,7 @@ if ($nome == null || $cpf == null || $senha == null) {
 
 } else {
 
-  $sql = "SELECT * FROM admin WHERE cpf = '$cpf' AND senha = '$senha' AND nome = '$nome' LIMIT 1";
+  $sql = "SELECT * FROM admin WHERE cpf = '$cpf' AND senha = '$senha' LIMIT 1";
 
   $run_query = mysqli_query($con, $sql);
   $count = mysqli_num_rows($run_query);

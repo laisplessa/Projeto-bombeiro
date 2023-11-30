@@ -42,17 +42,15 @@
           }
 
           if (!ret.erro) {
-            location.href = 'admin.html';
+            location.href = 'cinativa.html';
           }
         },
         error: function (xhr, status, error) {
           alert("Erro: " + error);
         },
         beforeSend: function () {
-          // Fazer algo antes de enviar a requisição
         },
         complete: function () {
-          // Fazer algo após a conclusão da requisição
         },
       });
     }
@@ -96,7 +94,7 @@
       <div id="senhaInvalida" style="color: black;"></div>
 
       <input type="button" name="enviar" value="Cadastrar" class="cadastro-button" onclick="cadastrar();" a
-        href="admin.html"></a>
+        href="cinativa.html"></a>
     </div>
   </form>
 </body>

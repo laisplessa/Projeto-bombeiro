@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="ficha.css">
     <link rel="stylesheet" href="signaturepad/signaturepad.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
     <script src="signaturepad/signaturepad.min.js"></script>
 
@@ -17,12 +18,13 @@
     <!--Título e subtítulo-->
     <div class="fundo">
         <div class="logo">
-            <img src="logobombeiros.png" height="140" width="140" align="right">
-            <!-- </div>  -->
-
             <h1>Bombeiros Voluntários<h1>
-                    <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
+                <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
+        <!-- <div class="sair">
+            <input type="button" name="Início" value="Início" class="button" href="inicio.html" />
+        </div> -->
         </div>
+    </div>
 
         <!-- Botão do Menu -->
         <div class="divmenu">
@@ -90,7 +92,7 @@
                 <banner>
                     <titulos id="Anamnese">Anamnese da Emergência Médica</titulos>
                     <div>
-                        <div class="destaqueclaro">
+                        <div class="destaqueclaro"> <br>
                             <div>O que aconteceu? (sinais e sintomas)</div>
                             <div><input class="tam90" type="text" name="oq_aconteceu"
                                     placeholder="Digite o que aconteceu" />
@@ -210,8 +212,8 @@
                         <div class="destaqueclaro">
                             <div class="simnao">
                                 <label for="sexo">Sexo:</label>
-                                <input name="sexo_paciente" type="radio" value="1">Feminino
-                                <input name="sexo_paciente" type="radio" value="0" checked>Masculino
+                                <input name="sexo_paciente" type="radio" value="1" onchange="verificarSexo()">Feminino
+                                <input name="sexo_paciente" type="radio" value="0" checked onchange="verificarSexo()">Masculino
                             </div>
                         </div>
                     </div>
@@ -270,7 +272,7 @@
 
                 <br>
 
-                <banner>
+                <banner id="anamneseGestacionalBanner" style="display: none;">
                     <titulos id="AnamneseGestacional">Anamnese Gestacional</titulos>
 
                     <div class="destaqueclaro">
@@ -840,13 +842,13 @@
                 <banner>
                     <titulos id="problemas">Problemas Encontrados Suspeitos</titulos>
                     <div>
-
+                        <div class="coluna2">
                         <div class="destaqueclaro">
                             <input type="hidden" name="psiquiatrico" value="0" checked>
                             <input type="checkbox" name="psiquiatrico" value="1">
                             <label for="psiquiatrico">Psiquiátrico</label>
                         </div>
-
+<br>
                         <div class="destaqueclaro">
                             <input type="hidden" name="respiratorio" value="0" checked>
                             <input type="checkbox" name="respiratorio" value="1">
@@ -904,6 +906,7 @@
                             <input type="text" class="form-control" name="outros_text" placeholder="Digite os outros" />
                         </div>
                     </div>
+                    </div>
                 </banner>
 
                 <br>
@@ -913,7 +916,7 @@
                     <titulos id="localtraumas">Localização dos Traumas</titulos>
                     <br><br>
                     <div class="table">
-                        <table>
+                        <table id="tabelaFerimentos">
                             <div class="imagem">
                                 <img src="corpo-frente.png" width="300" height="300">
                                 <img src="corpo-tras.png" width="300" height="300">
@@ -928,18 +931,17 @@
                                     <input type="text" class="form-control" name="numerocorpo"
                                         placeholder="Digite o número do local do corpo" maxlength="2" />
                                 </td>
-
                                 <td>
                                     <input type="hidden" name="fratura" value="0">
                                     <input type="checkbox" name="fratura" value="1" />Fraturas/Luxações/
-                                    Entorses <br>
+                                    Entorses  <br>
 
                                     <input type="hidden" name="ferimento" value="0">
                                     <input type="checkbox" name="ferimento" value="1" />Ferimentos
                                     diversos <br>
 
                                     <input type="hidden" name="hemorragias" value="0">
-                                    <input type="checkbox" name="hemorragias" value="1" />Hemorragias
+                                    <input type="checkbox" name="hemorragias" value="1" />Hemorragias 
                                     <br>
 
                                     <input type="hidden" name="esviceracao" value="0">
@@ -950,7 +952,8 @@
                                     <input type="checkbox" name="fab" value="" />F.A.B/ F.A.F <br>
 
                                     <input type="hidden" name="amputacao" value="0">
-                                    <input type="checkbox" name="amputacao" value="1" />Amputação <br>
+                                    <input type="checkbox" name="amputacao" value="1" />Amputação 
+                                    <br>
 
                                     <input type="hidden" name="queimadura1" value="0">
                                     <input type="checkbox" name="queimadura1" value="1" />Queimadura 1°
@@ -967,129 +970,50 @@
 
                             </tr>
 
-                            <td>
-                                <input type="text" class="form-control" name="numeroCorpo2"
-                                    placeholder="Digite o número do local do corpo"  maxlength="2" />
-                            </td>
-
-                            <td>
-                                <input type="hidden" name="fratura2" value="0">
-                                <input type="checkbox" name="fratura2" value="1" />Fraturas/Luxações/
-                                Entorses <br>
-                                <input type="hidden" name="ferimento2" value="0">
-                                <input type="checkbox" name="ferimento2" value="1" />Ferimentos diversos
-                                <br>
-                                <input type="hidden" name="hemorragias2" value="0">
-                                <input type="checkbox" name="hemorragias2" value="1" />Hemorragias <br>
-                                <input type="hidden" name="esviceracao2" value="0">
-                                <input type="checkbox" name="esviceracao2" value="1" />Esviceração <br>
-                                <input type="hidden" name="fab2" value="0">
-                                <input type="checkbox" name="fab2" value="1" />F.A.B/ F.A.F <br>
-                                <input type="hidden" name="amputacao2" value="0">
-                                <input type="checkbox" name="amputacao2" value="1" />Amputação <br>
-                                <input type="hidden" name="queimadura1_2" value="0">
-                                <input type="checkbox" name="queimadura1_2" value="1" />Queimadura 1° grau
-                                <br>
-                                <input type="hidden" name="queimadura2_2" value="0">
-                                <input type="checkbox" name="queimadura2_2" value="1" />Queimadura 2° grau
-                                <br>
-                                <input type="hidden" name="queimadura3_2" value="0">
-                                <input type="checkbox" name="queimadura3_2" value="1" />Queimadura 3° grau
-                                <br>
-
-                            </td>
-
-                            </tr>
-                            <tr class="destaqueclaro">
-                                <td>
-                                    <input type="text" class="form-control" name="numeroCorpo3"
-                                        placeholder="Digite o número do local do corpo"  maxlength="2" />
-                                </td>
-
-                                <td>
-                                    <input type="hidden" name="fratura3" value="0">
-                                    <input type="checkbox" name="fratura3" value="1" />Fraturas/Luxações/
-                                    Entorses <br>
-                                    <input type="hidden" name="ferimento3" value="0">
-                                    <input type="checkbox" name="ferimento3" value="1" />Ferimentos
-                                    diversos <br>
-
-                                    <input type="hidden" name="hemorragias3" value="0">
-                                    <input type="checkbox" name="hemorragias3" value="1" />Hemorragias
-                                    <br>
-
-                                    <input type="hidden" name="esviceracao3" value="0">
-                                    <input type="checkbox" name="esviceracao3" value="1" />Esviceração
-                                    <br>
-
-                                    <input type="hidden" name="fab3" value="0">
-                                    <input type="checkbox" name="fab3" value="1" />F.A.B/ F.A.F <br>
-
-                                    <input type="hidden" name="amputacao3" value="0">
-                                    <input type="checkbox" name="amputacao3" value="1" />Amputação <br>
-
-                                    <input type="hidden" name="queimadura1_3" value="0">
-                                    <input type="checkbox" name="queimadura1_3" value="1" />Queimadura 1°
-                                    grau <br>
-
-                                    <input type="hidden" name="queimadura2_3" value="0">
-                                    <input type="checkbox" name="queimadura2_3" value="1" />Queimadura 2°
-                                    grau <br>
-
-                                    <input type="hidden" name="queimadura3_3" value="0">
-                                    <input type="checkbox" name="queimadura3_3" value="1" />Queimadura 3°
-                                    grau <br>
-                                </td>
-
-                            </tr>
-
-
-
-                        </table>
-                    </div>
-
-                    <br>
-
-                </banner>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+                            <div class="mais" name="mais" class="button" onclick="adicionarCampo();"> + </div>
+                        </banner>
 
                 <!--Formulário sobre o ferimento-->
                 <br>
-
                 <banner>
                     <titulos id="ferimentos">Ferimentos</titulos>
                     <div class="table">
-                        <table>
+                        <table id="tabelaFerimentos">
                             <tr>
                                 <th>Local</th>
                                 <th>Lado</th>
                                 <th>Face</th>
                                 <th>Tipo</th>
                             </tr>
-
+                
                             <tr class="destaqueclaro">
                                 <td>
-                                    <input type="text" class="form-control" name="local_ferimento"
-                                        placeholder="Digite o local do ferimento" />
+                                    <input type="text" class="form-control" name="local_ferimento[]" placeholder="Digite o local do ferimento" />
                                 </td>
-
+                
                                 <td>
-                                    <select name="lado_ferimento">
+                                    <select name="lado_ferimento[]">
                                         <option value="" selected></option>
                                         <option value="direito">Direito</option>
                                         <option value="esquerdo">Esquerdo</option>
                                     </select>
                                 </td>
-
+                
                                 <td>
-                                    <select name="face_ferimento">
+                                    <select name="face_ferimento[]">
                                         <option value="" selected></option>
                                         <option value="frontal">Frontal</option>
                                         <option value="posterior">Posterior</option>
                                     </select>
                                 </td>
-
+                
                                 <td>
-                                    <select name="tipo_ferimento">
+                                    <select name="tipo_ferimento[]">
                                         <option value="" selected></option>
                                         <option value="ferimento">Ferimento</option>
                                         <option value="fratura">Fraturas</option>
@@ -1099,149 +1023,12 @@
                                     </select>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="text" class="form-control" name="local_ferimento2"
-                                        placeholder="Digite o local do ferimento" />
-                                </td>
-
-                                <td>
-                                    <select name="lado">
-                                        <option value="" selected></option>
-                                        <option value="direito">Direito</option>
-                                        <option value="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face">
-                                        <option value="" selected></option>
-                                        <option value="frontal">Frontal</option>
-                                        <option value="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo">
-                                        <option value="" selected></option>
-                                        <option value="ferimento">Ferimento</option>
-                                        <option value="fratura">Fraturas</option>
-                                        <option value="entorses">Entorses</option>
-                                        <option value="luxacao">Luxação</option>
-                                        <option value="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr class="destaqueclaro">
-                                <td>
-                                    <input type="text" class="form-control" name="local_ferimento3"
-                                        placeholder="Digite o local do ferimento" />
-                                </td>
-
-                                <td>
-                                    <select name="lado3">
-                                        <option value="" selected></option>
-                                        <option value="direito">Direito</option>
-                                        <option value="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face3">
-                                        <option value="" selected></option>
-                                        <option value="frontal">Frontal</option>
-                                        <option value="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo3">
-                                        <option value="" selected></option>
-                                        <option value="ferimento">Ferimento</option>
-                                        <option value="fratura">Fraturas</option>
-                                        <option value="entorses">Entorses</option>
-                                        <option value="luxacao">Luxação</option>
-                                        <option value="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="text" class="form-control" name="local_ferimento4"
-                                        placeholder="Digite o local do ferimento" />
-                                </td>
-
-                                <td>
-                                    <select name="lado4">
-                                        <option value="" selected></option>
-                                        <option value="direito">Direito</option>
-                                        <option value="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face4">
-                                        <option value="" selected></option>
-                                        <option value="frontal">Frontal</option>
-                                        <option value="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo4">
-                                        <option value="" selected></option>
-                                        <option value="ferimento">Ferimento</option>
-                                        <option value="fratura">Fraturas</option>
-                                        <option value="entorses">Entorses</option>
-                                        <option value="luxacao">Luxação</option>
-                                        <option value="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr class="destaqueclaro">
-                                <td>
-                                    <input type="text" class="form-control" name="local_ferimento5"
-                                        placeholder="Digite o local do ferimento" />
-                                </td>
-
-                                <td>
-                                    <select name="lado5">
-                                        <option value="" selected></option>
-                                        <option name="direito">Direito</option>
-                                        <option name="esquerdo">Esquerdo</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="face5">
-                                        <option value="" selected></option>
-                                        <option value="frontal">Frontal</option>
-                                        <option value="posterior">Posterior</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <select name="tipo5">
-                                        <option value="" selected></option>
-                                        <option value="ferimento">Ferimento</option>
-                                        <option value="fratura">Fraturas</option>
-                                        <option value="entorses">Entorses</option>
-                                        <option value="luxacao">Luxação</option>
-                                        <option value="contusao">Contusão</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-
-                            </tr>
-
                         </table>
                     </div>
+                
+                    <div class="mais" name="mais" class="button" onclick="adicionarCampo();"> + </div>
                 </banner>
+                    
 
                 <!--Formulário sobre a queimadura-->
                 <br>
@@ -1379,17 +1166,6 @@
                                 <td><input type="checkbox" name="qmembrose_4grau" value="1"></td>
                             </tr>
                         </table>
-                    </div>
-                </banner>
-
-                <br>
-
-                <!-- Caixa de texto para objetos recolhidos-->
-                <banner>
-                    <titulos id="objetosrec">Objetos Recolhidos</titulos>
-                    <div class="escrever">
-                        <input type="text" class="objetos" name="objetos_recolhidos"
-                            placeholder="Digite os objetos recolhidos" />
                     </div>
                 </banner>
 
@@ -1778,12 +1554,6 @@
                             </div>
                         </div>
                     </div>
-                </banner>
-
-                <!--Formulário forma de condução-->
-                <br>
-
-                <banner>
                     <titulos id="formaconducao">Forma de Condução</titulos>
                     <div>
                         <div class="coluna3">
@@ -1803,11 +1573,6 @@
                             </div>
                         </div>
                     </div>
-                </banner>
-
-                <!--Formulário decisão de transporte do paciente-->
-                <br>
-                <banner>
                     <titulos id="decisaotransp">Decisão de Transporte</titulos>
                     <div>
                         <div class="coluna4">
@@ -2483,6 +2248,11 @@
         <titulos id="observ">Observações Importantes</titulos>
         <div class="escrever">
             <input type="text" class="objetos" name="observacoes_importantes"
+                placeholder="Digite as observações importantes" />
+        </div>
+        <titulos id="objetosrec">Objetos Recolhidos</titulos>
+        <div class="escrever">
+            <input type="text" class="objetos" name="objetos_recolhidos"
                 placeholder="Digite os objetos recolhidos" />
         </div>
     </banner>
@@ -2493,6 +2263,7 @@
     <banner>
         <titulos id="cinematica">Avaliação da Cinemática</titulos>
         <div>
+            
             <div class="destaqueclaro">
                 <div class="coluna3">
                     <div>Distúrbio de Comportamento</div>
@@ -2629,24 +2400,26 @@
                 <input type="reset" value="Limpar Assinatura" />
                 <input type="hidden" name="assinatura" class="assinatura">
             </div>
+            <div class="coluna2">
             <div class="destaqueclaro">
-                <label for="testemunha">Testemunha:</label>
+                <label for="testemunha">Testemunha 1:</label>
                 <input type="text" class="form-control" name="testemunha" placeholder="Digite o nome da testemunha" />
             </div>
             <div class="destaqueclaro">
-                <label for="doc_testemunha">Documento testemunha:</label> <br>
+                <label for="doc_testemunha">Documento testemunha 1:</label> <br>
                 <input type="text" class="form-control" name="doc_testemunha"
                     placeholder="Digite o CPF/RG da testemunha" minlength="7" maxlength="11"/>
             </div>
             <div class="destaqueclaro">
-                <label for="testemunha2">Testemunha:</label>
+                <label for="testemunha2">Testemunha 2:</label>
                 <input type="text" class="form-control" name="testemunha2" placeholder="Digite o nome da testemunha" />
             </div>
             <div class="destaqueclaro">
-                <label for="doc_testemunha2">Documento testemunha:</label> <br>
+                <label for="doc_testemunha2">Documento testemunha 2:</label> <br>
                 <input type="text" class="form-control" name="doc_testemunha2"
                     placeholder="Digite o CPF/RG da testemunha"  minlength="7" maxlength="11" />
             </div>
+        </div>
         </div>
     </banner>
     <br>
@@ -2654,39 +2427,41 @@
     <banner>
         <titulos id="equipeatendimento">Equipe de Atendimento</titulos>
         <div>
-            <div class="destaqueclaro"><label for="medico_atendimento">Médico:</label>
-                <input type="text" size="45" name="medico_atendimento" placeholder="Digite" />
+            <div class="coluna2">
+            <div class="destaqueclaro">
+                <label for="medico_atendimento">Médico:</label>
+                <input type="text" name="medico_atendimento" placeholder="Digite" />
             </div>
             <div class="destaqueclaro"><label for="socorrista1">Socorrista 1:</label>
-                <input type="text" size="40" name="socorrista1" placeholder="Digite" />
+                <input type="text" name="socorrista1" placeholder="Digite" />
             </div>
             <div class="destaqueclaro"><label for="socorrista2">Socorrista 2:</label>
-                <input type="text" size="40" name="socorrista2" placeholder="Digite" />
+                <input type="text" name="socorrista2" placeholder="Digite" />
             </div>
             <div class="destaqueclaro"><label for="socorrista3">Socorrista 3:</label>
-                <input type="text" size="40" name="socorrista3" placeholder="Digite" />
+                <input type="text" name="socorrista3" placeholder="Digite" />
             </div>
             <div class="destaqueclaro"><label for="demandante">Demandante:</label>
-                <input type="text" size="39" name="demandante" placeholder="Digite" />
+                <input type="text" name="demandante" placeholder="Digite" />
             </div>
             <div class="destaqueclaro"><label for="equipe">Equipe:</label>
-                <input type="text" size="45" name="equipe" placeholder="Digite" />
+                <input type="text" name="equipe" placeholder="Digite" />
             </div>
         </div>
-    </banner>
-    <br>
-
-    <banner>
         <titulos id="preenchimento">Responsável pelo preenchimento</titulos>
+        <div class="coluna2">
         <div class="destaqueclaro">
             <label for="ficha">Ficha:</label>
-            <input type="text" size="45" name="ficha" placeholder="Digite" />
-            <br>
-            <label for="fibra">Fibra:</label>
-            <input type="text" size="45" name="fibra" placeholder="Digite" />
+            <input type="text" name="ficha" placeholder="Digite" />
+        </div>
+            <div class="destaqueclaro"> <label for="fibra">Fibra:</label>
+            <input type="text" name="fibra" placeholder="Digite" />
             </label>
         </div>
+    </div>
+    </div>
     </banner>
+    <br>
 
     <input type="button" name="enviar" value="Enviar" class="button" onclick="enviarFormulario();" a href="#" /></a>
 
@@ -2697,6 +2472,93 @@
     </form>
 
     <script>
+
+$(document).ready(function () {
+        // Esconde os campos inicialmente
+        $(".hora_medicacao, .ingeriu_horario").hide();
+
+
+        $("input[name='medicacao']").change(function () {
+            // Verifica se a pessoa faz uso de medicação
+            if ($(this).val() == "1") {
+                // Se sim, mostra os campos relacionados à medicação
+                $(".hora_medicacao").show();
+            } else {
+                // Se não, esconde os campos relacionados à medicação
+                $(".hora_medicacao").hide();
+            }
+        });
+
+        $("input[name='ingeriu']").change(function () {
+            // Verifica se a pessoa ingeriu alimento nas últimas 6 horas
+            if ($(this).val() == "1") {
+                // Se sim, mostra o campo ingeriu_horario
+                $(".ingeriu_horario").show();
+            } else {
+                // Se não, esconde o campo ingeriu_horario
+                $(".ingeriu_horario").hide();
+            }
+        });
+    });
+
+    var limiteLinhas = 5; // Defina o limite máximo de linhas
+
+    function adicionarCampo() {
+        var tabela = document.getElementById("tabelaFerimentos");
+        var linhas = tabela.getElementsByTagName("tr").length;
+
+        if (linhas < limiteLinhas) {
+            // Clone a última linha da tabela
+            var novaLinha = tabela.rows[tabela.rows.length - 1].cloneNode(true);
+
+            // Limpe os valores dos campos clonados
+            var campos = novaLinha.getElementsByTagName("input");
+            for (var i = 0; i < campos.length; i++) {
+                campos[i].value = "";
+            }
+
+            // Adicione a nova linha à tabela
+            tabela.appendChild(novaLinha);
+        } 
+    }
+
+    function adicionarCampo() {
+        var tabela = document.getElementById("tabelaFerimentos");
+        var linhas = tabela.getElementsByTagName("tr").length;
+
+        if (linhas < limiteLinhas) {
+            // Clone a última linha da tabela
+            var novaLinha = tabela.rows[tabela.rows.length - 1].cloneNode(true);
+
+            // Limpe os valores dos campos clonados
+            var campos = novaLinha.getElementsByTagName("input");
+            for (var i = 0; i < campos.length; i++) {
+                campos[i].value = "";
+            }
+
+            // Adicione a nova linha à tabela
+            tabela.appendChild(novaLinha);
+        } 
+    }
+   
+    function verificarSexo() {
+        // Obtém o valor do campo de seleção de sexo
+        var sexoSelecionado = document.querySelector('input[name="sexo_paciente"]:checked').value;
+
+        // Obtém a Anamnese Gestacional
+        var anamneseGestacionalBanner = document.getElementById('anamneseGestacionalBanner');
+
+        // seleção de sexo
+        if (sexoSelecionado === '1') {
+            anamneseGestacionalBanner.style.display = 'block'; // Exibe 
+        } else {
+            anamneseGestacionalBanner.style.display = 'none'; // Oculta 
+        }
+    }
+
+    // Chamada inicial para garantir que o estado seja correto no carregamento da página
+    verificarSexo();
+    
         (function (window) {
             var $canvas,
                 onResize = function (event) {

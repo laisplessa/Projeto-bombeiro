@@ -31,6 +31,7 @@
                             result += '<td>' + ficha.id_ficha + '</td>';
                             result += '<td>' + ficha.data + '</td>';
                             result += '<td>' + ficha.nome_paciente + '</td>';
+                            result += '<td>' + ficha.id_usuario + '</td>';
                             result += '<td><a href="ficha.html?idFicha=' + ficha.id_ficha + '">Visualizar</a></td>';
                             result += '</tr>';
                         });
@@ -79,7 +80,8 @@
                     <tr>
                         <td>Id Ficha</td>
                         <td>Data</td>
-                        <td>Paciente</td>
+                        <td>Nome Paciente</td>
+                        <td>Id Usuário</td>
                         <td>Visualizar</td>
                     </tr>
                 </table>

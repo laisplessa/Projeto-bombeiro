@@ -2542,33 +2542,38 @@ $(document).ready(function () {
     var limiteLinhasFerimentos = 6; // Defina o limite máximo de linhas
 
     function adicionarCampoTraumas() {
-        var tabela = document.getElementById("tabelaTraumas");
-        var linhas = tabela.getElementsByTagName("tr").length;
+    var tabela = document.getElementById("tabelaTraumas");
+    var linhas = tabela.getElementsByTagName("tr").length;
 
-        if (linhas < limiteLinhas) {
-            // Clone a última linha da tabela
-            var novaLinha = tabela.rows[1].cloneNode(true);
+    if (linhas < limiteLinhas) {
+        // Clone a última linha da tabela
+        var novaLinha = tabela.rows[1].cloneNode(true);
 
-            // Limpe os valores dos campos clonados
-            var campos = novaLinha.getElementsByTagName("input");
-            for (var i = 0; i < campos.length; i++) {
-                
-                if (campos[i].type != 'checkbox') {
-                    campos[i].value = "";
-                }
-                var name = campos[i].name;
-                if (campos[i].name.includes('queimadura')) {
-                    name = campos[i].name + '_' + linhas;
-                } else {
-                    name = campos[i].name + linhas;
-                }
-                campos[i].name = name;
+        // Limpe os valores dos campos clonados
+        var campos = novaLinha.querySelectorAll("input, select, textarea");
+        campos.forEach(function (campo) {
+            if (campo.type === "checkbox") {
+                campo.value = campo.checked ? "1" : "0";
+            } else {
+                campo.value = "";
             }
 
-            // Adicione a nova linha à tabela
-            tabela.appendChild(novaLinha);
-        } 
+            var name = campo.name;
+            if (name.includes('queimadura')) {
+                name = name + '_' + linhas;
+            } else {
+                name = name + linhas;
+            }
+            campo.name = name;
+        });
+
+        // Adicione a nova linha à tabela
+        tabela.appendChild(novaLinha);
     }
+}
+
+
+
 
     function adicionarCampoFerimentos() {
         var tabela = document.getElementById("tabelaFerimentos");

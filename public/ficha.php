@@ -58,7 +58,7 @@ $nomeAcompanhante = $_POST["nome_acompanhante"];
 $idadeAcompanhante = $_POST["idade_acompanhante"]  != null ? $_POST["idade_acompanhante"] : 'NULL';
 $localOcorrencia = $_POST["local_ocorrencia"];
 
-$periodoGestacao = $_POST["periodo_gestacao"];
+$periodoGestacao = $_POST["periodo_gestacao"] ;
 $preNatal = $_POST["pre_natal"];
 $nomeMedico = $_POST["nome_medico"];
 $complicacoes = $_POST["complicacoes"];

@@ -39,7 +39,7 @@ if ($count >= 1) {
 }
  else {
 
-  $sql = "INSERT INTO usuario (id_cadastro, nome, cpf, telefone, cargo, cidade, data_nascimento, senha, tipo) VALUES (null, '$nome', '$cpf', '$telefone', '$cargo', '$cidade', '$dataNascimento', '$senha', 'USUARIO');";
+  $sql = "INSERT INTO usuario (id_cadastro, nome, cpf, telefone, cargo, cidade, data_nascimento, senha, inativo, tipo) VALUES (null, '$nome', '$cpf', '$telefone', '$cargo', '$cidade', '$dataNascimento', '$senha', 1, 'USUARIO');";
   $run_query = mysqli_query($con, $sql);
   
   if ($run_query) {

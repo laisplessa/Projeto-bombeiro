@@ -86,7 +86,7 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  position: fixed;
+  /* position: fixed; */
   right: 10px;
-  top: 5px;
+  /* top: 5px; */
 }

@@ -21,8 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   }
 
   header("Content-Type: application/json");
-  echo json_encode($ficha);
-  exit();
+
+
+  if ($ficha['id_usuario'] != $_SESSION['id'] && $_SESSION['tipoUsuario'] != 'ADMIN') {
+    $data = array("erro" => true, "mensagem" => "Você não pode visualizar uma ficha que não foi cadastrada por você.");
+    echo json_encode($data);
+    exit();
+  
+  } else {
+    echo json_encode($ficha);
+    exit();
+  }
 }
 
 $oqAconteceu = $_POST["oq_aconteceu"];
@@ -154,7 +163,7 @@ $amputacao = $_POST["amputacao"] ;
 $queimadura1 = $_POST["queimadura1"] ;
 $queimadura2 = $_POST["queimadura2"] ;
 $queimadura3 = $_POST["queimadura3"] ;
-$numeroCorpo2 = $_POST["numeroCorpo2"];
+$numeroCorpo2 = $_POST["numerocorpo2"];
 $fratura2 = $_POST["fratura2"] ;
 $ferimento2 = $_POST["ferimento2"] ;
 $hemorragias2 = $_POST["hemorragias2"] ;
@@ -164,7 +173,7 @@ $amputacao2 = $_POST["amputacao2"] ;
 $queimadura12 = $_POST["queimadura1_2"] ;
 $queimadura22 = $_POST["queimadura2_2"] ;
 $queimadura32 = $_POST["queimadura3_2"] ;
-$numeroCorpo3 = $_POST["numeroCorpo3"];
+$numeroCorpo3 = $_POST["numerocorpo3"];
 $fratura3 = $_POST["fratura3"] ;
 $ferimento3 = $_POST["ferimento3"] ;
 $hemorragias3 = $_POST["hemorragias3"] ;
@@ -181,21 +190,21 @@ $ladoFerimento = $_POST["lado_ferimento"];
 $faceFerimento = $_POST["face_ferimento"];
 $tipoFerimento = $_POST["tipo_ferimento"];
 $Localferimento2 = $_POST["local_ferimento2"];
-$lado = $_POST["lado"];
-$face = $_POST["face"];
-$tipo = $_POST["tipo"];
+$lado = $_POST["lado_ferimento"];
+$face = $_POST["face_ferimento"];
+$tipo = $_POST["tipo_ferimento"];
 $Localferimento3 = $_POST["local_ferimento3"];
-$lado3 = $_POST["lado3"];
-$face3 = $_POST["face3"];
-$tipo3 = $_POST["tipo3"];
+$lado3 = $_POST["lado_ferimento3"];
+$face3 = $_POST["face_ferimento3"];
+$tipo3 = $_POST["tipo_ferimento3"];
 $Localferimento4 = $_POST["local_ferimento4"];
-$lado4 = $_POST["lado4"];
-$face4 = $_POST["face4"];
-$tipo4 = $_POST["tipo4"];
+$lado4 = $_POST["lado_ferimento4"];
+$face4 = $_POST["face_ferimento4"];
+$tipo4 = $_POST["tipo_ferimento4"];
 $Localferimento5 = $_POST["local_ferimento5"];
-$lado5 = $_POST["lado5"];
-$face5 = $_POST["face5"];
-$tipo5 = $_POST["tipo5"];
+$lado5 = $_POST["lado_ferimento5"];
+$face5 = $_POST["face_ferimento5"];
+$tipo5 = $_POST["tipo_ferimento5"];
 
 $qcabeca1grau = $_POST["qcabeca_1grau"] ;
 $qcabeca2grau = $_POST["qcabeca_2grau"] ;

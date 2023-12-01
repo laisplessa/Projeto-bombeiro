@@ -15,14 +15,12 @@
 </head>
 
 <body>
+    <a class="buttonIni" onClick="history.back()" href="javascript:void(0)">Voltar</a>
     <!--Título e subtítulo-->
     <div class="fundo">
         <div class="logo">
             <h1>Bombeiros Voluntários<h1>
                 <h3>Assoc. de Serviços Sociais Voluntários de Guaramirim</h3>
-        <!-- <div class="sair">
-            <input type="button" name="Início" value="Início" class="button" href="inicio.html" />
-        </div> -->
         </div>
     </div>
 
@@ -130,7 +128,7 @@
                             </div>
                         </div>
 
-                        <div class="destaqueclaro">
+                        <div class="destaqueclaro quaisProblemaSaude">
                             <div>Quais?</div>
                             <div><input class="tam90" type="text" name="quais_problemas"
                                     placeholder="Digite quais doenças" />
@@ -148,14 +146,14 @@
                             </div>
                         </div>
 
-                        <div class="destaqueclaro">
+                        <div class="destaqueclaro horarioUltimaMedicacao">
                             <div class="simnao">
                                 <div>Horário da última medicação:</div>
                                 <input type="time" class="hora_medicacao" name="hora_medicacao" placeholder="00:00">
                             </div>
                         </div>
 
-                        <div class="destaqueclaro">
+                        <div class="destaqueclaro horarioUltimaMedicacao">
                             <div>Quais?</div>
                             <div><input class="tam90" type="text" name="quais_medicacoes"
                                     placeholder="Digite quais medicações" />
@@ -188,7 +186,7 @@
                             </div>
                         </div>
 
-                        <div class="destaqueclaro">
+                        <div class="destaqueclaro ingeriuHorario">
                             <div class="simnao">
                                 <div>Que horas?</div>
                                 <input type="time" class="ingeriu_horario" name="ingeriu_horario" placeholder="00:00">
@@ -569,56 +567,56 @@
 
                         <table>
                             <tr>
-                                <th colspan="3">NÍVEL DE CONCIÊNCIA</th>
+                                <th colspan="2">NÍVEL DE CONCIÊNCIA</th>
                             </tr>
 
                             <th rowspan="5">ABERTURA <br> OCULAR</th>
-                            <td>MAIORES DE 5 ANOS</td>
-                            <td>MENORES DE 5 ANOS</td>
+                            <td class="concienciaMaior">MAIORES DE 5 ANOS</td>
+                            <td class="concienciaMenor">MENORES DE 5 ANOS</td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="espontanea">Espontânea</label>
+                                <td class="concienciaMaior"><label for="espontanea">Espontânea</label>
                                     <input type="hidden" name="espontanea" value="0">
                                     <input type="checkbox" name="espontanea" value="1">4
                                 </td>
 
-                                <td><label for="espontanea">Espontânea</label>
+                                <td class="concienciaMenor"><label for="espontanea">Espontânea</label>
                                     <input type="hidden" name="espontanea_menor" value="0">
                                     <input type="checkbox" name="espontanea_menor" value="1">4
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="comando_verbal">Comando Verbal</label>
+                                <td class="concienciaMaior"><label for="comando_verbal">Comando Verbal</label>
                                     <input type="hidden" name="comando" value="0">
                                     <input type="checkbox" name="comando" value="1">3
                                 </td>
 
-                                <td><label for="comando_verbal">Comando Verbal</label>
+                                <td class="concienciaMenor"><label for="comando_verbal">Comando Verbal</label>
                                     <input type="hidden" name="comando_menor" value="0">
                                     <input type="checkbox" name="comando_menor" value="1">3
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
+                                <td class="concienciaMaior"><label for="estimulo_doloroso">Estímulo Doloroso</label>
                                     <input type="hidden" name="estimulo" value="0">
                                     <input type="checkbox" name="estimulo" value="1">2
                                 </td>
-                                <td><label for="estimulo_doloroso">Estímulo Doloroso</label>
+                                <td class="concienciaMenor"><label for="estimulo_doloroso">Estímulo Doloroso</label>
                                     <input type="hidden" name="estimulo_menor" value="0">
                                     <input type="checkbox" name="estimulo_menor" value="1">2
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="nenhuma">Nenhuma</label>
+                                <td class="concienciaMaior"><label for="nenhuma">Nenhuma</label>
                                     <input type="hidden" name="nenhuma" value="0">
                                     <input type="checkbox" name="nenhuma" value="1">1
                                 </td>
 
-                                <td><label for="nenhuma_menor">Nenhuma</label>
+                                <td class="concienciaMenor"><label for="nenhuma_menor">Nenhuma</label>
                                     <input type="hidden" name="nenhuma_menor" value="0">
                                     <input type="checkbox" name="nenhuma_menor" value="1">1
                                 </td>
@@ -626,60 +624,60 @@
 
                             <th rowspan="6">RESPOSTA <br> VERBAL</th>
                             <tr class="destaqueclaro">
-                                <td><label for="orientado">Orientado</label>
+                                <td class="concienciaMaior"><label for="orientado">Orientado</label>
                                     <input type="hidden" name="orientado" value="0">
                                     <input type="checkbox" name="orientado" value="1">5
                                 </td>
 
-                                <td><label for="pf_apropriadas">Palavras e Frase Apropriadas</label>
+                                <td class="concienciaMenor"><label for="pf_apropriadas">Palavras e Frase Apropriadas</label>
                                     <input type="hidden" name="pf_apropriadas" value="0">
                                     <input type="checkbox" name="pf_apropriadas" value="1">5
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="confuso">Confuso</label>
+                                <td class="concienciaMaior"><label for="confuso">Confuso</label>
                                     <input type="hidden" name="confuso" value="0">
                                     <input type="checkbox" name="confuso" value="1">4
                                 </td>
 
-                                <td><label for="palavras_inapropriadas">Palavras Inapropriadas</label>
+                                <td class="concienciaMenor"><label for="palavras_inapropriadas">Palavras Inapropriadas</label>
                                     <input type="hidden" name="palavras_inapropriadas" value="0">
                                     <input type="checkbox" name="palavras_inapropriadas" value="1">4
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="inapropriadas_menor">Palavras Inapropriadas</label>
+                                <td class="concienciaMaior"><label for="inapropriadas_menor">Palavras Inapropriadas</label>
                                     <input type="hidden" name="inapropriadas_menor" value="0">
                                     <input type="checkbox" name="inapropriadas_menor" value="1">3
                                 </td>
 
-                                <td><label for="choro_grito">Choro Persistente ou Gritos</label>
+                                <td class="concienciaMenor"><label for="choro_grito">Choro Persistente ou Gritos</label>
                                     <input type="hidden" name="choro_grito" value="0">
                                     <input type="checkbox" name="choro_grito" value="1">3
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="p_incompreensiveis">Palavras Incompreensíveis</label>
+                                <td class="concienciaMaior"><label for="p_incompreensiveis">Palavras Incompreensíveis</label>
                                     <input type="hidden" name="p_incompreensiveis" value="0">
                                     <input type="checkbox" name="p_incompreensiveis" value="1">2
                                 </td>
 
-                                <td><label for="s_incompreensiveis">Sons Incompreensíveis</label>
+                                <td class="concienciaMenor"><label for="s_incompreensiveis">Sons Incompreensíveis</label>
                                     <input type="hidden" name="s_incompreensiveis" value="0">
                                     <input type="checkbox" name="s_incompreensiveis" value="1">2
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="nenhuma_menor2">Nenhuma</label>
+                                <td class="concienciaMaior"><label for="nenhuma_menor2">Nenhuma</label>
                                     <input type="hidden" name="nenhuma_menor2" value="0">
                                     <input type="checkbox" name="nenhuma_menor2" value="1">1
                                 </td>
 
-                                <td><label for="nenhuma_resposta">Nenhuma Resposta Verbal</label>
+                                <td class="concienciaMenor"><label for="nenhuma_resposta">Nenhuma Resposta Verbal</label>
                                     <input type="hidden" name="nenhuma_resposta" value="0">
                                     <input type="checkbox" name="nenhuma_resposta" value="1">1
                                 </td>
@@ -687,82 +685,82 @@
 
                             <th rowspan="7">RESPOSTA <br> MOTORA</th>
                             <tr>
-                                <td><label for="o_comandos">Obedece Comandos</label>
+                                <td class="concienciaMaior"><label for="o_comandos">Obedece Comandos</label>
                                     <input type="hidden" name="o_comandos" value="0">
                                     <input type="checkbox" name="o_comandos" value="1">6
                                 </td>
 
-                                <td><label for="o_protamente">Obedece Prontamente</label>
+                                <td class="concienciaMenor"><label for="o_protamente">Obedece Prontamente</label>
                                     <input type="hidden" name="o_prontamente" value="0">
                                     <input type="checkbox" name="o_prontamente" value="1">6
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="localiza_menor">Localiza Dor</label>
+                                <td class="concienciaMaior"><label for="localiza_menor">Localiza Dor</label>
                                     <input type="hidden" name="localiza_menor" value="0">
                                     <input type="checkbox" name="localiza_menor" value="1">5
                                 </td>
 
-                                <td><label for="localiza">Localiza Dor ou Estímulo Tatil</label>
+                                <td class="concienciaMenor"><label for="localiza">Localiza Dor ou Estímulo Tatil</label>
                                     <input type="hidden" name="localiza" value="0">
                                     <input type="checkbox" name="localiza" value="1">5
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="movimento_retirada">Movimento de retirada</label>
+                                <td class="concienciaMaior"><label for="movimento_retirada">Movimento de retirada</label>
                                     <input type="hidden" name="movimento_retirada" value="0">
                                     <input type="checkbox" name="movimento_retirada" value="1">4
                                 </td>
 
-                                <td><label for="retirada_estimulado">Retirada do Segmento Estimulado</label>
+                                <td class="concienciaMenor"><label for="retirada_estimulado">Retirada do Segmento Estimulado</label>
                                     <input type="hidden" name="retirada_estimulado" value="0">
                                     <input type="checkbox" name="retirada_estimulado" value="1">4
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="flexao_anormal">Flexão Anormal</label>
+                                <td class="concienciaMaior"><label for="flexao_anormal">Flexão Anormal</label>
                                     <input type="hidden" name="flexao_anormal" value="0">
                                     <input type="checkbox" name="flexao_anormal" value="1">3
                                 </td>
 
-                                <td><label for="flexao_menor">Flexão Anormal (Decorticação)</label>
+                                <td class="concienciaMenor"><label for="flexao_menor">Flexão Anormal (Decorticação)</label>
                                     <input type="hidden" name="flexao_menor" value="0">
                                     <input type="checkbox" name="flexao_menor" value="1">3
                                 </td>
                             </tr>
 
                             <tr>
-                                <td><label for="extensao_anormal">Extensão Anormal</label>
+                                <td class="concienciaMaior"><label for="extensao_anormal">Extensão Anormal</label>
                                     <input type="hidden" name="extensao_anormal" value="0">
                                     <input type="checkbox" name="extensao_anormal" value="1">2
                                 </td>
 
-                                <td><label for="extensao_menor">Extensão Anormal (Decerebração)</label>
+                                <td class="concienciaMenor"><label for="extensao_menor">Extensão Anormal (Decerebração)</label>
                                     <input type="hidden" name="extensao_menor" value="0">
                                     <input type="checkbox" name="extensao_menor" value="1">2
                                 </td>
                             </tr>
 
                             <tr class="destaqueclaro">
-                                <td><label for="nenhuma_3">Nenhuma</label>
+                                <td class="concienciaMaior"><label for="nenhuma_3">Nenhuma</label>
                                     <input type="hidden" name="nenhuma_3" value="0">
                                     <input type="checkbox" name="nenhuma_3" value="1">1
                                 </td>
 
-                                <td><label for="ausencia">Ausência (Paralisia Flácida, Hipotônia)</label>
+                                <td class="concienciaMenor"><label for="ausencia">Ausência (Paralisia Flácida, Hipotônia)</label>
                                     <input type="hidden" name="ausencia" value="0">
                                     <input type="checkbox" name="ausencia" value="1">1
                                 </td>
                             </tr>
 
-                            <th colspan="2"><label for="total">TOTAL (GCS)(3-15)</label><br>
+                            <th colspan="2" class="concienciaMaior"><label for="total">TOTAL (GCS)(3-15)</label><br>
                                 <input type="text" name="total" placeholder="Digite o total" maxlength="2"/>
                             </th>
 
-                            <th colspan="2"><label for="total_menor">TOTAL (GCS)(3-15)</label><br>
+                            <th colspan="2" class="concienciaMenor"><label for="total_menor">TOTAL (GCS)(3-15)</label><br>
                                 <input type="text" name="total_menor" placeholder="Digite o total" maxlength="2"/>
                             </th>
 
@@ -916,7 +914,7 @@
                     <titulos id="localtraumas">Localização dos Traumas</titulos>
                     <br><br>
                     <div class="table">
-                        <table id="tabelaFerimentos">
+                        <table id="tabelaTraumas">
                             <div class="imagem">
                                 <img src="corpo-frente.png" width="300" height="300">
                                 <img src="corpo-tras.png" width="300" height="300">
@@ -949,7 +947,7 @@
                                     <br>
 
                                     <input type="hidden" name="fab" value="0">
-                                    <input type="checkbox" name="fab" value="" />F.A.B/ F.A.F <br>
+                                    <input type="checkbox" name="fab" value="1" />F.A.B/ F.A.F <br>
 
                                     <input type="hidden" name="amputacao" value="0">
                                     <input type="checkbox" name="amputacao" value="1" />Amputação 
@@ -975,7 +973,7 @@
                 </table>
             </div>
             
-                            <div class="mais" name="mais" class="button" onclick="adicionarCampo();"> + </div>
+                            <div class="mais" name="mais" class="button" onclick="adicionarCampoTraumas();"> + </div>
                         </banner>
 
                 <!--Formulário sobre o ferimento-->
@@ -993,11 +991,11 @@
                 
                             <tr class="destaqueclaro">
                                 <td>
-                                    <input type="text" class="form-control" name="local_ferimento[]" placeholder="Digite o local do ferimento" />
+                                    <input type="text" class="form-control" name="local_ferimento" placeholder="Digite o local do ferimento" />
                                 </td>
                 
                                 <td>
-                                    <select name="lado_ferimento[]">
+                                    <select name="lado_ferimento">
                                         <option value="" selected></option>
                                         <option value="direito">Direito</option>
                                         <option value="esquerdo">Esquerdo</option>
@@ -1005,7 +1003,7 @@
                                 </td>
                 
                                 <td>
-                                    <select name="face_ferimento[]">
+                                    <select name="face_ferimento">
                                         <option value="" selected></option>
                                         <option value="frontal">Frontal</option>
                                         <option value="posterior">Posterior</option>
@@ -1013,7 +1011,7 @@
                                 </td>
                 
                                 <td>
-                                    <select name="tipo_ferimento[]">
+                                    <select name="tipo_ferimento">
                                         <option value="" selected></option>
                                         <option value="ferimento">Ferimento</option>
                                         <option value="fratura">Fraturas</option>
@@ -1026,7 +1024,7 @@
                         </table>
                     </div>
                 
-                    <div class="mais" name="mais" class="button" onclick="adicionarCampo();"> + </div>
+                    <div class="mais" name="mais" class="button" onclick="adicionarCampoFerimentos();"> + </div>
                 </banner>
                     
 
@@ -2475,46 +2473,81 @@
 
 $(document).ready(function () {
         // Esconde os campos inicialmente
-        $(".hora_medicacao, .ingeriu_horario").hide();
+        $(".horarioUltimaMedicacao, .ingeriuHorario, .quaisProblemaSaude").hide();
 
+
+        $("input[name='idade_paciente']").change(function() {
+            var idade = $(this).val();
+            if (idade >= 5) {
+                $('.concienciaMenor').hide();
+                $('.concienciaMaior').show();
+            } else {
+                $('.concienciaMenor').show();
+                $('.concienciaMaior').hide();
+            }
+        })
 
         $("input[name='medicacao']").change(function () {
             // Verifica se a pessoa faz uso de medicação
             if ($(this).val() == "1") {
                 // Se sim, mostra os campos relacionados à medicação
-                $(".hora_medicacao").show();
+                $(".horarioUltimaMedicacao").show();
             } else {
                 // Se não, esconde os campos relacionados à medicação
-                $(".hora_medicacao").hide();
+                $(".horarioUltimaMedicacao").hide();
             }
         });
 
+        $("input[name='problema_saude']").change(function () {
+            // Verifica se a pessoa ingeriu alimento nas últimas 6 horas
+            if ($(this).val() == "1") {
+                // Se sim, mostra o campo ingeriu_horario
+                $(".quaisProblemaSaude").show();
+            } else {
+                // Se não, esconde o campo ingeriu_horario
+                $(".quaisProblemaSaude").hide();
+            }
+        });
+        
         $("input[name='ingeriu']").change(function () {
             // Verifica se a pessoa ingeriu alimento nas últimas 6 horas
             if ($(this).val() == "1") {
                 // Se sim, mostra o campo ingeriu_horario
-                $(".ingeriu_horario").show();
+                $(".ingeriuHorario").show();
             } else {
                 // Se não, esconde o campo ingeriu_horario
-                $(".ingeriu_horario").hide();
+                $(".ingeriuHorario").hide();
             }
         });
+
+
     });
 
-    var limiteLinhas = 5; // Defina o limite máximo de linhas
+    var limiteLinhas = 4; // Defina o limite máximo de linhas
+    var limiteLinhasFerimentos = 6; // Defina o limite máximo de linhas
 
-    function adicionarCampo() {
-        var tabela = document.getElementById("tabelaFerimentos");
+    function adicionarCampoTraumas() {
+        var tabela = document.getElementById("tabelaTraumas");
         var linhas = tabela.getElementsByTagName("tr").length;
 
         if (linhas < limiteLinhas) {
             // Clone a última linha da tabela
-            var novaLinha = tabela.rows[tabela.rows.length - 1].cloneNode(true);
+            var novaLinha = tabela.rows[1].cloneNode(true);
 
             // Limpe os valores dos campos clonados
             var campos = novaLinha.getElementsByTagName("input");
             for (var i = 0; i < campos.length; i++) {
-                campos[i].value = "";
+                
+                if (campos[i].type != 'checkbox') {
+                    campos[i].value = "";
+                }
+                var name = campos[i].name;
+                if (campos[i].name.includes('queimadura')) {
+                    name = campos[i].name + '_' + linhas;
+                } else {
+                    name = campos[i].name + linhas;
+                }
+                campos[i].name = name;
             }
 
             // Adicione a nova linha à tabela
@@ -2522,18 +2555,20 @@ $(document).ready(function () {
         } 
     }
 
-    function adicionarCampo() {
+    function adicionarCampoFerimentos() {
         var tabela = document.getElementById("tabelaFerimentos");
         var linhas = tabela.getElementsByTagName("tr").length;
 
-        if (linhas < limiteLinhas) {
+        if (linhas < limiteLinhasFerimentos) {
             // Clone a última linha da tabela
-            var novaLinha = tabela.rows[tabela.rows.length - 1].cloneNode(true);
+            var novaLinha = tabela.rows[1].cloneNode(true);
 
             // Limpe os valores dos campos clonados
-            var campos = novaLinha.getElementsByTagName("input");
+            var campos = novaLinha.querySelectorAll("input,select");
             for (var i = 0; i < campos.length; i++) {
                 campos[i].value = "";
+                var name = campos[i].name;
+                campos[i].name = name + linhas;
             }
 
             // Adicione a nova linha à tabela
@@ -2543,16 +2578,13 @@ $(document).ready(function () {
    
     function verificarSexo() {
         // Obtém o valor do campo de seleção de sexo
-        var sexoSelecionado = document.querySelector('input[name="sexo_paciente"]:checked').value;
-
-        // Obtém a Anamnese Gestacional
-        var anamneseGestacionalBanner = document.getElementById('anamneseGestacionalBanner');
+        var sexoSelecionado = $('input[name="sexo_paciente"]:checked').val();
 
         // seleção de sexo
         if (sexoSelecionado === '1') {
-            anamneseGestacionalBanner.style.display = 'block'; // Exibe 
+            $('#anamneseGestacionalBanner').css('display', 'block'); // Exibe 
         } else {
-            anamneseGestacionalBanner.style.display = 'none'; // Oculta 
+            $('#anamneseGestacionalBanner').css('display', 'none');  // Oculta 
         }
     }
 
@@ -2582,7 +2614,34 @@ $(document).ready(function () {
                         type: "GET",
                         url: "ficha.php?idFicha=" + idFicha,
                         success: function (ret) {
+
+                            if (ret.erro) {
+                                $('body').css('display', 'none');
+                                alert(ret.mensagem);
+                                history.back();
+                            }
+
                             $('.form input,select').prop('disabled', true);
+                            $(".horarioUltimaMedicacao, .ingeriuHorario, .quaisProblemaSaude").show();
+
+                            if (ret['numero_corpo2']) {
+                                adicionarCampoTraumas();
+                            }
+                            if (ret['numero_corpo3']) {
+                                adicionarCampoTraumas();
+                            }
+                            if (ret['local_ferimento2']) {
+                                adicionarCampoFerimentos();
+                            }
+                            if (ret['local_ferimento3']) {
+                                adicionarCampoFerimentos();
+                            }
+                            if (ret['local_ferimento4']) {
+                                adicionarCampoFerimentos();
+                            }
+                            if (ret['local_ferimento5']) {
+                                adicionarCampoFerimentos();
+                            }
                             preencherDados(ret);
                         },
                         error: function (xhr, status, error) {
@@ -2718,18 +2777,34 @@ $(document).ready(function () {
                     //Problemas encontrados suspeitos
                     $('input:checkbox[name="psiquiatrico"]').filter('[value="' + data['psiquiatrico'] + '"]').attr('checked', true);
                     $('input:checkbox[name="respiratorio"]').filter('[value="' + data['respiratorio'] + '"]').attr('checked', true);
-                    $('select[name="respiratorio_opcoes"] option[value=' + data['respiratorio_opcoes'] + ']').attr('selected', true);
+                    
+                    if (data['respiratorio_opcoes']) {
+                        $('select[name="respiratorio_opcoes"] option[value=' + data['respiratorio_opcoes'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:checkbox[name="diabetes"]').filter('[value="' + data['diabetes'] + '"]').attr('checked', true);
-                    $('select[name="diabetes_opcoes"] option[value=' + data['diabetes_opcoes'] + ']').attr('selected', true);
+                    
+                    if (data['diabetes_opcoes']) {
+                        $('select[name="diabetes_opcoes"] option[value=' + data['diabetes_opcoes'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:checkbox[name="obstetrico"]').filter('[value="' + data['obstetrico'] + '"]').attr('checked', true);
-                    $('select[name="obstetrico_opcoes"] option[value=' + data['obstetrico_opcoes'] + ']').attr('selected', true);
+                    
+                    if (data['obstetrico_opcoes']) {
+                        $('select[name="obstetrico_opcoes"] option[value=' + data['obstetrico_opcoes'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:checkbox[name="transporte"]').filter('[value="' + data['transporte'] + '"]').attr('checked', true);
-                    $('select[name="transporte_opcoes"] option[value=' + data['transporte_opcoes'] + ']').attr('selected', true);
+                    
+                    if (data['transporte_opcoes']) {
+                        $('select[name="transporte_opcoes"] option[value=' + data['transporte_opcoes'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:checkbox[name="outros_problemas"]').filter('[value="' + data['outros_problemas'] + '"]').attr('checked', true);
                     $('input:text[name="outros_text"]').val(data['outros_text']);
 
                     //Localização dos traumas
-                    $('input:text[name="numerocorpo"]').val(data['numerocorpo']);
+                    $('input:text[name="numerocorpo"]').val(data['numero_corpo']);
                     $('input:checkbox[name="fratura"]').filter('[value="' + data['fratura'] + '"]').attr('checked', true);
                     $('input:checkbox[name="ferimento"]').filter('[value="' + data['ferimento'] + '"]').attr('checked', true);
                     $('input:checkbox[name="hemorragias"]').filter('[value="' + data['hemorragias'] + '"]').attr('checked', true);
@@ -2739,7 +2814,7 @@ $(document).ready(function () {
                     $('input:checkbox[name="queimadura1"]').filter('[value="' + data['queimadura1'] + '"]').attr('checked', true);
                     $('input:checkbox[name="queimadura2"]').filter('[value="' + data['queimadura2'] + '"]').attr('checked', true);
                     $('input:checkbox[name="queimadura3"]').filter('[value="' + data['queimadura3'] + '"]').attr('checked', true);
-                    $('input:text[name="numeroCorpo2"]').val(data['numero_corpo2']);
+                    $('input:text[name="numerocorpo2"]').val(data['numero_corpo2']);
                     $('input:checkbox[name="fratura2"]').filter('[value="' + data['fratura2'] + '"]').attr('checked', true);
                     $('input:checkbox[name="ferimento2"]').filter('[value="' + data['ferimento2'] + '"]').attr('checked', true);
                     $('input:checkbox[name="hemorragias2"]').filter('[value="' + data['hemorragias2'] + '"]').attr('checked', true);
@@ -2749,40 +2824,81 @@ $(document).ready(function () {
                     $('input:checkbox[name="queimadura1_2"]').filter('[value="' + data['queimadura1_2'] + '"]').attr('checked', true);
                     $('input:checkbox[name="queimadura2_2"]').filter('[value="' + data['queimadura2_2'] + '"]').attr('checked', true);
                     $('input:checkbox[name="queimadura3_2"]').filter('[value="' + data['queimadura3_2'] + '"]').attr('checked', true);
-                    $('input:text[name="numeroCorpo3"]').val(data['numero_corpo3']);
-                    $('input:checkbox[name="fratura2"]').filter('[value="' + data['fratura3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="ferimento2"]').filter('[value="' + data['ferimento3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="hemorragias2"]').filter('[value="' + data['hemorragias3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="esviceracao2"]').filter('[value="' + data['esviceracao3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="fab2"]').filter('[value="' + data['fab3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="amputacao2"]').filter('[value="' + data['amputacao3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="queimadura1_2"]').filter('[value="' + data['queimadura1_3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="queimadura2_2"]').filter('[value="' + data['queimadura2_3'] + '"]').attr('checked', true);
-                    $('input:checkbox[name="queimadura3_2"]').filter('[value="' + data['queimadura3_3'] + '"]').attr('checked', true);
+                    $('input:text[name="numerocorpo3"]').val(data['numero_corpo3']);
+                    $('input:checkbox[name="fratura3"]').filter('[value="' + data['fratura3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="ferimento3"]').filter('[value="' + data['ferimento3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="hemorragias3"]').filter('[value="' + data['hemorragias3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="esviceracao3"]').filter('[value="' + data['esviceracao3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="fab3"]').filter('[value="' + data['fab3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="amputacao3"]').filter('[value="' + data['amputacao3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura1_3"]').filter('[value="' + data['queimadura1_3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura2_3"]').filter('[value="' + data['queimadura2_3'] + '"]').attr('checked', true);
+                    $('input:checkbox[name="queimadura3_3"]').filter('[value="' + data['queimadura3_3'] + '"]').attr('checked', true);
 
                     //Ferimentos
                     $('input:text[name="local_ferimento"]').val(data['local_ferimento']);
-                    $('select[name="lado_ferimento"] option[value=' + data['lado_ferimento'] + ']').attr('selected', true);
-                    $('select[name="face_ferimento"] option[value=' + data['face_ferimento'] + ']').attr('selected', true);
-                    $('select[name="tipo_ferimento"] option[value=' + data['tipo_ferimento'] + ']').attr('selected', true);
+                    
+                    if (data['lado_ferimento']) {
+                        $('select[name="lado_ferimento"] option[value=' + data['lado_ferimento'] + ']').attr('selected', true);
+                    }
+                    
+                    if (data['face_ferimento']) {
+                        $('select[name="face_ferimento"] option[value=' + data['face_ferimento'] + ']').attr('selected', true);
+                    }
+                    
+                    if (data['tipo_ferimento']) {
+                        $('select[name="tipo_ferimento"] option[value=' + data['tipo_ferimento'] + ']').attr('selected', true);
+                    }
+
                     $('input:text[name="local_ferimento2"]').val(data['local_ferimento2']);
-                    $('select[name="lado"] option[value=' + data['lado'] + ']').attr('selected', true);
-                    $('select[name="face"] option[value=' + data['face'] + ']').attr('selected', true);
-                    $('select[name="tipo"] option[value=' + data['tipo'] + ']').attr('selected', true);
+                    
+                    if (data['lado']) {
+                        $('select[name="lado_ferimento2"] option[value=' + data['lado'] + ']').attr('selected', true);
+                    }
+
+                    if (data['face']) {
+                        $('select[name="face_ferimento2"] option[value=' + data['face'] + ']').attr('selected', true);
+                    }
+                    
+                    if (data['tipo']) {
+                        $('select[name="tipo_ferimento2"] option[value=' + data['tipo'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:text[name="local_ferimento3"]').val(data['local_ferimento3']);
-                    $('select[name="lado3"] option[value=' + data['lado3'] + ']').attr('selected', true);
-                    $('select[name="face3"] option[value=' + data['face3'] + ']').attr('selected', true);
-                    $('select[name="tipo3"] option[value=' + data['tipo3'] + ']').attr('selected', true);
+                    
+                    if (data['lado3']) {
+                        $('select[name="lado_ferimento3"] option[value=' + data['lado3'] + ']').attr('selected', true);
+                    }
+                    if (data['face3']) {
+                        $('select[name="face_ferimento3"] option[value=' + data['face3'] + ']').attr('selected', true);
+                    }
+                    if (data['tipo3']) {
+                        $('select[name="tipo_ferimento3"] option[value=' + data['tipo3'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:text[name="local_ferimento4"]').val(data['local_ferimento4']);
                     
-                    $('select[name="lado4"] option[value=' + data['lado4'] + ']').attr('selected', true);
-                    $('select[name="face4"] option[value=' + data['face4'] + ']').attr('selected', true);
-                    $('select[name="tipo4"] option[value=' + data['tipo4'] + ']').attr('selected', true);
+                    if (data['lado4']) {
+                        $('select[name="lado_ferimento4"] option[value=' + data['lado4'] + ']').attr('selected', true);
+                    }
+                    if (data['face4']) {
+                        $('select[name="face_ferimento4"] option[value=' + data['face4'] + ']').attr('selected', true);
+                    }
+                    if (data['tipo4']) {
+                       $('select[name="tipo_ferimento4"] option[value=' + data['tipo4'] + ']').attr('selected', true);
+                    }
+                    
                     $('input:text[name="local_ferimento5"]').val(data['local_ferimento5']);
                     
-                    $('select[name="lado5"] option[value=' + data['lado5'] + ']').attr('selected', true);
-                    $('select[name="face5"] option[value=' + data['face5'] + ']').attr('selected', true);
-                    $('select[name="tipo5"] option[value=' + data['tipo5'] + ']').attr('selected', true);
+                    if (data['lado5']) {
+                        $('select[name="lado_ferimento5"] option[value=' + data['lado5'] + ']').attr('selected', true);
+                    }
+                    if (data['face5']) {
+                        $('select[name="face_ferimento5"] option[value=' + data['face5'] + ']').attr('selected', true);
+                    }
+                    if (data['tipo5']) {
+                        $('select[name="tipo_ferimento5"] option[value=' + data['tipo5'] + ']').attr('selected', true);
+                    }
 
                     //Queimaduras
                     $('input:checkbox[name="qcabeca_1grau"]').filter('[value="' + data['qcabeca_1grau'] + '"]').attr('checked', true);

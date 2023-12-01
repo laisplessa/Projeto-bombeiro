@@ -78,3 +78,14 @@ body {
 input.form-control {
   width: 90%;
 }
+
+.button {
+  background: #660303;
+  color: #660303;
+  margin-top: 30px;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}

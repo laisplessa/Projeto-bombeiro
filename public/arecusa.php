@@ -29,6 +29,29 @@
       <div class="botaopesquisa">
       <b><a href="relatorio.html"> Pesquisar ocorrência </a></b>
     </div>
+
+
+    <?php
+      session_start();
+      if ($_SESSION['tipoUsuario'] == 'ADMIN') {
+    ?>
+    <div class="botaoatendimento">
+      <b><a href="cadastro.html"> Cadastrar Usuários </a></b>
+    </div>
+    <?php
+      }
+    ?>
+    
+    <?php
+      if ($_SESSION['tipoUsuario'] == 'ADMIN') {
+    ?>
+    <div class="botaoatendimento">
+      <b><a href="inativa.html"> Inativar Usuários </a></b>
+    </div>
+    <?php
+      }
+    ?>
+
   </div>
 
 </body>

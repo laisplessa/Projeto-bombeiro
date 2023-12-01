@@ -34,7 +34,8 @@ if ($cpf == null || $senha == null) {
     }
 
     $_SESSION['id'] = $usuario['id_cadastro'];
-
+    $_SESSION['tipoUsuario'] = $usuario['tipo'];
+    
     $data = array("erro" => false, "mensagem" => "Login executado com sucesso");
     header("Content-Type: application/json");
     echo json_encode($data);

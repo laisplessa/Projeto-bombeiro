@@ -122,3 +122,18 @@ titulos {
     right: 10px;
     /* top: 5px; */
   }
+
+  .button {
+    background: #660303;
+    color: #660303;
+    margin-top: 10px;
+    color: #000000;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #c78383;
+}

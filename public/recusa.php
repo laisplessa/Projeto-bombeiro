@@ -4,6 +4,7 @@ include "db.php";
 
 session_start();
 
+$data = $_POST["data"];
 $eu = $_POST["eu"];
 $rgNumero = $_POST["rg_numero"];
 $cpfNumero = $_POST["cpf_numero"];
@@ -22,8 +23,8 @@ if ($eu == null || $rgNumero == null || $cpfNumero == null ) {
   
   } else {
 
-$sqlFicha = "INSERT INTO recusa (id_recusa, eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2)
-VALUES (null, '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2')";
+$sqlFicha = "INSERT INTO recusa (id_recusa, data, eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2)
+VALUES (null, '$data', '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2')";
 
 $execucao = mysqli_query($con, $sqlFicha);
 

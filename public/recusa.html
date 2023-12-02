@@ -33,6 +33,9 @@
       <titulos id="termorec">Termo de Recusa de Atendimento e/ou Transporte</titulos>
       <div class="escrever">
           <div class="destaqueclaro">
+                <label for="data">Data:</label><br>
+                <input type="date" class="form-control" name="data" placeholder="dd/mm/aaaa"
+                    data-mask="00/00/0000" maxlength="10" autocomplete="off"><br>
               Eu <input class="tam75" type="text" size="45" name="eu" placeholder="Digite" />
               portador da carteira de indentidade RG N° <input type="text" name="rg_numero" size="32" maxlength="7"
                   placeholder="000.000.000-00">
@@ -72,6 +75,7 @@
           </div>
       </div>
       </div>
+    </div>
   </banner>
   <input type="button" name="enviar" value="Enviar" class="button" onclick="enviarFormulario();" a href="#" /></a>
             </form>

@@ -455,15 +455,6 @@ $codPs = $_POST["codigo_ps"];
 $hCh = $_POST["h_ch"];
 $siaSus = $_POST["sia_sus"];
 
-$eu = $_POST["eu"];
-$rgNumero = $_POST["rg_numero"];
-$cpfNumero = $_POST["cpf_numero"];
-$assinatura = $_POST["assinatura"];
-$testemunha = $_POST["testemunha"];
-$docTestemunha = $_POST["doc_testemunha"];
-$testemunha2 = $_POST["testemunha2"];
-$docTestemunha2 = $_POST["doc_testemunha2"];
-
 $medicoAtendimento = $_POST["medico_atendimento"];
 $socorrista1 = $_POST["socorrista1"];
 $socorrista2 = $_POST["socorrista2"];
@@ -494,7 +485,7 @@ $id = $_SESSION["id"];
     ataduras_8, ataduras_12, ataduras_20, atadura_quantidade, manta_aluminizada, manta_quantidade, cateter_oculos, cateter_quantidade, pas_dea, pas_quantidade, compressa_comum, compressa_quantidade, sonda_aspiracao, sonda_quantidade, kits_h, kits_p, kits_q, kits_quantidade, soro_fisiologico, soro_quantidade, luvas_descartaveis, luvas_quantidade, talas_papp, talas_papg, talas_quantidade, mascaras_descartaveis, mascara_quantidade, outro_material, outrom, outrom_quantidade,
     base_estabiliza, base_quantidade, ttf_adulto, ttf_infantil, ttf_quantidade, colar_nd, colar_pp, colar_p, colar_quantidade, tirante_aranha, tirante_quantidade, colar_m, colar_g, colar_n, tamanho_colar, colar_2quantidade, tirante_cabeca, 	tirantec_quantidade, coxins_estabiliza, coxins_quantidade, canula, canula_quantidade, ked_adulto, ked_infantil, ked_quantidade, outro_material2, outrom2, outrom2_quantidade, maca, maca_quantidade, outro_material3, outrom3, outrom3_quantidade,
     observacoes_importantes, disturbio_comportamento, encontrado_capacete, encontrado_cinto, parabrisas_avariado, caminhando_cena, painel_avariado, volante_torcido,n_usd, n_ocorrencia, desp, km_final, codigo_ir, codigo_ps, h_ch, sia_sus,
-    eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2, medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra)
+    medico_atendimento, socorrista1, socorrista2, socorrista3, demandante, equipe, respon_ficha, respon_fibra)
     
     VALUES ($id, '$oqAconteceu', $outrasVezes, '$quantoTempo', $problemaSaude, '$quais', $medicacao, '$horaMedicacao', '$quaisMedicacoes', $alergico, '$alergia', $ingeriu, '$ingeriuHorario',
     '$data', $sexoPaciente, '$nomeHospital', '$nomePaciente', $idade, $telefonePaciente, $rgCpf, '$nomeAcompanhante', $idadeAcompanhante, '$localOcorrencia',
@@ -514,7 +505,7 @@ $id = $_SESSION["id"];
     $ataduras8, $ataduras12, $ataduras20, '$ataduraQuantidade', $mantaAluminizada, '$mantaQuantidade', $cateterOculos, '$cateterQuantidade', $pasDea, '$pasQuantidade', $compressaComum, '$compressaQuantidade', $sondaAspiracao, '$sondaQuantidade', $kitsH, $kitsP, $kitsQ, '$kitsQuantidade', $soroFisiologico, '$soroQuantidade', $luvasDescartaveis, '$luvasQuantidade', $talasPapp, $talasPapg, '$talasQuantidade', $mascarasDescartaveis, '$mascaraQuantidade', $outroMaterial, '$outroM', '$outromQuantidade',
     $baseEstabiliza, '$baseQuantidade', $ttfAdulto, $ttfInfantil, '$ttfQuantidade', $colarNd, $colarPP, $colarP, '$colarQuantidade', $tiranteAranha, '$tiranteQuantidade', $colarM, $colarG, $colarN, '$tColar', '$colar2quantidade', $tiranteCabeca, '$tirantecQuantidade', $coxinsEstabiliza, '$coxinsQuantidade', $canula, '$canulaQuantidade', $kedAdulto, $kedInfantil, '$kedQuantidade', '$outroMaterial2', $outrom2, '$outrom2Quantidade', $maca, '$macaQuantidade', $outroMaterial3, '$outrom3', '$outrom3Quantidade',
     '$observacoesImportantes', $disturbioComportamento, $encontradoCapacete, $encontradoCinto, $parabrisasAvariado, $caminhandoCena, $painelAvariado, $volanteTorcido, '$nUsd', '$nOcorrencia', '$desp', '$kmFinal', $codIr, $codPs, '$hCh', '$siaSus',
-    '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2', '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
+    '$medicoAtendimento', '$socorrista1', '$socorrista2', '$socorrista3', '$demandante', '$equipe', '$ficha', '$fibra')";
 
 $execucao = mysqli_query($con, $sqlFicha);
 

@@ -21,7 +21,7 @@
 
     <!--Botão para acessar formulário de recusa de atendimento-->
     <div class="botaorecusa">
-      <b><a href="ficha.html #termorec"> Recusa de Atendimento</a></b>
+      <b><a href="recusa.html"> Recusa de Atendimento</a></b>
     </div>
   </div>
 

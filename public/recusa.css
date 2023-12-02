@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Calibri';
+    background-color: #fdfafa;
+    /* align-items: center; */
+}
+
+
+/* fundo */
+.fundo {
+    padding: 5px 35px;
+    background: #fdfafa;
+    line-height: 30px;
+}
+
+.fundo2 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px 50px;
+    background: #fdfafa;
+  }
+
+.logo {
+    block-size: 100px;
+    margin-top: 15px;
+    height: 140px;
+  }
+
+/* Tamanho da div onde ta o formuário */
+.formulario {
+    max-width: 800px;
+    max-height: 90%;
+    background: #a1a0a00e;
+    margin: 0px auto 40px auto;
+    border-radius: 5px;
+}
+
+/* Formulário completo */
+.form {
+    padding: 30px;
+}
+
+/* Espaço para escrever observações */
+.escrever {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*Cor destaque do formulario*/
+.destaqueclaro {
+    background-color: #e2d1d1d7;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+}
+
+/* Tamanho caixas de textos */
+.tam75 {
+    width: 75%;
+    align-items: center;
+}
+
+/* Colunas dados ambulância */
+.coluna2 {
+    column-count: 2;
+    align-items: center;
+}
+
+/* Configurações do form*/
+.form label,
+.form p {
+    line-height: 2rem;
+}
+
+.form input,
+.form select {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1.5px solid #660303;
+    background-color: #f7f2f2;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.form select {
+    cursor: pointer;
+}
+
+/* Borda */
+banner {
+    display: block;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #660303;
+    border-image: initial;
+}
+
+/* titulo dos campos */
+titulos {
+    font-size: 18px;
+}
+
+.buttonIni {
+    background: #660303;
+    margin-top: 30px;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* position: fixed; */
+    right: 10px;
+    /* top: 5px; */
+  }

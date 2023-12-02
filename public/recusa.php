@@ -14,6 +14,8 @@ $docTestemunha = $_POST["doc_testemunha"];
 $testemunha2 = $_POST["testemunha2"];
 $docTestemunha2 = $_POST["doc_testemunha2"];
 
+$id = $_SESSION["id"];
+
 if ($eu == null || $rgNumero == null || $cpfNumero == null ) {
 
     $data = array("erro" => true, "mensagem" => "Dados inválidos, por favor confira se preencheu todas as informações");
@@ -23,8 +25,8 @@ if ($eu == null || $rgNumero == null || $cpfNumero == null ) {
   
   } else {
 
-$sqlFicha = "INSERT INTO recusa (id_recusa, data, eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2)
-VALUES (null, '$data', '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2')";
+$sqlFicha = "INSERT INTO recusa (id_usuario, id_recusa, data, eu, rg_numero, cpf_numero, assinatura, testemunha, doc_testemunha, testemunha2, doc_testemunha2)
+VALUES ($id, null, '$data', '$eu', '$rgNumero', '$cpfNumero', '$assinatura', '$testemunha', '$docTestemunha', '$testemunha2', '$docTestemunha2')";
 
 $execucao = mysqli_query($con, $sqlFicha);
 

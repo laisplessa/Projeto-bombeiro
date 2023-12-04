@@ -14,10 +14,10 @@ session_start();
 if (isset($_POST["id"])) {
 
   $id = $_POST["id"];
-
   $sql = "UPDATE usuario SET inativo = 1 WHERE id_cadastro = $id";
-
   $run_query = mysqli_query($con, $sql);
+  
+
 
   if ($run_query) {
 

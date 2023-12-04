@@ -35,6 +35,14 @@ if ($dataOcorrencia == null) {
 
   $data["fichas"] = $fichas;
 
+  $sql = "SELECT * FROM recusa WHERE data >= '$dataOcorrenciaIni' and data <= '$dataOcorrenciaFim'";
+  
+  $run_query = mysqli_query($con, $sql);
+
+  while ($row = mysqli_fetch_assoc($run_query)) {
+    array_push($data["fichas"], $row);
+  }
+
   header("Content-Type: application/json");
   echo json_encode($data);
   exit();

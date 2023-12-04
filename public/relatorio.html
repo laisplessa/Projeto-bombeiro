@@ -28,11 +28,28 @@
 
                         ret.fichas.forEach(function (ficha) {
                             result += '<tr class="resultado">';
-                            result += '<td>' + ficha.id_ficha + '</td>';
+
+                            if (ficha.id_ficha) {
+                                result += '<td>' + ficha.id_ficha + '</td>';
+                            } else {
+                                result += '<td>' + ficha.id_recusa + '</td>';
+                            }
                             result += '<td>' + ficha.data + '</td>';
-                            result += '<td>' + ficha.nome_paciente + '</td>';
+
+                            if (ficha.id_ficha) {
+                                result += '<td>' + ficha.nome_paciente + '</td>';
+                            } else {
+                                result += '<td>' + ficha.eu + '</td>';
+                            }
+
                             result += '<td>' + ficha.id_usuario + '</td>';
-                            result += '<td><a href="ficha.html?idFicha=' + ficha.id_ficha + '">Visualizar</a></td>';
+                            
+                            if (ficha.id_ficha) {
+                                result += '<td><a href="ficha.html?idFicha=' + ficha.id_ficha + '">Visualizar</a></td>';
+                            } else {
+                                result += '<td><a href="recusa.html?idRecusa=' + ficha.id_recusa + '">Visualizar</a></td>';
+                            }
+                            
                             result += '</tr>';
                         });
 

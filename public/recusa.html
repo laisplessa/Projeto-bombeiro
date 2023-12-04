@@ -23,176 +23,180 @@
             <h1>Termo de recusa de atendimento</h1>
         </div>
     </div>
-           <!-- Começo formulário-->
-           <div class="formulario">
-            <form class="form">
-  <!--Termo de Recusa de atendimento-->
-  <br>
+    <!-- Começo formulário-->
+    <div class="formulario">
+        <form class="form">
+            <!--Termo de Recusa de atendimento-->
+            <br>
 
-  <banner>
-      <titulos id="termorec">Termo de Recusa de Atendimento e/ou Transporte</titulos>
-      <div class="escrever">
-          <div class="destaqueclaro">
-                <label for="data">Data:</label><br>
-                <input type="date" class="form-control" name="data" placeholder="dd/mm/aaaa"
-                    data-mask="00/00/0000" maxlength="10" autocomplete="off"><br>
-              Eu <input class="tam75" type="text" size="45" name="eu" placeholder="Digite" />
-              portador da carteira de indentidade RG N° <input type="text" name="rg_numero" size="32" maxlength="7"
-                  placeholder="000.000.000-00">
-              inscrito no CPF sob N° <input type="text" name="cpf_numero" maxlength="11" size="32"
-                  placeholder="000.000.000-00">
-              na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
-              me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
-              voluntários de Guaramirim/SC, e assumo, individualmente a responsabilidade
-              pelas consequências que possam ocorrer por razão da minha recusa. Declaro
-              que fui devidamente informado sobre o procedimento pelo qual eu deveria
-              me submeter e alertado sobre riscos à saúde da sua não realização.
-          </div>
-          <div class="destaqueclaro">
-              <label for="assinatura">Assinatura</label> <br>
-              <canvas class="pad"></canvas>
-              <input type="reset" value="Limpar Assinatura" />
-              <input type="hidden" name="assinatura" class="assinatura">
-          </div>
-          <div class="coluna2">
-          <div class="destaqueclaro">
-              <label for="testemunha">Testemunha 1:</label> <br>
-              <input type="text" class="form-control" name="testemunha" placeholder="Digite o nome da testemunha" />
-          </div>
-          <div class="destaqueclaro">
-              <label for="doc_testemunha">Documento testemunha 1:</label> <br>
-              <input type="text" class="form-control" name="doc_testemunha"
-                  placeholder="Digite o CPF/RG da testemunha" minlength="7" maxlength="11"/>
-          </div>
-          <div class="destaqueclaro">
-              <label for="testemunha2">Testemunha 2:</label> <br>
-              <input type="text" class="form-control" name="testemunha2" placeholder="Digite o nome da testemunha" />
-          </div>
-          <div class="destaqueclaro">
-              <label for="doc_testemunha2">Documento testemunha 2:</label> <br>
-              <input type="text" class="form-control" name="doc_testemunha2"
-                  placeholder="Digite o CPF/RG da testemunha"  minlength="7" maxlength="11" />
-          </div>
-      </div>
-      </div>
-    </div>
-  </banner>
-  <input type="button" name="enviar" value="Enviar" class="button" onclick="enviarFormulario();" a href="#" /></a>
-            </form>
+            <banner>
+                <titulos id="termorec">Termo de Recusa de Atendimento e/ou Transporte</titulos>
+                <div class="escrever">
+                    <div class="destaqueclaro">
+                        <label for="data">Data:</label><br>
+                        <input type="date" class="form-control" name="data" placeholder="dd/mm/aaaa"
+                            data-mask="00/00/0000" maxlength="10" autocomplete="off"><br>
+                        Eu <input class="tam75" type="text" size="45" name="eu" placeholder="Digite" />
+                        portador da carteira de indentidade RG N° <input type="text" name="rg_numero" size="32"
+                            maxlength="7" placeholder="000.000.000-00">
+                        inscrito no CPF sob N° <input type="text" name="cpf_numero" maxlength="11" size="32"
+                            placeholder="000.000.000-00">
+                        na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
+                        me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
+                        voluntários de Guaramirim/SC, e assumo, individualmente a responsabilidade
+                        pelas consequências que possam ocorrer por razão da minha recusa. Declaro
+                        que fui devidamente informado sobre o procedimento pelo qual eu deveria
+                        me submeter e alertado sobre riscos à saúde da sua não realização.
+                    </div>
+                    <div class="destaqueclaro">
+                        <label for="assinatura">Assinatura</label> <br>
+                        <canvas class="pad"></canvas>
+                        <input type="reset" value="Limpar Assinatura" />
+                        <input type="hidden" name="assinatura" class="assinatura">
+                    </div>
+                    <div class="coluna2">
+                        <div class="destaqueclaro">
+                            <label for="testemunha">Testemunha 1:</label> <br>
+                            <input type="text" class="form-control" name="testemunha"
+                                placeholder="Digite o nome da testemunha" />
+                        </div>
+                        <div class="destaqueclaro">
+                            <label for="doc_testemunha">Documento testemunha 1:</label> <br>
+                            <input type="text" class="form-control" name="doc_testemunha"
+                                placeholder="Digite o CPF/RG da testemunha" minlength="7" maxlength="11" />
+                        </div>
+                        <div class="destaqueclaro">
+                            <label for="testemunha2">Testemunha 2:</label> <br>
+                            <input type="text" class="form-control" name="testemunha2"
+                                placeholder="Digite o nome da testemunha" />
+                        </div>
+                        <div class="destaqueclaro">
+                            <label for="doc_testemunha2">Documento testemunha 2:</label> <br>
+                            <input type="text" class="form-control" name="doc_testemunha2"
+                                placeholder="Digite o CPF/RG da testemunha" minlength="7" maxlength="11" />
+                        </div>
+                    </div>
+                </div>
+                <input type="button" name="enviar" value="Enviar" class="button" onclick="enviarFormulario();" a
+                    href="#" /></a>
+            </banner>
+        </form>
 
-            <script>
-                (function (window) {
-                    var $canvas,
-                        onResize = function (event) {
-                            $canvas.attr({
-                                height: 200,
-                                width: 630
-                            });
-                        };
-    
-                    $(document).ready(function () {
-                        $canvas = $('canvas');
-                        window.addEventListener('orientationchange', onResize, false);
-                        window.addEventListener('resize', onResize, false);
-                        onResize();
-    
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const idRecusa = urlParams.get('idRecusa');
-    
-                        if (idRecusa) {
-                            $.ajax({
-                                type: "GET",
-                                url: "recusa.php?idRecusa=" + idRecusa,
-                                success: function (ret) {
-                                    if (ret.erro) {
-                                        $('body').css('display', 'none');
-                                        alert(ret.mensagem);
-                                        history.back();
-                                    } else {
-                                        // Chame a função de preenchimento de dados aqui
-                                        preencherDados(ret);
-                                    }
-                                },
-                                error: function (xhr, status, error) {
-                                    // Função de callback chamada em caso de erro na requisição
-                                    alert("Erro: " + error);
+        <script>
+            (function (window) {
+                var $canvas,
+                    onResize = function (event) {
+                        $canvas.attr({
+                            height: 200,
+                            width: 630
+                        });
+                    };
+
+                $(document).ready(function () {
+                    $canvas = $('canvas');
+                    window.addEventListener('orientationchange', onResize, false);
+                    window.addEventListener('resize', onResize, false);
+                    onResize();
+
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const idRecusa = urlParams.get('idRecusa');
+
+                    if (idRecusa) {
+                        $.ajax({
+                            type: "GET",
+                            url: "recusa.php?idRecusa=" + idRecusa,
+                            success: function (ret) {
+                                if (ret.erro) {
+                                    $('body').css('display', 'none');
+                                    alert(ret.mensagem);
+                                    history.back();
+                                } else {
+                                    // Chame a função de preenchimento de dados aqui
+                                    $('.form input,select').prop('disabled', true);
+                                    preencherDados(ret);
                                 }
-                            });
-                        } else {
-                            $('.form').signaturePad({
-                                drawOnly: true,
-                                defaultAction: 'drawIt',
-                                validateFields: false,
-                                lineWidth: 0,
-                                output: '.assinatura',
-                                clear: 'input[type=reset]',
-                            });
-                        }
-                    });
-    
-                    function preencherDados(data) {
-                        // Recusa atendimento
-                        $('input:text[name="eu"]').val(data['eu']);
-                        $('input:text[name="rg_numero"]').val(data['rg_numero']);
-                        $('input:text[name="cpf_numero"]').val(data['cpf_numero']);
-                        $('input:text[name="desp"]').val(data['desp']);
-                        $('input:text[name="testemunha"]').val(data['testemunha']);
-                        $('input:text[name="desp"]').val(data['desp']);
-                        $('input:text[name="doc_testemunha"]').val(data['doc_testemunha']);
-                        $('input:text[name="testemunha2"]').val(data['testemunha2']);
-                        $('input:text[name="doc_testemunha2"]').val(data['doc_testemunha2']);
-    
-                        if (ret['assinatura'] == '') {
-                            $('.form').signaturePad({
-                                drawOnly: true,
-                                defaultAction: 'drawIt',
-                                validateFields: false,
-                                lineWidth: 0,
-                                displayOnly: true,
-                                output: '.assinatura',
-                                clear: 'input[type=reset]',
-                            });
-                        } else {
-                            $('.form').signaturePad({
-                                drawOnly: true,
-                                defaultAction: 'drawIt',
-                                validateFields: false,
-                                lineWidth: 0,
-                                displayOnly: true,
-                                output: '.assinatura',
-                                clear: 'input[type=reset]',
-                            }).regenerate(ret['assinatura']);
-                        }
-                    }
-                }(this));
-    
-                function enviarFormulario() {
-                    var dados = $('.form').serialize();
-    
-                    $.ajax({
-                        type: "POST",
-                        url: "recusa.php",
-                        data: dados,
-                        success: function (ret) {
-                            // Função de callback chamada quando a requisição é bem-sucedida
-                            if (ret.erro) {
-                                alert(ret.mensagem); // Trata erros, se houverem
-                            } else {
-                                // Trata o caso de sucesso, se não houver erros
-                                alert(ret.mensagem);
-                                // Redirecione ou realize outras ações necessárias aqui
+                            },
+                            error: function (xhr, status, error) {
+                                // Função de callback chamada em caso de erro na requisição
+                                alert("Erro: " + error);
                             }
-                        },
-                        error: function (xhr, status, error) {
-                            // Função de callback chamada em caso de erro na requisição
-                            alert("Erro: " + error);
-                        }
-                    });
+                        });
+                    } else {
+                        $('.form').signaturePad({
+                            drawOnly: true,
+                            defaultAction: 'drawIt',
+                            validateFields: false,
+                            lineWidth: 0,
+                            output: '.assinatura',
+                            clear: 'input[type=reset]',
+                        });
+                    }
+                });
+
+                function preencherDados(data) {
+                    // Recusa atendimento
+                    $('input[type="date"][name="data"]').val(data['data']);
+                    $('input:text[name="eu"]').val(data['eu']);
+                    $('input:text[name="rg_numero"]').val(data['rg_numero']);
+                    $('input:text[name="cpf_numero"]').val(data['cpf_numero']);
+                    $('input:text[name="desp"]').val(data['desp']);
+                    $('input:text[name="testemunha"]').val(data['testemunha']);
+                    $('input:text[name="desp"]').val(data['desp']);
+                    $('input:text[name="doc_testemunha"]').val(data['doc_testemunha']);
+                    $('input:text[name="testemunha2"]').val(data['testemunha2']);
+                    $('input:text[name="doc_testemunha2"]').val(data['doc_testemunha2']);
+
+                    if (data['assinatura'] == '') {
+                        $('.form').signaturePad({
+                            drawOnly: true,
+                            defaultAction: 'drawIt',
+                            validateFields: false,
+                            lineWidth: 0,
+                            displayOnly: true,
+                            output: '.assinatura',
+                            clear: 'input[type=reset]',
+                        });
+                    } else {
+                        $('.form').signaturePad({
+                            drawOnly: true,
+                            defaultAction: 'drawIt',
+                            validateFields: false,
+                            lineWidth: 0,
+                            displayOnly: true,
+                            output: '.assinatura',
+                            clear: 'input[type=reset]',
+                        }).regenerate(data['assinatura']);
+                    }
                 }
-            </script>
-    
-        </div>
-    
-    </body>
-    
-    </html>
+            }(this));
+
+            function enviarFormulario() {
+                var dados = $('.form').serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "recusa.php",
+                    data: dados,
+                    success: function (ret) {
+                        // Função de callback chamada quando a requisição é bem-sucedida
+                        if (ret.erro) {
+                            alert(ret.mensagem); // Trata erros, se houverem
+                        } else {
+                            // Trata o caso de sucesso, se não houver erros
+                            alert(ret.mensagem);
+                            // Redirecione ou realize outras ações necessárias aqui
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Função de callback chamada em caso de erro na requisição
+                        alert("Erro: " + error);
+                    }
+                });
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>
